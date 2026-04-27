@@ -148,7 +148,8 @@
     .portfolio-item { background: var(--white); border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); transition: all 0.3s ease; }
     .portfolio-item:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
     .portfolio-img { aspect-ratio: 16/10; background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%); overflow: hidden; }
-    .portfolio-img img { width: 100%; height: 100%; object-fit: cover; }
+    .portfolio-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+    .portfolio-item:hover .portfolio-img img { transform: scale(1.03); }
     .portfolio-content { padding: 1.5rem; }
     .portfolio-tag { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent); }
     .portfolio-date { display: inline-block; font-size: 0.6875rem; font-weight: 600; background: var(--dark); color: white; padding: 0.25rem 0.625rem; border-radius: 100px; margin-left: 0.5rem; vertical-align: middle; }
@@ -410,7 +411,7 @@
       <p class="portfolio-real-note animate">Questi non sono template. Sono siti reali, gia online.</p>
       <div class="portfolio-grid">
         <a href="https://sanpaolohideout.it" target="_blank" rel="noopener" class="portfolio-item animate d1">
-          <div class="portfolio-img"><img src="preview.png" alt="Sito sanpaolohideout.it - Casa vacanze Roma" loading="lazy"></div>
+          <div class="portfolio-img"><img src="screenshot-sanpaolo.webp" alt="Sito sanpaolohideout.it - Casa vacanze Roma" loading="lazy"></div>
           <div class="portfolio-content">
             <div>
               <span class="portfolio-tag">Casa vacanze</span>
@@ -425,7 +426,7 @@
           </div>
         </a>
         <a href="https://cannigionexperience.com" target="_blank" rel="noopener" class="portfolio-item animate d2">
-          <div class="portfolio-img"><img src="preview_v2.png" alt="Sito cannigionexperience.com - Charter ed esperienze Cannigione" loading="lazy"></div>
+          <div class="portfolio-img"><img src="screenshot-cannigione.webp" alt="Sito cannigionexperience.com - Charter ed esperienze Cannigione" loading="lazy"></div>
           <div class="portfolio-content">
             <div>
               <span class="portfolio-tag">Charter / Esperienze</span>
@@ -440,7 +441,7 @@
           </div>
         </a>
         <a href="https://villa-almare.it" target="_blank" rel="noopener" class="portfolio-item animate d3">
-          <div class="portfolio-img"><img src="preview_v3.png" alt="Sito villa-almare.it - Villa di lusso Siracusa" loading="lazy"></div>
+          <div class="portfolio-img"><img src="screenshot-villa-almare.webp" alt="Sito villa-almare.it - Villa di lusso Siracusa" loading="lazy"></div>
           <div class="portfolio-content">
             <div>
               <span class="portfolio-tag">Villa / Luxury rental</span>
