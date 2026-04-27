@@ -151,6 +151,11 @@
     .portfolio-img img { width: 100%; height: 100%; object-fit: cover; }
     .portfolio-content { padding: 1.5rem; }
     .portfolio-tag { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent); }
+    .portfolio-date { display: inline-block; font-size: 0.6875rem; font-weight: 600; background: var(--dark); color: white; padding: 0.25rem 0.625rem; border-radius: 100px; margin-left: 0.5rem; vertical-align: middle; }
+    .portfolio-meta { display: flex; align-items: center; gap: 0.375rem; font-size: 0.8125rem; color: var(--text-light); margin-bottom: 0.5rem; }
+    .portfolio-meta svg { flex-shrink: 0; color: var(--text-light); }
+    .portfolio-real-note { text-align: center; font-size: 0.9375rem; color: var(--text-light); margin-bottom: 1.5rem; font-style: italic; }
+    .portfolio-cta { text-align: center; margin-top: 2.5rem; }
     .portfolio-content h3 { font-size: 1.125rem; color: var(--dark); margin: 0.25rem 0; }
     .portfolio-content p { font-size: 0.875rem; color: var(--text-light); }
 
@@ -397,34 +402,63 @@
   <section class="portfolio" id="progetti">
     <div class="container">
       <div class="section-header animate">
-        <h2>Siti realizzati per attivita in Sardegna</h2>
-        <p>Ogni progetto e unico, fatto su misura per il cliente e il suo pubblico.</p>
+        <h2>Siti realizzati recentemente in Sardegna</h2>
+        <p>Progetti reali, pubblicati negli ultimi mesi. Ogni sito e fatto su misura per il cliente.</p>
       </div>
+      <p class="portfolio-real-note animate">Questi non sono template. Sono siti reali, gia online.</p>
       <div class="portfolio-grid">
-        <div class="portfolio-item animate d1">
-          <div class="portfolio-img"><img src="preview.png" alt="Sito per B&B in Sardegna" loading="lazy"></div>
+        <a href="https://sanpaolohideout.it" target="_blank" rel="noopener" class="portfolio-item animate d1">
+          <div class="portfolio-img"><img src="preview.png" alt="Sito sanpaolohideout.it - Casa vacanze Roma" loading="lazy"></div>
           <div class="portfolio-content">
-            <span class="portfolio-tag">B&B</span>
-            <h3>B&B Sa Petra Ruja</h3>
-            <p>Sito con prenotazioni dirette, calendario e pagamento online.</p>
+            <div>
+              <span class="portfolio-tag">Casa vacanze</span>
+              <span class="portfolio-date">Aprile 2025</span>
+            </div>
+            <h3>San Paolo Hideout</h3>
+            <div class="portfolio-meta">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Roma
+            </div>
+            <p>Sito completo per casa vacanze con design pulito, ottimizzato per mobile e contatti diretti.</p>
           </div>
-        </div>
-        <div class="portfolio-item animate d2">
-          <div class="portfolio-img"><img src="preview_v2.png" alt="Sito per case vacanza" loading="lazy"></div>
+        </a>
+        <a href="https://cannigionexperience.com" target="_blank" rel="noopener" class="portfolio-item animate d2">
+          <div class="portfolio-img"><img src="preview_v2.png" alt="Sito cannigionexperience.com - Charter ed esperienze Cannigione" loading="lazy"></div>
           <div class="portfolio-content">
-            <span class="portfolio-tag">Case Vacanza</span>
-            <h3>Sardegna Dream Rentals</h3>
-            <p>Multi-proprieta con booking integrato e pagamenti automatici.</p>
+            <div>
+              <span class="portfolio-tag">Charter / Esperienze</span>
+              <span class="portfolio-date">Aprile 2025</span>
+            </div>
+            <h3>Cannigione Experience</h3>
+            <div class="portfolio-meta">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Cannigione
+            </div>
+            <p>Sito per noleggio e esperienze con layout moderno, richiesta prenotazioni e UX semplice.</p>
           </div>
-        </div>
-        <div class="portfolio-item animate d3">
-          <div class="portfolio-img"><img src="preview_v3.png" alt="Sito per ristorante" loading="lazy"></div>
+        </a>
+        <a href="https://villa-almare.it" target="_blank" rel="noopener" class="portfolio-item animate d3">
+          <div class="portfolio-img"><img src="preview_v3.png" alt="Sito villa-almare.it - Villa di lusso Sardegna" loading="lazy"></div>
           <div class="portfolio-content">
-            <span class="portfolio-tag">Ristorante</span>
-            <h3>Ristorante Mare Blu</h3>
-            <p>Sito vetrina con menu digitale e prenotazione tavoli.</p>
+            <div>
+              <span class="portfolio-tag">Villa / Luxury rental</span>
+              <span class="portfolio-date">Aprile 2025</span>
+            </div>
+            <h3>Villa Almare</h3>
+            <div class="portfolio-meta">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Sardegna
+            </div>
+            <p>Sito elegante per villa di lusso con immagini immersive e contatti diretti senza piattaforme.</p>
           </div>
-        </div>
+        </a>
+      </div>
+      <div class="portfolio-cta animate">
+        <p style="font-size:1.125rem;color:var(--text);margin-bottom:1rem;"><strong>Vuoi qualcosa di simile per la tua attivita?</strong></p>
+        <a href="https://wa.me/393331234567?text=Ciao%2C%20vorrei%20la%20bozza%20gratuita%20per%20il%20mio%20sito" class="btn btn-primary btn-lg" target="_blank" rel="noopener" onclick="fbq('track','Contact'); gtag('event','conversion',{'send_to':'AW-XXXXXXXX/XXXXXXXX'});">
+          <svg class="icon-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Richiedi la tua bozza gratuita
+        </a>
       </div>
     </div>
   </section>
