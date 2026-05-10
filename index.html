@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Siti Web per Attività Locali in Sardegna | Bozza Gratuita in 48h</title>
-  <meta name="description" content="Siti web su misura per ristoranti, professionisti, negozi e attività in Sardegna. Bozza gratuita in 48 ore, nessun anticipo, senza impegno. Più clienti, più contatti.">
+  <title>WebSardegna · Portale Turistico Indipendente</title>
+  <meta name="description" content="Scopri la Sardegna autentica. Destinazioni, esperienze e guide indipendenti per viaggiatori che vogliono andare oltre i soliti percorsi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
@@ -71,27 +74,108 @@
     .trust-badge { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: var(--text-light); font-weight: 500; }
     .trust-badge svg { flex-shrink: 0; color: var(--accent); }
 
-    /* Header */
-    .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
-    .site-header .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-    .logo { font-weight: 700; font-size: 1.25rem; color: var(--dark); }
-    .logo span { color: var(--accent); }
-    .header-cta { display: none; }
-    @media(min-width:640px){ .header-cta { display: inline-flex; padding: 0.5rem 1.25rem; font-size: 0.875rem; } }
+    /* Header – editorial */
+    .site-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: transparent;
+      border-bottom: none;
+    }
+    .site-header .container {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      height: 56px;
+      padding: 0 2rem;
+      max-width: 100%;
+    }
+    .logo {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .header-nav a {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      color: #ffffff;
+      text-decoration: none;
+      text-transform: lowercase;
+      letter-spacing: 0.04em;
+      opacity: 0.8;
+      transition: opacity 0.15s;
+    }
+    .header-nav a:hover { opacity: 1; }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      justify-content: flex-end;
+    }
+    .header-right a {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      color: #ffffff;
+      text-decoration: none;
+      text-transform: lowercase;
+      letter-spacing: 0.04em;
+      opacity: 0.8;
+      transition: opacity 0.15s;
+    }
+    .header-right a:hover { opacity: 1; }
+    @media(max-width:640px) {
+      .header-nav { display: none; }
+      .site-header .container { grid-template-columns: 1fr 1fr; }
+    }
 
-    /* Hero */
-    .hero { background: var(--darker); color: white; padding-top: calc(64px + 5rem); padding-bottom: 5rem; position: relative; overflow: hidden; }
-    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at top right, rgba(22,163,74,0.12) 0%, transparent 50%), radial-gradient(ellipse at bottom left, rgba(59,130,246,0.08) 0%, transparent 50%); pointer-events: none; }
-    .hero .container { position: relative; z-index: 1; }
-    .hero-content { max-width: 720px; }
-    .hero-tag { display: inline-block; padding: 0.375rem 1rem; background: rgba(22,163,74,0.2); color: #86efac; border-radius: 100px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem; animation: fadeInUp 0.6s ease forwards; }
-    .hero h1 { font-size: clamp(2.25rem, 6vw, 3.5rem); line-height: 1.1; font-weight: 800; margin-bottom: 1.25rem; letter-spacing: -0.02em; animation: fadeInUp 0.6s ease 0.1s both; }
-    .hero h1 em { color: #86efac; font-style: normal; }
-    .hero-subtitle { font-size: clamp(1.125rem, 2.5vw, 1.375rem); color: #94a3b8; margin-bottom: 2rem; line-height: 1.6; animation: fadeInUp 0.6s ease 0.2s both; }
-    .hero-cta { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem; animation: fadeInUp 0.6s ease 0.3s both; }
-    .hero .trust-badges { justify-content: flex-start; animation: fadeInUp 0.6s ease 0.4s both; }
-    .hero .trust-badge { color: #94a3b8; }
-    .hero .trust-badge svg { color: #86efac; }
+    /* Hero – editorial full-viewport */
+    .hero {
+      background: #0a0a0a;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero .container {
+      width: 100%;
+      max-width: 100%;
+      padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-content {
+      text-align: center;
+      max-width: 100%;
+    }
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(80px, 15vw, 180px);
+      line-height: 0.9;
+      color: #3ddc84;
+      text-transform: uppercase;
+      margin: 0 0 1.5rem 0;
+      letter-spacing: 0.01em;
+    }
+    .hero-tagline {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 13px;
+      color: #ffffff;
+      letter-spacing: 0.1em;
+      text-transform: lowercase;
+      opacity: 0.7;
+    }
 
     /* Who its for */
     .who-for { background: var(--light); }
@@ -229,11 +313,17 @@
   <!-- Header -->
   <header class="site-header">
     <div class="container">
-      <div class="logo">Web<span>Sardegna</span></div>
-      <a href="https://wa.me/393331234567?text=Ciao%2C%20vorrei%20la%20bozza%20gratuita%20per%20il%20mio%20sito" class="btn btn-primary header-cta" target="_blank" rel="noopener" onclick="fbq('track','Contact'); gtag('event','conversion',{'send_to':'AW-XXXXXXXX/XXXXXXXX'});">
-        <svg class="icon-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Scrivimi su WhatsApp
-      </a>
+      <div class="logo">WebSardegna</div>
+      <nav class="header-nav">
+        <a href="#attivita">destinazioni</a>
+        <a href="#soluzione">esperienze</a>
+        <a href="#come-funziona">guide</a>
+        <a href="#contatto">contatti</a>
+      </nav>
+      <div class="header-right">
+        <a href="#contatto">email</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener">ig</a>
+      </div>
     </div>
   </header>
 
@@ -241,23 +331,8 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <span class="hero-tag">Sviluppatore Web Freelance &middot; Sardegna</span>
-        <h1>Il tuo business in Sardegna merita un sito che <em>porta clienti</em>.</h1>
-        <p class="hero-subtitle">
-          Siti web su misura per qualsiasi attivita locale. <strong>Piu contatti, piu clienti, piu controllo.</strong> Nessun template. Nessun anticipo. Bozza gratuita in 48 ore.
-        </p>
-        <div class="hero-cta">
-          <a href="https://wa.me/393331234567?text=Ciao%2C%20vorrei%20la%20bozza%20gratuita%20per%20il%20mio%20sito" class="btn btn-primary btn-lg" target="_blank" rel="noopener" onclick="fbq('track','Contact'); gtag('event','conversion',{'send_to':'AW-XXXXXXXX/XXXXXXXX'});">
-            <svg class="icon-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Richiedi la tua bozza gratuita su WhatsApp
-          </a>
-          <a href="#progetti" class="btn btn-ghost btn-lg">Guarda siti realizzati</a>
-        </div>
-        <div class="trust-badges">
-          <div class="trust-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Bozza gratuita in 48 ore</div>
-          <div class="trust-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Nessun anticipo</div>
-          <div class="trust-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Senza impegno</div>
-        </div>
+        <h1>la<br>sardegna<br>che non<br>trovi<br>online</h1>
+        <p class="hero-tagline">portale turistico indipendente &middot; sardegna</p>
       </div>
     </div>
   </section>
