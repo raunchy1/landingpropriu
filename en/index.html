@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Applicazioni Custom per Aziende | Software su Misura, AI, Mobile</title>
-  <meta name="description" content="Sviluppiamo web app, applicazioni mobile, automazioni AI e MVP per aziende. Software su misura che risolve problemi reali, consegnato velocemente.">
-  <link rel="canonical" href="https://websardegna.life/">
-  <link rel="alternate" hreflang="en" href="https://websardegna.life/en/">
+  <title>Custom Apps for Business | Web Apps, AI Automation, Mobile</title>
+  <meta name="description" content="We build custom web apps, mobile applications, AI automation and rapid MVPs for businesses. Tailored software that solves real problems, delivered fast.">
+  <link rel="canonical" href="https://websardegna.life/en/">
   <link rel="alternate" hreflang="it" href="https://websardegna.life/">
+  <link rel="alternate" hreflang="en" href="https://websardegna.life/en/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -40,7 +40,6 @@
 
     .container { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
 
-    /* NAV */
     .nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       background: rgba(7,13,26,0.85);
@@ -52,19 +51,10 @@
       display: flex; align-items: center; justify-content: space-between;
       height: 60px;
     }
-    .nav-logo {
-      font-size: 15px; font-weight: 700; color: var(--white);
-      letter-spacing: -0.01em;
-    }
+    .nav-logo { font-size: 15px; font-weight: 700; color: var(--white); letter-spacing: -0.01em; }
     .nav-logo span { color: var(--accent); }
-    .nav-links {
-      display: flex; align-items: center; gap: 2rem;
-      list-style: none;
-    }
-    .nav-links a {
-      font-size: 13px; color: var(--muted); font-weight: 500;
-      transition: color 0.15s;
-    }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 13px; color: var(--muted); font-weight: 500; transition: color 0.15s; }
     .nav-links a:hover { color: var(--white); }
     .nav-right { display: flex; align-items: center; gap: 1rem; }
     .lang-switch {
@@ -79,11 +69,8 @@
       border-radius: 8px; transition: opacity 0.15s;
     }
     .nav-cta:hover { opacity: 0.85; }
-    @media(max-width:768px) {
-      .nav-links { display: none; }
-    }
+    @media(max-width:768px) { .nav-links { display: none; } }
 
-    /* HERO */
     .hero {
       min-height: 100vh;
       display: flex; align-items: center;
@@ -116,10 +103,7 @@
       margin-bottom: 1.25rem;
     }
     .hero h1 em { color: var(--accent); font-style: normal; }
-    .hero-sub {
-      font-size: 1.0625rem; color: var(--muted); line-height: 1.7;
-      margin-bottom: 2rem; max-width: 480px;
-    }
+    .hero-sub { font-size: 1.0625rem; color: var(--muted); line-height: 1.7; margin-bottom: 2rem; max-width: 480px; }
     .hero-actions { display: flex; gap: 0.875rem; flex-wrap: wrap; }
     .btn-primary {
       display: inline-flex; align-items: center; gap: 0.5rem;
@@ -135,16 +119,12 @@
       border-radius: 10px; transition: all 0.15s;
     }
     .btn-outline:hover { border-color: rgba(255,255,255,0.2); color: var(--white); }
-    .hero-visual {
-      display: flex; flex-direction: column; gap: 0.75rem;
-    }
+    .hero-visual { display: flex; flex-direction: column; gap: 0.75rem; }
     .code-card {
       background: var(--surface); border: 1px solid var(--border);
       border-radius: 14px; padding: 1.25rem 1.5rem;
     }
-    .code-card-header {
-      display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.875rem;
-    }
+    .code-card-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.875rem; }
     .dot { width: 10px; height: 10px; border-radius: 50%; }
     .dot-r { background: #ff5f57; }
     .dot-y { background: #ffbd2e; }
@@ -162,21 +142,8 @@
     .stat-val { font-size: 1.5rem; font-weight: 700; color: var(--white); }
     .stat-val span { color: var(--accent); }
     .stat-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.2rem; }
-    @media(max-width:768px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-      .hero-visual { display: none; }
-    }
+    @media(max-width:768px) { .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; } .hero-visual { display: none; } }
 
-    /* LOGOS */
-    .logos { padding: 2.5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .logos-inner { display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; }
-    .logos p { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.25rem; text-align: center; }
-    .logo-tag {
-      font-size: 13px; font-weight: 600; color: var(--muted);
-      opacity: 0.6; letter-spacing: 0.03em;
-    }
-
-    /* SERVICES */
     .services { padding: 6rem 0; }
     .section-label {
       font-size: 11px; font-weight: 700; color: var(--accent);
@@ -187,14 +154,9 @@
       font-weight: 800; color: var(--white); letter-spacing: -0.02em;
       line-height: 1.15; margin-bottom: 0.875rem;
     }
-    .section-sub {
-      font-size: 1.0625rem; color: var(--muted); max-width: 520px;
-      line-height: 1.7;
-    }
+    .section-sub { font-size: 1.0625rem; color: var(--muted); max-width: 520px; line-height: 1.7; }
     .section-header { margin-bottom: 3.5rem; }
-    .services-grid {
-      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem;
-    }
+    .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
     @media(max-width:640px) { .services-grid { grid-template-columns: 1fr; } }
     .service-card {
       background: var(--surface); border: 1px solid var(--border);
@@ -208,10 +170,7 @@
       display: flex; align-items: center; justify-content: center;
       margin-bottom: 1.25rem; font-size: 22px;
     }
-    .service-card h3 {
-      font-size: 1.1rem; font-weight: 700; color: var(--white);
-      margin-bottom: 0.5rem; letter-spacing: -0.01em;
-    }
+    .service-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; letter-spacing: -0.01em; }
     .service-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
     .service-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
     .tag {
@@ -220,22 +179,14 @@
       border-radius: 100px; padding: 0.2rem 0.65rem; color: var(--muted);
     }
 
-    /* PROCESS */
     .process { padding: 6rem 0; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
     @media(max-width:640px) { .process-grid { grid-template-columns: 1fr; } }
     .process-step { position: relative; padding-left: 1.25rem; }
-    .step-num {
-      font-size: 11px; font-weight: 700; color: var(--accent);
-      text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;
-    }
-    .process-step h3 {
-      font-size: 1.05rem; font-weight: 700; color: var(--white);
-      margin-bottom: 0.5rem;
-    }
+    .step-num { font-size: 11px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
+    .process-step h3 { font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
     .process-step p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
 
-    /* WHY */
     .why { padding: 6rem 0; }
     .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
     @media(max-width:768px) { .why-grid { grid-template-columns: 1fr; } }
@@ -260,41 +211,23 @@
     .tl-icon { font-size: 18px; }
     .tl-label { font-size: 13px; font-weight: 600; color: var(--white); }
     .tl-time { font-size: 11px; color: var(--muted); margin-top: 0.1rem; }
-    .tl-badge {
-      margin-left: auto; font-size: 11px; font-weight: 600;
-      padding: 0.2rem 0.6rem; border-radius: 100px;
-    }
+    .tl-badge { margin-left: auto; font-size: 11px; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 100px; }
     .badge-done { background: rgba(34,197,94,0.15); color: #4ade80; }
     .badge-prog { background: rgba(99,102,241,0.15); color: #a5b4fc; }
     .badge-plan { background: rgba(255,255,255,0.06); color: var(--muted); }
 
-    /* CTA */
     .cta-section {
       padding: 6rem 0;
       background: linear-gradient(135deg, var(--surface) 0%, var(--bg) 100%);
       border-top: 1px solid var(--border); text-align: center;
     }
-    .cta-section h2 {
-      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-      font-weight: 800; color: var(--white); letter-spacing: -0.02em;
-      margin-bottom: 1rem;
-    }
+    .cta-section h2 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 800; color: var(--white); letter-spacing: -0.02em; margin-bottom: 1rem; }
     .cta-section p { font-size: 1.0625rem; color: var(--muted); margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto; }
     .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
     .btn-lg { padding: 0.875rem 2rem; font-size: 15px; }
-    .guarantee {
-      display: flex; align-items: center; justify-content: center;
-      gap: 0.5rem; margin-top: 1.5rem;
-      font-size: 13px; color: var(--muted);
-    }
+    .guarantee { display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.5rem; font-size: 13px; color: var(--muted); }
 
-    /* FOOTER */
-    footer {
-      padding: 2rem 0;
-      border-top: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: space-between;
-      font-size: 13px; color: var(--muted);
-    }
+    footer { padding: 2rem 0; border-top: 1px solid var(--border); font-size: 13px; color: var(--muted); }
     footer a { color: var(--muted); transition: color 0.15s; }
     footer a:hover { color: var(--white); }
     .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
@@ -307,14 +240,14 @@
     <div class="nav-inner">
       <div class="nav-logo">app<span>craft</span></div>
       <ul class="nav-links">
-        <li><a href="#servizi">Servizi</a></li>
-        <li><a href="#processo">Come lavoriamo</a></li>
-        <li><a href="#perche">Perché noi</a></li>
-        <li><a href="#contatti">Contatti</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">How we work</a></li>
+        <li><a href="#why">Why us</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav-right">
-        <a href="/en/" class="lang-switch">EN</a>
-        <a href="#contatti" class="nav-cta">Parliamone →</a>
+        <a href="/" class="lang-switch">IT</a>
+        <a href="#contact" class="nav-cta">Let's talk →</a>
       </div>
     </div>
   </nav>
@@ -323,14 +256,14 @@
   <section class="hero">
     <div class="hero-inner">
       <div>
-        <div class="hero-badge">⚡ Software su misura</div>
-        <h1>Costruiamo app che <em>risolvono</em> problemi reali</h1>
+        <div class="hero-badge">⚡ Custom software</div>
+        <h1>We build apps that <em>actually solve</em> business problems</h1>
         <p class="hero-sub">
-          Web app, automazioni AI, app mobile e MVP veloci. Niente soluzioni generiche — sviluppiamo solo ciò che serve alla tua azienda.
+          Web apps, AI automation, mobile apps and rapid MVPs. No generic solutions — we engineer software around your specific challenge.
         </p>
         <div class="hero-actions">
-          <a href="#contatti" class="btn-primary">Parla con noi →</a>
-          <a href="#servizi" class="btn-outline">Vedi i servizi</a>
+          <a href="#contact" class="btn-primary">Talk to us →</a>
+          <a href="#services" class="btn-outline">See services</a>
         </div>
       </div>
       <div class="hero-visual">
@@ -341,27 +274,27 @@
             <div class="dot dot-g"></div>
           </div>
           <div class="code-line"><span class="kw">const</span> app = <span class="fn">buildCustomApp</span>({</div>
-          <div class="code-line">&nbsp;&nbsp;client: <span class="str">"La tua azienda"</span>,</div>
+          <div class="code-line">&nbsp;&nbsp;client: <span class="str">"Your business"</span>,</div>
           <div class="code-line">&nbsp;&nbsp;stack: [<span class="str">"AI"</span>, <span class="str">"Web"</span>, <span class="str">"Mobile"</span>],</div>
-          <div class="code-line">&nbsp;&nbsp;delivery: <span class="num">14</span>, <span class="kw">// giorni</span></div>
+          <div class="code-line">&nbsp;&nbsp;delivery: <span class="num">14</span>, <span class="kw">// days</span></div>
           <div class="code-line">});</div>
         </div>
         <div class="stat-row">
           <div class="stat-card">
-            <div class="stat-val">14<span>gg</span></div>
-            <div class="stat-label">MVP consegnato</div>
+            <div class="stat-val">14<span>d</span></div>
+            <div class="stat-label">MVP delivered</div>
           </div>
           <div class="stat-card">
             <div class="stat-val">100<span>%</span></div>
-            <div class="stat-label">Custom, nessun template</div>
+            <div class="stat-label">Custom, no templates</div>
           </div>
           <div class="stat-card">
             <div class="stat-val">AI<span>+</span></div>
-            <div class="stat-label">Integrazione nativa</div>
+            <div class="stat-label">Native integration</div>
           </div>
           <div class="stat-card">
             <div class="stat-val">€0</div>
-            <div class="stat-label">Anticipo richiesto</div>
+            <div class="stat-label">Upfront cost</div>
           </div>
         </div>
       </div>
@@ -369,43 +302,43 @@
   </section>
 
   <!-- SERVICES -->
-  <section class="services" id="servizi">
+  <section class="services" id="services">
     <div class="container">
       <div class="section-header">
-        <div class="section-label">Cosa costruiamo</div>
-        <h2 class="section-title">Soluzioni digitali per ogni esigenza aziendale</h2>
-        <p class="section-sub">Ogni progetto è progettato intorno al problema specifico del cliente — non adattiamo template preesistenti.</p>
+        <div class="section-label">What we build</div>
+        <h2 class="section-title">Digital solutions for every business need</h2>
+        <p class="section-sub">Every project is engineered around the client's specific problem — we never force-fit a pre-existing template.</p>
       </div>
       <div class="services-grid">
 
         <div class="service-card">
           <div class="service-icon">🖥️</div>
-          <h3>Web App Custom</h3>
-          <p>Portali interni, dashboard operative, CRM su misura, sistemi di gestione. Applicazioni web complete che automatizzano i processi della tua azienda e scalano con te.</p>
+          <h3>Custom Web Apps</h3>
+          <p>Internal portals, operational dashboards, bespoke CRMs, management systems. Full-stack web applications that automate your business processes and scale with you.</p>
           <div class="service-tags">
             <span class="tag">React / Next.js</span>
-            <span class="tag">Dashboard</span>
+            <span class="tag">Dashboards</span>
             <span class="tag">CRM</span>
-            <span class="tag">Portali</span>
+            <span class="tag">Portals</span>
           </div>
         </div>
 
         <div class="service-card">
           <div class="service-icon">🤖</div>
-          <h3>Automazioni & AI</h3>
-          <p>Chatbot intelligenti, elaborazione documenti, workflow automatizzati, integrazione di modelli AI nelle operazioni quotidiane. Riduci il lavoro manuale, aumenta l'efficienza.</p>
+          <h3>AI & Automation</h3>
+          <p>Intelligent chatbots, document processing, automated workflows, AI model integration into daily operations. Cut manual work, boost efficiency where it matters most.</p>
           <div class="service-tags">
             <span class="tag">Claude / GPT</span>
-            <span class="tag">Chatbot</span>
-            <span class="tag">Workflow</span>
+            <span class="tag">Chatbots</span>
+            <span class="tag">Workflows</span>
             <span class="tag">OCR / NLP</span>
           </div>
         </div>
 
         <div class="service-card">
           <div class="service-icon">📱</div>
-          <h3>App Mobile</h3>
-          <p>Applicazioni iOS e Android native o cross-platform. Dalla UX alla pubblicazione sugli store — sviluppiamo app mobili che i tuoi utenti usano davvero.</p>
+          <h3>Mobile Apps</h3>
+          <p>Native or cross-platform iOS and Android applications. From UX to App Store release — we build mobile apps your users will actually open.</p>
           <div class="service-tags">
             <span class="tag">React Native</span>
             <span class="tag">iOS & Android</span>
@@ -416,11 +349,11 @@
 
         <div class="service-card">
           <div class="service-icon">🚀</div>
-          <h3>MVP in 14 Giorni</h3>
-          <p>Hai un'idea e vuoi validarla velocemente? Costruiamo un prodotto funzionante in tempi record. Niente feature superflue — solo ciò che serve per testare il mercato.</p>
+          <h3>MVP in 14 Days</h3>
+          <p>Have an idea and need to validate it fast? We ship a working product in record time. No superfluous features — only what's needed to test the market and learn.</p>
           <div class="service-tags">
             <span class="tag">Rapid prototyping</span>
-            <span class="tag">Startup</span>
+            <span class="tag">Startups</span>
             <span class="tag">Lean build</span>
             <span class="tag">Launch-ready</span>
           </div>
@@ -431,112 +364,112 @@
   </section>
 
   <!-- PROCESS -->
-  <section class="process" id="processo">
+  <section class="process" id="process">
     <div class="container">
       <div class="section-header">
-        <div class="section-label">Come lavoriamo</div>
-        <h2 class="section-title">Dal problema al prodotto, senza perdere tempo</h2>
-        <p class="section-sub">Un processo diretto in tre fasi. Nessuna burocrazia, nessun ciclo interminabile di approvazioni.</p>
+        <div class="section-label">How we work</div>
+        <h2 class="section-title">From problem to product, without wasting time</h2>
+        <p class="section-sub">A straight three-phase process. No bureaucracy, no endless approval cycles.</p>
       </div>
       <div class="process-grid">
         <div class="process-step">
-          <div class="step-num">01 — Analisi</div>
-          <h3>Capiamo il problema</h3>
-          <p>Prima call gratuita per capire esattamente cosa stai cercando di risolvere. Niente brief infiniti — usciamo con requisiti chiari in 1 ora.</p>
+          <div class="step-num">01 — Discovery</div>
+          <h3>We understand the problem</h3>
+          <p>Free first call to understand exactly what you're trying to solve. No endless briefs — we leave with clear requirements in under an hour.</p>
         </div>
         <div class="process-step">
           <div class="step-num">02 — Build</div>
-          <h3>Costruiamo veloce</h3>
-          <p>Cicli di sviluppo brevi con feedback continuo. Vedi il prodotto crescere settimana per settimana, non scopri tutto solo alla fine.</p>
+          <h3>We ship fast</h3>
+          <p>Short development cycles with continuous feedback. You see the product grow week by week — not just at the very end.</p>
         </div>
         <div class="process-step">
           <div class="step-num">03 — Deploy</div>
-          <h3>Online e operativo</h3>
-          <p>Rilascio, formazione del team e supporto post-lancio inclusi. Non sparciamo dopo la consegna — rimaniamo disponibili.</p>
+          <h3>Live and operational</h3>
+          <p>Launch, team training and post-launch support included. We don't disappear after delivery — we stay available.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- WHY -->
-  <section class="why" id="perche">
+  <section class="why" id="why">
     <div class="container">
       <div class="why-grid">
         <div>
-          <div class="section-label">Perché sceglierci</div>
-          <h2 class="section-title">Non siamo una grande agenzia. È un vantaggio.</h2>
+          <div class="section-label">Why choose us</div>
+          <h2 class="section-title">We're not a big agency. That's the point.</h2>
           <div class="why-list">
             <div class="why-item">
               <div class="why-icon">⚡</div>
               <div>
-                <h4>Velocità reale</h4>
-                <p>Nessun layer di account manager e project manager. Parli direttamente con chi costruisce il tuo prodotto.</p>
+                <h4>Real speed</h4>
+                <p>No layers of account managers and project managers. You talk directly to the people building your product.</p>
               </div>
             </div>
             <div class="why-item">
               <div class="why-icon">🎯</div>
               <div>
-                <h4>Soluzioni su misura</h4>
-                <p>Non adattiamo la tua azienda a un template. Progettiamo la soluzione attorno al tuo problema specifico.</p>
+                <h4>Truly tailored</h4>
+                <p>We don't fit your company into a template. We design the solution around your specific problem.</p>
               </div>
             </div>
             <div class="why-item">
               <div class="why-icon">🔒</div>
               <div>
-                <h4>Rischio zero in partenza</h4>
-                <p>Nessun anticipo. Paghi solo quando hai in mano qualcosa che funziona e ti soddisfa.</p>
+                <h4>Zero upfront risk</h4>
+                <p>No deposit. You pay only when you have something that works and satisfies you.</p>
               </div>
             </div>
             <div class="why-item">
               <div class="why-icon">📈</div>
               <div>
-                <h4>Pensato per scalare</h4>
-                <p>Architetture pulite che reggono la crescita. Non ti ritroverai a riscrivere tutto tra 6 mesi.</p>
+                <h4>Built to scale</h4>
+                <p>Clean architectures that hold up under growth. You won't be rewriting everything in 6 months.</p>
               </div>
             </div>
           </div>
         </div>
         <div class="why-visual">
-          <div style="font-size:13px;font-weight:600;color:var(--muted);margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.08em;">Progetto tipo — 3 settimane</div>
+          <div style="font-size:13px;font-weight:600;color:var(--muted);margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.08em;">Typical project — 3 weeks</div>
           <div class="timeline-item">
             <div class="tl-icon">📋</div>
             <div>
-              <div class="tl-label">Analisi requisiti</div>
-              <div class="tl-time">Giorno 1–2</div>
+              <div class="tl-label">Requirements analysis</div>
+              <div class="tl-time">Day 1–2</div>
             </div>
             <div class="tl-badge badge-done">✓ Done</div>
           </div>
           <div class="timeline-item">
             <div class="tl-icon">🎨</div>
             <div>
-              <div class="tl-label">Design & prototipo</div>
-              <div class="tl-time">Giorno 3–5</div>
+              <div class="tl-label">Design & prototype</div>
+              <div class="tl-time">Day 3–5</div>
             </div>
             <div class="tl-badge badge-done">✓ Done</div>
           </div>
           <div class="timeline-item">
             <div class="tl-icon">⚙️</div>
             <div>
-              <div class="tl-label">Sviluppo core</div>
-              <div class="tl-time">Giorno 6–14</div>
+              <div class="tl-label">Core development</div>
+              <div class="tl-time">Day 6–14</div>
             </div>
-            <div class="tl-badge badge-prog">In corso</div>
+            <div class="tl-badge badge-prog">In progress</div>
           </div>
           <div class="timeline-item">
             <div class="tl-icon">🧪</div>
             <div>
-              <div class="tl-label">Test & revisioni</div>
-              <div class="tl-time">Giorno 15–18</div>
+              <div class="tl-label">Testing & revisions</div>
+              <div class="tl-time">Day 15–18</div>
             </div>
-            <div class="tl-badge badge-plan">Prossimo</div>
+            <div class="tl-badge badge-plan">Up next</div>
           </div>
           <div class="timeline-item">
             <div class="tl-icon">🚀</div>
             <div>
-              <div class="tl-label">Deploy & lancio</div>
-              <div class="tl-time">Giorno 19–21</div>
+              <div class="tl-label">Deploy & launch</div>
+              <div class="tl-time">Day 19–21</div>
             </div>
-            <div class="tl-badge badge-plan">Prossimo</div>
+            <div class="tl-badge badge-plan">Up next</div>
           </div>
         </div>
       </div>
@@ -544,16 +477,16 @@
   </section>
 
   <!-- CTA -->
-  <section class="cta-section" id="contatti">
+  <section class="cta-section" id="contact">
     <div class="container">
-      <h2>Hai un problema da risolvere?</h2>
-      <p>Raccontaci cosa stai cercando di fare. Prima call gratuita, nessun impegno, risposta entro 24 ore.</p>
+      <h2>Have a problem to solve?</h2>
+      <p>Tell us what you're trying to do. Free first call, no commitment, reply within 24 hours.</p>
       <div class="cta-actions">
-        <a href="mailto:ciao@websardegna.life" class="btn-primary btn-lg">Scrivici →</a>
+        <a href="mailto:hello@websardegna.life" class="btn-primary btn-lg">Email us →</a>
         <a href="https://wa.me/393331234567" class="btn-outline btn-lg" target="_blank" rel="noopener">WhatsApp</a>
       </div>
       <div class="guarantee">
-        <span>✓</span> Nessun anticipo &nbsp;·&nbsp; <span>✓</span> Prima call gratuita &nbsp;·&nbsp; <span>✓</span> Risposta in 24h
+        <span>✓</span> No upfront cost &nbsp;·&nbsp; <span>✓</span> Free first call &nbsp;·&nbsp; <span>✓</span> Reply within 24h
       </div>
     </div>
   </section>
@@ -562,10 +495,10 @@
   <footer>
     <div class="container">
       <div class="footer-inner">
-        <span>© 2025 AppCraft · Software su misura per aziende</span>
+        <span>© 2025 AppCraft · Custom software for business</span>
         <div style="display:flex;gap:1.5rem;">
-          <a href="/en/">English</a>
-          <a href="mailto:ciao@websardegna.life">Email</a>
+          <a href="/">Italiano</a>
+          <a href="mailto:hello@websardegna.life">Email</a>
           <a href="https://wa.me/393331234567" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
