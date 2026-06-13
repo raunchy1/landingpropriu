@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "cta": "free mockup"
+  },
+  "hero": {
+    "eyebrow": "// web designer — sardinia, italy",
+    "greeting": "hey.",
+    "name": "i'm cristian.",
+    "role": "i build websites.",
+    "body1": "developer and designer with real experience.",
+    "body2": "i put ",
+    "bold1": "maximum effort and care",
+    "body3": " into every project —",
+    "body4": "because your website should ",
+    "bold2": "bring you customers",
+    "body5": ",",
+    "body6": "not just look pretty.",
+    "personal1": "every site is a unique project.",
+    "personal2": "we talk directly, no middlemen.",
+    "ctaPrimary": "get a free mockup",
+    "ctaSecondary": "see my work ↓",
+    "trust1": "mockup in 48h",
+    "trust2": "no upfront cost",
+    "trust3": "no commitment",
+    "waLink": "https://wa.me/393501998569?text=Hey%2C%20I%27d%20like%20a%20free%20mockup%20for%20my%20website"
+  },
+  "marquee": {
+    "items": "restaurants · hotels · shops · services · real estate · coaches · freelancers · e-commerce · local business"
+  },
+  "services": {
+    "eyebrow": "// i work with any type of business",
+    "title1": "your website.",
+    "title2": "built your way.",
+    "name1": "local businesses", "tag1": "more customers from the web",
+    "name2": "restaurants & cafes", "tag2": "digital menu + bookings",
+    "name3": "hotels & rentals", "tag3": "direct reservations",
+    "name4": "freelancers & coaches", "tag4": "serious online presence",
+    "name5": "gyms & wellness", "tag5": "bookings + contacts",
+    "name6": "shops & artisans", "tag6": "e-commerce + showcase"
+  },
+  "problems": {
+    "eyebrow": "// why you need a website",
+    "title1": "your customer",
+    "title2": "is searching for you online.",
+    "title3": "right now.",
+    "body": "if you don't have a proper website, they're booking with someone else.",
+    "bodyStrong": "no excuses — you need to be findable",
+    "card1Title": "you're invisible online",
+    "card1Body": "customers search on google. if you're not there, you don't exist.",
+    "card2Title": "customers don't understand what you do",
+    "card2Body": "outdated site, confusing info, bad photos. a confused customer doesn't book.",
+    "card3Title": "no system for contacts",
+    "card3Body": "the customer has to hunt for your number. every friction point is a lost booking."
+  },
+  "solutions": {
+    "eyebrow": "// what you get",
+    "title1": "a website that works for you.",
+    "title2": "24/7.",
+    "item1Title": "custom design",
+    "item1Body": "every site is designed from scratch for your business. no cookie-cutter templates that look like your competitor's.",
+    "item2Title": "direct contacts",
+    "item2Body": "contact forms, whatsapp, online bookings. your customer doesn't have to search for anything.",
+    "item3Title": "mobile-first",
+    "item3Body": "70% of your customers search from their phone. your site will be fast, clean, and easy to use."
+  },
+  "process": {
+    "eyebrow": "// how it works",
+    "title1": "three steps.",
+    "title2": "your site is live.",
+    "step1Title": "send me a message",
+    "step1Body": "tell me about your business in 5 minutes. i'll ask the right questions.",
+    "step2Title": "get a mockup in 48 hours",
+    "step2Body": "see the design before you decide. don't like it? no problem at all.",
+    "step3Title": "your site goes live",
+    "step3Body": "i build everything, set up contacts and forms. you approve. it's online and working."
+  },
+  "projects": {
+    "eyebrow": "// real projects, already live",
+    "title1": "sites that work.",
+    "title2": "not demos.",
+    "cta": "visit site →",
+    "tag1": "charter & experiences",
+    "desc1": "trilingual website for boat rental with integrated booking calendar.",
+    "tag2": "luxury b&b",
+    "desc2": "elegant website for luxury b&b with direct booking and immersive gallery.",
+    "tag3": "vacation rental",
+    "desc3": "complete website for vacation rental with clean design and direct contacts."
+  },
+  "pricing": {
+    "eyebrow": "// try without risk",
+    "price": "$550.",
+    "subtitle": "everything included.",
+    "tagline": "you only pay if you love it.",
+    "item1": "custom mockup delivered in 48 hours",
+    "item2": "zero startup costs",
+    "item3": "payment only if you proceed",
+    "item4": "site live within days",
+    "item5": "no upfront payment",
+    "waLink": "https://wa.me/393501998569?text=Hey%2C%20I%27d%20like%20a%20free%20mockup%20for%20my%20website"
+  },
+  "faq": {
+    "eyebrow": "// frequently asked questions",
+    "title1": "all clear.",
+    "title2": "if not, message me.",
+    "q1": "how much does it cost?",
+    "a1": "flat rate: <strong>$550</strong> for a complete custom website. no deposit: you only pay when the site is done and you're happy with it.",
+    "q2": "how long does it take?",
+    "a2": "the <strong>mockup arrives in 48 hours</strong>. once approved, your site is live within days.",
+    "q3": "does this work for my business?",
+    "a3": "if you run a <strong>restaurant, shop, studio, or any local business</strong> — yes. send me a message and we'll figure it out together."
+  },
+  "finalCta": {
+    "eyebrow": "// next step",
+    "title1": "let's talk.",
+    "title2": "no strings attached.",
+    "waLabel": "whatsapp — i reply personally",
+    "waNote1": "free mockup in 48h",
+    "waNote2": "like it? we continue together",
+    "waNote3": "zero commitments, zero deposits",
+    "waLink": "https://wa.me/393501998569?text=Hey%2C%20I%27d%20like%20a%20free%20mockup%20for%20my%20website"
+  },
+  "footer": {
+    "location": "sardinia, 2026"
+  },
+  "mobileBar": {
+    "cta": "get free mockup",
+    "call": "call",
+    "waLink": "https://wa.me/393501998569?text=Hey%2C%20I%27d%20like%20a%20free%20mockup%20for%20my%20website"
+  }
+}

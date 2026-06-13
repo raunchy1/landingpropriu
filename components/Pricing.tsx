@@ -1,17 +1,20 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
 import ScrollReveal from './ScrollReveal'
 
-const WA_LINK =
-  'https://wa.me/393501998569?text=Ciao%2C%20vorrei%20la%20bozza%20gratuita%20per%20il%20mio%20sito'
-
-const features = [
-  'bozza grafica in 48 ore',
-  'zero costi di avvio',
-  'pagamento solo se procedi',
-  'sito online in pochi giorni',
-  'nessun pagamento anticipato',
-]
-
 export default function Pricing() {
+  const t = useTranslations('pricing')
+  const tHero = useTranslations('hero')
+
+  const features = [
+    t('item1'),
+    t('item2'),
+    t('item3'),
+    t('item4'),
+    t('item5'),
+  ]
+
   return (
     <section
       className="py-[100px] md:py-[160px]"
@@ -28,7 +31,7 @@ export default function Pricing() {
               fontWeight: 500,
             }}
           >
-            // prova senza rischio
+            {t('eyebrow')}
           </p>
 
           {/* headline */}
@@ -40,8 +43,8 @@ export default function Pricing() {
               fontWeight: 800,
             }}
           >
-            <span style={{ color: 'var(--fg)' }}>500€.</span>{' '}
-            <span style={{ color: 'var(--muted)' }}>tutto incluso.</span>
+            <span style={{ color: 'var(--fg)' }}>{t('price')}</span>{' '}
+            <span style={{ color: 'var(--muted)' }}>{t('subtitle')}</span>
           </h2>
 
           {/* subtitle */}
@@ -54,7 +57,7 @@ export default function Pricing() {
               lineHeight: 1.7,
             }}
           >
-            paghi solo se ti piace.
+            {t('tagline')}
           </p>
 
           {/* feature list */}
@@ -89,7 +92,7 @@ export default function Pricing() {
           {/* WhatsApp CTA */}
           <div className="reveal-child">
             <a
-              href={WA_LINK}
+              href={t('waLink')}
               target="_blank"
               rel="noopener"
               className="cta-primary inline-flex items-center gap-3 rounded-lg px-7 py-3.5 text-[15px] font-medium transition-all duration-300"
@@ -103,7 +106,7 @@ export default function Pricing() {
                 className="inline-block h-2 w-2 rounded-full"
                 style={{ background: 'var(--accent-green)' }}
               />
-              richiedi bozza gratuita
+              {tHero('ctaPrimary')}
             </a>
           </div>
         </ScrollReveal>

@@ -1,17 +1,11 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import ScrollReveal from './ScrollReveal'
 
-const WA_LINK =
-  'https://wa.me/393501998569?text=Ciao%2C%20vorrei%20la%20bozza%20gratuita%20per%20il%20mio%20sito'
-
-const NOTE_ITEMS = [
-  'bozza gratuita in 48h',
-  'ti piace? continuiamo insieme',
-  'zero vincoli, zero anticipi',
-]
-
 export default function FinalCTA() {
+  const t = useTranslations('finalCta')
+
   return (
     <section
       className="relative"
@@ -27,7 +21,7 @@ export default function FinalCTA() {
             className="reveal-child mb-5 text-[11px]"
             style={{ color: 'var(--muted)', fontFamily: 'var(--font-mono)' }}
           >
-            // il prossimo passo
+            {t('eyebrow')}
           </p>
 
           {/* headline */}
@@ -38,14 +32,14 @@ export default function FinalCTA() {
               letterSpacing: '-0.03em',
             }}
           >
-            <span style={{ color: 'var(--fg)' }}>parliamone.</span>
+            <span style={{ color: 'var(--fg)' }}>{t('title1')}</span>
             <br />
-            <span style={{ color: 'var(--muted)' }}>senza impegno.</span>
+            <span style={{ color: 'var(--muted)' }}>{t('title2')}</span>
           </h2>
 
           {/* whatsapp card */}
           <a
-            href={WA_LINK}
+            href={t('waLink')}
             target="_blank"
             rel="noopener"
             className="reveal-child block rounded-xl transition-all duration-300"
@@ -72,7 +66,7 @@ export default function FinalCTA() {
                 className="text-[13px]"
                 style={{ color: 'var(--muted)', fontFamily: 'var(--font-mono)' }}
               >
-                whatsapp — rispondo io, personalmente
+                {t('waLabel')}
               </span>
             </div>
 
@@ -90,14 +84,14 @@ export default function FinalCTA() {
 
             {/* note items */}
             <div className="flex flex-col gap-1.5">
-              {NOTE_ITEMS.map((item) => (
+              {[1, 2, 3].map((i) => (
                 <p
-                  key={item}
+                  key={i}
                   className="text-[12px]"
                   style={{ color: 'var(--muted)', fontFamily: 'var(--font-mono)' }}
                 >
                   <span style={{ color: 'var(--accent-green)' }}>→</span>{' '}
-                  {item}
+                  {t(`waNote${i}`)}
                 </p>
               ))}
             </div>

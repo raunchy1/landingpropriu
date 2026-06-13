@@ -1,11 +1,10 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-
-const WA_LINK =
-  'https://wa.me/393501998569?text=Ciao%2C%20vorrei%20la%20bozza%20gratuita%20per%20il%20mio%20sito'
+import { useTranslations } from 'next-intl'
 
 export default function MobileBar() {
+  const t = useTranslations('mobileBar')
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -41,7 +40,7 @@ export default function MobileBar() {
     >
       {/* whatsapp link */}
       <a
-        href={WA_LINK}
+        href={t('waLink')}
         target="_blank"
         rel="noopener"
         className="flex items-center gap-2.5 text-[13px] font-medium"
@@ -51,7 +50,7 @@ export default function MobileBar() {
           className="inline-block h-2 w-2 shrink-0 rounded-full"
           style={{ background: 'var(--accent-green)' }}
         />
-        richiedi bozza gratuita
+        {t('cta')}
       </a>
 
       {/* tel link */}
@@ -66,7 +65,7 @@ export default function MobileBar() {
           e.currentTarget.style.color = 'var(--muted)'
         }}
       >
-        chiama ↗
+        {t('call')} ↗
       </a>
     </div>
   )

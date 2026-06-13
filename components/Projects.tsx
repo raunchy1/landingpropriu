@@ -1,33 +1,38 @@
-import ScrollReveal from './ScrollReveal'
+'use client'
 
-const projects = [
-  {
-    name: 'cannigione experience',
-    location: 'cannigione, sardegna',
-    desc: 'sito trilingue per noleggio barca con calendario prenotazioni integrato.',
-    tag: 'charter & esperienze',
-    url: 'https://cannigionexperience.com',
-    img: '/img/projects/screenshot-cannigione.webp',
-  },
-  {
-    name: 'la suite n4',
-    location: 'alghero, sardegna',
-    desc: 'sito elegante per b&b di lusso con prenotazione diretta e galleria immersiva.',
-    tag: 'b&b di lusso',
-    url: 'https://bb-alghero.vercel.app',
-    img: '/img/projects/screenshot-sanpaolo.webp',
-  },
-  {
-    name: 'san paolo hideout',
-    location: 'roma',
-    desc: 'sito completo per casa vacanze con design pulito e contatti diretti.',
-    tag: 'casa vacanze',
-    url: 'https://sanpaolohideout.it',
-    img: '/img/projects/screenshot-villa-almare.webp',
-  },
-]
+import ScrollReveal from './ScrollReveal'
+import { useTranslations } from 'next-intl'
 
 export default function Projects() {
+  const t = useTranslations('projects')
+
+  const projects = [
+    {
+      name: 'cannigione experience',
+      location: 'cannigione, sardegna',
+      desc: t('desc1'),
+      tag: t('tag1'),
+      url: 'https://cannigionexperience.com',
+      img: '/img/projects/screenshot-cannigione.webp',
+    },
+    {
+      name: 'la suite n4',
+      location: 'alghero, sardegna',
+      desc: t('desc2'),
+      tag: t('tag2'),
+      url: 'https://bb-alghero.vercel.app',
+      img: '/img/projects/screenshot-sanpaolo.webp',
+    },
+    {
+      name: 'san paolo hideout',
+      location: 'roma',
+      desc: t('desc3'),
+      tag: t('tag3'),
+      url: 'https://sanpaolohideout.it',
+      img: '/img/projects/screenshot-villa-almare.webp',
+    },
+  ]
+
   return (
     <section
       id="progetti"
@@ -45,7 +50,7 @@ export default function Projects() {
               fontWeight: 500,
             }}
           >
-            // progetti reali, già online
+            {t('eyebrow')}
           </p>
 
           {/* headline */}
@@ -56,9 +61,9 @@ export default function Projects() {
               letterSpacing: '-0.03em',
             }}
           >
-            <span style={{ color: 'var(--fg)' }}>siti che funzionano.</span>
+            <span style={{ color: 'var(--fg)' }}>{t('title1')}</span>
             <br />
-            <span style={{ color: 'var(--muted)' }}>non demo.</span>
+            <span style={{ color: 'var(--muted)' }}>{t('title2')}</span>
           </h2>
         </ScrollReveal>
 
@@ -144,7 +149,7 @@ export default function Projects() {
                         color: 'var(--muted)',
                       }}
                     >
-                      visita il sito →
+                      {t('cta')} →
                     </span>
                   </div>
                 </div>

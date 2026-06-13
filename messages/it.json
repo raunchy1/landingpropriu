@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "cta": "bozza gratuita"
+  },
+  "hero": {
+    "eyebrow": "// web designer — sardegna, italia",
+    "greeting": "ciao.",
+    "name": "sono cristian.",
+    "role": "faccio siti web.",
+    "body1": "programmatore e designer con esperienza.",
+    "body2": "metto ",
+    "bold1": "massimo impegno e serietà",
+    "body3": " in ogni progetto —",
+    "body4": "perché il tuo sito deve ",
+    "bold2": "portarti clienti",
+    "body5": ",",
+    "body6": "non solo fare bella figura.",
+    "personal1": "ogni sito è un progetto unico.",
+    "personal2": "comunichiamo direttamente, senza intermediari.",
+    "ctaPrimary": "richiedi bozza gratuita",
+    "ctaSecondary": "guarda i progetti ↓",
+    "trust1": "bozza in 48h",
+    "trust2": "nessun anticipo",
+    "trust3": "senza impegno",
+    "waLink": "https://wa.me/393501998569?text=Ciao%2C%20vorrei%20la%20bozza%20gratuita%20per%20il%20mio%20sito"
+  },
+  "marquee": {
+    "items": "b&b · ristoranti · hotel · charter · case vacanza · artigianato · professionisti · e-commerce · tour"
+  },
+  "services": {
+    "eyebrow": "// lavoro con qualsiasi tipo di attività",
+    "title1": "il tuo sito.",
+    "title2": "come lo vuoi tu.",
+    "name1": "attività locali", "tag1": "più clienti dal web",
+    "name2": "turismo e hospitality", "tag2": "prenotazioni dirette",
+    "name3": "ristoranti e bar", "tag3": "menu digitale + contatti",
+    "name4": "professionisti", "tag4": "presenza online seria",
+    "name5": "palestre e benessere", "tag5": "booking + contatti",
+    "name6": "artigiani e negozi", "tag6": "e-commerce + vetrina"
+  },
+  "problems": {
+    "eyebrow": "// perché ti serve un sito",
+    "title1": "il tuo cliente",
+    "title2": "ti sta cercando online.",
+    "title3": "adesso.",
+    "body": "se non hai un sito fatto bene, sta prenotando da qualcun altro.",
+    "bodyStrong": "non servono scuse — servono contatti",
+    "card1Title": "non vieni trovato",
+    "card1Body": "i clienti cercano su google. se non sei lì, non esisti.",
+    "card2Title": "i clienti non capiscono cosa fai",
+    "card2Body": "sito vecchio, informazioni confuse. un cliente confuso non prenota.",
+    "card3Title": "nessun sistema per contatti",
+    "card3Body": "il cliente deve cercare il numero. ogni attrito è una prenotazione persa."
+  },
+  "solutions": {
+    "eyebrow": "// cosa otterrai",
+    "title1": "un sito che lavora per te.",
+    "title2": "24 ore su 24.",
+    "item1Title": "design su misura",
+    "item1Body": "ogni sito è progettato da zero per la tua attività. nessun template uguale a quello del concorrente.",
+    "item2Title": "contatti diretti",
+    "item2Body": "form contatto, whatsapp, prenotazioni online. il cliente non deve cercare nulla.",
+    "item3Title": "ottimizzato per mobile",
+    "item3Body": "il 70% dei clienti ti cerca dal telefono. il tuo sito sarà veloce e facile da usare."
+  },
+  "process": {
+    "eyebrow": "// come funziona",
+    "title1": "tre passaggi.",
+    "title2": "il tuo sito è online.",
+    "step1Title": "mi scrivi su whatsapp",
+    "step1Body": "mi racconti la tua attività in 5 min. non serve preparare niente, ti faccio io le domande giuste.",
+    "step2Title": "ricevi la bozza in 48 ore",
+    "step2Body": "vedi il design prima di decidere. non ti piace? nessun problema.",
+    "step3Title": "il sito è online",
+    "step3Body": "costruisco tutto, configuro i contatti. approvi e sei online."
+  },
+  "projects": {
+    "eyebrow": "// progetti reali, già online",
+    "title1": "siti che funzionano.",
+    "title2": "non demo.",
+    "cta": "visita il sito →",
+    "tag1": "charter & esperienze",
+    "desc1": "sito trilingue per noleggio barca con calendario prenotazioni integrato.",
+    "tag2": "b&b di lusso",
+    "desc2": "sito elegante per b&b di lusso con prenotazione diretta e galleria immersiva.",
+    "tag3": "casa vacanze",
+    "desc3": "sito completo per casa vacanze con design pulito e contatti diretti."
+  },
+  "pricing": {
+    "eyebrow": "// prova senza rischio",
+    "price": "500€.",
+    "subtitle": "tutto incluso.",
+    "tagline": "paghi solo se ti piace.",
+    "item1": "bozza grafica in 48 ore",
+    "item2": "zero costi di avvio",
+    "item3": "pagamento solo se procedi",
+    "item4": "sito online in pochi giorni",
+    "item5": "nessun pagamento anticipato",
+    "waLink": "https://wa.me/393501998569?text=Ciao%2C%20vorrei%20la%20bozza%20gratuita%20per%20il%20mio%20sito"
+  },
+  "faq": {
+    "eyebrow": "// domande frequenti",
+    "title1": "tutto chiaro.",
+    "title2": "se no, scrivimi.",
+    "q1": "quanto costa?",
+    "a1": "prezzo fisso: <strong>500€</strong> per un sito completo e su misura. <strong>nessun anticipo</strong>: paghi solo quando il sito è finito e ti piace.",
+    "q2": "quanto tempo ci vuole?",
+    "a2": "la <strong>bozza grafica arriva in 48 ore</strong>. una volta approvata, il sito è online in pochi giorni.",
+    "q3": "funziona per la mia attività?",
+    "a3": "se hai un <strong>ristorante, negozio, studio professionale, attività turistica o qualsiasi business locale</strong> in sardegna, sì. scrivimi e vediamo insieme."
+  },
+  "finalCta": {
+    "eyebrow": "// il prossimo passo",
+    "title1": "parliamone.",
+    "title2": "senza impegno.",
+    "waLabel": "whatsapp — rispondo io, personalmente",
+    "waNote1": "bozza gratuita in 48h",
+    "waNote2": "ti piace? continuiamo insieme",
+    "waNote3": "zero vincoli, zero anticipi",
+    "waLink": "https://wa.me/393501998569?text=Ciao%2C%20vorrei%20la%20bozza%20gratuita%20per%20il%20mio%20sito"
+  },
+  "footer": {
+    "location": "sardegna, 2026"
+  },
+  "mobileBar": {
+    "cta": "richiedi bozza gratuita",
+    "call": "chiama",
+    "waLink": "https://wa.me/393501998569?text=Ciao%2C%20vorrei%20la%20bozza%20gratuita%20per%20il%20mio%20sito"
+  }
+}

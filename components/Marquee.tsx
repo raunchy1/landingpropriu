@@ -1,9 +1,11 @@
 'use client'
 
-const ITEMS =
-  'b&b · ristoranti · hotel · charter · case vacanza · artigianato · professionisti · e-commerce · tour'
+import { useTranslations } from 'next-intl'
 
 export default function Marquee() {
+  const t = useTranslations('marquee')
+  const items = t('items')
+
   return (
     <div
       className="relative flex h-[48px] items-center overflow-hidden"
@@ -26,7 +28,7 @@ export default function Marquee() {
             letterSpacing: '0.04em',
           }}
         >
-          {ITEMS}
+          {items}
         </span>
         <span
           className="shrink-0 whitespace-nowrap px-6"
@@ -37,7 +39,7 @@ export default function Marquee() {
             letterSpacing: '0.04em',
           }}
         >
-          {ITEMS}
+          {items}
         </span>
         <span
           className="shrink-0 whitespace-nowrap px-6"
@@ -48,7 +50,7 @@ export default function Marquee() {
             letterSpacing: '0.04em',
           }}
         >
-          {ITEMS}
+          {items}
         </span>
         <span
           className="shrink-0 whitespace-nowrap px-6"
@@ -59,7 +61,7 @@ export default function Marquee() {
             letterSpacing: '0.04em',
           }}
         >
-          {ITEMS}
+          {items}
         </span>
       </div>
     </div>

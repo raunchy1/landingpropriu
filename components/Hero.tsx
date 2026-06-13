@@ -1,12 +1,10 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 
-const WA_LINK =
-  'https://wa.me/393501998569?text=Ciao%2C%20vorrei%20la%20bozza%20gratuita%20per%20il%20mio%20sito'
-
-function AnimatedCiao() {
-  const letters = ['c', 'i', 'a', 'o', '.']
+function AnimatedCiao({ text }: { text: string }) {
+  const letters = text.split('')
   const ref = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
@@ -40,6 +38,8 @@ function AnimatedCiao() {
 }
 
 export default function Hero() {
+  const t = useTranslations('hero')
+
   return (
     <section
       className="relative flex min-h-[100svh] items-center"
@@ -52,10 +52,10 @@ export default function Hero() {
           className="animate-rise delay-1 mb-5 font-mono text-[11px]"
           style={{ color: 'var(--muted)', fontFamily: 'var(--font-mono)' }}
         >
-          // web designer — sardegna, italia
+          {t('eyebrow')}
         </p>
 
-        {/* ciao. */}
+        {/* greeting */}
         <h1
           className="animate-rise delay-2 mb-4 font-extrabold leading-[0.95]"
           style={{
@@ -64,7 +64,7 @@ export default function Hero() {
             color: 'var(--fg)',
           }}
         >
-          <AnimatedCiao />
+          <AnimatedCiao text={t('greeting')} />
         </h1>
 
         {/* subtitle lines */}
@@ -77,7 +77,7 @@ export default function Hero() {
               color: 'var(--fg)',
             }}
           >
-            sono cristian.
+            {t('name')}
           </h2>
           <h2
             className="animate-rise delay-4 font-bold leading-[1.15]"
@@ -87,7 +87,7 @@ export default function Hero() {
               color: 'var(--muted)',
             }}
           >
-            faccio siti web.
+            {t('role')}
           </h2>
         </div>
 
@@ -96,17 +96,21 @@ export default function Hero() {
           className="animate-rise delay-5 mb-8 max-w-[480px] text-[17px] leading-[1.7]"
           style={{ color: 'var(--muted)' }}
         >
-          programmatore e designer con esperienza.
+          {t('body1')}
           <br />
-          metto massimo impegno e serietà in ogni progetto —
-          <br />
-          perché il tuo sito deve{' '}
+          {t('body2')}
           <strong style={{ color: 'var(--fg)', fontWeight: 600 }}>
-            portarti clienti
+            {t('bold1')}
           </strong>
-          ,
+          {t('body3')}
           <br />
-          non solo fare bella figura.
+          {t('body4')}
+          <strong style={{ color: 'var(--fg)', fontWeight: 600 }}>
+            {t('bold2')}
+          </strong>
+          {t('body5')}
+          <br />
+          {t('body6')}
         </p>
 
         {/* personal note */}
@@ -119,16 +123,16 @@ export default function Hero() {
             className="text-[11px] leading-[1.8]"
             style={{ color: 'var(--muted)', fontFamily: 'var(--font-mono)' }}
           >
-            ogni sito è un progetto unico.
+            {t('personal1')}
             <br />
-            comunichiamo direttamente, senza intermediari.
+            {t('personal2')}
           </p>
         </div>
 
         {/* CTAs */}
         <div className="animate-rise delay-7 mb-6 flex flex-wrap items-center gap-5">
           <a
-            href={WA_LINK}
+            href={t('waLink')}
             target="_blank"
             rel="noopener"
             className="cta-primary inline-flex items-center gap-3 rounded-lg px-7 py-3.5 text-[15px] font-medium transition-all duration-300"
@@ -142,7 +146,7 @@ export default function Hero() {
               className="inline-block h-2 w-2 rounded-full"
               style={{ background: 'var(--accent-green)' }}
             />
-            richiedi bozza gratuita
+            {t('ctaPrimary')}
           </a>
 
           <a
@@ -154,7 +158,7 @@ export default function Hero() {
               paddingBottom: 2,
             }}
           >
-            guarda i progetti ↓
+            {t('ctaSecondary')}
           </a>
         </div>
 
@@ -163,11 +167,11 @@ export default function Hero() {
           className="animate-rise delay-8 flex flex-wrap gap-3 text-[11px]"
           style={{ color: 'var(--dim)', fontFamily: 'var(--font-mono)' }}
         >
-          <span>bozza in 48h</span>
+          <span>{t('trust1')}</span>
           <span aria-hidden="true">·</span>
-          <span>nessun anticipo</span>
+          <span>{t('trust2')}</span>
           <span aria-hidden="true">·</span>
-          <span>senza impegno</span>
+          <span>{t('trust3')}</span>
         </div>
       </div>
     </section>

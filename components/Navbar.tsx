@@ -1,11 +1,16 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-
-const WA_LINK =
-  'https://wa.me/393501998569?text=Ciao%2C%20vorrei%20la%20bozza%20gratuita%20per%20il%20mio%20sito'
+import { useTranslations } from 'next-intl'
+import { useLocale } from 'next-intl'
+import { usePathname, useRouter } from 'next/navigation'
 
 export default function Navbar() {
+  const t = useTranslations('nav')
+  const tHero = useTranslations('hero')
+  const locale = useLocale()
+  const pathname = usePathname()
+  const router = useRouter()
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -15,6 +20,13 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  function switchLocale(newLocale: string) {
+    let path = pathname
+    if (path.startsWith('/en')) path = path.slice(3) || '/'
+    if (path.startsWith('/it')) path = path.slice(3) || '/'
+    router.push(newLocale === 'it' ? path : `/en${path}`)
+  }
 
   return (
     <header
@@ -35,8 +47,14 @@ export default function Navbar() {
           <span style={{ color: 'var(--muted)' }}>.life</span>
         </a>
 
+        <div className="flex items-center gap-1" style={{ fontFamily: 'var(--font-mono)', fontSize: '11px' }}>
+          <button onClick={() => switchLocale('it')} style={{ color: locale === 'it' ? 'var(--fg)' : 'var(--dim)', fontWeight: locale === 'it' ? 600 : 400, background: 'none', border: 'none', cursor: 'pointer', padding: '4px' }}>it</button>
+          <span style={{ color: 'var(--dim)' }}>/</span>
+          <button onClick={() => switchLocale('en')} style={{ color: locale === 'en' ? 'var(--fg)' : 'var(--dim)', fontWeight: locale === 'en' ? 600 : 400, background: 'none', border: 'none', cursor: 'pointer', padding: '4px' }}>en</button>
+        </div>
+
         <a
-          href={WA_LINK}
+          href={tHero('waLink')}
           target="_blank"
           rel="noopener"
           className="cta-primary inline-flex items-center gap-3 rounded-lg px-5 py-2.5 text-[13px] font-medium transition-all duration-300"
@@ -50,7 +68,7 @@ export default function Navbar() {
             className="inline-block h-2 w-2 rounded-full"
             style={{ background: 'var(--accent-green)' }}
           />
-          bozza gratuita
+          {t('cta')}
         </a>
       </div>
     </header>

@@ -1,21 +1,16 @@
-import ScrollReveal from './ScrollReveal'
+'use client'
 
-const solutions = [
-  {
-    title: 'design su misura',
-    body: 'ogni sito è progettato da zero per la tua attività. nessun template uguale a quello del concorrente.',
-  },
-  {
-    title: 'contatti diretti',
-    body: 'form contatto, whatsapp, prenotazioni online. il cliente non deve cercare nulla.',
-  },
-  {
-    title: 'ottimizzato per mobile',
-    body: 'il 70% dei clienti ti cerca dal telefono. il tuo sito sarà veloce e facile da usare.',
-  },
-]
+import ScrollReveal from './ScrollReveal'
+import { useTranslations } from 'next-intl'
 
 export default function Solutions() {
+  const t = useTranslations('solutions')
+
+  const items = [1, 2, 3].map((i) => ({
+    title: t(`item${i}Title`),
+    body: t(`item${i}Body`),
+  }))
+
   return (
     <section
       className="py-[100px] md:py-[160px]"
@@ -32,7 +27,7 @@ export default function Solutions() {
               fontWeight: 500,
             }}
           >
-            // cosa otterrai
+            {t('eyebrow')}
           </p>
 
           {/* headline */}
@@ -43,14 +38,14 @@ export default function Solutions() {
               letterSpacing: '-0.03em',
             }}
           >
-            <span style={{ color: 'var(--fg)' }}>un sito che lavora per te.</span>
+            <span style={{ color: 'var(--fg)' }}>{t('title1')}</span>
             <br />
-            <span style={{ color: 'var(--muted)' }}>24 ore su 24.</span>
+            <span style={{ color: 'var(--muted)' }}>{t('title2')}</span>
           </h2>
 
           {/* solution items */}
           <div className="flex flex-col" style={{ gap: '48px' }}>
-            {solutions.map((item, i) => (
+            {items.map((item, i) => (
               <div
                 key={i}
                 className="reveal-child"

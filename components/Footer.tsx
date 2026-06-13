@@ -1,4 +1,10 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
+
 export default function Footer() {
+  const t = useTranslations('footer')
+
   return (
     <footer
       style={{ borderTop: '1px solid var(--line)' }}
@@ -12,7 +18,7 @@ export default function Footer() {
         }}
       >
         <span>websardegna.life</span>
-        <span>sardegna, 2026</span>
+        <span>{t('location')}</span>
       </div>
     </footer>
   )

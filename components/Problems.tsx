@@ -1,23 +1,16 @@
 'use client'
 
 import ScrollReveal from '@/components/ScrollReveal'
-
-const PROBLEMS = [
-  {
-    title: 'non vieni trovato',
-    body: 'i clienti cercano su Google. se non sei lì, non esisti.',
-  },
-  {
-    title: 'i clienti non capiscono cosa fai',
-    body: 'sito vecchio, informazioni confuse. un cliente confuso non prenota.',
-  },
-  {
-    title: 'nessun sistema per contatti',
-    body: 'il cliente deve cercare il numero. ogni attrito è una prenotazione persa.',
-  },
-]
+import { useTranslations } from 'next-intl'
 
 export default function Problems() {
+  const t = useTranslations('problems')
+
+  const cards = [1, 2, 3].map((i) => ({
+    title: t(`card${i}Title`),
+    body: t(`card${i}Body`),
+  }))
+
   return (
     <section
       className="py-[100px] md:py-[160px]"
@@ -34,7 +27,7 @@ export default function Problems() {
               color: 'var(--muted)',
             }}
           >
-            // perché ti serve un sito
+            {t('eyebrow')}
           </p>
 
           {/* headline */}
@@ -47,13 +40,13 @@ export default function Problems() {
                 color: 'var(--fg)',
               }}
             >
-              il tuo cliente
+              {t('title1')}
               <br />
               <span style={{ color: 'var(--muted)' }}>
-                ti sta cercando online.
+                {t('title2')}
               </span>
               <br />
-              <span style={{ color: 'var(--fg)' }}>adesso.</span>
+              <span style={{ color: 'var(--fg)' }}>{t('title3')}</span>
             </h2>
           </div>
 
@@ -62,17 +55,16 @@ export default function Problems() {
             className="reveal-child mb-10 max-w-[480px] text-[17px] leading-[1.7]"
             style={{ color: 'var(--muted)' }}
           >
-            se non hai un sito fatto bene, sta prenotando da qualcun altro.
-            non servono scuse —{' '}
+            {t('body')}{' '}
             <strong style={{ color: 'var(--fg)', fontWeight: 600 }}>
-              servono contatti
+              {t('bodyStrong')}
             </strong>
             .
           </p>
 
           {/* problem cards */}
           <div className="flex flex-col gap-3">
-            {PROBLEMS.map((problem) => (
+            {cards.map((problem) => (
               <div
                 key={problem.title}
                 className="reveal-child"

@@ -1,17 +1,16 @@
 'use client'
 
 import ScrollReveal from '@/components/ScrollReveal'
-
-const SERVICES = [
-  { name: 'attività locali', tag: 'più clienti dal web' },
-  { name: 'turismo e hospitality', tag: 'prenotazioni dirette' },
-  { name: 'ristoranti e bar', tag: 'menu digitale + contatti' },
-  { name: 'professionisti', tag: 'presenza online seria' },
-  { name: 'palestre e benessere', tag: 'booking + contatti' },
-  { name: 'artigiani e negozi', tag: 'e-commerce + vetrina' },
-]
+import { useTranslations } from 'next-intl'
 
 export default function Services() {
+  const t = useTranslations('services')
+
+  const items = [1, 2, 3, 4, 5, 6].map((i) => ({
+    name: t(`name${i}`),
+    tag: t(`tag${i}`),
+  }))
+
   return (
     <section
       className="py-[100px] md:py-[160px]"
@@ -28,7 +27,7 @@ export default function Services() {
               color: 'var(--muted)',
             }}
           >
-            // lavoro con qualsiasi tipo di attività
+            {t('eyebrow')}
           </p>
 
           {/* headline */}
@@ -40,22 +39,22 @@ export default function Services() {
                 letterSpacing: '-0.03em',
               }}
             >
-              <span style={{ color: 'var(--fg)' }}>il tuo sito.</span>
+              <span style={{ color: 'var(--fg)' }}>{t('title1')}</span>
               <br />
-              <span style={{ color: 'var(--muted)' }}>come lo vuoi tu.</span>
+              <span style={{ color: 'var(--muted)' }}>{t('title2')}</span>
             </h2>
           </div>
 
           {/* service rows */}
           <div>
-            {SERVICES.map((service, i) => (
+            {items.map((service, i) => (
               <div
                 key={service.name}
                 className="list-row reveal-child flex items-center justify-between"
                 style={{
                   padding: '20px 0',
                   borderTop: '1px solid var(--line)',
-                  ...(i === SERVICES.length - 1
+                  ...(i === items.length - 1
                     ? { borderBottom: '1px solid var(--line)' }
                     : {}),
                 }}

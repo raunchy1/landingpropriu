@@ -1,24 +1,17 @@
-import ScrollReveal from './ScrollReveal'
+'use client'
 
-const steps = [
-  {
-    number: '01',
-    title: 'mi scrivi su whatsapp',
-    body: 'mi racconti la tua attività in 5 min. non serve preparare niente, ti faccio io le domande giuste.',
-  },
-  {
-    number: '02',
-    title: 'ricevi la bozza in 48 ore',
-    body: 'vedi il design prima di decidere. non ti piace? nessun problema.',
-  },
-  {
-    number: '03',
-    title: 'il sito è online',
-    body: 'costruisco tutto, configuro i contatti. approvi e sei online.',
-  },
-]
+import ScrollReveal from './ScrollReveal'
+import { useTranslations } from 'next-intl'
 
 export default function Process() {
+  const t = useTranslations('process')
+
+  const steps = [1, 2, 3].map((i) => ({
+    number: String(i).padStart(2, '0'),
+    title: t(`step${i}Title`),
+    body: t(`step${i}Body`),
+  }))
+
   return (
     <section
       className="py-[100px] md:py-[160px]"
@@ -35,7 +28,7 @@ export default function Process() {
               fontWeight: 500,
             }}
           >
-            // come funziona
+            {t('eyebrow')}
           </p>
 
           {/* headline */}
@@ -46,9 +39,9 @@ export default function Process() {
               letterSpacing: '-0.03em',
             }}
           >
-            <span style={{ color: 'var(--fg)' }}>tre passaggi.</span>
+            <span style={{ color: 'var(--fg)' }}>{t('title1')}</span>
             <br />
-            <span style={{ color: 'var(--muted)' }}>il tuo sito è online.</span>
+            <span style={{ color: 'var(--muted)' }}>{t('title2')}</span>
           </h2>
 
           {/* steps — desktop: 3 columns, mobile: stacked */}

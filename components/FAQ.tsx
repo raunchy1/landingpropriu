@@ -1,27 +1,17 @@
 'use client'
 
 import { useCallback } from 'react'
+import { useTranslations } from 'next-intl'
 import ScrollReveal from './ScrollReveal'
 
-const faqs = [
-  {
-    question: 'quanto costa?',
-    answer:
-      'prezzo fisso: <strong>500€</strong> per un sito completo e su misura. <strong>nessun anticipo</strong>: paghi solo quando il sito è finito e ti piace.',
-  },
-  {
-    question: 'quanto tempo ci vuole?',
-    answer:
-      'la <strong>bozza grafica arriva in 48 ore</strong>. una volta approvata, il sito è online in pochi giorni.',
-  },
-  {
-    question: 'funziona per la mia attività?',
-    answer:
-      'se hai un <strong>ristorante, negozio, studio professionale, attività turistica o qualsiasi business locale</strong> in sardegna, sì. scrivimi e vediamo insieme.',
-  },
-]
-
 export default function FAQ() {
+  const t = useTranslations('faq')
+
+  const faqs = [1, 2, 3].map((i) => ({
+    question: t(`q${i}`),
+    answer: t.raw(`a${i}`),
+  }))
+
   const handleToggle = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
       const item = e.currentTarget.closest('.faq-item')
@@ -48,7 +38,7 @@ export default function FAQ() {
               fontWeight: 500,
             }}
           >
-            // domande frequenti
+            {t('eyebrow')}
           </p>
 
           {/* headline */}
@@ -59,9 +49,9 @@ export default function FAQ() {
               letterSpacing: '-0.03em',
             }}
           >
-            <span style={{ color: 'var(--fg)' }}>tutto chiaro.</span>
+            <span style={{ color: 'var(--fg)' }}>{t('title1')}</span>
             <br />
-            <span style={{ color: 'var(--muted)' }}>se no, scrivimi.</span>
+            <span style={{ color: 'var(--muted)' }}>{t('title2')}</span>
           </h2>
 
           {/* faq items */}
