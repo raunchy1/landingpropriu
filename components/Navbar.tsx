@@ -1,16 +1,15 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { useTranslations } from 'next-intl'
-import { useLocale } from 'next-intl'
-import { usePathname, useRouter } from 'next/navigation'
+import { useTranslations, useLocale } from 'next-intl'
+import { useRouter, usePathname } from '@/i18n/navigation'
 
 export default function Navbar() {
   const t = useTranslations('nav')
   const tHero = useTranslations('hero')
   const locale = useLocale()
-  const pathname = usePathname()
   const router = useRouter()
+  const pathname = usePathname()
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -21,11 +20,8 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  function switchLocale(newLocale: string) {
-    let path = pathname
-    if (path.startsWith('/en')) path = path.slice(3) || '/'
-    if (path.startsWith('/it')) path = path.slice(3) || '/'
-    router.push(newLocale === 'it' ? path : `/en${path}`)
+  function switchLocale(newLocale: 'it' | 'en') {
+    router.replace(pathname, { locale: newLocale })
   }
 
   return (
