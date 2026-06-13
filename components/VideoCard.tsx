@@ -1,8 +1,14 @@
 'use client'
 
 import ScrollReveal from '@/components/ScrollReveal'
+import { useLocale } from 'next-intl'
 
 export default function VideoCard() {
+  const locale = useLocale()
+  const videoSrc = locale === 'en'
+    ? '/video/websardegna_hey_final_EN.mp4'
+    : '/video/websardegna_ciao_final.mp4'
+
   return (
     <ScrollReveal>
       <div
@@ -13,6 +19,7 @@ export default function VideoCard() {
         }}
       >
         <video
+          key={locale}
           autoPlay
           muted
           loop
@@ -20,7 +27,7 @@ export default function VideoCard() {
           className="block w-full h-auto"
         >
           <source
-            src="/video/websardegna_ciao_final.mp4"
+            src={videoSrc}
             type="video/mp4"
           />
         </video>
@@ -28,3 +35,4 @@ export default function VideoCard() {
     </ScrollReveal>
   )
 }
+
