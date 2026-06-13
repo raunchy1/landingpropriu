@@ -1,6 +1,5 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
-import VideoCard from '@/components/VideoCard'
 import Marquee from '@/components/Marquee'
 import Services from '@/components/Services'
 import Problems from '@/components/Problems'
@@ -54,11 +53,6 @@ export default function Home() {
 
       <Navbar />
       <Hero />
-
-      {/* video card */}
-      <div className="mx-auto max-w-[720px] px-6 pb-0 md:px-8">
-        <VideoCard />
-      </div>
 
       <Marquee />
 

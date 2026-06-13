@@ -1,10 +1,14 @@
 'use client'
 
 import ScrollReveal from './ScrollReveal'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 
 export default function Projects() {
   const t = useTranslations('projects')
+  const locale = useLocale()
+  const videoSrc = locale === 'en'
+    ? '/video/websardegna_showreel_EN.mp4'
+    : '/video/websardegna_showreel_IT.mp4'
 
   const projects = [
     {
@@ -65,6 +69,29 @@ export default function Projects() {
             <br />
             <span style={{ color: 'var(--muted)' }}>{t('title2')}</span>
           </h2>
+        </ScrollReveal>
+
+        {/* showreel video */}
+        <ScrollReveal>
+          <div
+            className="reveal-child mx-auto overflow-hidden md:max-w-[360px]"
+            style={{
+              border: '1px solid var(--line)',
+              borderRadius: '12px',
+              marginBottom: '48px',
+            }}
+          >
+            <video
+              key={locale}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="block w-full h-auto"
+            >
+              <source src={videoSrc} type="video/mp4" />
+            </video>
+          </div>
         </ScrollReveal>
 
         {/* project cards */}
