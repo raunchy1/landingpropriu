@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
+import { trackWhatsAppClick } from '@/lib/trackWhatsApp'
 
 export default function MobileBar() {
   const t = useTranslations('mobileBar')
@@ -42,7 +43,8 @@ export default function MobileBar() {
       <a
         href={t('waLink')}
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
+        onClick={() => trackWhatsAppClick('sticky_bar')}
         className="flex items-center gap-2.5 text-[13px] font-medium"
         style={{ color: 'var(--fg)' }}
       >

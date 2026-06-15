@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import ScrollReveal from './ScrollReveal'
 import { useTranslations, useLocale } from 'next-intl'
 
@@ -17,7 +18,7 @@ export default function Projects() {
       desc: t('desc1'),
       tag: t('tag1'),
       url: 'https://cannigionexperience.com',
-      img: '/img/projects/screenshot-cannigione.webp',
+      image: '/img/projects/cannigione.webp',
     },
     {
       name: 'la suite n4',
@@ -25,7 +26,7 @@ export default function Projects() {
       desc: t('desc2'),
       tag: t('tag2'),
       url: 'https://bb-alghero.vercel.app',
-      img: '/img/projects/screenshot-sanpaolo.webp',
+      image: '/img/projects/la-suite-n4.webp',
     },
     {
       name: 'san paolo hideout',
@@ -33,7 +34,7 @@ export default function Projects() {
       desc: t('desc3'),
       tag: t('tag3'),
       url: 'https://sanpaolohideout.it',
-      img: '/img/projects/screenshot-villa-almare.webp',
+      image: '/img/projects/san-paolo-hideout.webp',
     },
   ]
 
@@ -45,7 +46,6 @@ export default function Projects() {
     >
       <div className="mx-auto max-w-[720px] px-6 md:px-8">
         <ScrollReveal>
-          {/* eyebrow */}
           <p
             className="reveal-child mb-5 text-[11px]"
             style={{
@@ -57,7 +57,6 @@ export default function Projects() {
             {t('eyebrow')}
           </p>
 
-          {/* headline */}
           <h2
             className="reveal-child mb-14 font-bold leading-[1.15]"
             style={{
@@ -71,58 +70,40 @@ export default function Projects() {
           </h2>
         </ScrollReveal>
 
-        {/* showreel video */}
         <ScrollReveal>
-          <div
-            className="reveal-child mx-auto overflow-hidden md:max-w-[360px]"
-            style={{
-              border: '1px solid var(--line)',
-              borderRadius: '12px',
-              marginBottom: '48px',
-            }}
-          >
+          <div className="reveal-child my-12 flex justify-center">
             <video
               key={locale}
+              src={videoSrc}
               autoPlay
               muted
               loop
               playsInline
-              className="block w-full h-auto"
-            >
-              <source src={videoSrc} type="video/mp4" />
-            </video>
+              className="w-full max-w-[360px] rounded-xl border border-[var(--line)]"
+            />
           </div>
         </ScrollReveal>
 
-        {/* project cards */}
         <div className="flex flex-col" style={{ gap: '16px' }}>
           {projects.map((project, i) => (
             <ScrollReveal key={i}>
               <a
                 href={project.url}
                 target="_blank"
-                rel="noopener"
-                className="project-card reveal-child block overflow-hidden"
-                style={{
-                  border: '1px solid var(--line)',
-                  borderRadius: '12px',
-                }}
+                rel="noopener noreferrer"
+                className="project-card reveal-child block overflow-hidden rounded-xl border border-[var(--line)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--muted)]"
               >
-                {/* screenshot */}
-                <img
-                  src={project.img}
-                  alt={project.name}
-                  className="project-img w-full"
-                  style={{
-                    aspectRatio: '16 / 10',
-                    objectFit: 'cover',
-                    display: 'block',
-                  }}
-                />
+                <div className="aspect-[16/10] overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={`${project.name} website preview`}
+                    width={1200}
+                    height={750}
+                    className="project-img h-full w-full object-cover"
+                  />
+                </div>
 
-                {/* content */}
                 <div style={{ padding: '24px' }}>
-                  {/* name + location */}
                   <div className="mb-2 flex flex-wrap items-baseline gap-3">
                     <h3
                       style={{
@@ -145,7 +126,6 @@ export default function Projects() {
                     </span>
                   </div>
 
-                  {/* description */}
                   <p
                     className="mb-4"
                     style={{
@@ -158,7 +138,6 @@ export default function Projects() {
                     {project.desc}
                   </p>
 
-                  {/* bottom row: tag + link */}
                   <div className="flex items-center justify-between">
                     <span
                       style={{
