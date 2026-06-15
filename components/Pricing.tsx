@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl'
 import ScrollReveal from './ScrollReveal'
+import { trackWhatsAppClick } from '@/lib/trackWhatsApp'
 
 export default function Pricing() {
   const t = useTranslations('pricing')
@@ -94,7 +95,8 @@ export default function Pricing() {
             <a
               href={t('waLink')}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick('pricing')}
               className="cta-primary inline-flex items-center gap-3 rounded-lg px-7 py-3.5 text-[15px] font-medium transition-all duration-300"
               style={{
                 border: '1px solid var(--line)',

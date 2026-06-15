@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl'
 import ScrollReveal from './ScrollReveal'
+import { trackWhatsAppClick } from '@/lib/trackWhatsApp'
 
 export default function FinalCTA() {
   const t = useTranslations('finalCta')
@@ -41,7 +42,8 @@ export default function FinalCTA() {
           <a
             href={t('waLink')}
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick('final_cta')}
             className="reveal-child block rounded-xl transition-all duration-300"
             style={{
               border: '1px solid var(--line)',
