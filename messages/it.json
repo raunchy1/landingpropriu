@@ -28,15 +28,28 @@
     "items": "b&b · ristoranti · hotel · charter · case vacanza · artigianato · professionisti · e-commerce · tour"
   },
   "services": {
-    "eyebrow": "// lavoro con qualsiasi tipo di attività",
-    "title1": "il tuo sito.",
-    "title2": "come lo vuoi tu.",
-    "name1": "attività locali", "tag1": "più clienti dal web",
-    "name2": "turismo e hospitality", "tag2": "prenotazioni dirette",
-    "name3": "ristoranti e bar", "tag3": "menu digitale + contatti",
-    "name4": "professionisti", "tag4": "presenza online seria",
-    "name5": "palestre e benessere", "tag5": "booking + contatti",
-    "name6": "artigiani e negozi", "tag6": "e-commerce + vetrina"
+    "eyebrow": "// servizi",
+    "title1": "Non solo siti web.",
+    "intro": "Un sito è spesso il punto di partenza — ma il digitale è molto di più. Ecco cosa posso costruire per la tua attività:",
+    "cat1Title": "Siti web su misura",
+    "cat1Body": "Veloci, moderni, pensati per convertire i visitatori in clienti. Niente template generici: ogni sito è costruito attorno alla tua attività.",
+    "cat2Title": "Applicazioni e software personalizzati",
+    "cat2Body": "Hai un processo da automatizzare? Un gestionale che non esiste ancora? Sviluppo applicazioni web e SaaS su misura per le esigenze reali del tuo business.",
+    "cat3Title": "Integrazione con l'Intelligenza Artificiale",
+    "cat3Body": "Chatbot, automazioni, generazione di contenuti, assistenti virtuali. Porto l'AI dentro la tua attività in modo concreto e utile, non come moda passeggera.",
+    "cat4Title": "Campagne pubblicitarie",
+    "cat4Body": "Google Ads, Meta, TikTok. Gestisco campagne su tutte le piattaforme, dalla strategia alla creatività.",
+    "cat5Title": "Contenuti video con AI",
+    "cat5Body": "Video promozionali, contenuti per i social, advertising creativo generato con strumenti di intelligenza artificiale.",
+    "closing": "Se il tuo progetto non rientra esattamente in queste categorie, scrivimi lo stesso. Probabilmente posso aiutarti — o dirti onestamente se non è il caso."
+  },
+  "about": {
+    "eyebrow": "// chi sono",
+    "greeting": "Ciao, sono Cristian.",
+    "p1": "Sono originario della Repubblica di Moldova e oggi vivo in Sardegna, da dove lavoro con clienti in tutta Italia e all'estero.",
+    "p2": "Sviluppo siti web e applicazioni da più di 10 anni. In questo tempo ho imparato una cosa semplice: un buon progetto digitale non nasce da un template, ma da una conversazione. Per questo lavori sempre direttamente con me — niente intermediari, niente call center. Mi spieghi cosa ti serve, io ascolto, e costruiamo insieme qualcosa che funziona davvero per la tua attività.",
+    "p3": "Che si tratti di un sito vetrina, di un'applicazione su misura o di una campagna pubblicitaria, il mio approccio è lo stesso: comunicazione costante, trasparenza totale, e zero promesse che non posso mantenere.",
+    "closing": "Se hai un progetto in mente — anche solo un'idea — scrivimi. Ne parliamo senza impegno."
   },
   "problems": {
     "eyebrow": "// perché ti serve un sito",
@@ -75,16 +88,15 @@
     "step3Body": "costruisco tutto, configuro i contatti. approvi e sei online."
   },
   "projects": {
-    "eyebrow": "// progetti reali, già online",
-    "title1": "siti che funzionano.",
-    "title2": "non demo.",
-    "cta": "visita il sito →",
-    "tag1": "charter & esperienze",
-    "desc1": "sito trilingue per noleggio barca con calendario prenotazioni integrato.",
-    "tag2": "b&b di lusso",
-    "desc2": "sito elegante per b&b di lusso con prenotazione diretta e galleria immersiva.",
-    "tag3": "casa vacanze",
-    "desc3": "sito completo per casa vacanze con design pulito e contatti diretti."
+    "eyebrow": "// i miei lavori",
+    "title": "I miei lavori",
+    "body1": "Preferisco non mostrare pubblicamente i progetti dei miei clienti — per rispetto della loro privacy e perché ogni lavoro è pensato su misura, non per essere messo in vetrina.",
+    "body2": "Se vuoi vedere esempi concreti di quello che ho realizzato, scrivimi in privato su WhatsApp: ti mostro volentieri il mio portfolio completo e parliamo del tuo progetto.",
+    "cta": "Vedi il portfolio su WhatsApp",
+    "waLink": "https://wa.me/393501998569?text=Ciao%2C%20vorrei%20vedere%20il%20tuo%20portfolio",
+    "stat1": "10+ anni di esperienza",
+    "stat2": "Progetti consegnati in Italia e all'estero",
+    "stat3": "Lavoro diretto, senza intermediari"
   },
   "pricing": {
     "eyebrow": "// prova senza rischio",

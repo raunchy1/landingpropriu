@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import Marquee from '@/components/Marquee'
 import Services from '@/components/Services'
+import About from '@/components/About'
 import Problems from '@/components/Problems'
 import Solutions from '@/components/Solutions'
 import Process from '@/components/Process'
@@ -62,6 +63,12 @@ export default function Home() {
       </div>
 
       <Services />
+
+      <div className="mx-auto max-w-[720px] px-6 md:px-8">
+        <div className="hairline" />
+      </div>
+
+      <About />
 
       <div className="mx-auto max-w-[720px] px-6 md:px-8">
         <div className="hairline" />

@@ -28,15 +28,28 @@
     "items": "restaurants · hotels · shops · services · real estate · coaches · freelancers · e-commerce · local business"
   },
   "services": {
-    "eyebrow": "// i work with any type of business",
-    "title1": "your website.",
-    "title2": "built your way.",
-    "name1": "local businesses", "tag1": "more customers from the web",
-    "name2": "restaurants & cafes", "tag2": "digital menu + bookings",
-    "name3": "hotels & rentals", "tag3": "direct reservations",
-    "name4": "freelancers & coaches", "tag4": "serious online presence",
-    "name5": "gyms & wellness", "tag5": "bookings + contacts",
-    "name6": "shops & artisans", "tag6": "e-commerce + showcase"
+    "eyebrow": "// services",
+    "title1": "More than just websites.",
+    "intro": "A website is often the starting point — but digital goes much further. Here's what I can build for your business:",
+    "cat1Title": "Custom websites",
+    "cat1Body": "Fast, modern, designed to turn visitors into customers. No generic templates — every site is built around your business.",
+    "cat2Title": "Custom applications & software",
+    "cat2Body": "Got a process to automate? A tool that doesn't exist yet? I build custom web applications and SaaS tailored to your real business needs.",
+    "cat3Title": "AI integration",
+    "cat3Body": "Chatbots, automations, content generation, virtual assistants. I bring AI into your business in a practical, useful way — not as a passing trend.",
+    "cat4Title": "Advertising campaigns",
+    "cat4Body": "Google Ads, Meta, TikTok. I manage campaigns across all platforms, from strategy to creative.",
+    "cat5Title": "AI-powered video content",
+    "cat5Body": "Promotional videos, social media content, creative advertising generated with AI tools.",
+    "closing": "If your project doesn't fit neatly into these categories, reach out anyway. Chances are I can help — or I'll tell you honestly if I can't."
+  },
+  "about": {
+    "eyebrow": "// about me",
+    "greeting": "Hi, I'm Cristian.",
+    "p1": "Originally from the Republic of Moldova, I'm now based in Sardinia, Italy, working remotely with clients across Europe and beyond.",
+    "p2": "I've been building websites and applications for over 10 years. In that time I've learned one simple thing: a good digital project doesn't come from a template — it comes from a conversation. That's why you always work directly with me. No middlemen, no account managers. You tell me what you need, I listen, and together we build something that actually works for your business.",
+    "p3": "Whether it's a simple website, a custom application, or an advertising campaign, my approach stays the same: constant communication, full transparency, and no promises I can't keep.",
+    "closing": "If you have a project in mind — even just an idea — get in touch. Let's talk, no commitment."
   },
   "problems": {
     "eyebrow": "// why you need a website",
@@ -75,16 +88,15 @@
     "step3Body": "i build everything, set up contacts and forms. you approve. it's online and working."
   },
   "projects": {
-    "eyebrow": "// real projects, already live",
-    "title1": "sites that work.",
-    "title2": "not demos.",
-    "cta": "visit site →",
-    "tag1": "charter & experiences",
-    "desc1": "trilingual website for boat rental with integrated booking calendar.",
-    "tag2": "luxury b&b",
-    "desc2": "elegant website for luxury b&b with direct booking and immersive gallery.",
-    "tag3": "vacation rental",
-    "desc3": "complete website for vacation rental with clean design and direct contacts."
+    "eyebrow": "// my work",
+    "title": "My work",
+    "body1": "I prefer not to publicly display my clients' projects — out of respect for their privacy, and because every project is built bespoke, not for show.",
+    "body2": "If you'd like to see concrete examples of what I've built, message me privately on WhatsApp: I'll gladly walk you through my full portfolio and we can talk about your project.",
+    "cta": "See portfolio on WhatsApp",
+    "waLink": "https://wa.me/393501998569?text=Hi%2C%20I%27d%20like%20to%20see%20your%20portfolio",
+    "stat1": "10+ years of experience",
+    "stat2": "Projects delivered across Europe and beyond",
+    "stat3": "Direct work, no middlemen"
   },
   "pricing": {
     "eyebrow": "// try without risk",

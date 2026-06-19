@@ -6,9 +6,9 @@ import { useTranslations } from 'next-intl'
 export default function Services() {
   const t = useTranslations('services')
 
-  const items = [1, 2, 3, 4, 5, 6].map((i) => ({
-    name: t(`name${i}`),
-    tag: t(`tag${i}`),
+  const categories = [1, 2, 3, 4, 5].map((i) => ({
+    title: t(`cat${i}Title`),
+    body: t(`cat${i}Body`),
   }))
 
   return (
@@ -19,7 +19,6 @@ export default function Services() {
     >
       <div className="mx-auto max-w-[720px] px-6 md:px-8">
         <ScrollReveal>
-          {/* eyebrow */}
           <p
             className="reveal-child mb-5 text-[11px]"
             style={{
@@ -30,53 +29,66 @@ export default function Services() {
             {t('eyebrow')}
           </p>
 
-          {/* headline */}
-          <div className="reveal-child mb-12">
-            <h2
-              className="font-bold leading-[1.1]"
-              style={{
-                fontSize: 'clamp(28px, 5vw, 48px)',
-                letterSpacing: '-0.03em',
-              }}
-            >
-              <span style={{ color: 'var(--fg)' }}>{t('title1')}</span>
-              <br />
-              <span style={{ color: 'var(--muted)' }}>{t('title2')}</span>
-            </h2>
-          </div>
+          <h2
+            className="reveal-child mb-6 font-bold leading-[1.15]"
+            style={{
+              fontSize: 'clamp(28px, 5vw, 48px)',
+              letterSpacing: '-0.03em',
+              color: 'var(--fg)',
+            }}
+          >
+            {t('title1')}
+          </h2>
 
-          {/* service rows */}
-          <div>
-            {items.map((service, i) => (
-              <div
-                key={service.name}
-                className="list-row reveal-child flex items-center justify-between"
-                style={{
-                  padding: '20px 0',
-                  borderTop: '1px solid var(--line)',
-                  ...(i === items.length - 1
-                    ? { borderBottom: '1px solid var(--line)' }
-                    : {}),
-                }}
-              >
-                <span
-                  className="text-[18px] font-medium"
-                  style={{ color: 'var(--fg)' }}
+          <p
+            className="reveal-child mb-14 max-w-[520px] text-[17px] leading-[1.7]"
+            style={{ color: 'var(--muted)' }}
+          >
+            {t('intro')}
+          </p>
+
+          <div className="flex flex-col" style={{ gap: '48px' }}>
+            {categories.map((cat, i) => (
+              <div key={cat.title} className="reveal-child">
+                <div className="mb-3 flex items-baseline gap-4">
+                  <span
+                    className="text-[11px] tabular-nums"
+                    style={{
+                      fontFamily: 'var(--font-mono)',
+                      color: 'var(--dim)',
+                    }}
+                  >
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <h3
+                    className="text-[20px] font-semibold leading-[1.3]"
+                    style={{ color: 'var(--fg)' }}
+                  >
+                    {cat.title}
+                  </h3>
+                </div>
+                <p
+                  className="pl-[calc(11px+1rem+16px)] text-[15px] leading-[1.7]"
+                  style={{ color: 'var(--muted)' }}
                 >
-                  {service.name}
-                </span>
-                <span
-                  className="text-[11px]"
-                  style={{
-                    fontFamily: 'var(--font-mono)',
-                    color: 'var(--muted)',
-                  }}
-                >
-                  {service.tag}
-                </span>
+                  {cat.body}
+                </p>
+                {i < categories.length - 1 && (
+                  <div
+                    className="mt-12 h-px"
+                    style={{ background: 'var(--line)' }}
+                  />
+                )}
               </div>
             ))}
           </div>
+
+          <p
+            className="reveal-child mt-14 max-w-[520px] text-[15px] leading-[1.7]"
+            style={{ color: 'var(--muted)', fontFamily: 'var(--font-mono)' }}
+          >
+            <span style={{ color: 'var(--accent-green)' }}>→</span> {t('closing')}
+          </p>
         </ScrollReveal>
       </div>
     </section>
