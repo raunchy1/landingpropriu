@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
-import { trackWhatsAppClick } from '@/lib/trackWhatsApp'
+
 
 function AnimatedCiao({ text }: { text: string }) {
   const letters = text.split('')
@@ -133,10 +133,7 @@ export default function Hero() {
         {/* CTAs */}
         <div className="animate-rise delay-7 mb-6 flex flex-wrap items-center gap-5">
           <a
-            href={t('waLink')}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackWhatsAppClick('hero')}
+            href="#contact"
             className="cta-primary inline-flex items-center gap-3 rounded-lg px-7 py-3.5 text-[15px] font-medium transition-all duration-300"
             style={{
               border: '1px solid var(--line)',
