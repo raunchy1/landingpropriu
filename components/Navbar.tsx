@@ -3,11 +3,11 @@
 import { useEffect, useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { useRouter, usePathname } from '@/i18n/navigation'
-import { trackWhatsAppClick } from '@/lib/trackWhatsApp'
+
 
 export default function Navbar() {
   const t = useTranslations('nav')
-  const tHero = useTranslations('hero')
+
   const locale = useLocale()
   const router = useRouter()
   const pathname = usePathname()
@@ -51,10 +51,7 @@ export default function Navbar() {
         </div>
 
         <a
-          href={tHero('waLink')}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => trackWhatsAppClick('navbar')}
+          href="#contact"
           className="cta-primary inline-flex items-center gap-3 rounded-lg px-5 py-2.5 text-[13px] font-medium transition-all duration-300"
           style={{
             border: '1px solid var(--line)',

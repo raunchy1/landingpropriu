@@ -2,6 +2,7 @@ export type WhatsAppLocation =
   | 'hero'
   | 'navbar'
   | 'pricing'
+  | 'contact'
   | 'final_cta'
   | 'sticky_bar'
 
