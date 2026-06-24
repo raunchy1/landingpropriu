@@ -3,7 +3,7 @@
 import ScrollReveal from './ScrollReveal'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
-import { trackWhatsAppClick } from '@/lib/trackWhatsApp'
+import WhatsAppLink from '@/components/WhatsAppLink'
 
 export default function Projects() {
   const t = useTranslations('projects')
@@ -94,11 +94,8 @@ export default function Projects() {
               {t('viewAll')}
             </Link>
 
-            <a
-              href={t('waLink')}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackWhatsAppClick('contact')}
+            <WhatsAppLink
+              location="contact"
               className="cta-primary inline-flex items-center gap-3 rounded-lg px-7 py-3.5 text-[15px] font-medium transition-all duration-300"
               style={{
                 border: '1px solid var(--line)',
@@ -111,7 +108,7 @@ export default function Projects() {
                 style={{ background: 'var(--accent-green)' }}
               />
               {t('cta')}
-            </a>
+            </WhatsAppLink>
           </div>
 
           <div className="reveal-child grid grid-cols-1 gap-4 sm:grid-cols-3">

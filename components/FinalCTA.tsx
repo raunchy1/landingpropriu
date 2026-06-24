@@ -3,7 +3,8 @@
 import { useState, type FormEvent, type ReactNode } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import ScrollReveal from './ScrollReveal'
-import { trackWhatsAppClick } from '@/lib/trackWhatsApp'
+import WhatsAppLink from '@/components/WhatsAppLink'
+import { trackFormSubmit } from '@/lib/trackEvents'
 
 const WEB3FORMS_KEY = '71392d98-c721-43c2-8250-c03840287e70'
 const CONTACT_EMAIL = 'cristiermurache@gmail.com'
@@ -108,6 +109,7 @@ function ContactForm() {
       })
       const data = await res.json()
       if (data.success) {
+        trackFormSubmit()
         setStatus('success')
         form.reset()
       } else {
@@ -303,13 +305,7 @@ function WhatsAppBlock() {
     <ContactCard>
       <LabelRow label={isSecondary ? t('waAlt') : t('waLabel')} />
 
-      <a
-        href={t('waLink')}
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={() => trackWhatsAppClick('contact')}
-        className="block"
-      >
+      <WhatsAppLink location="contact" className="block">
         <p
           className="font-bold"
           style={{
@@ -320,7 +316,7 @@ function WhatsAppBlock() {
         >
           +39 350 199 85 69
         </p>
-      </a>
+      </WhatsAppLink>
 
       <div className="flex flex-col gap-1.5">
         {[1, 2, 3].map((i) => (

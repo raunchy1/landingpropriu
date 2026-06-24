@@ -18,6 +18,7 @@ export async function submitToIndexNow(urls: string[]): Promise<Response> {
 
 export const indexNowUrls = [
   'https://websardegna.life/',
+  'https://websardegna.life/sardegna/bozza-gratuita',
   'https://websardegna.life/guida',
   'https://websardegna.life/blog/miglior-web-designer-sardegna-guida',
   'https://websardegna.life/servizi',

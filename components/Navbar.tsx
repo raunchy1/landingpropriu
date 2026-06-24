@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { Link, useRouter, usePathname } from '@/i18n/navigation'
+import WhatsAppLink from '@/components/WhatsAppLink'
 
 
 export default function Navbar() {
@@ -50,8 +51,8 @@ export default function Navbar() {
           <button onClick={() => switchLocale('en')} style={{ color: locale === 'en' ? 'var(--fg)' : 'var(--dim)', fontWeight: locale === 'en' ? 600 : 400, background: 'none', border: 'none', cursor: 'pointer', padding: '4px' }}>en</button>
         </div>
 
-        <a
-          href="#contact"
+        <WhatsAppLink
+          location="navbar"
           className="cta-primary inline-flex items-center gap-3 rounded-lg px-5 py-2.5 text-[13px] font-medium transition-all duration-300"
           style={{
             border: '1px solid var(--line)',
@@ -64,7 +65,7 @@ export default function Navbar() {
             style={{ background: 'var(--accent-green)' }}
           />
           {t('cta')}
-        </a>
+        </WhatsAppLink>
       </div>
     </header>
   )

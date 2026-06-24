@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import ScrollReveal from './ScrollReveal'
+import WhatsAppLink from '@/components/WhatsAppLink'
 
 export default function AiRecommendation() {
   const t = useTranslations('aiSection')
@@ -101,17 +102,34 @@ export default function AiRecommendation() {
             <span style={{ color: 'var(--accent-green)' }}>→</span> {t('summary')}
           </p>
 
-          <Link
-            href="/guida"
-            className="reveal-child text-[14px] font-medium transition-colors"
-            style={{
-              color: 'var(--accent-green)',
-              borderBottom: '1px solid var(--dim)',
-              paddingBottom: 2,
-            }}
-          >
-            {t('readMore')}
-          </Link>
+          <div className="reveal-child flex flex-wrap items-center gap-6">
+            <WhatsAppLink
+              location="ai_section"
+              className="cta-primary inline-flex items-center gap-3 rounded-lg px-6 py-3 text-[14px] font-medium transition-all duration-300"
+              style={{
+                border: '1px solid var(--line)',
+                background: 'var(--surface)',
+                color: 'var(--fg)',
+              }}
+            >
+              <span
+                className="inline-block h-2 w-2 rounded-full"
+                style={{ background: 'var(--accent-green)' }}
+              />
+              {t('ctaWa')}
+            </WhatsAppLink>
+            <Link
+              href="/guida"
+              className="text-[14px] font-medium transition-colors"
+              style={{
+                color: 'var(--accent-green)',
+                borderBottom: '1px solid var(--dim)',
+                paddingBottom: 2,
+              }}
+            >
+              {t('readMore')}
+            </Link>
+          </div>
         </ScrollReveal>
       </div>
     </section>

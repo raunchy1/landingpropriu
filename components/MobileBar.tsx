@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
-
+import WhatsAppLink from '@/components/WhatsAppLink'
+import { trackPhoneClick } from '@/lib/trackEvents'
 
 export default function MobileBar() {
   const t = useTranslations('mobileBar')
@@ -10,20 +11,23 @@ export default function MobileBar() {
 
   useEffect(() => {
     const hero = document.getElementById('hero')
-    if (!hero) return
+    if (hero) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            setVisible(!entry.isIntersecting)
+          })
+        },
+        { rootMargin: '0px 0px -10% 0px' }
+      )
+      observer.observe(hero)
+      return () => observer.disconnect()
+    }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          setVisible(!entry.isIntersecting)
-        })
-      },
-      { rootMargin: '0px 0px -10% 0px' }
-    )
-
-    observer.observe(hero)
-
-    return () => observer.disconnect()
+    const handleScroll = () => setVisible(window.scrollY > 200)
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
@@ -39,9 +43,8 @@ export default function MobileBar() {
         transition: 'transform 0.3s ease',
       }}
     >
-      {/* whatsapp link */}
-      <a
-        href="#contact"
+      <WhatsAppLink
+        location="sticky_bar"
         className="flex items-center gap-2.5 text-[13px] font-medium"
         style={{ color: 'var(--fg)' }}
       >
@@ -50,13 +53,13 @@ export default function MobileBar() {
           style={{ background: 'var(--accent-green)' }}
         />
         {t('cta')}
-      </a>
+      </WhatsAppLink>
 
-      {/* tel link */}
       <a
         href="tel:+393501998569"
         className="text-[13px] font-medium transition-colors duration-300"
         style={{ color: 'var(--muted)' }}
+        onClick={() => trackPhoneClick('sticky_bar')}
         onMouseEnter={(e) => {
           e.currentTarget.style.color = 'var(--fg)'
         }}

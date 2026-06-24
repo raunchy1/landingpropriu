@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
+import WhatsAppLink from '@/components/WhatsAppLink'
 
 
 function AnimatedCiao({ text }: { text: string }) {
@@ -141,8 +142,8 @@ export default function Hero() {
 
         {/* CTAs */}
         <div className="animate-rise delay-8 mb-6 flex flex-wrap items-center gap-5">
-          <a
-            href="#contact"
+          <WhatsAppLink
+            location="hero"
             className="cta-primary inline-flex items-center gap-3 rounded-lg px-7 py-3.5 text-[15px] font-medium transition-all duration-300"
             style={{
               border: '1px solid var(--line)',
@@ -155,7 +156,7 @@ export default function Hero() {
               style={{ background: 'var(--accent-green)' }}
             />
             {t('ctaPrimary')}
-          </a>
+          </WhatsAppLink>
 
           <a
             href="#progetti"
