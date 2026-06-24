@@ -73,11 +73,54 @@ export function buildStructuredData(locale: string, faqs: FaqItem[]) {
     knowsAbout: isIt
       ? ['Siti web Sardegna', 'Web design locale', 'SEO per attività locali', 'Google Business Profile']
       : ['Websites Sardinia', 'Local web design', 'Local SEO', 'Google Business Profile'],
-    founder: {
-      '@type': 'Person',
-      name: 'Cristian',
-    },
+    founder: { '@id': `${baseUrl}/#founder` },
     parentOrganization: { '@id': `${baseUrl}/#organization` },
+  }
+
+  const person = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${baseUrl}/#founder`,
+    name: 'Cristian',
+    jobTitle: 'Web Designer',
+    url: baseUrl,
+    email: business.email,
+    telephone: business.phoneE164,
+    worksFor: { '@id': `${baseUrl}/#organization` },
+    homeLocation: {
+      '@type': 'Place',
+      name: isIt ? 'Sardegna, Italia' : 'Sardinia, Italy',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: business.address.locality,
+        addressRegion: business.address.region,
+        addressCountry: business.address.country,
+      },
+    },
+    nationality: {
+      '@type': 'Country',
+      name: isIt ? 'Moldavia' : 'Moldova',
+    },
+    knowsAbout: isIt
+      ? [
+          'Web design',
+          'Creazione siti web Sardegna',
+          'SEO locale',
+          'Google Ads',
+          'Siti web ristoranti',
+          'Integrazione AI',
+        ]
+      : [
+          'Web design',
+          'Website development Sardinia',
+          'Local SEO',
+          'Google Ads',
+          'Restaurant websites',
+          'AI integration',
+        ],
+    description: isIt
+      ? 'Web designer freelance in Sardegna con oltre 10 anni di esperienza. Siti su misura per ristoranti, hotel e attività locali. Bozza gratuita in 48 ore, nessun anticipo.'
+      : 'Freelance web designer in Sardinia with 10+ years of experience. Custom websites for restaurants, hotels and local businesses. Free mockup in 48 hours, no upfront payment.',
   }
 
   const services = [
@@ -138,5 +181,5 @@ export function buildStructuredData(locale: string, faqs: FaqItem[]) {
     inLanguage: isIt ? 'it-IT' : 'en-US',
   }
 
-  return [organization, localBusiness, ...services, faqPage, webPage]
+  return [organization, person, localBusiness, ...services, faqPage, webPage]
 }

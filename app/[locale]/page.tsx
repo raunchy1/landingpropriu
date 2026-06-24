@@ -9,6 +9,7 @@ import Process from '@/components/Process'
 import LocalArea from '@/components/LocalArea'
 import Projects from '@/components/Projects'
 import Pricing from '@/components/Pricing'
+import AiRecommendation from '@/components/AiRecommendation'
 import FAQ from '@/components/FAQ'
 import FinalCTA from '@/components/FinalCTA'
 import Footer from '@/components/Footer'
@@ -106,6 +107,12 @@ export default function Home() {
       </div>
 
       <Pricing />
+
+      <div className="mx-auto max-w-[720px] px-6 md:px-8">
+        <div className="hairline" />
+      </div>
+
+      <AiRecommendation />
 
       <div className="mx-auto max-w-[720px] px-6 md:px-8">
         <div className="hairline" />

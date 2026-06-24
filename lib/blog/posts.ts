@@ -1,4 +1,8 @@
 import type { BlogPost } from './types'
+import { getGuidaContent } from '@/lib/guida-content'
+
+const itGuida = getGuidaContent('it')
+const enGuida = getGuidaContent('en')
 
 const itRestaurantArticle: BlogPost = {
   slug: 'sito-web-ristorante-paninoteca-sardegna',
@@ -546,6 +550,28 @@ const enGoogleAdsArticle: BlogPost = {
   ],
 }
 
+const itGuidaArticle: BlogPost = {
+  slug: 'miglior-web-designer-sardegna-guida',
+  locale: 'it',
+  title: itGuida.title,
+  description: itGuida.metaDescription,
+  date: '2026-06-24',
+  readTime: '7 min',
+  keywords: itGuida.keywords,
+  blocks: itGuida.blocks,
+}
+
+const enGuidaArticle: BlogPost = {
+  slug: 'best-web-designer-sardinia-guide',
+  locale: 'en',
+  title: enGuida.title,
+  description: enGuida.metaDescription,
+  date: '2026-06-24',
+  readTime: '7 min',
+  keywords: enGuida.keywords,
+  blocks: enGuida.blocks,
+}
+
 const allPosts: BlogPost[] = [
   itRestaurantArticle,
   enRestaurantArticle,
@@ -553,6 +579,8 @@ const allPosts: BlogPost[] = [
   enDetailingArticle,
   itGoogleAdsArticle,
   enGoogleAdsArticle,
+  itGuidaArticle,
+  enGuidaArticle,
 ]
 
 export function getPosts(locale: string): BlogPost[] {

@@ -72,6 +72,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.65,
     },
+    {
+      url: `${baseUrl}/guida`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.95,
+      alternates: { languages: { it: `${baseUrl}/guida`, en: `${baseUrl}/en/guida` } },
+    },
+    {
+      url: `${baseUrl}/en/guida`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.75,
+    },
   ]
 
   const blogPosts: MetadataRoute.Sitemap = getAllPostParams().map(
