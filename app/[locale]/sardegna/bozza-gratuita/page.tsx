@@ -3,6 +3,8 @@ import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { business } from '@/lib/business'
 import LandingHero from '@/components/landing/LandingHero'
 import LandingForm from '@/components/landing/LandingForm'
+import LandingStickyBar from '@/components/landing/LandingStickyBar'
+import LandingPageTracker from '@/components/landing/LandingPageTracker'
 
 type Props = {
   params: { locale: string }
@@ -80,8 +82,10 @@ export default async function BozzaGratuitaPage({ params }: Props) {
         </div>
       </header>
 
+      <LandingPageTracker />
       <LandingHero />
       <LandingForm />
+      <LandingStickyBar />
 
       <footer className="pb-24 pt-8 text-center md:pb-8">
         <p className="text-[11px]" style={{ color: 'var(--dim)', fontFamily: 'var(--font-mono)' }}>

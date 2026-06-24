@@ -38,7 +38,7 @@ export default function LandingForm() {
       })
       const data = await res.json()
       if (data.success) {
-        trackFormSubmit()
+        trackFormSubmit('landing')
         setStatus('success')
         form.reset()
       } else {

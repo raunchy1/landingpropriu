@@ -6,6 +6,9 @@ import { routing } from '@/i18n/routing'
 import { notFound } from 'next/navigation'
 import '../globals.css'
 import StructuredData from '@/components/StructuredData'
+import AttributionCapture from '@/components/AttributionCapture'
+import GoogleAdsConversion from '@/components/GoogleAdsConversion'
+import { analytics } from '@/lib/analytics'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -146,11 +149,23 @@ export default async function RootLayout({
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N6KPZVBF');`,
+})(window,document,'script','dataLayer','${analytics.gtmId}');`,
           }}
         />
 
-
+        {/* Google Ads + GA4 (conversion tracking) */}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${analytics.googleAdsId}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','${analytics.googleAdsId}');
+gtag('config','${analytics.ga4Id}');`,
+          }}
+        />
       </head>
       <body
         className="font-sans antialiased"
@@ -166,6 +181,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         <NextIntlClientProvider messages={messages}>
+          <AttributionCapture />
+          <GoogleAdsConversion />
           {children}
         </NextIntlClientProvider>
       </body>
