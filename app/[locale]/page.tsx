@@ -6,6 +6,7 @@ import About from '@/components/About'
 import Problems from '@/components/Problems'
 import Solutions from '@/components/Solutions'
 import Process from '@/components/Process'
+import LocalArea from '@/components/LocalArea'
 import Projects from '@/components/Projects'
 import Pricing from '@/components/Pricing'
 import FAQ from '@/components/FAQ'
@@ -87,6 +88,12 @@ export default function Home() {
       </div>
 
       <Process />
+
+      <div className="mx-auto max-w-[720px] px-6 md:px-8">
+        <div className="hairline" />
+      </div>
+
+      <LocalArea />
 
       <div className="mx-auto max-w-[720px] px-6 md:px-8">
         <div className="hairline" />

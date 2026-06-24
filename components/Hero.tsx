@@ -56,45 +56,54 @@ export default function Hero() {
           {t('eyebrow')}
         </p>
 
-        {/* greeting */}
-        <h1
-          className="animate-rise delay-2 mb-4 font-extrabold leading-[0.95]"
+        {/* greeting — decorative */}
+        <p
+          className="animate-rise delay-2 mb-3 font-extrabold leading-[0.95]"
+          aria-hidden="true"
           style={{
-            fontSize: 'clamp(64px, 15vw, 140px)',
+            fontSize: 'clamp(48px, 12vw, 100px)',
             letterSpacing: '-0.035em',
             color: 'var(--fg)',
           }}
         >
           <AnimatedCiao text={t('greeting')} />
+        </p>
+
+        {/* SEO headline */}
+        <h1
+          className="animate-rise delay-3 mb-4 font-bold leading-[1.1]"
+          style={{
+            fontSize: 'clamp(28px, 5vw, 48px)',
+            letterSpacing: '-0.03em',
+            color: 'var(--fg)',
+          }}
+        >
+          {t('h1')}
         </h1>
 
         {/* subtitle lines */}
         <div className="mb-7">
-          <h2
-            className="animate-rise delay-3 font-bold leading-[1.15]"
-            style={{
-              fontSize: 'clamp(28px, 5vw, 48px)',
-              letterSpacing: '-0.03em',
-              color: 'var(--fg)',
-            }}
+          <p
+            className="animate-rise delay-4 text-[17px] leading-[1.6]"
+            style={{ color: 'var(--muted)' }}
           >
             {t('name')}
-          </h2>
-          <h2
-            className="animate-rise delay-4 font-bold leading-[1.15]"
+          </p>
+          <p
+            className="animate-rise delay-5 font-semibold leading-[1.3]"
             style={{
-              fontSize: 'clamp(28px, 5vw, 48px)',
-              letterSpacing: '-0.03em',
-              color: 'var(--muted)',
+              fontSize: 'clamp(20px, 3vw, 28px)',
+              letterSpacing: '-0.02em',
+              color: 'var(--accent-green)',
             }}
           >
             {t('role')}
-          </h2>
+          </p>
         </div>
 
         {/* body paragraph */}
         <p
-          className="animate-rise delay-5 mb-8 max-w-[480px] text-[17px] leading-[1.7]"
+          className="animate-rise delay-6 mb-8 max-w-[520px] text-[17px] leading-[1.7]"
           style={{ color: 'var(--muted)' }}
         >
           {t('body1')}
@@ -115,7 +124,7 @@ export default function Hero() {
         </p>
 
         {/* personal note */}
-        <div className="animate-rise delay-6 mb-10 flex items-start gap-4">
+        <div className="animate-rise delay-7 mb-10 flex items-start gap-4">
           <span
             className="mt-[7px] block h-[1px] w-[28px] shrink-0"
             style={{ background: 'var(--dim)' }}
@@ -131,7 +140,7 @@ export default function Hero() {
         </div>
 
         {/* CTAs */}
-        <div className="animate-rise delay-7 mb-6 flex flex-wrap items-center gap-5">
+        <div className="animate-rise delay-8 mb-6 flex flex-wrap items-center gap-5">
           <a
             href="#contact"
             className="cta-primary inline-flex items-center gap-3 rounded-lg px-7 py-3.5 text-[15px] font-medium transition-all duration-300"
@@ -163,7 +172,7 @@ export default function Hero() {
 
         {/* trust badges */}
         <div
-          className="animate-rise delay-8 flex flex-wrap gap-3 text-[11px]"
+          className="animate-rise delay-9 flex flex-wrap gap-3 text-[11px]"
           style={{ color: 'var(--dim)', fontFamily: 'var(--font-mono)' }}
         >
           <span>{t('trust1')}</span>

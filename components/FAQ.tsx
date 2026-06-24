@@ -7,7 +7,7 @@ import ScrollReveal from './ScrollReveal'
 export default function FAQ() {
   const t = useTranslations('faq')
 
-  const faqs = [1, 2, 3].map((i) => ({
+  const faqs = Array.from({ length: 12 }, (_, i) => i + 1).map((i) => ({
     question: t(`q${i}`),
     answer: t.raw(`a${i}`),
   }))

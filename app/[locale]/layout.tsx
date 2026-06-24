@@ -5,6 +5,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server'
 import { routing } from '@/i18n/routing'
 import { notFound } from 'next/navigation'
 import '../globals.css'
+import StructuredData from '@/components/StructuredData'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -36,13 +37,13 @@ export async function generateMetadata({
 
   const meta = {
     it: {
-      title: 'siti web per attività locali in sardegna | bozza gratuita in 48h',
+      title: 'Siti Web Sardegna | Creazione Siti su Misura — Bozza Gratuita 48h',
       description:
-        'siti web su misura per ristoranti, professionisti, negozi e attività in sardegna. bozza gratuita in 48 ore, nessun anticipo, senza impegno. più clienti, più contatti.',
+        'Web designer in Sardegna per ristoranti, paninoteche, hotel e attività locali. Creazione siti web su misura con bozza gratuita in 48 ore, senza anticipo. Servizio in Nuoro, Ogliastra e tutta l\'isola.',
       ogLocale: 'it_IT',
-      ogTitle: 'websardegna.life',
+      ogTitle: 'WebSardegna — Siti Web su Misura in Sardegna',
       ogDescription:
-        'siti web su misura per attività locali in sardegna. bozza gratuita in 48h.',
+        'Creazione siti web per attività locali in Sardegna. Bozza gratuita in 48h, nessun anticipo, paghi solo se sei soddisfatto.',
     },
     en: {
       title: 'custom websites for local businesses | free mockup in 48h',
@@ -57,9 +58,28 @@ export async function generateMetadata({
 
   const m = meta[locale as keyof typeof meta] || meta.it
 
+  const keywords = locale === 'it'
+    ? [
+        'siti web sardegna',
+        'creazione siti web sardegna',
+        'web designer sardegna',
+        'bozza sito web gratuita',
+        'siti web ristoranti sardegna',
+        'siti web nuoro',
+        'siti web ogliastra',
+      ]
+    : [
+        'websites sardinia',
+        'web designer sardinia',
+        'custom websites italy',
+        'free website mockup',
+        'local business websites',
+      ]
+
   return {
     title: m.title,
     description: m.description,
+    keywords,
     metadataBase: new URL('https://websardegna.life'),
     alternates: {
       canonical: locale === 'it' ? '/' : '/en',
@@ -114,6 +134,8 @@ export default async function RootLayout({
   return (
     <html lang={locale} className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
+        <StructuredData locale={locale} />
+
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{

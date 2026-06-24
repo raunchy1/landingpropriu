@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
-import { useRouter, usePathname } from '@/i18n/navigation'
+import { Link, useRouter, usePathname } from '@/i18n/navigation'
 
 
 export default function Navbar() {
@@ -39,10 +39,10 @@ export default function Navbar() {
       }}
     >
       <div className="mx-auto flex h-full max-w-[720px] items-center justify-between px-6 md:px-8">
-        <a href="#" className="text-[15px] font-semibold" style={{ color: 'var(--fg)' }}>
+        <Link href="/" className="text-[15px] font-semibold" style={{ color: 'var(--fg)' }}>
           websardegna
           <span style={{ color: 'var(--muted)' }}>.life</span>
-        </a>
+        </Link>
 
         <div className="flex items-center gap-1" style={{ fontFamily: 'var(--font-mono)', fontSize: '11px' }}>
           <button onClick={() => switchLocale('it')} style={{ color: locale === 'it' ? 'var(--fg)' : 'var(--dim)', fontWeight: locale === 'it' ? 600 : 400, background: 'none', border: 'none', cursor: 'pointer', padding: '4px' }}>it</button>

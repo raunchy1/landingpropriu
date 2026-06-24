@@ -2,6 +2,7 @@
 
 import ScrollReveal from '@/components/ScrollReveal'
 import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 
 export default function Services() {
   const t = useTranslations('services')
@@ -83,12 +84,26 @@ export default function Services() {
             ))}
           </div>
 
-          <p
-            className="reveal-child mt-14 max-w-[520px] text-[15px] leading-[1.7]"
-            style={{ color: 'var(--muted)', fontFamily: 'var(--font-mono)' }}
-          >
-            <span style={{ color: 'var(--accent-green)' }}>→</span> {t('closing')}
-          </p>
+          <div className="reveal-child mt-14 flex flex-col gap-4">
+            <Link
+              href="/servizi"
+              className="text-[14px] font-medium transition-colors"
+              style={{
+                color: 'var(--accent-green)',
+                borderBottom: '1px solid var(--dim)',
+                paddingBottom: 2,
+                width: 'fit-content',
+              }}
+            >
+              {t('viewAll')}
+            </Link>
+            <p
+              className="max-w-[520px] text-[15px] leading-[1.7]"
+              style={{ color: 'var(--muted)', fontFamily: 'var(--font-mono)' }}
+            >
+              <span style={{ color: 'var(--accent-green)' }}>→</span> {t('closing')}
+            </p>
+          </div>
         </ScrollReveal>
       </div>
     </section>
