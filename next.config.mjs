@@ -7,6 +7,15 @@ const nextConfig = {
   images: {
     formats: ['image/webp'],
   },
+  async redirects() {
+    return [
+      {
+        source: '/bozza-gratuita',
+        destination: '/sardegna/bozza-gratuita',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);
