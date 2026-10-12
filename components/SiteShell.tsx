@@ -10,7 +10,7 @@ export default function SiteShell({ children }: Props) {
   return (
     <div style={{ background: 'var(--bg)', minHeight: '100vh' }}>
       <Navbar />
-      <main className="pt-[64px]">{children}</main>
+      <main className="relative pt-[64px]">{children}</main>
       <Footer />
       <MobileBar />
     </div>

@@ -1,5 +1,6 @@
 {
   "nav": {
+    "portfolio": "portfolio",
     "cta": "free mockup"
   },
   "hero": {
@@ -326,6 +327,7 @@
     "waLink": "https://wa.me/393501998569?text=Hey%2C%20I%27d%20like%20a%20free%20mockup%20for%20my%20website"
   },
   "footer": {
+    "portfolio": "portfolio",
     "home": "home",
     "services": "services",
     "blog": "blog",

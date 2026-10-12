@@ -60,6 +60,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/portfolio`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+      alternates: { languages: { it: `${baseUrl}/portfolio`, en: `${baseUrl}/en/portfolio` } },
+    },
+    {
       url: `${baseUrl}/progetti`,
       lastModified,
       changeFrequency: 'monthly',

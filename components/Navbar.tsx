@@ -42,10 +42,11 @@ export default function Navbar() {
       <div className="mx-auto flex h-full max-w-[720px] items-center justify-between px-6 md:px-8">
         <Link href="/" className="text-[15px] font-semibold" style={{ color: 'var(--fg)' }}>
           websardegna
-          <span style={{ color: 'var(--muted)' }}>.life</span>
+          <span style={{ color: 'var(--muted)' }}>.xyz</span>
         </Link>
 
         <div className="flex items-center gap-1" style={{ fontFamily: 'var(--font-mono)', fontSize: '11px' }}>
+          <Link href="/portfolio" className="mr-2 sm:mr-3" style={{ color: pathname === '/portfolio' ? 'var(--fg)' : 'var(--muted)', padding: '4px' }}>{t('portfolio')}</Link>
           <button onClick={() => switchLocale('it')} style={{ color: locale === 'it' ? 'var(--fg)' : 'var(--dim)', fontWeight: locale === 'it' ? 600 : 400, background: 'none', border: 'none', cursor: 'pointer', padding: '4px' }}>it</button>
           <span style={{ color: 'var(--dim)' }}>/</span>
           <button onClick={() => switchLocale('en')} style={{ color: locale === 'en' ? 'var(--fg)' : 'var(--dim)', fontWeight: locale === 'en' ? 600 : 400, background: 'none', border: 'none', cursor: 'pointer', padding: '4px' }}>en</button>

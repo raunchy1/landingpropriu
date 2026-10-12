@@ -29,6 +29,9 @@ export default function Footer() {
           <Link href="/progetti" style={{ color: 'var(--muted)' }}>
             {t('projects')}
           </Link>
+          <Link href="/portfolio" style={{ color: 'var(--muted)' }}>
+            {t('portfolio')}
+          </Link>
           <Link href="/contatti" style={{ color: 'var(--muted)' }}>
             {t('contact')}
           </Link>

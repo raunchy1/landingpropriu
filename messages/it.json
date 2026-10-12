@@ -1,5 +1,6 @@
 {
   "nav": {
+    "portfolio": "portfolio",
     "cta": "bozza gratuita"
   },
   "hero": {
@@ -325,6 +326,7 @@
     "waLink": "https://wa.me/393501998569?text=Ciao%2C%20vorrei%20la%20bozza%20gratuita%20per%20il%20mio%20sito"
   },
   "footer": {
+    "portfolio": "portfolio",
     "home": "home",
     "services": "servizi",
     "blog": "blog",
