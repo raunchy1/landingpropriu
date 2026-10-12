@@ -35,7 +35,7 @@ export function buildStructuredData(locale: string, faqs: FaqItem[]) {
     '@type': 'ProfessionalService',
     '@id': `${baseUrl}/#localbusiness`,
     name: isIt ? 'WebSardegna — Creazione Siti Web' : 'WebSardegna — Custom Websites',
-    alternateName: ['WebSardegna', 'websardegna.life'],
+    alternateName: ['WebSardegna', 'websardegna.xyz'],
     description: isIt
       ? 'Web designer freelance in Sardegna. Siti web su misura per ristoranti, negozi e attività locali. Bozza gratuita in 48 ore, senza anticipo.'
       : 'Freelance web designer in Sardinia, Italy. Custom websites for local businesses. Free mockup in 48 hours, no upfront payment.',

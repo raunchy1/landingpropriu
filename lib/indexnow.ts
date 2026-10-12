@@ -1,5 +1,5 @@
 const INDEXNOW_KEY = '84a594a78df0e0feec22134537af7c4e'
-const HOST = 'websardegna.life'
+const HOST = 'websardegna.xyz'
 
 export const indexNowKey = INDEXNOW_KEY
 
@@ -17,10 +17,10 @@ export async function submitToIndexNow(urls: string[]): Promise<Response> {
 }
 
 export const indexNowUrls = [
-  'https://websardegna.life/',
-  'https://websardegna.life/sardegna/bozza-gratuita',
-  'https://websardegna.life/guida',
-  'https://websardegna.life/blog/miglior-web-designer-sardegna-guida',
-  'https://websardegna.life/servizi',
-  'https://websardegna.life/contatti',
+  'https://websardegna.xyz/',
+  'https://websardegna.xyz/sardegna/bozza-gratuita',
+  'https://websardegna.xyz/guida',
+  'https://websardegna.xyz/blog/miglior-web-designer-sardegna-guida',
+  'https://websardegna.xyz/servizi',
+  'https://websardegna.xyz/contatti',
 ]

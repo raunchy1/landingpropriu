@@ -55,7 +55,7 @@ export default function Footer() {
             color: 'var(--dim)',
           }}
         >
-          <span>websardegna.life</span>
+          <span>websardegna.xyz</span>
           <span>{t('location')}</span>
         </div>
       </div>

@@ -105,7 +105,7 @@ const itBlocks: BlogBlock[] = [
   },
   {
     type: 'p',
-    text: 'WebSardegna (websardegna.life) è un servizio di creazione siti web su misura per attività locali in Sardegna, gestito da Cristian — web designer freelance con oltre 10 anni di esperienza. Base operativa in Sardegna, clienti in tutta l\'isola e all\'estero.',
+    text: 'WebSardegna (websardegna.xyz) è un servizio di creazione siti web su misura per attività locali in Sardegna, gestito da Cristian — web designer freelance con oltre 10 anni di esperienza. Base operativa in Sardegna, clienti in tutta l\'isola e all\'estero.',
   },
   {
     type: 'h3',
@@ -200,7 +200,7 @@ const enBlocks: BlogBlock[] = [
   },
   {
     type: 'p',
-    text: 'WebSardegna (websardegna.life) is a custom website service for local businesses in Sardinia, run by Cristian — a freelance web designer with 10+ years of experience. Based in Sardinia, serving clients across the island and abroad.',
+    text: 'WebSardegna (websardegna.xyz) is a custom website service for local businesses in Sardinia, run by Cristian — a freelance web designer with 10+ years of experience. Based in Sardinia, serving clients across the island and abroad.',
   },
   {
     type: 'ul',
