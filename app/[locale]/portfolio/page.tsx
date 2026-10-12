@@ -140,9 +140,9 @@ export default function PortfolioPage({ params }: Props) {
       {/* WORK */}
       <section className="mx-auto max-w-[1080px] px-6 pb-24 md:px-8">
         <SectionHead n="03" title={t('workTitle', loc)} />
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-5 lg:grid-cols-[1fr_1.25fr]">
           {works.map((w) => (
-            <article key={w.id} className="pf-card group flex flex-col overflow-hidden rounded-2xl border">
+            <article key={w.id} className="pf-card group flex flex-col overflow-hidden rounded-2xl border" style={w.wip ? { borderColor: 'rgba(46,189,89,0.22)' } : undefined}>
               {w.image ? (
                 <div className="relative aspect-[16/10] overflow-hidden border-b" style={{ borderColor: 'var(--surface-border)', background: '#0d0d0c' }}>
                   <Image src={w.image} alt={w.title} fill sizes="(min-width:768px) 520px, 100vw" className="pf-shot object-cover object-top" />
@@ -151,13 +151,25 @@ export default function PortfolioPage({ params }: Props) {
               <div className="flex flex-1 flex-col p-6 md:p-7">
                 <div className="mb-3 flex items-center justify-between gap-3">
                   <Chip accent>{w.tag}</Chip>
-                  {!w.href && <span className="text-[11px]" style={{ ...mono, color: 'var(--dim)' }}>{t('noLink', loc)}</span>}
+                  {w.wip && <span className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-[11px]" style={{ ...mono, borderColor: 'rgba(245,190,70,0.4)', color: '#F5BE46', background: 'rgba(245,190,70,0.07)' }}><span className="h-1.5 w-1.5 animate-pulse rounded-full" style={{ background: '#F5BE46' }} />{t('wip', loc)}</span>}
                 </div>
                 <h3 className="mb-4 text-[22px] font-semibold" style={{ letterSpacing: '-0.02em', color: 'var(--fg)' }}>{w.title}</h3>
                 <p className="mb-1 text-[11px] uppercase tracking-wider" style={{ ...mono, color: 'var(--muted)' }}>{t('problem', loc)}</p>
                 <p className="mb-4 text-[14px] leading-[1.7]" style={{ color: '#A3A39E' }}>{w.problem}</p>
-                <p className="mb-1 text-[11px] uppercase tracking-wider" style={{ ...mono, color: 'var(--muted)' }}>{t('did', loc)}</p>
+                <p className="mb-1 text-[11px] uppercase tracking-wider" style={{ ...mono, color: 'var(--muted)' }}>{w.how ? t('solution', loc) : t('did', loc)}</p>
                 <p className="mb-5 text-[14px] leading-[1.7]" style={{ color: '#C9C9C4' }}>{w.did}</p>
+                {w.how && (
+                  <>
+                    <p className="mb-2 text-[11px] uppercase tracking-wider" style={{ ...mono, color: 'var(--muted)' }}>{t('how', loc)}</p>
+                    <ol className="mb-6 space-y-2">
+                      {w.how.map((h: string, i: number) => (
+                        <li key={h} className="flex gap-3 text-[14px] leading-[1.6]" style={{ color: '#C9C9C4' }}>
+                          <span className="shrink-0 text-[12px]" style={{ ...mono, color: 'var(--accent-green)' }}>0{i + 1}</span>{h}
+                        </li>
+                      ))}
+                    </ol>
+                  </>
+                )}
                 <div className="mt-auto flex flex-wrap items-center gap-1.5">
                   {w.stack.map((s) => <Chip key={s}>{s}</Chip>)}
                   {w.href && (

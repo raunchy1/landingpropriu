@@ -73,6 +73,9 @@ const copy = {
   workTitle: { it: 'Lavori selezionati', en: 'Selected work' },
   problem: { it: 'Problema', en: 'Problem' },
   did: { it: 'Cosa ho fatto', en: 'What I did' },
+  solution: { it: 'Soluzione', en: 'Solution' },
+  how: { it: 'Come funziona', en: 'How it works' },
+  wip: { it: 'In sviluppo', en: 'Work in progress' },
   visit: { it: 'Visita', en: 'Visit' },
   skillsTitle: { it: 'Competenze', en: 'Skills' },
   expTitle: { it: 'Esperienza', en: 'Experience' },
@@ -97,7 +100,7 @@ export const rakazoLinks = [
 ]
 export const rakazoStack = ['TypeScript', 'Hono', 'oRPC', 'Better Auth', 'Postgres', 'Prisma', 'Graphile Worker', 'Docker', 'E2B', 'Electron', 'SSE']
 
-type Work = { id: string; title: string; tag: L; problem: L; did: L; stack: string[]; href?: string; image?: string }
+type Work = { id: string; title: string; tag: L; problem: L; did: L; how?: { it: string[]; en: string[] }; wip?: boolean; stack: string[]; href?: string; image?: string }
 const works: Work[] = [
   {
     id: 'anvelope', title: 'Anvelope Ungheni', image: '/portfolio/anvelope.webp', href: 'https://anvelope-ungheni.md',
@@ -107,63 +110,15 @@ const works: Work[] = [
     stack: ['Next.js', 'Supabase', 'TypeScript', 'Tailwind', 'i18n RO/RU'],
   },
   {
-    id: 'andamus', title: 'Andamus', image: '/portfolio/andamus.webp', href: 'https://andamus.13.140.190.190.sslip.io',
-    tag: { it: 'Prodotto · Ride sharing', en: 'Product · Ride sharing' },
-    problem: { it: 'Trovare e offrire passaggi in modo semplice, con login veloce e notifiche in tempo reale.', en: 'Finding and offering rides simply, with fast sign-in and real-time notifications.' },
-    did: { it: 'Prodotto digitale completo: autenticazione Google OAuth, Google Maps, notifiche push, email transazionali con Resend, analytics PostHog e monitoraggio errori con Sentry. Migrato su server self-hosted.', en: 'Complete digital product: Google OAuth sign-in, Google Maps, push notifications, transactional email via Resend, PostHog analytics and Sentry error monitoring. Migrated to a self-hosted server.' },
-    stack: ['Next.js', 'Supabase', 'Google OAuth/Maps', 'Push', 'Resend', 'PostHog', 'Sentry'],
-  },
-  {
-    id: 'divingchia', title: 'Diving Chia', image: '/portfolio/divingchia.webp', href: 'https://divingchia.com',
-    tag: { it: 'Turismo · Sardegna', en: 'Tourism · Sardinia' },
-    problem: { it: 'Un centro immersioni a Chia senza una presenza online all’altezza dell’esperienza.', en: 'A dive centre in Chia without an online presence that matched the experience.' },
-    did: { it: 'Sito esperienziale per immersioni e turismo a Chia, con contatto diretto via WhatsApp.', en: 'Experience-led diving and tourism website for Chia, with direct WhatsApp contact.' },
-    stack: ['Next.js', 'TypeScript', 'Tailwind'],
-  },
-  {
-    id: 'sanpaolo', title: 'San Paolo Hideout', image: '/portfolio/sanpaolo.webp', href: 'https://sanpaolohideout.it',
-    tag: { it: 'Hospitality · Roma', en: 'Hospitality · Rome' },
-    problem: { it: 'Una struttura ricettiva che voleva più prenotazioni dirette e un’esperienza ospite curata.', en: 'A guest house that wanted more direct bookings and a polished guest experience.' },
-    did: { it: 'Sito hospitality e piattaforma per gli ospiti, con disponibilità e contatto diretto.', en: 'Hospitality website and guest experience platform, with availability and direct contact.' },
-    stack: ['Next.js', 'TypeScript', 'iCal-style availability'],
-  },
-  {
-    id: 'cannigione', title: 'Cannigione Experience',
-    tag: { it: 'Turismo · Sardegna', en: 'Tourism · Sardinia' },
-    problem: { it: 'Visitatori di Cannigione senza un punto unico per scoprire esperienze locali.', en: 'Visitors to Cannigione had no single place to discover local experiences.' },
-    did: { it: 'Sito di viaggio e hospitality con esperienza digitale per chi visita Cannigione, in Sardegna.', en: 'Travel and hospitality website and digital experience for visitors to Cannigione, Sardinia.' },
-    stack: ['Next.js', 'TypeScript'],
-  },
-  {
-    id: 'websardegna', title: 'WebSardegna', image: '/portfolio/websardegna.webp', href: 'https://websardegna.xyz',
-    tag: { it: 'Studio · Growth', en: 'Studio · Growth' },
-    problem: { it: 'Attività locali in Sardegna senza un sito moderno né un modo misurabile per acquisire clienti.', en: 'Local businesses in Sardinia without a modern site or a measurable way to win customers.' },
-    did: { it: 'Il mio studio: siti su misura con bozza in 48h, bilingue IT/EN, campagne Google, Meta e TikTok Ads con GA4, GTM, Pixel e Conversion API.', en: 'My studio: custom sites with a 48h mockup, bilingual IT/EN, Google, Meta and TikTok Ads campaigns with GA4, GTM, Pixel and Conversion API.' },
-    stack: ['Next.js', 'next-intl', 'GA4', 'GTM', 'Ads'],
-  },
-  {
-    id: 'salesfactory', title: 'AI Sales Factory',
-    tag: { it: 'AI · Automazione', en: 'AI · Automation' },
-    problem: { it: 'Generazione lead e outreach manuali, lenti e difficili da scalare.', en: 'Manual lead generation and outreach — slow and hard to scale.' },
-    did: { it: 'Sistema di automazione vendite con AI per lead generation, outreach e workflow di conversione.', en: 'AI-powered sales automation system for lead generation, outreach and conversion workflows.' },
-    stack: ['LLM APIs', 'Automation', 'Outreach workflows'],
-  },
-  {
-    id: 'ecosorgente', title: 'Ecosorgente AI Creative System',
-    tag: { it: 'AI · Creatività', en: 'AI · Creative' },
-    problem: { it: 'Produrre concept pubblicitari, immagini e video brevi richiedeva troppo tempo.', en: 'Producing ad concepts, images and short videos took too much time.' },
-    did: { it: 'Sistema creativo AI per generare concept pubblicitari, immagini e workflow di video short-form.', en: 'AI creative system for generating advertising concepts, images and short-form video workflows.' },
-    stack: ['LLM APIs', 'Image generation', 'Video workflows'],
-  },
-  {
-    id: 'infra', title: 'Infra: Vercel → Contabo + Coolify',
-    tag: { it: 'DevOps · Self-hosting', en: 'DevOps · Self-hosting' },
-    problem: { it: 'App dei clienti su piani hosting limitati e costosi, con progetti bloccati.', en: 'Client apps on limited, costly hosting plans, with projects getting blocked.' },
-    did: { it: 'Migrazione delle app dei clienti da Vercel a un VPS Contabo self-hosted con Coolify e Docker: certificati Let’s Encrypt, cutover DNS, variabili d’ambiente e verifica post-migrazione.', en: 'Migrated client apps from Vercel to a self-hosted Contabo VPS with Coolify and Docker: Let’s Encrypt certificates, DNS cutovers, environment variables and post-migration checks.' },
-    stack: ['Docker', 'Coolify', 'Let’s Encrypt', 'DNS'],
+    id: 'andamus', title: 'Andamus', image: '/portfolio/andamus.webp', href: 'https://andamus.13.140.190.190.sslip.io', wip: true,
+    tag: { it: 'SaaS · Mobilità in Sardegna', en: 'SaaS · Mobility in Sardinia' },
+    problem: { it: 'In Sardegna spostarsi da un paese all’altro, o da una città all’altra, è davvero difficile: autobus locali con orari scomodi e poco frequenti, e per andare da A a B spesso servono più cambi di mezzo e tanto tempo perso.', en: 'In Sardinia, getting from village to village or town to town is genuinely hard: local buses run on awkward, infrequent schedules, and going from A to B often means changing several times and losing hours.' },
+    did: { it: 'Ho progettato Andamus partendo da un’usanza fortissima sull’isola: offrire un passaggio. Un SaaS che trasforma questa abitudine in una rete di mobilità locale, con due profili — passeggero e autista. Credo che Andamus possa risolvere un problema duro e amaro per chi vive sull’isola: i trasporti.', en: 'I designed Andamus around a strong island custom: offering a lift — a “passaggio”. It’s a SaaS that turns that habit into a local mobility network, with two profiles: passenger and driver. I believe Andamus can solve a hard, bitter problem for the people who live on the island: transport.' },
+    how: { it: ['L’autista pubblica il viaggio che deve già fare, in una direzione e a un orario.', 'I passeggeri cercano la tratta, trovano il passaggio e prenotano il posto.', 'L’autista decide se offrirlo gratis o a pagamento — pagamenti integrati con Stripe.', 'Notifiche push e login con Google tengono tutti aggiornati in tempo reale.'], en: ['A driver publishes a trip they’re already making, in a direction and at a time.', 'Passengers search the route, find the ride and book a seat.', 'The driver chooses whether the ride is free or paid — payments integrated via Stripe.', 'Push notifications and Google sign-in keep everyone updated in real time.'] },
+    stack: ['Next.js', 'Supabase', 'Google OAuth', 'Google Maps', 'Stripe', 'Push notifications', 'Resend', 'PostHog', 'Sentry'],
   },
 ]
-export const getWorks = (loc: Loc) => works.map((w) => ({ ...w, tag: pick(w.tag, loc), problem: pick(w.problem, loc), did: pick(w.did, loc) }))
+export const getWorks = (loc: Loc) => works.map((w) => ({ ...w, tag: pick(w.tag, loc), problem: pick(w.problem, loc), did: pick(w.did, loc), how: w.how ? w.how[loc] : undefined }))
 
 export const skills: { title: L; items: string[] }[] = [
   { title: { it: 'AI & LLM', en: 'AI & LLM' }, items: ['LLM integration', 'AI agents & tool use', 'Prompt engineering', 'Multi-model orchestration', 'Structured outputs / JSON', 'RAG, memory & context', 'Classification & extraction', 'Content generation'] },
