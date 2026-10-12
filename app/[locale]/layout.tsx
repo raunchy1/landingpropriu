@@ -53,7 +53,7 @@ export async function generateMetadata({
       description:
         'custom-built websites for restaurants, hotels, shops and local businesses. free mockup in 48 hours, no upfront payment, no commitment.',
       ogLocale: 'en_US',
-      ogTitle: 'websardegna.life',
+      ogTitle: 'websardegna.xyz',
       ogDescription:
         'custom websites for local businesses. free mockup in 48h.',
     },
@@ -83,7 +83,7 @@ export async function generateMetadata({
     title: m.title,
     description: m.description,
     keywords,
-    metadataBase: new URL('https://websardegna.life'),
+    metadataBase: new URL('https://websardegna.xyz'),
     alternates: {
       canonical: locale === 'it' ? '/' : '/en',
       languages: {
@@ -95,14 +95,14 @@ export async function generateMetadata({
     openGraph: {
       title: m.ogTitle,
       description: m.ogDescription,
-      url: locale === 'it' ? 'https://websardegna.life' : 'https://websardegna.life/en',
-      siteName: 'websardegna.life',
+      url: locale === 'it' ? 'https://websardegna.xyz' : 'https://websardegna.xyz/en',
+      siteName: 'websardegna.xyz',
       images: [
         {
           url: '/og-image.png',
           width: 1200,
           height: 630,
-          alt: 'websardegna.life',
+          alt: 'websardegna.xyz',
         },
       ],
       locale: m.ogLocale,

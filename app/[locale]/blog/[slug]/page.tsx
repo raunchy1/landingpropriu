@@ -57,7 +57,7 @@ export default async function BlogPostPage({ params }: Props) {
     publisher: {
       '@type': 'Organization',
       name: 'WebSardegna',
-      url: 'https://websardegna.life',
+      url: 'https://websardegna.xyz',
     },
     inLanguage: locale === 'it' ? 'it-IT' : 'en-US',
     keywords: post.keywords.join(', '),
