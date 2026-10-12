@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { getAllPostParams } from '@/lib/blog/posts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://websardegna.life'
+  const baseUrl = 'https://websardegna.xyz'
   const lastModified = new Date()
 
   const staticPages: MetadataRoute.Sitemap = [

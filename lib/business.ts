@@ -9,7 +9,7 @@ export const business = {
     it: 'Creazione siti web su misura in Sardegna',
     en: 'Custom websites in Sardinia, Italy',
   },
-  url: 'https://websardegna.life',
+  url: 'https://websardegna.xyz',
   email: 'cristiermurache@gmail.com',
   phone: '+39 350 199 8569',
   phoneE164: '+393501998569',
@@ -85,7 +85,7 @@ export const gbpDescriptionIt = `Web designer freelance in Sardegna. Creo siti w
 ✓ Mobile-first, SEO locale, integrazione WhatsApp
 ✓ Anche Google Ads, AI e software su misura
 
-Scrivimi su WhatsApp o visita websardegna.life — rispondo personalmente entro 24 ore.`
+Scrivimi su WhatsApp o visita websardegna.xyz — rispondo personalmente entro 24 ore.`
 
 /** Review request message (IT) — send via WhatsApp after project delivery */
 export const reviewRequestIt = `Ciao [NOME]! Spero che il sito ti stia portando risultati 🙌

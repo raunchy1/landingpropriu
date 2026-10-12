@@ -99,7 +99,7 @@ function ContactForm() {
         },
         body: JSON.stringify({
           access_key: WEB3FORMS_KEY,
-          subject: 'Nuova richiesta da websardegna.life',
+          subject: 'Nuova richiesta da websardegna.xyz',
           from_name: 'WebSardegna',
           name,
           email,
