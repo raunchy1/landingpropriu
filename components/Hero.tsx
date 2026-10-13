@@ -128,7 +128,7 @@ export default function Hero() {
         <div className="animate-rise delay-7 mb-10 flex items-start gap-4">
           <span
             className="mt-[7px] block h-[1px] w-[28px] shrink-0"
-            style={{ background: 'var(--dim)' }}
+            style={{ background: 'var(--dim-line)' }}
           />
           <p
             className="text-[11px] leading-[1.8]"
@@ -163,7 +163,7 @@ export default function Hero() {
             className="text-sm transition-all duration-300"
             style={{
               color: 'var(--muted)',
-              borderBottom: '1px solid var(--dim)',
+              borderBottom: '1px solid var(--dim-line)',
               paddingBottom: 2,
             }}
           >

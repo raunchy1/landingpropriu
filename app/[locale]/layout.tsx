@@ -8,7 +8,7 @@ import '../globals.css'
 import StructuredData from '@/components/StructuredData'
 import AttributionCapture from '@/components/AttributionCapture'
 import GoogleAdsConversion from '@/components/GoogleAdsConversion'
-import { analytics } from '@/lib/analytics'
+import ConsentManager from '@/components/ConsentManager'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -49,13 +49,13 @@ export async function generateMetadata({
         'Creazione siti web per attività locali in Sardegna. Bozza gratuita in 48h, nessun anticipo, paghi solo se sei soddisfatto.',
     },
     en: {
-      title: 'custom websites for local businesses | free mockup in 48h',
+      title: 'Custom Websites for Local Businesses in Sardinia | Free Mockup in 48h',
       description:
-        'custom-built websites for restaurants, hotels, shops and local businesses. free mockup in 48 hours, no upfront payment, no commitment.',
+        'Custom-built websites for restaurants, hotels, shops and local businesses in Sardinia. Free mockup in 48 hours, no upfront payment, no commitment.',
       ogLocale: 'en_US',
-      ogTitle: 'websardegna.xyz',
+      ogTitle: 'WebSardegna — Custom Websites in Sardinia, Italy',
       ogDescription:
-        'custom websites for local businesses. free mockup in 48h.',
+        'Websites for local businesses in Sardinia. Free mockup in 48h, no upfront payment — pay only if you are happy.',
     },
   }
 
@@ -142,28 +142,11 @@ export default async function RootLayout({
       <head>
         <StructuredData locale={locale} />
 
-        {/* Google Tag Manager */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','${analytics.gtmId}');`,
-          }}
-        />
-
-        {/* Google Ads + GA4 (conversion tracking) */}
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${analytics.googleAdsId}`}
-        />
+        {/* Google Consent Mode v2 — default denied; tags load only after consent (ConsentManager) */}
         <script
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());
-gtag('config','${analytics.googleAdsId}');
-gtag('config','${analytics.ga4Id}');`,
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});`,
           }}
         />
       </head>
@@ -171,18 +154,10 @@ gtag('config','${analytics.ga4Id}');`,
         className="font-sans antialiased"
         style={{ fontFamily: 'var(--font-sans)' }}
       >
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-N6KPZVBF"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          />
-        </noscript>
         <NextIntlClientProvider messages={messages}>
           <AttributionCapture />
           <GoogleAdsConversion />
+          <ConsentManager />
           {children}
         </NextIntlClientProvider>
       </body>

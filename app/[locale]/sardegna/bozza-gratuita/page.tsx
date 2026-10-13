@@ -71,7 +71,7 @@ export default async function BozzaGratuitaPage({ params }: Props) {
       >
         <div className="mx-auto flex h-full max-w-[720px] items-center justify-between px-6">
           <span className="text-[14px] font-semibold" style={{ color: 'var(--fg)' }}>
-            websardegna<span style={{ color: 'var(--muted)' }}>.life</span>
+            websardegna<span style={{ color: 'var(--muted)' }}>.xyz</span>
           </span>
           <span
             className="text-[11px]"

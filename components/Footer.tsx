@@ -11,7 +11,7 @@ export default function Footer() {
     <footer style={{ borderTop: '1px solid var(--line)' }}>
       <div className="mx-auto max-w-[720px] px-6 py-6 md:px-8">
         <nav
-          className="mb-4 flex flex-wrap gap-x-5 gap-y-2"
+          className="mb-4 flex flex-wrap gap-x-5 gap-y-1 [&>a]:inline-block [&>a]:py-2"
           style={{ fontFamily: 'var(--font-mono)', fontSize: 11 }}
         >
           <Link href="/" style={{ color: 'var(--muted)' }}>
@@ -34,6 +34,12 @@ export default function Footer() {
           </Link>
           <Link href="/contatti" style={{ color: 'var(--muted)' }}>
             {t('contact')}
+          </Link>
+          <Link href="/privacy" style={{ color: 'var(--muted)' }}>
+            Privacy
+          </Link>
+          <Link href="/cookie-policy" style={{ color: 'var(--muted)' }}>
+            Cookie
           </Link>
         </nav>
 

@@ -87,7 +87,7 @@ export default function Projects() {
               className="text-[14px] font-medium transition-colors"
               style={{
                 color: 'var(--accent-green)',
-                borderBottom: '1px solid var(--dim)',
+                borderBottom: '1px solid var(--dim-line)',
                 paddingBottom: 2,
               }}
             >

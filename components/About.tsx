@@ -124,7 +124,7 @@ export default function About() {
           <div className="reveal-child mt-10 flex items-start gap-4">
             <span
               className="mt-[7px] block h-[1px] w-[28px] shrink-0"
-              style={{ background: 'var(--dim)' }}
+              style={{ background: 'var(--dim-line)' }}
             />
             <p
               className="text-[15px] leading-[1.7]"

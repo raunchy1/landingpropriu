@@ -69,7 +69,7 @@ export default async function BlogPage({ params }: Props) {
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="group block rounded-xl border border-[var(--line)] p-6 transition-colors duration-300 hover:border-[var(--dim)]"
+                className="group block rounded-xl border border-[var(--line)] p-6 transition-colors duration-300 hover:border-[var(--dim-line)]"
                 style={{ background: 'var(--surface)' }}
               >
                 <time

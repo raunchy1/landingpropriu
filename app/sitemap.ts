@@ -67,6 +67,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: { languages: { it: `${baseUrl}/portfolio`, en: `${baseUrl}/en/portfolio` } },
     },
     {
+      url: `${baseUrl}/en/portfolio`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified,
+      changeFrequency: 'yearly',
+      priority: 0.2,
+    },
+    {
+      url: `${baseUrl}/en/privacy`,
+      lastModified,
+      changeFrequency: 'yearly',
+      priority: 0.1,
+    },
+    {
+      url: `${baseUrl}/cookie-policy`,
+      lastModified,
+      changeFrequency: 'yearly',
+      priority: 0.2,
+    },
+    {
+      url: `${baseUrl}/en/cookie-policy`,
+      lastModified,
+      changeFrequency: 'yearly',
+      priority: 0.1,
+    },
+    {
       url: `${baseUrl}/progetti`,
       lastModified,
       changeFrequency: 'monthly',
@@ -106,5 +136,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   )
 
-  return [...staticPages, ...blogPosts]
+  // Every IT/EN static page pair carries reciprocal hreflang alternates.
+  const withAlternates = staticPages.map((p) => {
+    const path = p.url.replace(baseUrl, '').replace(/^\/en(?=\/|$)/, '')
+    return {
+      ...p,
+      alternates: {
+        languages: { it: `${baseUrl}${path}`, en: `${baseUrl}/en${path}` },
+      },
+    }
+  })
+
+  return [...withAlternates, ...blogPosts]
 }

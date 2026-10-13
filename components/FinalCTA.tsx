@@ -336,7 +336,7 @@ function WhatsAppBlock() {
           {t('orEmail')}{' '}
           <a
             href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(t('emailSubject'))}`}
-            style={{ color: 'var(--fg)', borderBottom: '1px solid var(--dim)' }}
+            style={{ color: 'var(--fg)', borderBottom: '1px solid var(--dim-line)' }}
           >
             {CONTACT_EMAIL}
           </a>
@@ -400,7 +400,7 @@ export default function FinalCTA() {
           <div className="reveal-child mt-10 text-center">
             <p className="text-[13px]" style={{ fontFamily: 'var(--font-mono)' }}>
               <span style={{ color: 'var(--fg)' }}>websardegna</span>
-              <span style={{ color: 'var(--muted)' }}>.life</span>
+              <span style={{ color: 'var(--muted)' }}>.xyz</span>
               <span className="caret" />
             </p>
           </div>

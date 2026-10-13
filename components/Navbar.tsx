@@ -46,10 +46,10 @@ export default function Navbar() {
         </Link>
 
         <div className="flex items-center gap-1" style={{ fontFamily: 'var(--font-mono)', fontSize: '11px' }}>
-          <Link href="/portfolio" className="mr-2 sm:mr-3" style={{ color: pathname === '/portfolio' ? 'var(--fg)' : 'var(--muted)', padding: '4px' }}>{t('portfolio')}</Link>
-          <button onClick={() => switchLocale('it')} style={{ color: locale === 'it' ? 'var(--fg)' : 'var(--dim)', fontWeight: locale === 'it' ? 600 : 400, background: 'none', border: 'none', cursor: 'pointer', padding: '4px' }}>it</button>
+          <Link href="/portfolio" className="mr-2 sm:mr-3" style={{ color: pathname === '/portfolio' ? 'var(--fg)' : 'var(--muted)', padding: '10px 6px', display: 'inline-block' }}>{t('portfolio')}</Link>
+          <button onClick={() => switchLocale('it')} style={{ color: locale === 'it' ? 'var(--fg)' : 'var(--dim)', fontWeight: locale === 'it' ? 600 : 400, background: 'none', border: 'none', cursor: 'pointer', padding: '10px 8px', minWidth: 32, minHeight: 32 }}>it</button>
           <span style={{ color: 'var(--dim)' }}>/</span>
-          <button onClick={() => switchLocale('en')} style={{ color: locale === 'en' ? 'var(--fg)' : 'var(--dim)', fontWeight: locale === 'en' ? 600 : 400, background: 'none', border: 'none', cursor: 'pointer', padding: '4px' }}>en</button>
+          <button onClick={() => switchLocale('en')} style={{ color: locale === 'en' ? 'var(--fg)' : 'var(--dim)', fontWeight: locale === 'en' ? 600 : 400, background: 'none', border: 'none', cursor: 'pointer', padding: '10px 8px', minWidth: 32, minHeight: 32 }}>en</button>
         </div>
 
         <WhatsAppLink

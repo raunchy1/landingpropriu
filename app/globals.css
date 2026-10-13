@@ -6,8 +6,9 @@
 :root {
   --bg: #080808;
   --fg: #EDEDEA;
-  --muted: #6E6E69;
-  --dim: #3A3A36;
+  --muted: #9A9A94;
+  --dim: #85857F;
+  --dim-line: #3A3A36;
   --line: #1E1E1C;
   --accent-green: #2EBD59;
   --surface: rgba(255, 255, 255, 0.015);
@@ -29,7 +30,7 @@ body {
 /* ─── keyframes ─── */
 @keyframes rise {
   from {
-    opacity: 0;
+
     transform: translateY(12px);
   }
   to {
@@ -63,7 +64,7 @@ body {
 
 /* ─── animation utilities ─── */
 .animate-rise {
-  opacity: 0;
+
   animation: rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
@@ -234,3 +235,10 @@ body {
 .pf-flagship { background: radial-gradient(80% 120% at 0% 0%, rgba(46,189,89,0.08), transparent 60%), linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); border-color: rgba(46,189,89,0.22); }
 .pf-shot { transition: transform .8s cubic-bezier(0.22,1,0.36,1); }
 .group:hover .pf-shot, a:hover > .pf-shot { transform: scale(1.03); }
+
+/* a11y: links inside running text must not rely on colour alone */
+main p a:not([class*="inline-flex"]):not([class*="rounded"]),
+main li a:not([class*="inline-flex"]):not([class*="rounded"]) {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

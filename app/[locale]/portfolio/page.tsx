@@ -78,7 +78,7 @@ export default function PortfolioPage({ params }: Props) {
           <div className="animate-rise relative mx-auto w-full max-w-[380px]" style={{ animationDelay: '120ms' }}>
             <div className="absolute -inset-3 rounded-[28px] opacity-60 blur-2xl" style={{ background: 'radial-gradient(circle at 30% 20%, rgba(46,189,89,0.35), transparent 60%)' }} />
             <div className="relative overflow-hidden rounded-[24px] border" style={{ borderColor: 'var(--surface-border)' }}>
-              <Image src={profile.photo} alt={profile.name} width={640} height={640} priority className="h-auto w-full" />
+              <Image src={profile.photo} alt={profile.name} width={640} height={640} priority sizes="(min-width:768px) 400px, 90vw" className="h-auto w-full" />
             </div>
           </div>
         </div>
@@ -205,7 +205,7 @@ export default function PortfolioPage({ params }: Props) {
         <ol className="relative border-l pl-7 md:pl-10" style={{ borderColor: 'var(--line)' }}>
           {experience.map((e, i) => (
             <li key={e.role + e.org} className="relative pb-9 last:pb-0">
-              <span className="absolute -left-[33px] top-1.5 h-2.5 w-2.5 rounded-full md:-left-[45px]" style={{ background: i < 2 ? 'var(--accent-green)' : 'var(--dim)', boxShadow: i < 2 ? '0 0 0 4px rgba(46,189,89,0.12)' : 'none' }} />
+              <span className="absolute -left-[33px] top-1.5 h-2.5 w-2.5 rounded-full md:-left-[45px]" style={{ background: i < 2 ? 'var(--accent-green)' : 'var(--dim-line)', boxShadow: i < 2 ? '0 0 0 4px rgba(46,189,89,0.12)' : 'none' }} />
               <div className="grid gap-1 md:grid-cols-[180px_1fr] md:gap-8">
                 <p className="text-[12px]" style={{ ...mono, color: 'var(--muted)' }}>{pick(e.dates, loc)}</p>
                 <div>
