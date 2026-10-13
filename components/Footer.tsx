@@ -51,7 +51,7 @@ export default function Footer() {
           {' · '}
           {business.address.locality}, {business.address.region}
           {' · '}
-          <a href={`tel:${business.phoneE164}`} style={{ color: 'var(--muted)' }}>
+          <a href={`tel:${business.phoneE164}`} className="underline underline-offset-2" style={{ color: 'var(--muted)' }}>
             {business.phone}
           </a>
         </address>
