@@ -1,4 +1,5 @@
 import type { BlogPost } from './types'
+import { seoPostsIt } from './posts-seo'
 import { getGuidaContent } from '@/lib/guida-content'
 
 const itGuida = getGuidaContent('it')
@@ -39,7 +40,7 @@ const itRestaurantArticle: BlogPost = {
     {
       type: 'ul',
       items: [
-        'Il 70% delle ricerche per ristoranti avviene da smartphone',
+        'Gran parte delle ricerche per ristoranti avviene da smartphone',
         'I turisti in Sardegna cercano "ristorante vicino a me" o "paninoteca [città]"',
         'Un sito veloce aumenta la fiducia: il cliente percepisce professionalità',
         'WhatsApp, form contatto e Maps integrati riducono l\'attrito alla prenotazione',
@@ -79,7 +80,7 @@ const itRestaurantArticle: BlogPost = {
     },
     {
       type: 'p',
-      text: 'Senza titoli corretti, meta description, schema LocalBusiness e collegamento con Google Business Profile, il sito esiste ma non viene trovato. Le ricerche "ristorante Nuoro", "paninoteca Ogliastra" o "mangiare Arzana" vanno ai competitor che hanno curato questi dettagli.',
+      text: 'Senza titoli corretti, meta description, schema LocalBusiness e collegamento con Google Business Profile, il sito esiste ma non viene trovato. Le ricerche "ristorante Nuoro", "paninoteca Ogliastra" o "mangiare a Tortolì" vanno ai competitor che hanno curato questi dettagli.',
     },
     {
       type: 'h3',
@@ -217,7 +218,7 @@ const enRestaurantArticle: BlogPost = {
     {
       type: 'ul',
       items: [
-        '70% of restaurant searches happen on smartphones',
+        'Many restaurant searches happen on smartphones',
         'Tourists in Sardinia search "restaurant near me" or "sandwich shop [city]"',
         'A fast website builds trust and signals professionalism',
         'Integrated WhatsApp, contact forms and Maps reduce friction to booking',
@@ -573,6 +574,7 @@ const enGuidaArticle: BlogPost = {
 }
 
 const allPosts: BlogPost[] = [
+  ...seoPostsIt,
   itRestaurantArticle,
   enRestaurantArticle,
   itDetailingArticle,
@@ -591,6 +593,6 @@ export function getPost(locale: string, slug: string): BlogPost | undefined {
   return allPosts.find((p) => p.locale === locale && p.slug === slug)
 }
 
-export function getAllPostParams(): { locale: string; slug: string }[] {
-  return allPosts.map((p) => ({ locale: p.locale, slug: p.slug }))
+export function getAllPostParams(): { locale: string; slug: string; date: string }[] {
+  return allPosts.map((p) => ({ locale: p.locale, slug: p.slug, date: p.date }))
 }

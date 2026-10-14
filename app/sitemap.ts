@@ -110,6 +110,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.65,
     },
     {
+      url: `${baseUrl}/sardegna/bozza-gratuita`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/en/sardegna/bozza-gratuita`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
       url: `${baseUrl}/guida`,
       lastModified,
       changeFrequency: 'monthly',
@@ -125,12 +137,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const blogPosts: MetadataRoute.Sitemap = getAllPostParams().map(
-    ({ locale, slug }) => ({
+    ({ locale, slug, date }) => ({
       url:
         locale === 'it'
           ? `${baseUrl}/blog/${slug}`
           : `${baseUrl}/en/blog/${slug}`,
-      lastModified,
+      lastModified: new Date(date),
       changeFrequency: 'monthly' as const,
       priority: 0.75,
     })

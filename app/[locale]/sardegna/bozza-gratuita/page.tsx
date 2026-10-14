@@ -1,3 +1,4 @@
+import { withSeo } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { business } from '@/lib/business'
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'landingPage' })
 
-  return {
+  return withSeo({
     title: t('metaTitle'),
     description: t('metaDescription'),
     robots: { index: false, follow: false },
@@ -25,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           ? '/sardegna/bozza-gratuita'
           : '/en/sardegna/bozza-gratuita',
     },
-  }
+  }, locale)
 }
 
 export default async function BozzaGratuitaPage({ params }: Props) {

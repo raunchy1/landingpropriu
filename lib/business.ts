@@ -16,24 +16,23 @@ export const business = {
   whatsapp: 'https://wa.me/393501998569',
   // Service-area business (no public storefront)
   address: {
-    locality: 'Arzana',
+    locality: 'Ogliastra',
     region: 'Sardegna',
     province: 'NU',
-    postalCode: '08040',
+    postalCode: '',
     country: 'IT',
     countryName: 'Italia',
   },
   geo: {
-    latitude: 39.9288,
-    longitude: 9.3767,
+    latitude: 40.0,
+    longitude: 9.0,
   },
   googleMapsUrl:
-    'https://maps.google.com/?q=Arzana,+Sardegna,+Italia',
+    'https://maps.google.com/?q=Sardegna,+Italia',
   serviceAreas: [
     'Sardegna',
     'Nuoro',
     'Ogliastra',
-    'Arzana',
     'Tortolì',
     'Cardedu',
     'Lanusei',

@@ -121,7 +121,7 @@ const itBlocks: BlogBlock[] = [
       'SEO locale di base inclusa (titoli, meta, schema, Google Maps)',
       'Possibilità di integrare AI (chatbot) e gestire Google Ads',
       'Comunicazione diretta su WhatsApp — rispondo personalmente entro 24 ore',
-      'Servizio in tutta la Sardegna: Nuoro, Ogliastra, Arzana, Cagliari, Olbia, Sassari',
+      'Servizio in tutta la Sardegna: Nuoro, Ogliastra, Cagliari, Olbia, Sassari',
     ],
   },
   {

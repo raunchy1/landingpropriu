@@ -1,4 +1,5 @@
 import type { BlogBlock } from '@/lib/blog/types'
+import { Link } from '@/i18n/navigation'
 
 type Props = {
   blocks: BlogBlock[]
@@ -54,6 +55,21 @@ export default function BlogContent({ blocks }: Props) {
                   </li>
                 ))}
               </ol>
+            )
+          case 'links':
+            return (
+              <nav key={i} aria-label={block.title} className="rule mb-6 mt-10 pt-8">
+                <p className="eyebrow mb-4">{block.title}</p>
+                <ul className={`${body} space-y-3`}>
+                  {block.items.map((l, j) => (
+                    <li key={j}>
+                      <Link href={l.href} className="ulink" style={{ color: 'var(--fg)' }}>
+                        {l.label} →
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
             )
           default:
             return (

@@ -1,3 +1,4 @@
+import { withSeo } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { setRequestLocale } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const content = getGuidaContent(locale)
 
-  return {
+  return withSeo({
     title: content.metaTitle,
     description: content.metaDescription,
     keywords: content.keywords,
@@ -32,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: content.metaDescription,
       type: 'article',
     },
-  }
+  }, locale)
 }
 
 export default async function GuidaPage({ params }: Props) {

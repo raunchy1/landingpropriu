@@ -1,3 +1,4 @@
+import { withSeo } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { setRequestLocale } from 'next-intl/server'
 import LegalPage from '@/components/LegalPage'
@@ -9,11 +10,11 @@ type Props = { params: { locale: string } }
 export function generateMetadata({ params }: Props): Metadata {
   const loc = params.locale === 'en' ? 'en' : 'it'
   const d = legal.privacy[loc]
-  return {
+  return withSeo({
     title: d.title + ' — WebSardegna',
     description: d.meta,
     alternates: { canonical: loc === 'it' ? '/privacy' : '/en/privacy', languages: { it: '/privacy', en: '/en/privacy' } },
-  }
+  }, loc)
 }
 
 export default function Page({ params }: Props) {

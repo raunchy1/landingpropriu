@@ -4,6 +4,7 @@ export type BlogBlock =
   | { type: 'h3'; text: string }
   | { type: 'ul'; items: string[] }
   | { type: 'ol'; items: string[] }
+  | { type: 'links'; title: string; items: { href: string; label: string }[] }
 
 export type BlogPost = {
   slug: string

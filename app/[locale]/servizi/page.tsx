@@ -1,3 +1,4 @@
+import { withSeo } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
@@ -13,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'serviziPage' })
 
-  return {
+  return withSeo({
     title: t('metaTitle'),
     description: t('metaDescription'),
     keywords: t.raw('keywords') as string[],
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         en: '/en/servizi',
       },
     },
-  }
+  }, locale)
 }
 
 export default async function ServiziPage({ params }: Props) {

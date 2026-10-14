@@ -1,3 +1,4 @@
+import { withSeo } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { setRequestLocale } from 'next-intl/server'
@@ -23,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const path = `/blog/${slug}`
 
-  return {
+  return withSeo({
     title: post.title,
     description: post.description,
     keywords: post.keywords,
@@ -36,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'article',
       publishedTime: post.date,
     },
-  }
+  }, locale)
 }
 
 export default async function BlogPostPage({ params }: Props) {

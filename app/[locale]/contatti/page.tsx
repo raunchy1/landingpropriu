@@ -1,3 +1,4 @@
+import { withSeo } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
@@ -14,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'contattiPage' })
 
-  return {
+  return withSeo({
     title: t('metaTitle'),
     description: t('metaDescription'),
     alternates: {
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         en: '/en/contatti',
       },
     },
-  }
+  }, locale)
 }
 
 export default async function ContattiPage({ params }: Props) {
@@ -127,7 +128,7 @@ export default async function ContattiPage({ params }: Props) {
                 <p className="text-[20px] leading-[1.3] tracking-[-0.02em]" style={{ color: 'var(--fg)' }}>
                   <span itemProp="addressLocality">{business.address.locality}</span>,{' '}
                   <span itemProp="addressRegion">{business.address.region}</span>{' '}
-                  <span itemProp="postalCode">{business.address.postalCode}</span>,{' '}
+                  
                   <span itemProp="addressCountry">{business.address.countryName}</span>
                 </p>
                 <p className="mt-2 text-[14px]" style={{ color: 'var(--muted)' }}>

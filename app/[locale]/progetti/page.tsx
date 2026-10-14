@@ -1,3 +1,4 @@
+import { withSeo } from '@/lib/seo'
 import type { Metadata } from 'next'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import Image from 'next/image'
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'progettiPage' })
 
-  return {
+  return withSeo({
     title: t('metaTitle'),
     description: t('metaDescription'),
     alternates: {
@@ -25,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         en: '/en/progetti',
       },
     },
-  }
+  }, locale)
 }
 
 export default async function ProgettiPage({ params }: Props) {
