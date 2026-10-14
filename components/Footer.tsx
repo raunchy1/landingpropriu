@@ -4,12 +4,12 @@ import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { business } from '@/lib/business'
 
-export default function Footer() {
+export default function Footer({ wide = false }: { wide?: boolean }) {
   const t = useTranslations('footer')
 
   return (
     <footer style={{ borderTop: '1px solid var(--line)' }}>
-      <div className="mx-auto max-w-[720px] px-6 py-6 md:px-8">
+      <div className={wide ? 'wrap py-8 pb-24 md:pb-8' : 'mx-auto max-w-[720px] px-6 py-6 md:px-8'}>
         <nav
           className="mb-4 flex flex-wrap gap-x-5 gap-y-1 [&>a]:inline-block [&>a]:py-2"
           style={{ fontFamily: 'var(--font-mono)', fontSize: 11 }}
@@ -35,6 +35,9 @@ export default function Footer() {
           <Link href="/contatti" style={{ color: 'var(--muted)' }}>
             {t('contact')}
           </Link>
+          <a href="https://instagram.com/websardegna" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--muted)' }}>
+            Instagram
+          </a>
           <Link href="/privacy" style={{ color: 'var(--muted)' }}>
             Privacy
           </Link>

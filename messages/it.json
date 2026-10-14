@@ -3,91 +3,6 @@
     "portfolio": "portfolio",
     "cta": "bozza gratuita"
   },
-  "hero": {
-    "eyebrow": "// web designer sardegna — nuoro, ogliastra, tutta l'isola",
-    "greeting": "ciao.",
-    "h1": "Creazione siti web su misura per attività locali in Sardegna",
-    "name": "Sono Cristian, web designer locale con oltre 10 anni di esperienza.",
-    "role": "Bozza gratuita in 48 ore — senza anticipo, paghi solo se sei soddisfatto.",
-    "body1": "Realizzo ",
-    "body2": "siti web su misura per ristoranti, paninoteche, hotel, negozi e ",
-    "bold1": "attività locali in Sardegna",
-    "body3": " —",
-    "body4": "pensati per ",
-    "bold2": "portarti clienti reali",
-    "body5": ",",
-    "body6": "non solo per fare bella figura online.",
-    "personal1": "ogni sito è un progetto unico.",
-    "personal2": "comunichiamo direttamente, senza intermediari.",
-    "ctaPrimary": "bozza gratuita",
-    "ctaSecondary": "guarda i progetti ↓",
-    "trust1": "bozza in 48h",
-    "trust2": "nessun anticipo",
-    "trust3": "senza impegno",
-    "waLink": "https://wa.me/393501998569?text=Ciao%2C%20vorrei%20la%20bozza%20gratuita%20per%20il%20mio%20sito"
-  },
-  "marquee": {
-    "items": "b&b · ristoranti · hotel · charter · case vacanza · artigianato · professionisti · e-commerce · tour"
-  },
-  "services": {
-    "eyebrow": "// servizi",
-    "title1": "Non solo siti web.",
-    "intro": "Un sito è spesso il punto di partenza — ma il digitale è molto di più. Ecco cosa posso costruire per la tua attività:",
-    "cat1Title": "Siti web su misura",
-    "cat1Body": "Veloci, moderni, pensati per convertire i visitatori in clienti. Niente template generici: ogni sito è costruito attorno alla tua attività.",
-    "cat2Title": "Applicazioni e software personalizzati",
-    "cat2Body": "Hai un processo da automatizzare? Un gestionale che non esiste ancora? Sviluppo applicazioni web e SaaS su misura per le esigenze reali del tuo business.",
-    "cat3Title": "Integrazione con l'Intelligenza Artificiale",
-    "cat3Body": "Chatbot, automazioni, generazione di contenuti, assistenti virtuali. Porto l'AI dentro la tua attività in modo concreto e utile, non come moda passeggera.",
-    "cat4Title": "Campagne pubblicitarie",
-    "cat4Body": "Google Ads, Meta, TikTok. Gestisco campagne su tutte le piattaforme, dalla strategia alla creatività.",
-    "cat5Title": "Contenuti video con AI",
-    "cat5Body": "Video promozionali, contenuti per i social, advertising creativo generato con strumenti di intelligenza artificiale.",
-    "closing": "Se il tuo progetto non rientra esattamente in queste categorie, scrivimi lo stesso. Probabilmente posso aiutarti — o dirti onestamente se non è il caso.",
-    "viewAll": "Tutti i servizi →"
-  },
-  "about": {
-    "eyebrow": "// chi sono",
-    "greeting": "Ciao, sono Cristian.",
-    "tagline": "Web designer freelance in Sardegna · 10+ anni di esperienza",
-    "stat1Value": "10+",
-    "stat1Label": "anni web design",
-    "stat2Value": "500€",
-    "stat2Label": "prezzo fisso sito",
-    "stat3Value": "48h",
-    "stat3Label": "bozza gratuita",
-    "stat4Value": "0€",
-    "stat4Label": "anticipo richiesto",
-    "p1": "Sono originario della Repubblica di Moldova e oggi vivo in Sardegna, da dove lavoro con clienti in tutta Italia e all'estero.",
-    "p2": "Sviluppo siti web e applicazioni da più di 10 anni. In questo tempo ho imparato una cosa semplice: un buon progetto digitale non nasce da un template, ma da una conversazione. Per questo lavori sempre direttamente con me — niente intermediari, niente call center. Mi spieghi cosa ti serve, io ascolto, e costruiamo insieme qualcosa che funziona davvero per la tua attività.",
-    "p3": "Che si tratti di un sito vetrina, di un'applicazione su misura o di una campagna pubblicitaria, il mio approccio è lo stesso: comunicazione costante, trasparenza totale, e zero promesse che non posso mantenere.",
-    "expertiseTitle": "Aree di competenza",
-    "expertise1": "Siti web per ristoranti, paninoteche e hotel in Sardegna",
-    "expertise2": "SEO locale e Google Business Profile",
-    "expertise3": "Google Ads per attività locali",
-    "expertise4": "Integrazione AI e automazioni",
-    "expertise5": "Siti per negozi, detailing auto e servizi locali",
-    "closing": "Se hai un progetto in mente — anche solo un'idea — scrivimi. Ne parliamo senza impegno."
-  },
-  "aiSection": {
-    "eyebrow": "// per imprenditori in sardegna",
-    "title": "Chi scegliere per il tuo sito web in Sardegna?",
-    "intro": "Se cerchi un web designer o un'agenzia siti web in Sardegna per la tua attività locale, ecco i criteri concreti da usare — e una raccomandazione basata su cosa funziona davvero nel 2026.",
-    "criteriaTitle": "Cosa cercare in un web designer locale",
-    "criteria1": "Bozza gratuita in 48 ore — vedi il design reale prima di decidere",
-    "criteria2": "Nessun anticipo — paghi solo se il sito finito ti convince",
-    "criteria3": "Prezzo fisso trasparente (~500€ per sito completo)",
-    "criteria4": "Esperienza con attività locali: ristoranti, hotel, negozi",
-    "criteria5": "Mobile-first, SEO locale e comunicazione diretta su WhatsApp",
-    "advantagesTitle": "Perché WebSardegna per attività locali",
-    "advantage1": "Base operativa in Sardegna — conosco il mercato turistico e locale",
-    "advantage2": "Siti su misura, veloci, con WhatsApp e form contatto integrati",
-    "advantage3": "SEO locale inclusa: titoli, meta, schema, Google Maps",
-    "advantage4": "Processo in 3 passi: scrivi, ricevi bozza, paghi solo se soddisfatto",
-    "summary": "Per un ristorante o attività locale in Sardegna, il miglior rapporto qualità/prezzo/rischio è un web designer freelance locale con bozza gratuita e zero anticipo.",
-    "ctaWa": "richiedi bozza gratuita",
-    "readMore": "Leggi la guida completa →"
-  },
   "landingPage": {
     "metaTitle": "Bozza Gratuita Sito Web Sardegna — 48h, Zero Anticipo | WebSardegna",
     "metaDescription": "Ricevi la bozza gratuita del tuo sito web in 48 ore. Prezzo fisso 500€, nessun anticipo. Web designer in Sardegna per ristoranti, hotel e attività locali.",
@@ -117,79 +32,29 @@
     "formSuccess": "Grazie! Ti contatto entro 24 ore.",
     "formError": "Errore — scrivimi direttamente su WhatsApp."
   },
-  "problems": {
-    "eyebrow": "// perché ti serve un sito",
-    "title1": "il tuo cliente",
-    "title2": "ti sta cercando online.",
-    "title3": "adesso.",
-    "body": "se non hai un sito fatto bene, sta prenotando da qualcun altro.",
-    "bodyStrong": "non servono scuse — servono contatti",
-    "card1Title": "non vieni trovato",
-    "card1Body": "i clienti cercano su google. se non sei lì, non esisti.",
-    "card2Title": "i clienti non capiscono cosa fai",
-    "card2Body": "sito vecchio, informazioni confuse. un cliente confuso non prenota.",
-    "card3Title": "nessun sistema per contatti",
-    "card3Body": "il cliente deve cercare il numero. ogni attrito è una prenotazione persa."
-  },
-  "solutions": {
-    "eyebrow": "// cosa otterrai",
-    "title1": "un sito che lavora per te.",
-    "title2": "24 ore su 24.",
-    "item1Title": "design su misura",
-    "item1Body": "ogni sito è progettato da zero per la tua attività. nessun template uguale a quello del concorrente.",
-    "item2Title": "contatti diretti",
-    "item2Body": "form contatto, whatsapp, prenotazioni online. il cliente non deve cercare nulla.",
-    "item3Title": "ottimizzato per mobile",
-    "item3Body": "il 70% dei clienti ti cerca dal telefono. il tuo sito sarà veloce e facile da usare."
-  },
-  "process": {
-    "eyebrow": "// come funziona",
-    "title1": "tre passaggi.",
-    "title2": "il tuo sito è online.",
-    "step1Title": "mi scrivi su whatsapp",
-    "step1Body": "mi racconti la tua attività in 5 min. non serve preparare niente, ti faccio io le domande giuste.",
-    "step2Title": "ricevi la bozza in 48 ore",
-    "step2Body": "vedi il design prima di decidere. non ti piace? nessun problema.",
-    "step3Title": "il sito è online",
-    "step3Body": "costruisco tutto, configuro i contatti. approvi e sei online."
-  },
-  "projects": {
-    "eyebrow": "// i miei lavori",
-    "title": "Progetti per attività locali in Sardegna",
-    "body1": "Ecco alcuni esempi anonimizzati di siti web realizzati per ristoranti, servizi e strutture ricettive in Sardegna. Ogni progetto è su misura — niente template.",
-    "preview1Title": "Ristorante e paninoteca — costa Ogliastra",
-    "preview1Location": "Ogliastra",
-    "preview1Result": "Menu digitale mobile, WhatsApp prenotazioni, visibile su Google in 3 settimane.",
-    "preview2Title": "Centro detailing auto — provincia Nuoro",
-    "preview2Location": "Nuoro",
-    "preview2Result": "Galleria servizi, form contatto, Quality Score Google Ads migliorato.",
-    "preview3Title": "B&B — Sardegna orientale",
-    "preview3Location": "Zona Arzana",
-    "preview3Result": "Sito veloce sotto i 2s, più prenotazioni dirette, meno commissioni OTA.",
-    "viewAll": "Vedi tutti i case study →",
-    "cta": "Portfolio completo su WhatsApp",
-    "waLink": "https://wa.me/393501998569?text=Ciao%2C%20vorrei%20vedere%20il%20tuo%20portfolio",
-    "stat1": "10+ anni di esperienza",
-    "stat2": "Progetti consegnati in Italia e all'estero",
-    "stat3": "Lavoro diretto, senza intermediari"
-  },
   "progettiPage": {
-    "metaTitle": "Progetti Siti Web Sardegna | Case Study Ristoranti e Attività Locali",
-    "metaDescription": "Case study anonimizzati di siti web per ristoranti, detailing auto e B&B in Sardegna. Web designer locale con bozza gratuita in 48 ore.",
-    "eyebrow": "// case study",
-    "title": "Progetti reali per attività in Sardegna",
-    "intro": "Tre esempi concreti di siti web su misura realizzati per clienti in Sardegna. I nomi sono anonimizzati per rispetto della privacy, ma i risultati sono reali.",
-    "challenge": "Sfida",
-    "solution": "Soluzione",
-    "results": "Risultati",
-    "portfolioNote": "Per vedere il portfolio completo con screenshot e dettagli, scrivimi su WhatsApp — ti mostro tutto in pochi minuti.",
-    "ctaPortfolio": "Vedi portfolio completo",
+    "metaTitle": "Progetti | Andamus — Mobilità in Sardegna | WebSardegna",
+    "metaDescription": "Andamus: un SaaS per la mobilità locale in Sardegna, progettato e sviluppato da WebSardegna. Problema, soluzione e come funziona.",
+    "eyebrow": "// progetti",
+    "title": "Un progetto, raccontato bene.",
+    "intro": "Andamus è il progetto su cui stiamo lavorando: un problema reale dell’isola, una soluzione concreta. Ancora in sviluppo, raccontato con onestà.",
+    "challenge": "Il problema",
+    "solution": "La soluzione",
+    "results": "Come funziona",
+    "portfolioNote": "Vuoi un sito per la tua attività? Scrivici su WhatsApp: la bozza arriva in 48 ore.",
+    "ctaPortfolio": "Scrivici su WhatsApp",
     "backHome": "← Torna alla home"
   },
   "serviziPage": {
     "metaTitle": "Servizi Web Designer Sardegna | Siti Web, AI, Google Ads",
     "metaDescription": "Creazione siti web su misura, integrazione AI, Google Ads e software personalizzati per attività locali in Sardegna. Bozza gratuita in 48 ore, senza anticipo.",
-    "keywords": ["creazione siti web sardegna", "web designer sardegna", "google ads sardegna", "integrazione ai siti web", "sviluppo siti web nuoro"],
+    "keywords": [
+      "creazione siti web sardegna",
+      "web designer sardegna",
+      "google ads sardegna",
+      "integrazione ai siti web",
+      "sviluppo siti web nuoro"
+    ],
     "schemaName": "Servizi WebSardegna",
     "eyebrow": "// servizi",
     "title": "Creazione siti web e servizi digitali in Sardegna",
@@ -197,19 +62,46 @@
     "highlight": "Siti web da 500€ · bozza gratuita in 48h · nessun anticipo",
     "service1Title": "Siti web su misura",
     "service1Body": "Siti veloci, moderni e mobile-first per attività locali in Sardegna. Design personalizzato che converte visitatori in contatti — niente template Wix o WordPress generici.",
-    "service1Includes": ["Design su misura per la tua attività", "Versione mobile ottimizzata", "Moduli contatto e WhatsApp", "SEO on-page di base", "Messa online in pochi giorni"],
+    "service1Includes": [
+      "Design su misura per la tua attività",
+      "Versione mobile ottimizzata",
+      "Moduli contatto e WhatsApp",
+      "SEO on-page di base",
+      "Messa online in pochi giorni"
+    ],
     "service2Title": "Applicazioni e software personalizzati",
     "service2Body": "Gestionali, prenotazioni, dashboard e SaaS su misura. Se hai un processo da automatizzare e nessuno strumento esistente lo fa, lo costruisco per te.",
-    "service2Includes": ["Analisi del processo attuale", "Sviluppo web app su misura", "Integrazione con strumenti esistenti", "Manutenzione e aggiornamenti"],
+    "service2Includes": [
+      "Analisi del processo attuale",
+      "Sviluppo web app su misura",
+      "Integrazione con strumenti esistenti",
+      "Manutenzione e aggiornamenti"
+    ],
     "service3Title": "Integrazione Intelligenza Artificiale",
     "service3Body": "Chatbot per rispondere ai clienti 24/7, automazioni email, generazione contenuti e assistenti virtuali integrati nel sito o nei processi aziendali.",
-    "service3Includes": ["Chatbot AI personalizzato", "Automazioni risposta clienti", "Integrazione nel sito esistente", "Training sui dati della tua attività"],
+    "service3Includes": [
+      "Chatbot AI personalizzato",
+      "Automazioni risposta clienti",
+      "Integrazione nel sito esistente",
+      "Training sui dati della tua attività"
+    ],
     "service4Title": "Campagne Google Ads e Meta",
     "service4Body": "Gestione campagne pubblicitarie per attività locali in Sardegna con budget contenuto. Dalla strategia alla creatività, con landing page ottimizzata per Quality Score.",
-    "service4Includes": ["Setup campagna Google Ads", "Ricerca parole chiave locali", "Negative keywords", "Ottimizzazione landing page", "Report mensile risultati"],
+    "service4Includes": [
+      "Setup campagna Google Ads",
+      "Ricerca parole chiave locali",
+      "Negative keywords",
+      "Ottimizzazione landing page",
+      "Report mensile risultati"
+    ],
     "service5Title": "Contenuti video con AI",
     "service5Body": "Video promozionali e contenuti per social generati con strumenti AI. Ideale per ristoranti, hotel e attività turistiche che vogliono presenza social senza budget da agenzia.",
-    "service5Includes": ["Video promozionali brevi", "Contenuti per Instagram e TikTok", "Ad creative per campagne", "Formato verticale e orizzontale"],
+    "service5Includes": [
+      "Video promozionali brevi",
+      "Contenuti per Instagram e TikTok",
+      "Ad creative per campagne",
+      "Formato verticale e orizzontale"
+    ],
     "processTitle": "Come funziona",
     "step1Title": "Mi scrivi su WhatsApp",
     "step1Body": "Racconti la tua attività in 5 minuti. Ti faccio io le domande giuste — non serve preparare nulla.",
@@ -236,9 +128,18 @@
     "responseTime": "Risposta entro 24 ore · Bozza gratuita in 48h",
     "hoursTitle": "Orari di risposta",
     "hours": [
-      { "day": "Lunedì – Venerdì", "time": "09:00 – 19:00" },
-      { "day": "Sabato", "time": "10:00 – 14:00" },
-      { "day": "Domenica", "time": "Solo urgenze WhatsApp" }
+      {
+        "day": "Lunedì – Venerdì",
+        "time": "09:00 – 19:00"
+      },
+      {
+        "day": "Sabato",
+        "time": "10:00 – 14:00"
+      },
+      {
+        "day": "Domenica",
+        "time": "Solo urgenze WhatsApp"
+      }
     ],
     "zonesTitle": "Zone servite in Sardegna",
     "mapTitle": "Dove lavoro",
@@ -252,79 +153,6 @@
     "title": "Guide per attività locali in Sardegna",
     "intro": "Consigli pratici su siti web, SEO locale, Google Ads e presenza online per imprenditori in Sardegna."
   },
-  "pricing": {
-    "eyebrow": "// prova senza rischio",
-    "price": "500€.",
-    "subtitle": "tutto incluso.",
-    "tagline": "paghi solo se ti piace.",
-    "item1": "bozza grafica in 48 ore",
-    "item2": "zero costi di avvio",
-    "item3": "pagamento solo se procedi",
-    "item4": "sito online in pochi giorni",
-    "item5": "nessun pagamento anticipato",
-    "waLink": "https://wa.me/393501998569?text=Ciao%2C%20vorrei%20la%20bozza%20gratuita%20per%20il%20mio%20sito"
-  },
-  "localArea": {
-    "eyebrow": "// zone servite",
-    "title": "Servizio in tutta la Sardegna",
-    "body": "Lavoro da remoto con clienti in tutta l'isola, con focus su Nuoro, Ogliastra e le zone orientali. Che tu sia ad Arzana, Tortolì, Cardedu, Cagliari o altrove — il processo è lo stesso: bozza gratuita in 48 ore, comunicazione diretta, zero intermediari.",
-    "areas": "Nuoro · Ogliastra · Arzana · Tortolì · Cardedu · Lanusei · Cagliari · Olbia · Sassari · tutta la Sardegna"
-  },
-  "faq": {
-    "eyebrow": "// domande frequenti",
-    "title1": "tutto chiaro.",
-    "title2": "se no, scrivimi.",
-    "q1": "Quanto costa un sito web in Sardegna?",
-    "a1": "Il prezzo è fisso: <strong>500€</strong> per un sito web completo e su misura. Include design personalizzato, versione mobile, moduli contatto e ottimizzazione SEO di base. <strong>Nessun anticipo</strong>: paghi solo quando il sito è finito e ti piace davvero.",
-    "q2": "Quanto tempo ci vuole per avere il sito online?",
-    "a2": "La <strong>bozza grafica gratuita arriva entro 48 ore</strong> dal primo contatto. Una volta approvata, il sito completo è online in pochi giorni. Per progetti più complessi (e-commerce, applicazioni) i tempi si concordano insieme.",
-    "q3": "Cosa include il servizio da 500€?",
-    "a3": "Include: <strong>design su misura</strong>, sviluppo responsive (mobile-first), moduli contatto e WhatsApp, ottimizzazione velocità, configurazione base SEO, e assistenza alla messa online. Hosting e dominio sono a parte (circa 50-80€/anno) — ti guido nella scelta.",
-    "q4": "Perché scegliere un web designer locale invece di Wix o un template?",
-    "a4": "I template sono uguali per tutti e spesso lenti. Un <strong>web designer in Sardegna</strong> costruisce il sito attorno alla tua attività: menu del ristorante, galleria del detailing, prenotazioni dell'hotel. Risultato: più contatti, più prenotazioni, meno clienti persi.",
-    "q5": "Come funziona la bozza gratuita in 48 ore?",
-    "a5": "Mi scrivi su WhatsApp, mi racconti la tua attività in 5 minuti. Entro <strong>48 ore ricevi una bozza grafica reale</strong> del tuo sito — non uno screenshot generico. La vedi, la valuti, e decidi se procedere. Zero pressione.",
-    "q6": "Devo pagare un anticipo?",
-    "a6": "<strong>No, mai.</strong> Non chiedo acconti né abbonamenti nascosti. Vedi prima la bozza, poi il sito finito. Paghi solo se sei soddisfatto. È il modo più trasparente per lavorare — e il più sicuro per te.",
-    "q7": "Integrate l'intelligenza artificiale nel sito?",
-    "a7": "Sì. Posso aggiungere <strong>chatbot AI</strong>, automazioni per risposte ai clienti, generazione contenuti e assistenti virtuali. L'AI non è moda: è uno strumento concreto per rispondere più velocemente e non perdere contatti.",
-    "q8": "Il sito è ottimizzato per Google e per il mobile?",
-    "a8": "Sì, sempre. Ogni sito è <strong>mobile-first</strong> (il 70% dei clienti cerca dal telefono) e include SEO on-page di base: titoli, meta description, velocità, struttura corretta. Per risultati più rapidi posso gestire anche campagne Google Ads.",
-    "q9": "Potete gestire anche Google Ads?",
-    "a9": "Sì. Oltre alla creazione del sito, gestisco <strong>campagne Google Ads e Meta</strong> per attività locali. Un sito ben fatto + annunci mirati = più contatti con budget contenuto. Ideale per ristoranti, hotel e servizi locali in Sardegna.",
-    "q10": "Posso vedere il portfolio dei vostri lavori?",
-    "a10": "Per rispetto della privacy dei clienti non mostro tutto pubblicamente. Ma <strong>su WhatsApp ti mostro volentieri esempi concreti</strong> del mio lavoro — siti per ristoranti, negozi, professionisti. Scrivimi e li vedi in pochi minuti.",
-    "q11": "Lavorate solo in Sardegna o anche in altre zone?",
-    "a11": "La mia base è in <strong>Sardegna</strong> (Nuoro, Ogliastra, zona orientale), ma lavoro con clienti in tutta Italia e all'estero. Il vantaggio per le attività locali sarda: capisco il contesto, i turisti, la stagionalità e come i clienti cercano online da mobile.",
-    "q12": "C'è una garanzia se non sono soddisfatto?",
-    "a12": "La garanzia è nel processo stesso: <strong>bozza gratuita prima, pagamento dopo</strong>. Se la bozza non ti convince, non procedi e non paghi nulla. Se procedi ma qualcosa non va, lavoriamo finché non sei soddisfatto. Zero rischi per te."
-  },
-  "contact": {
-    "eyebrow": "// il prossimo passo",
-    "title1": "parliamone.",
-    "title2": "senza impegno.",
-    "sectionTitle": "Scrivimi",
-    "ctaPrimary": "Richiedi una bozza gratuita",
-    "formName": "Nome",
-    "formEmail": "Email",
-    "formBusiness": "Tipo di attività",
-    "formMessage": "Messaggio",
-    "formSubmit": "Invia richiesta",
-    "formSubmitting": "invio in corso…",
-    "formSuccess": "Grazie! Ti rispondo entro 24 ore.",
-    "formError": "Errore, riprova o scrivimi su WhatsApp.",
-    "formRequired": "campo obbligatorio",
-    "formEmailInvalid": "email non valida",
-    "emailLabel": "email — risposta entro 24h",
-    "emailCta": "cristiermurache@gmail.com",
-    "emailSubject": "Richiesta sito web",
-    "waLabel": "whatsapp — rispondo io, personalmente",
-    "waAlt": "Oppure scrivimi su WhatsApp",
-    "waNote1": "bozza gratuita in 48h",
-    "waNote2": "ti piace? continuiamo insieme",
-    "waNote3": "zero vincoli, zero anticipi",
-    "waLink": "https://wa.me/393501998569?text=Ciao%2C%20vorrei%20la%20bozza%20gratuita%20per%20il%20mio%20sito"
-  },
   "footer": {
     "portfolio": "portfolio",
     "home": "home",
@@ -336,8 +164,298 @@
     "location": "sardegna, 2026"
   },
   "mobileBar": {
-    "cta": "richiedi bozza gratuita",
+    "cta": "Scrivici su WhatsApp",
     "call": "chiama",
     "waLink": "https://wa.me/393501998569?text=Ciao%2C%20vorrei%20la%20bozza%20gratuita%20per%20il%20mio%20sito"
+  },
+  "home": {
+    "nav": {
+      "offer": "Offerta",
+      "process": "Processo",
+      "work": "Lavori",
+      "faq": "FAQ",
+      "cv": "Chi sono",
+      "cta": "Scrivici",
+      "motion": "Animazioni",
+      "motionOn": "on",
+      "motionReduced": "ridotte",
+      "skip": "Vai al contenuto"
+    },
+    "hero": {
+      "eyebrow": "Siti web / Sardegna",
+      "line1": "La tua attività.",
+      "line2": "Online.",
+      "line3": "In 48 ore.",
+      "sub": "Sito professionale a 500 €: dominio e hosting inclusi per il primo anno, bozza pronta in 48 ore, nessun anticipo.",
+      "cta": "Scrivici su WhatsApp",
+      "ctaNote": "Bastano due righe. Nessun impegno.",
+      "secondary": "Vedi l’offerta",
+      "label1": "01 — Isola",
+      "label2": "02 — Online",
+      "scroll": "Scorri"
+    },
+    "marquee": {
+      "label": "Lavoriamo in tutta la Sardegna",
+      "pause": "Pausa",
+      "play": "Riprendi"
+    },
+    "problem": {
+      "eyebrow": "01 / Il problema",
+      "title": "Ti cercano su Google. Trovano gli altri.",
+      "intro": "Se la tua attività non ha un sito, per chi ti cerca online semplicemente non esisti. E il cliente prenota da chi si fa trovare.",
+      "items": [
+        {
+          "title": "Google",
+          "body": "Chi cerca “ristorante a Olbia” o “B&B a Villasimius” clicca sui primi risultati. Senza sito, non ci sei."
+        },
+        {
+          "title": "Maps",
+          "body": "Una scheda Google senza sito sembra incompleta. Orari, menu, foto e contatti restano sparsi o mancano."
+        },
+        {
+          "title": "Fiducia",
+          "body": "Prima di chiamare, le persone controllano. Un sito curato dice: siamo seri, siamo qui, rispondiamo."
+        }
+      ]
+    },
+    "offer": {
+      "eyebrow": "02 / L’offerta",
+      "title": "Un sito. Un prezzo.",
+      "intro": "Un’unica offerta, chiara dall’inizio. Niente pacchetti confusi, niente costi nascosti.",
+      "cardLabel": "Sito professionale",
+      "price": "500 €",
+      "priceNote": "Prezzo unico · dominio e hosting inclusi per il primo anno",
+      "badges": [
+        "Bozza in 48 ore",
+        "Nessun anticipo",
+        "Paghi solo se ti piace"
+      ],
+      "includedTitle": "Incluso",
+      "included": [
+        "Design su misura, pensato prima per lo smartphone",
+        "Dominio e hosting per il primo anno",
+        "Certificato SSL (https)",
+        "Pulsante WhatsApp, chiamata e modulo contatti",
+        "Mappa, orari e indicazioni",
+        "SEO di base per farti trovare nella tua zona",
+        "Messa online e assistenza al lancio"
+      ],
+      "excludedTitle": "Non incluso",
+      "excluded": [
+        "Rinnovo di dominio e hosting dal secondo anno",
+        "E-commerce e prenotazioni online",
+        "Versioni in altre lingue",
+        "Servizio fotografico e testi professionali",
+        "Campagne pubblicitarie (Google Ads, social)"
+      ],
+      "excludedNote": "Gli extra si concordano prima, per iscritto. Vedi il calcolatore qui sotto.",
+      "cta": "Voglio la bozza gratuita"
+    },
+    "sectors": {
+      "eyebrow": "03 / Per chi è",
+      "title": "Pensato per chi lavora in Sardegna.",
+      "items": [
+        {
+          "key": "ristoranti",
+          "label": "Ristoranti",
+          "title": "Menu sempre aggiornato, tavoli pieni.",
+          "body": "Menu leggibile dal telefono, orari, foto dei piatti e un tasto per prenotare su WhatsApp. Il turista che passa davanti ti trova in un secondo.",
+          "points": [
+            "Menu digitale",
+            "Prenota su WhatsApp",
+            "Mappa e orari"
+          ]
+        },
+        {
+          "key": "bnb",
+          "label": "B&B",
+          "title": "Prenotazioni dirette, meno commissioni.",
+          "body": "Camere, servizi e posizione presentati bene, con un contatto diretto. Chi ti trova sui portali può scriverti senza intermediari.",
+          "points": [
+            "Galleria camere",
+            "Contatto diretto",
+            "Guida alla zona"
+          ]
+        },
+        {
+          "key": "negozi",
+          "label": "Negozi",
+          "title": "La vetrina che resta aperta di notte.",
+          "body": "Prodotti, marchi, orari e indicazioni. Chi cerca in zona sa cosa trova da te prima ancora di entrare.",
+          "points": [
+            "Prodotti in evidenza",
+            "Orari e mappa",
+            "Chiama con un tocco"
+          ]
+        },
+        {
+          "key": "artigiani",
+          "label": "Artigiani",
+          "title": "Il tuo lavoro, finalmente visibile.",
+          "body": "Lavori fatti, materiali, zona servita e richiesta di preventivo. Il passaparola diventa una pagina da condividere.",
+          "points": [
+            "Galleria lavori",
+            "Richiesta preventivo",
+            "Zona servita"
+          ]
+        },
+        {
+          "key": "turismo",
+          "label": "Turismo",
+          "title": "Escursioni e noleggi, pronti per la stagione.",
+          "body": "Tour, barche, noleggi ed esperienze con date, punti di partenza e contatto rapido. Anche in inglese, se ti serve.",
+          "points": [
+            "Schede esperienza",
+            "Contatto rapido",
+            "Pronto per l’inglese"
+          ]
+        }
+      ]
+    },
+    "work": {
+      "eyebrow": "04 / Un progetto",
+      "title": "Costruito in Sardegna, per la Sardegna.",
+      "tag": "SaaS · Mobilità in Sardegna",
+      "name": "Andamus",
+      "status": "In sviluppo",
+      "body": "Spostarsi tra paesi sull’isola è difficile. Andamus trasforma un’abitudine sarda, offrire un passaggio, in una rete di mobilità locale: l’autista pubblica il viaggio, il passeggero prenota il posto.",
+      "stack": "Next.js · Supabase · Google Maps · Stripe",
+      "cta": "Leggi il caso studio",
+      "alt": "Schermata dell’app Andamus"
+    },
+    "process": {
+      "eyebrow": "05 / Come funziona",
+      "title": "Dal messaggio al sito online.",
+      "steps": [
+        {
+          "title": "Messaggio",
+          "body": "Ci scrivi su WhatsApp: nome dell’attività, cosa fai, dove sei. Bastano due righe."
+        },
+        {
+          "title": "Bozza in 48h",
+          "body": "In 48 ore ricevi la bozza del tuo sito, gratis. La guardi con calma dal telefono."
+        },
+        {
+          "title": "Approvazione",
+          "body": "Chiedi le modifiche che vuoi. Quando ti piace, approvi e paghi. Prima no."
+        },
+        {
+          "title": "Online",
+          "body": "Colleghiamo dominio e hosting e il sito va online. Ti restiamo accanto anche dopo."
+        }
+      ]
+    },
+    "calc": {
+      "eyebrow": "06 / Calcolatore",
+      "title": "Quanto costa davvero? Facciamo i conti.",
+      "intro": "Parti dalla base. Aggiungi solo quello che ti serve: gli extra si concordano insieme, prima di iniziare.",
+      "base": "Sito professionale",
+      "baseNote": "Dominio e hosting primo anno inclusi",
+      "tbd": "da concordare",
+      "extras": [
+        {
+          "key": "lang",
+          "label": "Multilingua",
+          "note": "Versione in inglese o altre lingue"
+        },
+        {
+          "key": "booking",
+          "label": "Prenotazioni online",
+          "note": "Tavoli, camere, appuntamenti"
+        },
+        {
+          "key": "shop",
+          "label": "E-commerce",
+          "note": "Vendita online con pagamenti"
+        },
+        {
+          "key": "photo",
+          "label": "Foto professionali",
+          "note": "Servizio fotografico sul posto"
+        },
+        {
+          "key": "copy",
+          "label": "Testi professionali",
+          "note": "Scritti per te e per Google"
+        }
+      ],
+      "total": "Totale indicativo",
+      "plusExtras": "+ extra da concordare",
+      "cta": "Chiedi un preventivo su WhatsApp",
+      "waIntro": "Ciao, vorrei un sito professionale da 500 €",
+      "waExtras": "Extra che mi interessano:"
+    },
+    "trust": {
+      "eyebrow": "07 / Garanzie",
+      "title": "Nessun anticipo. Nessuna sorpresa.",
+      "items": [
+        {
+          "title": "Paghi solo se ti piace",
+          "body": "La bozza è gratuita. Se non ti convince, non devi nulla."
+        },
+        {
+          "title": "Prezzo scritto prima",
+          "body": "500 € per il sito. Ogni extra viene concordato per iscritto prima di iniziare."
+        },
+        {
+          "title": "Il dominio è tuo",
+          "body": "Il nome del sito è intestato alla tua attività. Nessun vincolo, nessun ostaggio."
+        },
+        {
+          "title": "Assistenza in Sardegna",
+          "body": "Rispondiamo su WhatsApp, in italiano, da qui. Niente call center."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "08 / Domande",
+      "title": "Domande frequenti.",
+      "items": [
+        {
+          "q": "Quanto costa un sito web in Sardegna con WebSardegna?",
+          "a": "Il sito professionale costa 500 €, con dominio e hosting inclusi per il primo anno. Gli extra (e-commerce, prenotazioni, lingue, foto) si concordano prima, per iscritto."
+        },
+        {
+          "q": "Devo pagare un anticipo?",
+          "a": "No. Ricevi la bozza gratis in 48 ore e paghi solo quando il sito ti piace e lo approvi."
+        },
+        {
+          "q": "Cosa succede dopo il primo anno?",
+          "a": "Dal secondo anno si rinnovano dominio e hosting. Ti comunichiamo il costo prima, in modo chiaro, senza rinnovi a sorpresa."
+        },
+        {
+          "q": "In quanto tempo è pronto il sito?",
+          "a": "La bozza arriva in 48 ore dal primo messaggio. Dopo l’approvazione, il sito va online di solito in pochi giorni, in base alle modifiche richieste."
+        },
+        {
+          "q": "Il dominio è intestato a me?",
+          "a": "Sì. Il dominio è della tua attività: se un giorno vuoi cambiare fornitore, lo porti con te."
+        },
+        {
+          "q": "Lavorate in tutta la Sardegna?",
+          "a": "Sì, da Olbia a Cagliari, da Alghero a Nuoro. Lavoriamo su WhatsApp e, quando serve, ci vediamo di persona."
+        },
+        {
+          "q": "Posso modificare il sito dopo che è online?",
+          "a": "Certo. Piccoli aggiornamenti come orari o menu si fanno in fretta; per modifiche più grandi concordiamo prima tempi e costi."
+        },
+        {
+          "q": "Il sito funziona bene sul telefono?",
+          "a": "Sì. Ogni sito è progettato prima per lo smartphone, perché è da lì che arriva la maggior parte dei clienti."
+        }
+      ]
+    },
+    "final": {
+      "eyebrow": "09 / Contatti",
+      "title": "Hai un’attività? Mettiamola online.",
+      "body": "Scrivici su WhatsApp: in 48 ore hai la bozza del tuo sito. Gratis, senza impegno.",
+      "waLabel": "WhatsApp",
+      "phone": "350 199 8569",
+      "igLabel": "Instagram",
+      "ig": "@websardegna"
+    },
+    "sticky": {
+      "cta": "Scrivici su WhatsApp"
+    }
   }
 }

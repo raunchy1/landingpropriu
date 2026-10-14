@@ -15,10 +15,11 @@ export type WhatsAppMessageKey = 'default' | 'landing'
 /** Build WhatsApp URL with optional UTM/gclid from current page (client-side). */
 export function buildWhatsAppUrl(
   locale: 'it' | 'en',
-  messageKey: WhatsAppMessageKey = 'default'
+  messageKey: WhatsAppMessageKey = 'default',
+  customText?: string
 ): string {
   const messages = messageKey === 'landing' ? LANDING_MESSAGES : DEFAULT_MESSAGES
-  const text = messages[locale]
+  const text = customText || messages[locale]
   const params = new URLSearchParams({ text })
 
   if (typeof window !== 'undefined') {

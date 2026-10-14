@@ -14,6 +14,9 @@ import {
 type Props = {
   location: WhatsAppLocation
   messageKey?: WhatsAppMessageKey
+  /** Overrides the prefilled message (e.g. calculator selection). */
+  customText?: string
+  ariaLabel?: string
   className?: string
   style?: CSSProperties
   children: ReactNode
@@ -22,14 +25,16 @@ type Props = {
 export default function WhatsAppLink({
   location,
   messageKey = 'default',
+  customText,
+  ariaLabel,
   className,
   style,
   children,
 }: Props) {
   const locale = useLocale() as 'it' | 'en'
   const href = useMemo(
-    () => buildWhatsAppUrl(locale, messageKey),
-    [locale, messageKey]
+    () => buildWhatsAppUrl(locale, messageKey, customText),
+    [locale, messageKey, customText]
   )
 
   return (
@@ -39,6 +44,7 @@ export default function WhatsAppLink({
       rel="noopener noreferrer"
       className={className}
       style={style}
+      aria-label={ariaLabel}
       onClick={() => trackWhatsAppClick(location)}
     >
       {children}

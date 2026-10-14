@@ -7,6 +7,7 @@ export type WhatsAppLocation =
   | 'sticky_bar'
   | 'landing'
   | 'ai_section'
+  | 'calculator'
 
 function pushEvent(payload: Record<string, unknown>) {
   if (typeof window !== 'undefined' && window.dataLayer) {

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, JetBrains_Mono } from 'next/font/google'
+import { Space_Grotesk, JetBrains_Mono } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, setRequestLocale } from 'next-intl/server'
 import { routing } from '@/i18n/routing'
@@ -9,9 +9,11 @@ import StructuredData from '@/components/StructuredData'
 import AttributionCapture from '@/components/AttributionCapture'
 import GoogleAdsConversion from '@/components/GoogleAdsConversion'
 import ConsentManager from '@/components/ConsentManager'
+import { MOTION_INIT_SCRIPT } from '@/lib/motion-script'
 
-const inter = Inter({
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
   variable: '--font-sans',
   display: 'swap',
 })
@@ -40,22 +42,22 @@ export async function generateMetadata({
 
   const meta = {
     it: {
-      title: 'Siti Web Sardegna | Creazione Siti su Misura — Bozza Gratuita 48h',
+      title: 'Siti Web Sardegna a 500 € | Online in 48 ore — WebSardegna',
       description:
-        'Web designer in Sardegna per ristoranti, paninoteche, hotel e attività locali. Creazione siti web su misura con bozza gratuita in 48 ore, senza anticipo. Servizio in Nuoro, Ogliastra e tutta l\'isola.',
+        'Sito professionale per la tua attività in Sardegna a 500 €: dominio e hosting inclusi il primo anno, bozza gratuita in 48 ore, nessun anticipo. Ristoranti, B&B, negozi, artigiani e turismo.',
       ogLocale: 'it_IT',
-      ogTitle: 'WebSardegna — Siti Web su Misura in Sardegna',
+      ogTitle: 'La tua attività. Online. In 48 ore. — WebSardegna',
       ogDescription:
-        'Creazione siti web per attività locali in Sardegna. Bozza gratuita in 48h, nessun anticipo, paghi solo se sei soddisfatto.',
+        'Siti web per attività in Sardegna: 500 €, dominio e hosting inclusi il primo anno, bozza in 48 ore, nessun anticipo.',
     },
     en: {
-      title: 'Custom Websites for Local Businesses in Sardinia | Free Mockup in 48h',
+      title: 'Websites in Sardinia for €500 | Online in 48 hours — WebSardegna',
       description:
-        'Custom-built websites for restaurants, hotels, shops and local businesses in Sardinia. Free mockup in 48 hours, no upfront payment, no commitment.',
+        'A professional website for your business in Sardinia for €500: domain and hosting included for the first year, free draft in 48 hours, no upfront payment. Restaurants, B&Bs, shops, craftspeople and tourism.',
       ogLocale: 'en_US',
-      ogTitle: 'WebSardegna — Custom Websites in Sardinia, Italy',
+      ogTitle: 'Your business. Online. In 48 hours. — WebSardegna',
       ogDescription:
-        'Websites for local businesses in Sardinia. Free mockup in 48h, no upfront payment — pay only if you are happy.',
+        'Websites for businesses in Sardinia: €500, domain and hosting included for the first year, draft in 48 hours, no upfront payment.',
     },
   }
 
@@ -64,7 +66,10 @@ export async function generateMetadata({
   const keywords = locale === 'it'
     ? [
         'siti web sardegna',
+        'sito web 500 euro',
         'creazione siti web sardegna',
+        'siti web olbia',
+        'siti web cagliari',
         'web designer sardegna',
         'bozza sito web gratuita',
         'siti web ristoranti sardegna',
@@ -138,8 +143,12 @@ export default async function RootLayout({
   const messages = await getMessages()
 
   return (
-    <html lang={locale} className={`${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang={locale} className={`${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
+      data-motion="on"
+      suppressHydrationWarning>
       <head>
+        {/* motion preference before first paint (localStorage → prefers-reduced-motion) */}
+        <script dangerouslySetInnerHTML={{ __html: MOTION_INIT_SCRIPT }} />
         <StructuredData locale={locale} />
 
         {/* Google Consent Mode v2 — default denied; tags load only after consent (ConsentManager) */}

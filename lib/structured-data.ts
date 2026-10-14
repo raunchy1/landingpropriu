@@ -32,18 +32,19 @@ export function buildStructuredData(locale: string, faqs: FaqItem[]) {
 
   const localBusiness = {
     '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
+    '@type': ['LocalBusiness', 'ProfessionalService'],
     '@id': `${baseUrl}/#localbusiness`,
     name: isIt ? 'WebSardegna — Creazione Siti Web' : 'WebSardegna — Custom Websites',
     alternateName: ['WebSardegna', 'websardegna.xyz'],
     description: isIt
-      ? 'Web designer freelance in Sardegna. Siti web su misura per ristoranti, negozi e attività locali. Bozza gratuita in 48 ore, senza anticipo.'
-      : 'Freelance web designer in Sardinia, Italy. Custom websites for local businesses. Free mockup in 48 hours, no upfront payment.',
+      ? 'Siti web professionali per attività in Sardegna: 500 €, dominio e hosting inclusi per il primo anno, bozza in 48 ore, nessun anticipo.'
+      : 'Professional websites for businesses in Sardinia: €500, domain and hosting included for the first year, draft in 48 hours, no upfront payment.',
     url: locale === 'it' ? baseUrl : `${baseUrl}/en`,
     image: `${baseUrl}/og-image.png`,
     email: business.email,
     telephone: business.phoneE164,
-    priceRange: business.priceRange,
+    priceRange: '€500',
+    sameAs: ['https://instagram.com/websardegna'],
     hasMap: business.googleMapsUrl,
     geo: {
       '@type': 'GeoCoordinates',
@@ -68,11 +69,12 @@ export function buildStructuredData(locale: string, faqs: FaqItem[]) {
       name: area,
     })),
     serviceType: isIt
-      ? ['Creazione siti web', 'Web design', 'SEO locale', 'Google Ads', 'Integrazione AI']
-      : ['Website development', 'Web design', 'Local SEO', 'Google Ads', 'AI integration'],
+      ? ['Creazione siti web', 'Web design', 'SEO locale']
+      : ['Website development', 'Web design', 'Local SEO'],
     knowsAbout: isIt
       ? ['Siti web Sardegna', 'Web design locale', 'SEO per attività locali', 'Google Business Profile']
       : ['Websites Sardinia', 'Local web design', 'Local SEO', 'Google Business Profile'],
+    makesOffer: { '@id': `${baseUrl}/#offer-website` },
     founder: { '@id': `${baseUrl}/#founder` },
     parentOrganization: { '@id': `${baseUrl}/#organization` },
   }
@@ -119,40 +121,33 @@ export function buildStructuredData(locale: string, faqs: FaqItem[]) {
           'AI integration',
         ],
     description: isIt
-      ? 'Web designer freelance in Sardegna con oltre 10 anni di esperienza. Siti su misura per ristoranti, hotel e attività locali. Bozza gratuita in 48 ore, nessun anticipo.'
-      : 'Freelance web designer in Sardinia with 10+ years of experience. Custom websites for restaurants, hotels and local businesses. Free mockup in 48 hours, no upfront payment.',
+      ? 'Web designer e sviluppatore in Sardegna. Siti su misura per ristoranti, B&B, negozi e attività locali. Bozza in 48 ore, nessun anticipo.'
+      : 'Web designer and developer in Sardinia. Custom websites for restaurants, B&Bs, shops and local businesses. Draft in 48 hours, no upfront payment.',
   }
 
-  const services = [
-    {
+  const offer = {
+    '@context': 'https://schema.org',
+    '@type': 'Offer',
+    '@id': `${baseUrl}/#offer-website`,
+    name: isIt ? 'Sito professionale' : 'Professional website',
+    description: isIt
+      ? 'Sito web professionale su misura: dominio e hosting inclusi per il primo anno, bozza in 48 ore, nessun anticipo. Extra (e-commerce, prenotazioni, multilingua, foto) da concordare.'
+      : 'Custom professional website: domain and hosting included for the first year, draft in 48 hours, no upfront payment. Extras (e-commerce, booking, multilingual, photos) agreed separately.',
+    price: '500',
+    priceCurrency: 'EUR',
+    availability: 'https://schema.org/InStock',
+    url: locale === 'it' ? `${baseUrl}/#offerta` : `${baseUrl}/en#offerta`,
+    areaServed: { '@type': 'AdministrativeArea', name: 'Sardegna' },
+    seller: { '@id': `${baseUrl}/#localbusiness` },
+    itemOffered: {
       '@type': 'Service',
       '@id': `${baseUrl}/#service-website`,
-      name: isIt ? 'Creazione siti web su misura' : 'Custom website development',
-      description: isIt
-        ? 'Siti web veloci e moderni per ristoranti, hotel, negozi e attività locali in Sardegna. Design personalizzato, mobile-first, ottimizzati per Google.'
-        : 'Fast, modern websites for restaurants, hotels, shops and local businesses in Sardinia. Custom design, mobile-first, SEO-ready.',
-      provider: { '@id': `${baseUrl}/#localbusiness` },
-      areaServed: { '@type': 'AdministrativeArea', name: 'Sardegna' },
-      offers: {
-        '@type': 'Offer',
-        price: isIt ? '500' : '550',
-        priceCurrency: isIt ? 'EUR' : 'USD',
-        description: isIt
-          ? 'Bozza gratuita in 48 ore. Pagamento solo se soddisfatto.'
-          : 'Free mockup in 48 hours. Pay only if satisfied.',
-      },
-    },
-    {
-      '@type': 'Service',
-      '@id': `${baseUrl}/#service-ai`,
-      name: isIt ? 'Integrazione Intelligenza Artificiale' : 'AI integration',
-      description: isIt
-        ? 'Chatbot, automazioni e assistenti virtuali integrati nel sito web e nei processi aziendali.'
-        : 'Chatbots, automations and virtual assistants integrated into your website and business workflows.',
+      name: isIt ? 'Creazione siti web in Sardegna' : 'Website development in Sardinia',
+      serviceType: isIt ? 'Creazione siti web' : 'Website development',
       provider: { '@id': `${baseUrl}/#localbusiness` },
       areaServed: { '@type': 'AdministrativeArea', name: 'Sardegna' },
     },
-  ]
+  }
 
   const faqPage = {
     '@context': 'https://schema.org',
@@ -174,12 +169,12 @@ export function buildStructuredData(locale: string, faqs: FaqItem[]) {
     '@id': locale === 'it' ? `${baseUrl}/#webpage` : `${baseUrl}/en#webpage`,
     url: locale === 'it' ? baseUrl : `${baseUrl}/en`,
     name: isIt
-      ? 'Siti web per attività locali in Sardegna | Bozza gratuita in 48h'
-      : 'Custom websites for local businesses | Free mockup in 48h',
+      ? 'Siti web Sardegna a 500 € | Online in 48 ore'
+      : 'Websites in Sardinia for €500 | Online in 48 hours',
     isPartOf: { '@id': `${baseUrl}/#organization` },
     about: { '@id': `${baseUrl}/#localbusiness` },
     inLanguage: isIt ? 'it-IT' : 'en-US',
   }
 
-  return [organization, person, localBusiness, ...services, faqPage, webPage]
+  return [organization, person, localBusiness, offer, faqPage, webPage]
 }

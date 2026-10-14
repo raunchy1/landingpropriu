@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
+import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import SiteShell from '@/components/SiteShell'
 import { getCaseStudies } from '@/lib/projects'
@@ -33,8 +34,8 @@ export default async function ProgettiPage({ params }: Props) {
 
   const waLink =
     locale === 'it'
-      ? 'https://wa.me/393501998569?text=Ciao%2C%20vorrei%20vedere%20il%20tuo%20portfolio'
-      : 'https://wa.me/393501998569?text=Hi%2C%20I%27d%20like%20to%20see%20your%20portfolio'
+      ? 'https://wa.me/393501998569?text=Ciao%2C%20vorrei%20un%20sito%20per%20la%20mia%20attivit%C3%A0'
+      : 'https://wa.me/393501998569?text=Hi%2C%20I%27d%20like%20a%20website%20for%20my%20business'
 
   return (
     <SiteShell>
@@ -93,6 +94,17 @@ export default async function ProgettiPage({ params }: Props) {
                     {study.location}
                   </span>
                 </div>
+
+                {study.image && (
+                  <Image
+                    src={study.image}
+                    alt={study.title}
+                    width={1200}
+                    height={750}
+                    sizes="(min-width: 768px) 720px, 100vw"
+                    className="mb-6 h-auto w-full rounded-lg border border-[var(--line)]"
+                  />
+                )}
 
                 <h2
                   className="mb-4 font-semibold leading-[1.25]"

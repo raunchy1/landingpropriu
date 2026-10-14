@@ -1,133 +1,43 @@
-import Navbar from '@/components/Navbar'
-import Hero from '@/components/Hero'
-import Marquee from '@/components/Marquee'
-import Services from '@/components/Services'
-import About from '@/components/About'
-import Problems from '@/components/Problems'
-import Solutions from '@/components/Solutions'
-import Process from '@/components/Process'
-import LocalArea from '@/components/LocalArea'
-import Projects from '@/components/Projects'
-import Pricing from '@/components/Pricing'
-import AiRecommendation from '@/components/AiRecommendation'
-import FAQ from '@/components/FAQ'
-import FinalCTA from '@/components/FinalCTA'
+import { setRequestLocale } from 'next-intl/server'
+import HomeNav from '@/components/home/HomeNav'
+import Hero from '@/components/home/Hero'
+import Marquee from '@/components/home/Marquee'
+import Problem from '@/components/home/Problem'
+import Offer from '@/components/home/Offer'
+import Sectors from '@/components/home/Sectors'
+import Work from '@/components/home/Work'
+import Process from '@/components/home/Process'
+import Calculator from '@/components/home/Calculator'
+import Trust from '@/components/home/Trust'
+import Faq from '@/components/home/Faq'
+import FinalCta from '@/components/home/FinalCta'
+import HomeMotion from '@/components/home/HomeMotion'
 import Footer from '@/components/Footer'
 import MobileBar from '@/components/MobileBar'
 
-export default function Home() {
+export default async function Home({ params }: { params: { locale: string } }) {
+  const { locale } = await params
+  setRequestLocale(locale)
+
   return (
-    <main style={{ background: 'var(--bg)', minHeight: '100vh' }}>
-      {/* halftone dot decoration — top right */}
-      <div
-        className="pointer-events-none fixed z-0"
-        style={{
-          right: '-12%',
-          top: '-6%',
-          width: '70%',
-          height: '34%',
-          backgroundImage:
-            'radial-gradient(circle, rgba(237,237,234,0.07) 1.1px, transparent 1.1px)',
-          backgroundSize: '14px 14px',
-          maskImage:
-            'radial-gradient(ellipse at 70% 30%, #000 0%, transparent 68%)',
-          WebkitMaskImage:
-            'radial-gradient(ellipse at 70% 30%, #000 0%, transparent 68%)',
-        }}
-      />
-
-      {/* halftone dot decoration — bottom left */}
-      <div
-        className="pointer-events-none fixed z-0"
-        style={{
-          left: '-12%',
-          bottom: '-6%',
-          width: '70%',
-          height: '34%',
-          backgroundImage:
-            'radial-gradient(circle, rgba(237,237,234,0.07) 1.1px, transparent 1.1px)',
-          backgroundSize: '14px 14px',
-          maskImage:
-            'radial-gradient(ellipse at 30% 70%, #000 0%, transparent 68%)',
-          WebkitMaskImage:
-            'radial-gradient(ellipse at 30% 70%, #000 0%, transparent 68%)',
-        }}
-      />
-
-      <Navbar />
-      <Hero />
-
-      <Marquee />
-
-      {/* hairline separator */}
-      <div className="mx-auto max-w-[720px] px-6 md:px-8">
-        <div className="hairline" />
-      </div>
-
-      <Services />
-
-      <div className="mx-auto max-w-[720px] px-6 md:px-8">
-        <div className="hairline" />
-      </div>
-
-      <About />
-
-      <div className="mx-auto max-w-[720px] px-6 md:px-8">
-        <div className="hairline" />
-      </div>
-
-      <Problems />
-
-      <div className="mx-auto max-w-[720px] px-6 md:px-8">
-        <div className="hairline" />
-      </div>
-
-      <Solutions />
-
-      <div className="mx-auto max-w-[720px] px-6 md:px-8">
-        <div className="hairline" />
-      </div>
-
-      <Process />
-
-      <div className="mx-auto max-w-[720px] px-6 md:px-8">
-        <div className="hairline" />
-      </div>
-
-      <LocalArea />
-
-      <div className="mx-auto max-w-[720px] px-6 md:px-8">
-        <div className="hairline" />
-      </div>
-
-      <Projects />
-
-      <div className="mx-auto max-w-[720px] px-6 md:px-8">
-        <div className="hairline" />
-      </div>
-
-      <Pricing />
-
-      <div className="mx-auto max-w-[720px] px-6 md:px-8">
-        <div className="hairline" />
-      </div>
-
-      <AiRecommendation />
-
-      <div className="mx-auto max-w-[720px] px-6 md:px-8">
-        <div className="hairline" />
-      </div>
-
-      <FAQ />
-
-      <div className="mx-auto max-w-[720px] px-6 md:px-8">
-        <div className="hairline" />
-      </div>
-
-      <FinalCTA />
-
-      <Footer />
+    <>
+      <HomeNav />
+      <main id="contenuto" className="relative overflow-x-clip" style={{ background: 'var(--bg)', color: 'var(--fg)' }}>
+        <Hero />
+        <Marquee />
+        <Problem />
+        <Offer />
+        <Sectors />
+        <Work />
+        <Process />
+        <Calculator />
+        <Trust />
+        <Faq />
+        <FinalCta />
+      </main>
+      <Footer wide />
       <MobileBar />
-    </main>
+      <HomeMotion rootId="contenuto" />
+    </>
   )
 }

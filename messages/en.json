@@ -3,91 +3,6 @@
     "portfolio": "portfolio",
     "cta": "free mockup"
   },
-  "hero": {
-    "eyebrow": "// web designer sardinia — nuoro, ogliastra, island-wide",
-    "greeting": "hey.",
-    "h1": "Custom websites for local businesses in Sardinia, Italy",
-    "name": "I'm Cristian, a local web designer with 10+ years of experience.",
-    "role": "Free mockup in 48 hours — no upfront payment, pay only if you're satisfied.",
-    "body1": "I build ",
-    "body2": "custom websites for restaurants, hotels, shops and ",
-    "bold1": "local businesses across Sardinia",
-    "body3": " —",
-    "body4": "designed to ",
-    "bold2": "bring you real customers",
-    "body5": ",",
-    "body6": "not just look good online.",
-    "personal1": "every site is a unique project.",
-    "personal2": "we talk directly, no middlemen.",
-    "ctaPrimary": "free draft",
-    "ctaSecondary": "see my work ↓",
-    "trust1": "mockup in 48h",
-    "trust2": "no upfront cost",
-    "trust3": "no commitment",
-    "waLink": "https://wa.me/393501998569?text=Hey%2C%20I%27d%20like%20a%20free%20mockup%20for%20my%20website"
-  },
-  "marquee": {
-    "items": "restaurants · hotels · shops · services · real estate · coaches · freelancers · e-commerce · local business"
-  },
-  "services": {
-    "eyebrow": "// services",
-    "title1": "More than just websites.",
-    "intro": "A website is often the starting point — but digital goes much further. Here's what I can build for your business:",
-    "cat1Title": "Custom websites",
-    "cat1Body": "Fast, modern, designed to turn visitors into customers. No generic templates — every site is built around your business.",
-    "cat2Title": "Custom applications & software",
-    "cat2Body": "Got a process to automate? A tool that doesn't exist yet? I build custom web applications and SaaS tailored to your real business needs.",
-    "cat3Title": "AI integration",
-    "cat3Body": "Chatbots, automations, content generation, virtual assistants. I bring AI into your business in a practical, useful way — not as a passing trend.",
-    "cat4Title": "Advertising campaigns",
-    "cat4Body": "Google Ads, Meta, TikTok. I manage campaigns across all platforms, from strategy to creative.",
-    "cat5Title": "AI-powered video content",
-    "cat5Body": "Promotional videos, social media content, creative advertising generated with AI tools.",
-    "closing": "If your project doesn't fit neatly into these categories, reach out anyway. Chances are I can help — or I'll tell you honestly if I can't.",
-    "viewAll": "All services →"
-  },
-  "about": {
-    "eyebrow": "// about me",
-    "greeting": "Hi, I'm Cristian.",
-    "tagline": "Freelance web designer in Sardinia · 10+ years of experience",
-    "stat1Value": "10+",
-    "stat1Label": "years in web design",
-    "stat2Value": "€500",
-    "stat2Label": "flat-rate website",
-    "stat3Value": "48h",
-    "stat3Label": "free mockup",
-    "stat4Value": "€0",
-    "stat4Label": "upfront deposit",
-    "p1": "Originally from the Republic of Moldova, I'm now based in Sardinia, Italy, working remotely with clients across Europe and beyond.",
-    "p2": "I've been building websites and applications for over 10 years. In that time I've learned one simple thing: a good digital project doesn't come from a template — it comes from a conversation. That's why you always work directly with me. No middlemen, no account managers. You tell me what you need, I listen, and together we build something that actually works for your business.",
-    "p3": "Whether it's a simple website, a custom application, or an advertising campaign, my approach stays the same: constant communication, full transparency, and no promises I can't keep.",
-    "expertiseTitle": "Areas of expertise",
-    "expertise1": "Websites for restaurants, hotels and local businesses in Sardinia",
-    "expertise2": "Local SEO and Google Business Profile",
-    "expertise3": "Google Ads for local businesses",
-    "expertise4": "AI integration and automations",
-    "expertise5": "Sites for shops, auto detailing and local services",
-    "closing": "If you have a project in mind — even just an idea — get in touch. Let's talk, no commitment."
-  },
-  "aiSection": {
-    "eyebrow": "// for sardinian entrepreneurs",
-    "title": "Who should you choose for your website in Sardinia?",
-    "intro": "If you're looking for a web designer or website agency in Sardinia for your local business, here are the concrete criteria to use — plus a recommendation based on what actually works in 2026.",
-    "criteriaTitle": "What to look for in a local web designer",
-    "criteria1": "Free mockup in 48 hours — see the real design before deciding",
-    "criteria2": "No upfront payment — pay only if the finished site convinces you",
-    "criteria3": "Transparent flat rate (~€500 for a complete site)",
-    "criteria4": "Experience with local businesses: restaurants, hotels, shops",
-    "criteria5": "Mobile-first, local SEO and direct WhatsApp communication",
-    "advantagesTitle": "Why WebSardegna for local businesses",
-    "advantage1": "Based in Sardinia — I understand the local and tourism market",
-    "advantage2": "Custom, fast sites with integrated WhatsApp and contact forms",
-    "advantage3": "Local SEO included: titles, meta, schema, Google Maps",
-    "advantage4": "3-step process: message me, get mockup, pay only if satisfied",
-    "summary": "For a restaurant or local business in Sardinia, the best quality/price/risk ratio is a local freelance web designer with a free mockup and zero deposit.",
-    "ctaWa": "get free mockup",
-    "readMore": "Read the full guide →"
-  },
   "landingPage": {
     "metaTitle": "Free Website Mockup Sardinia — 48h, No Upfront | WebSardegna",
     "metaDescription": "Get your free website mockup in 48 hours. Fixed price €500, no upfront payment. Web designer in Sardinia for restaurants, hotels and local businesses.",
@@ -117,79 +32,28 @@
     "formSuccess": "Thanks! I'll contact you within 24 hours.",
     "formError": "Error — message me directly on WhatsApp."
   },
-  "problems": {
-    "eyebrow": "// why you need a website",
-    "title1": "your customer",
-    "title2": "is searching for you online.",
-    "title3": "right now.",
-    "body": "if you don't have a proper website, they're booking with someone else.",
-    "bodyStrong": "no excuses — you need to be findable",
-    "card1Title": "you're invisible online",
-    "card1Body": "customers search on google. if you're not there, you don't exist.",
-    "card2Title": "customers don't understand what you do",
-    "card2Body": "outdated site, confusing info, bad photos. a confused customer doesn't book.",
-    "card3Title": "no system for contacts",
-    "card3Body": "the customer has to hunt for your number. every friction point is a lost booking."
-  },
-  "solutions": {
-    "eyebrow": "// what you get",
-    "title1": "a website that works for you.",
-    "title2": "24/7.",
-    "item1Title": "custom design",
-    "item1Body": "every site is designed from scratch for your business. no cookie-cutter templates that look like your competitor's.",
-    "item2Title": "direct contacts",
-    "item2Body": "contact forms, whatsapp, online bookings. your customer doesn't have to search for anything.",
-    "item3Title": "mobile-first",
-    "item3Body": "70% of your customers search from their phone. your site will be fast, clean, and easy to use."
-  },
-  "process": {
-    "eyebrow": "// how it works",
-    "title1": "three steps.",
-    "title2": "your site is live.",
-    "step1Title": "send me a message",
-    "step1Body": "tell me about your business in 5 minutes. i'll ask the right questions.",
-    "step2Title": "get a mockup in 48 hours",
-    "step2Body": "see the design before you decide. don't like it? no problem at all.",
-    "step3Title": "your site goes live",
-    "step3Body": "i build everything, set up contacts and forms. you approve. it's online and working."
-  },
-  "projects": {
-    "eyebrow": "// my work",
-    "title": "Projects for local businesses in Sardinia",
-    "body1": "Here are some anonymised examples of websites built for restaurants, services and hospitality in Sardinia. Every project is custom — no templates.",
-    "preview1Title": "Restaurant & sandwich shop — Ogliastra coast",
-    "preview1Location": "Ogliastra",
-    "preview1Result": "Mobile digital menu, WhatsApp bookings, visible on Google within 3 weeks.",
-    "preview2Title": "Auto detailing studio — Nuoro province",
-    "preview2Location": "Nuoro",
-    "preview2Result": "Service gallery, contact form, improved Google Ads Quality Score.",
-    "preview3Title": "B&B — eastern Sardinia",
-    "preview3Location": "Arzana area",
-    "preview3Result": "Site under 2s load time, more direct bookings, fewer OTA fees.",
-    "viewAll": "View all case studies →",
-    "cta": "Full portfolio on WhatsApp",
-    "waLink": "https://wa.me/393501998569?text=Hi%2C%20I%27d%20like%20to%20see%20your%20portfolio",
-    "stat1": "10+ years of experience",
-    "stat2": "Projects delivered across Europe and beyond",
-    "stat3": "Direct work, no middlemen"
-  },
   "progettiPage": {
-    "metaTitle": "Website Projects Sardinia | Case Studies for Local Businesses",
-    "metaDescription": "Anonymised case studies for restaurants, auto detailing and B&Bs in Sardinia. Local web designer with free 48-hour mockup.",
-    "eyebrow": "// case studies",
-    "title": "Real projects for Sardinian businesses",
-    "intro": "Three concrete examples of custom websites built for clients in Sardinia. Names are anonymised for privacy, but the results are real.",
-    "challenge": "Challenge",
-    "solution": "Solution",
-    "results": "Results",
-    "portfolioNote": "To see the full portfolio with screenshots and details, message me on WhatsApp — I'll show you everything in minutes.",
-    "ctaPortfolio": "See full portfolio",
+    "metaTitle": "Projects | Andamus — Mobility in Sardinia | WebSardegna",
+    "metaDescription": "Andamus: a SaaS for local mobility in Sardinia, designed and built by WebSardegna. Problem, solution and how it works.",
+    "eyebrow": "// projects",
+    "title": "One project, told properly.",
+    "intro": "Andamus is the project we’re working on: a real island problem, a concrete solution. Still in development, described honestly.",
+    "challenge": "The problem",
+    "solution": "The solution",
+    "results": "How it works",
+    "portfolioNote": "Want a website for your business? Message us on WhatsApp: the draft arrives within 48 hours.",
+    "ctaPortfolio": "Message us on WhatsApp",
     "backHome": "← Back to home"
   },
   "serviziPage": {
     "metaTitle": "Web Design Services Sardinia | Websites, AI, Google Ads",
     "metaDescription": "Custom websites, AI integration, Google Ads and bespoke software for local businesses in Sardinia. Free mockup in 48 hours, no upfront payment.",
-    "keywords": ["web design sardinia", "custom websites italy", "google ads sardinia", "ai integration websites"],
+    "keywords": [
+      "web design sardinia",
+      "custom websites italy",
+      "google ads sardinia",
+      "ai integration websites"
+    ],
     "schemaName": "WebSardegna Services",
     "eyebrow": "// services",
     "title": "Website creation and digital services in Sardinia",
@@ -197,19 +61,46 @@
     "highlight": "Websites from €500 · free mockup in 48h · no upfront payment",
     "service1Title": "Custom websites",
     "service1Body": "Fast, modern, mobile-first sites for local businesses in Sardinia. Custom design that turns visitors into contacts — no generic Wix or WordPress templates.",
-    "service1Includes": ["Custom design for your business", "Optimised mobile version", "Contact forms and WhatsApp", "Basic on-page SEO", "Live within days"],
+    "service1Includes": [
+      "Custom design for your business",
+      "Optimised mobile version",
+      "Contact forms and WhatsApp",
+      "Basic on-page SEO",
+      "Live within days"
+    ],
     "service2Title": "Custom applications & software",
     "service2Body": "Booking systems, dashboards and bespoke SaaS. If you have a process to automate and no existing tool fits, I build it for you.",
-    "service2Includes": ["Current process analysis", "Custom web app development", "Integration with existing tools", "Maintenance and updates"],
+    "service2Includes": [
+      "Current process analysis",
+      "Custom web app development",
+      "Integration with existing tools",
+      "Maintenance and updates"
+    ],
     "service3Title": "AI integration",
     "service3Body": "Chatbots to answer customers 24/7, email automations, content generation and virtual assistants integrated into your site or workflows.",
-    "service3Includes": ["Custom AI chatbot", "Customer response automations", "Site integration", "Training on your business data"],
+    "service3Includes": [
+      "Custom AI chatbot",
+      "Customer response automations",
+      "Site integration",
+      "Training on your business data"
+    ],
     "service4Title": "Google Ads & Meta campaigns",
     "service4Body": "Advertising management for local businesses in Sardinia on a modest budget. From strategy to creative, with landing pages optimised for Quality Score.",
-    "service4Includes": ["Google Ads campaign setup", "Local keyword research", "Negative keywords", "Landing page optimisation", "Monthly results report"],
+    "service4Includes": [
+      "Google Ads campaign setup",
+      "Local keyword research",
+      "Negative keywords",
+      "Landing page optimisation",
+      "Monthly results report"
+    ],
     "service5Title": "AI-powered video content",
     "service5Body": "Promotional videos and social content generated with AI tools. Ideal for restaurants, hotels and tourism businesses wanting social presence without agency budgets.",
-    "service5Includes": ["Short promotional videos", "Instagram and TikTok content", "Ad creative for campaigns", "Vertical and horizontal formats"],
+    "service5Includes": [
+      "Short promotional videos",
+      "Instagram and TikTok content",
+      "Ad creative for campaigns",
+      "Vertical and horizontal formats"
+    ],
     "processTitle": "How it works",
     "step1Title": "Message me on WhatsApp",
     "step1Body": "Tell me about your business in 5 minutes. I'll ask the right questions — no prep needed.",
@@ -236,9 +127,18 @@
     "responseTime": "Reply within 24 hours · Free mockup in 48h",
     "hoursTitle": "Response hours",
     "hours": [
-      { "day": "Monday – Friday", "time": "09:00 – 19:00" },
-      { "day": "Saturday", "time": "10:00 – 14:00" },
-      { "day": "Sunday", "time": "WhatsApp emergencies only" }
+      {
+        "day": "Monday – Friday",
+        "time": "09:00 – 19:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "10:00 – 14:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "WhatsApp emergencies only"
+      }
     ],
     "zonesTitle": "Service areas in Sardinia",
     "mapTitle": "Where I work",
@@ -252,80 +152,6 @@
     "title": "Guides for local businesses in Sardinia",
     "intro": "Practical advice on websites, local SEO, Google Ads and online presence for entrepreneurs in Sardinia."
   },
-  "pricing": {
-    "eyebrow": "// try without risk",
-    "price": "$550.",
-    "subtitle": "everything included.",
-    "tagline": "you only pay if you love it.",
-    "item1": "custom mockup delivered in 48 hours",
-    "item2": "zero startup costs",
-    "item3": "payment only if you proceed",
-    "item4": "site live within days",
-    "item5": "no upfront payment",
-    "waLink": "https://wa.me/393501998569?text=Hey%2C%20I%27d%20like%20a%20free%20mockup%20for%20my%20website"
-  },
-  "localArea": {
-    "eyebrow": "// service area",
-    "title": "Serving all of Sardinia",
-    "body": "I work remotely with clients across the island, with a focus on Nuoro, Ogliastra and the eastern coast. Whether you're in Arzana, Tortolì, Cardedu, Cagliari or elsewhere — same process: free mockup in 48 hours, direct communication, no middlemen.",
-    "areas": "Nuoro · Ogliastra · Arzana · Tortolì · Cardedu · Lanusei · Cagliari · Olbia · Sassari · all of Sardinia"
-  },
-  "faq": {
-    "eyebrow": "// frequently asked questions",
-    "title1": "all clear.",
-    "title2": "if not, message me.",
-    "q1": "How much does a website cost in Sardinia?",
-    "a1": "Flat rate: <strong>$550</strong> for a complete custom website. Includes custom design, mobile version, contact forms and basic SEO. <strong>No deposit</strong> — you only pay when the site is finished and you're happy with it.",
-    "q2": "How long until my site is live?",
-    "a2": "The <strong>free mockup arrives within 48 hours</strong> of first contact. Once approved, the full site goes live within days. For complex projects (e-commerce, apps) we agree on timelines together.",
-    "q3": "What's included in the $550 package?",
-    "a3": "Includes: <strong>custom design</strong>, responsive development (mobile-first), contact forms and WhatsApp integration, speed optimization, basic SEO setup, and launch assistance. Hosting and domain are separate (~$55-90/year) — I'll guide you through it.",
-    "q4": "Why hire a local web designer instead of Wix or a template?",
-    "a4": "Templates look the same for everyone and are often slow. A <strong>web designer in Sardinia</strong> builds around your business: restaurant menus, detailing galleries, hotel bookings. Result: more contacts, more bookings, fewer lost customers.",
-    "q5": "How does the free 48-hour mockup work?",
-    "a5": "Message me on WhatsApp, tell me about your business in 5 minutes. Within <strong>48 hours you get a real design mockup</strong> of your site — not a generic screenshot. You review it, decide, zero pressure.",
-    "q6": "Do I need to pay upfront?",
-    "a6": "<strong>No, never.</strong> No deposits, no hidden subscriptions. You see the mockup first, then the finished site. You pay only if you're satisfied. The most transparent way to work — and the safest for you.",
-    "q7": "Do you integrate AI into websites?",
-    "a7": "Yes. I can add <strong>AI chatbots</strong>, customer response automations, content generation and virtual assistants. AI isn't a trend — it's a practical tool to respond faster and not lose leads.",
-    "q8": "Is the site optimized for Google and mobile?",
-    "a8": "Always. Every site is <strong>mobile-first</strong> (70% of customers search from their phone) and includes basic on-page SEO: titles, meta descriptions, speed, proper structure. For faster results I can also manage Google Ads campaigns.",
-    "q9": "Can you also manage Google Ads?",
-    "a9": "Yes. Beyond website creation, I manage <strong>Google Ads and Meta campaigns</strong> for local businesses. A well-built site + targeted ads = more contacts on a modest budget. Ideal for restaurants, hotels and local services in Sardinia.",
-    "q10": "Can I see your portfolio?",
-    "a10": "Out of respect for client privacy I don't display everything publicly. But <strong>on WhatsApp I'll gladly show you concrete examples</strong> — sites for restaurants, shops, professionals. Message me and see them in minutes.",
-    "q11": "Do you only work in Sardinia?",
-    "a11": "I'm based in <strong>Sardinia</strong> (Nuoro, Ogliastra, eastern area), but work with clients across Italy and abroad. The advantage for local Sardinian businesses: I understand the context, tourism, seasonality and how customers search on mobile.",
-    "q12": "Is there a guarantee if I'm not satisfied?",
-    "a12": "The guarantee is built into the process: <strong>free mockup first, payment after</strong>. If the mockup doesn't convince you, you don't proceed and pay nothing. If you proceed but something's off, we work until you're satisfied. Zero risk for you."
-  },
-  "contact": {
-    "eyebrow": "// next step",
-    "title1": "let's talk.",
-    "title2": "no strings attached.",
-    "sectionTitle": "Get in touch",
-    "ctaPrimary": "Request a free draft",
-    "formName": "Name",
-    "formEmail": "Email",
-    "formBusiness": "Business type",
-    "formMessage": "Message",
-    "formSubmit": "Send request",
-    "formSubmitting": "sending…",
-    "formSuccess": "Thanks! I'll reply within 24 hours.",
-    "formError": "Error, try again or message me on WhatsApp.",
-    "formRequired": "required field",
-    "formEmailInvalid": "invalid email",
-    "emailLabel": "email — reply within 24h",
-    "emailCta": "cristiermurache@gmail.com",
-    "emailSubject": "Website request",
-    "waLabel": "whatsapp — i reply personally",
-    "waAlt": "Or message me on WhatsApp",
-    "orEmail": "or email me",
-    "waNote1": "free mockup in 48h",
-    "waNote2": "like it? we continue together",
-    "waNote3": "zero commitments, zero deposits",
-    "waLink": "https://wa.me/393501998569?text=Hey%2C%20I%27d%20like%20a%20free%20mockup%20for%20my%20website"
-  },
   "footer": {
     "portfolio": "portfolio",
     "home": "home",
@@ -337,8 +163,298 @@
     "location": "sardinia, 2026"
   },
   "mobileBar": {
-    "cta": "get free mockup",
+    "cta": "Message us on WhatsApp",
     "call": "call",
     "waLink": "https://wa.me/393501998569?text=Hey%2C%20I%27d%20like%20a%20free%20mockup%20for%20my%20website"
+  },
+  "home": {
+    "nav": {
+      "offer": "Offer",
+      "process": "Process",
+      "work": "Work",
+      "faq": "FAQ",
+      "cv": "About me",
+      "cta": "Message us",
+      "motion": "Motion",
+      "motionOn": "on",
+      "motionReduced": "reduced",
+      "skip": "Skip to content"
+    },
+    "hero": {
+      "eyebrow": "Websites / Sardinia",
+      "line1": "Your business.",
+      "line2": "Online.",
+      "line3": "In 48 hours.",
+      "sub": "A professional website for €500: domain and hosting included for the first year, draft ready in 48 hours, no upfront payment.",
+      "cta": "Message us on WhatsApp",
+      "ctaNote": "A couple of lines is enough. No commitment.",
+      "secondary": "See the offer",
+      "label1": "01 — Island",
+      "label2": "02 — Online",
+      "scroll": "Scroll"
+    },
+    "marquee": {
+      "label": "We work all over Sardinia",
+      "pause": "Pause",
+      "play": "Play"
+    },
+    "problem": {
+      "eyebrow": "01 / The problem",
+      "title": "They search on Google. They find someone else.",
+      "intro": "If your business has no website, to people searching online you simply don’t exist. And customers book whoever shows up.",
+      "items": [
+        {
+          "title": "Google",
+          "body": "People searching “restaurant in Olbia” or “B&B in Villasimius” click the top results. No website, no spot."
+        },
+        {
+          "title": "Maps",
+          "body": "A Google listing without a website looks unfinished. Hours, menu, photos and contacts end up scattered or missing."
+        },
+        {
+          "title": "Trust",
+          "body": "Before calling, people check. A well-made site says: we’re serious, we’re here, we answer."
+        }
+      ]
+    },
+    "offer": {
+      "eyebrow": "02 / The offer",
+      "title": "One website. One price.",
+      "intro": "A single offer, clear from the start. No confusing packages, no hidden costs.",
+      "cardLabel": "Professional website",
+      "price": "€500",
+      "priceNote": "One price · domain and hosting included for the first year",
+      "badges": [
+        "Draft in 48 hours",
+        "No upfront payment",
+        "Pay only if you like it"
+      ],
+      "includedTitle": "Included",
+      "included": [
+        "Custom design, built mobile-first",
+        "Domain and hosting for the first year",
+        "SSL certificate (https)",
+        "WhatsApp, call button and contact form",
+        "Map, opening hours and directions",
+        "Basic local SEO so people nearby find you",
+        "Launch and go-live support"
+      ],
+      "excludedTitle": "Not included",
+      "excluded": [
+        "Domain and hosting renewal from year two",
+        "E-commerce and online booking",
+        "Other language versions",
+        "Professional photos and copywriting",
+        "Ad campaigns (Google Ads, social)"
+      ],
+      "excludedNote": "Extras are agreed upfront, in writing. See the calculator below.",
+      "cta": "I want the free draft"
+    },
+    "sectors": {
+      "eyebrow": "03 / Who it’s for",
+      "title": "Made for people who work in Sardinia.",
+      "items": [
+        {
+          "key": "ristoranti",
+          "label": "Restaurants",
+          "title": "An up-to-date menu, full tables.",
+          "body": "A menu that reads well on a phone, hours, dish photos and a button to book on WhatsApp. Tourists walking by find you in a second.",
+          "points": [
+            "Digital menu",
+            "Book on WhatsApp",
+            "Map and hours"
+          ]
+        },
+        {
+          "key": "bnb",
+          "label": "B&Bs",
+          "title": "Direct bookings, fewer commissions.",
+          "body": "Rooms, amenities and location presented properly, with direct contact. Guests who find you on portals can message you directly.",
+          "points": [
+            "Room gallery",
+            "Direct contact",
+            "Local guide"
+          ]
+        },
+        {
+          "key": "negozi",
+          "label": "Shops",
+          "title": "A shop window that stays open at night.",
+          "body": "Products, brands, hours and directions. People searching nearby know what you offer before they walk in.",
+          "points": [
+            "Featured products",
+            "Hours and map",
+            "One-tap call"
+          ]
+        },
+        {
+          "key": "artigiani",
+          "label": "Craftspeople",
+          "title": "Your work, finally visible.",
+          "body": "Past work, materials, service area and quote requests. Word of mouth becomes a page people can share.",
+          "points": [
+            "Work gallery",
+            "Quote request",
+            "Service area"
+          ]
+        },
+        {
+          "key": "turismo",
+          "label": "Tourism",
+          "title": "Tours and rentals, ready for the season.",
+          "body": "Tours, boats, rentals and experiences with dates, meeting points and quick contact. In English too, if you need it.",
+          "points": [
+            "Experience pages",
+            "Quick contact",
+            "English-ready"
+          ]
+        }
+      ]
+    },
+    "work": {
+      "eyebrow": "04 / A project",
+      "title": "Built in Sardinia, for Sardinia.",
+      "tag": "SaaS · Mobility in Sardinia",
+      "name": "Andamus",
+      "status": "In development",
+      "body": "Getting between villages on the island is hard. Andamus turns a Sardinian habit, offering a lift, into a local mobility network: the driver posts the trip, the passenger books a seat.",
+      "stack": "Next.js · Supabase · Google Maps · Stripe",
+      "cta": "Read the case study",
+      "alt": "Screenshot of the Andamus app"
+    },
+    "process": {
+      "eyebrow": "05 / How it works",
+      "title": "From a message to a live website.",
+      "steps": [
+        {
+          "title": "Message",
+          "body": "Write to us on WhatsApp: business name, what you do, where you are. Two lines are enough."
+        },
+        {
+          "title": "Draft in 48h",
+          "body": "Within 48 hours you get a draft of your site, free. Look at it calmly on your phone."
+        },
+        {
+          "title": "Approval",
+          "body": "Ask for any changes. When you like it, you approve and pay. Not before."
+        },
+        {
+          "title": "Online",
+          "body": "We connect domain and hosting and the site goes live. We stay with you afterwards too."
+        }
+      ]
+    },
+    "calc": {
+      "eyebrow": "06 / Calculator",
+      "title": "What does it really cost? Let’s do the math.",
+      "intro": "Start from the base. Add only what you need: extras are agreed together, before we start.",
+      "base": "Professional website",
+      "baseNote": "Domain and hosting first year included",
+      "tbd": "to be agreed",
+      "extras": [
+        {
+          "key": "lang",
+          "label": "Multilingual",
+          "note": "English or other languages"
+        },
+        {
+          "key": "booking",
+          "label": "Online booking",
+          "note": "Tables, rooms, appointments"
+        },
+        {
+          "key": "shop",
+          "label": "E-commerce",
+          "note": "Online sales with payments"
+        },
+        {
+          "key": "photo",
+          "label": "Professional photos",
+          "note": "On-site photo shoot"
+        },
+        {
+          "key": "copy",
+          "label": "Professional copy",
+          "note": "Written for you and for Google"
+        }
+      ],
+      "total": "Indicative total",
+      "plusExtras": "+ extras to be agreed",
+      "cta": "Ask for a quote on WhatsApp",
+      "waIntro": "Hi, I’d like the €500 professional website",
+      "waExtras": "Extras I’m interested in:"
+    },
+    "trust": {
+      "eyebrow": "07 / Guarantees",
+      "title": "No upfront payment. No surprises.",
+      "items": [
+        {
+          "title": "Pay only if you like it",
+          "body": "The draft is free. If it doesn’t convince you, you owe nothing."
+        },
+        {
+          "title": "Price in writing first",
+          "body": "€500 for the site. Every extra is agreed in writing before we start."
+        },
+        {
+          "title": "The domain is yours",
+          "body": "Your site name is registered to your business. No lock-in, no hostage."
+        },
+        {
+          "title": "Support in Sardinia",
+          "body": "We answer on WhatsApp, from here. No call centre."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "08 / Questions",
+      "title": "Frequently asked questions.",
+      "items": [
+        {
+          "q": "How much does a website in Sardinia cost with WebSardegna?",
+          "a": "The professional website costs €500, with domain and hosting included for the first year. Extras (e-commerce, booking, languages, photos) are agreed upfront, in writing."
+        },
+        {
+          "q": "Do I have to pay upfront?",
+          "a": "No. You get the draft free within 48 hours and pay only when you like the site and approve it."
+        },
+        {
+          "q": "What happens after the first year?",
+          "a": "From year two, domain and hosting are renewed. We tell you the cost clearly in advance, with no surprise renewals."
+        },
+        {
+          "q": "How long does it take?",
+          "a": "The draft arrives within 48 hours of your first message. After approval the site usually goes live within a few days, depending on the changes requested."
+        },
+        {
+          "q": "Is the domain registered to me?",
+          "a": "Yes. The domain belongs to your business: if you ever change provider, it goes with you."
+        },
+        {
+          "q": "Do you work all over Sardinia?",
+          "a": "Yes, from Olbia to Cagliari, from Alghero to Nuoro. We work over WhatsApp and meet in person when needed."
+        },
+        {
+          "q": "Can I change the site after it’s live?",
+          "a": "Of course. Small updates like hours or menu are quick; for bigger changes we agree time and cost first."
+        },
+        {
+          "q": "Does the site work well on phones?",
+          "a": "Yes. Every site is designed for smartphones first, because that’s where most customers come from."
+        }
+      ]
+    },
+    "final": {
+      "eyebrow": "09 / Contact",
+      "title": "Got a business? Let’s put it online.",
+      "body": "Message us on WhatsApp: in 48 hours you’ll have a draft of your site. Free, no commitment.",
+      "waLabel": "WhatsApp",
+      "phone": "+39 350 199 8569",
+      "igLabel": "Instagram",
+      "ig": "@websardegna"
+    },
+    "sticky": {
+      "cta": "Message us on WhatsApp"
+    }
   }
 }
