@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
 import SiteShell from '@/components/SiteShell'
+import PageHeader from '@/components/site/PageHeader'
+import Arrow from '@/components/home/Arrow'
 import { business } from '@/lib/business'
 
 type Props = {
@@ -74,204 +76,139 @@ export default async function ContattiPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
       />
 
-      <section className="py-[80px] md:py-[120px]">
-        <div className="mx-auto max-w-[720px] px-6 md:px-8">
-          <p
-            className="mb-5 text-[11px]"
-            style={{
-              color: 'var(--muted)',
-              fontFamily: 'var(--font-mono)',
-              fontWeight: 500,
-            }}
-          >
-            {t('eyebrow')}
-          </p>
+      <PageHeader eyebrow={t('eyebrow')} title={t('title')} lead={t('intro')} />
 
-          <h1
-            className="mb-4 font-bold leading-[1.1]"
-            style={{
-              fontSize: 'clamp(32px, 5vw, 52px)',
-              letterSpacing: '-0.03em',
-              color: 'var(--fg)',
-            }}
-          >
-            {t('title')}
-          </h1>
+      <section className="wrap pb-24 md:pb-36">
+        {/* NAP block — citation-ready */}
+        <address
+          className="not-italic"
+          itemScope
+          itemType="https://schema.org/ProfessionalService"
+        >
+          <meta itemProp="name" content={business.name} />
+          <meta itemProp="url" content={business.url} />
 
-          <p
-            className="mb-12 max-w-[600px] text-[17px] leading-[1.7]"
-            style={{ color: 'var(--muted)' }}
-          >
-            {t('intro')}
-          </p>
+          <p className="eyebrow eyebrow-accent mb-6">{business.name}</p>
 
-          {/* NAP block — citation-ready */}
-          <address
-            className="not-italic mb-12 rounded-xl border border-[var(--line)] p-6 md:p-8"
-            style={{ background: 'var(--surface)' }}
-            itemScope
-            itemType="https://schema.org/ProfessionalService"
-          >
-            <meta itemProp="name" content={business.name} />
-            <meta itemProp="url" content={business.url} />
+          <div data-reveal className="grid gap-px md:grid-cols-3" style={{ background: 'var(--line)' }}>
+            <div className="flex flex-col justify-between gap-8 p-6 md:p-8" style={{ background: 'var(--bg)' }}>
+              <p className="eyebrow">{t('phoneLabel')}</p>
+              <a
+                href={`tel:${business.phoneE164}`}
+                itemProp="telephone"
+                className="text-[26px] leading-none tracking-[-0.03em] transition-colors hover:text-[var(--accent)] md:text-[30px]"
+                style={{ color: 'var(--fg)' }}
+              >
+                {business.phone}
+              </a>
+            </div>
 
-            <p
-              className="mb-6 font-semibold"
-              style={{ fontSize: '20px', color: 'var(--fg)' }}
+            <div className="flex flex-col justify-between gap-8 p-6 md:p-8" style={{ background: 'var(--bg)' }}>
+              <p className="eyebrow">{t('emailLabel')}</p>
+              <a
+                href={`mailto:${business.email}`}
+                itemProp="email"
+                className="break-all text-[20px] leading-[1.2] tracking-[-0.02em] transition-colors hover:text-[var(--accent)] md:text-[22px]"
+                style={{ color: 'var(--fg)' }}
+              >
+                {business.email}
+              </a>
+            </div>
+
+            <div
+              className="flex flex-col justify-between gap-8 p-6 md:p-8"
+              style={{ background: 'var(--bg)' }}
+              itemProp="address"
+              itemScope
+              itemType="https://schema.org/PostalAddress"
             >
-              {business.name}
-            </p>
-
-            <div className="mb-6 flex flex-col gap-3">
+              <p className="eyebrow">{t('areaLabel')}</p>
               <div>
-                <p
-                  className="mb-1 text-[11px] uppercase tracking-wide"
-                  style={{ color: 'var(--dim)', fontFamily: 'var(--font-mono)' }}
-                >
-                  {t('phoneLabel')}
-                </p>
-                <a
-                  href={`tel:${business.phoneE164}`}
-                  itemProp="telephone"
-                  className="text-[17px] font-medium transition-colors hover:text-[var(--accent-green)]"
-                  style={{ color: 'var(--fg)' }}
-                >
-                  {business.phone}
-                </a>
-              </div>
-
-              <div>
-                <p
-                  className="mb-1 text-[11px] uppercase tracking-wide"
-                  style={{ color: 'var(--dim)', fontFamily: 'var(--font-mono)' }}
-                >
-                  {t('emailLabel')}
-                </p>
-                <a
-                  href={`mailto:${business.email}`}
-                  itemProp="email"
-                  className="text-[17px] font-medium transition-colors hover:text-[var(--accent-green)]"
-                  style={{ color: 'var(--fg)' }}
-                >
-                  {business.email}
-                </a>
-              </div>
-
-              <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
-                <p
-                  className="mb-1 text-[11px] uppercase tracking-wide"
-                  style={{ color: 'var(--dim)', fontFamily: 'var(--font-mono)' }}
-                >
-                  {t('areaLabel')}
-                </p>
-                <p className="text-[17px]" style={{ color: 'var(--fg)' }}>
+                <p className="text-[20px] leading-[1.3] tracking-[-0.02em]" style={{ color: 'var(--fg)' }}>
                   <span itemProp="addressLocality">{business.address.locality}</span>,{' '}
                   <span itemProp="addressRegion">{business.address.region}</span>{' '}
                   <span itemProp="postalCode">{business.address.postalCode}</span>,{' '}
                   <span itemProp="addressCountry">{business.address.countryName}</span>
                 </p>
-                <p
-                  className="mt-1 text-[14px]"
-                  style={{ color: 'var(--muted)' }}
-                >
+                <p className="mt-2 text-[14px]" style={{ color: 'var(--muted)' }}>
                   {t('areaNote')}
                 </p>
               </div>
             </div>
+          </div>
 
+          <div data-reveal className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
             <a
               href={waLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="cta-primary mb-6 inline-flex items-center gap-3 rounded-lg px-7 py-3.5 text-[15px] font-medium transition-all duration-300"
-              style={{
-                border: '1px solid var(--line)',
-                background: 'var(--surface)',
-                color: 'var(--fg)',
-              }}
+              className="btn btn-accent w-full sm:w-auto"
             >
-              <span
-                className="inline-block h-2 w-2 rounded-full"
-                style={{ background: 'var(--accent-green)' }}
-              />
               {t('ctaWhatsApp')}
+              <Arrow />
             </a>
-
-            <p
-              className="text-[13px]"
-              style={{ color: 'var(--dim)', fontFamily: 'var(--font-mono)' }}
-            >
+            <p className="text-[13px]" style={{ color: 'var(--dim)' }}>
               {t('responseTime')}
             </p>
-          </address>
+          </div>
+        </address>
+      </section>
 
+      <section className="rule py-24 md:py-36">
+        <div className="wrap grid gap-16 lg:grid-cols-12 lg:gap-6">
           {/* Opening hours */}
-          <div className="mb-12">
-            <h2
-              className="mb-4 font-semibold"
-              style={{ fontSize: '20px', color: 'var(--fg)' }}
-            >
+          <div className="lg:col-span-5">
+            <h2 data-split className="display h-md mb-8 md:mb-10">
               {t('hoursTitle')}
             </h2>
-            <div
-              className="rounded-xl border border-[var(--line)] p-6"
-              style={{ background: 'var(--surface)' }}
-            >
+            <ul data-reveal className="rule">
               {hours.map((h) => (
-                <div
+                <li
                   key={h.day}
-                  className="flex justify-between border-b border-[var(--line)] py-3 last:border-0"
+                  className="flex justify-between gap-4 border-b py-4"
+                  style={{ borderColor: 'var(--line)' }}
                 >
-                  <span className="text-[15px]" style={{ color: 'var(--fg)' }}>
+                  <span className="text-[16px]" style={{ color: 'var(--fg)' }}>
                     {h.day}
                   </span>
-                  <span
-                    className="text-[14px]"
-                    style={{ color: 'var(--muted)', fontFamily: 'var(--font-mono)' }}
-                  >
+                  <span className="text-[15px] tabular-nums" style={{ color: 'var(--muted)' }}>
                     {h.time}
                   </span>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
           {/* Service areas */}
-          <div className="mb-12">
-            <h2
-              className="mb-4 font-semibold"
-              style={{ fontSize: '20px', color: 'var(--fg)' }}
-            >
+          <div className="lg:col-span-6 lg:col-start-7">
+            <h2 data-split className="display h-md mb-8 md:mb-10">
               {t('zonesTitle')}
             </h2>
-            <div className="flex flex-wrap gap-2">
+            <div data-reveal className="flex flex-wrap gap-2">
               {business.serviceAreas.map((area) => (
                 <span
                   key={area}
-                  className="rounded-full border border-[var(--line)] px-4 py-2 text-[12px]"
-                  style={{
-                    color: 'var(--muted)',
-                    fontFamily: 'var(--font-mono)',
-                    background: 'var(--surface)',
-                  }}
+                  className="rounded-full border px-4 py-2 text-[14px]"
+                  style={{ borderColor: 'var(--dim-line)', color: 'var(--fg)' }}
                 >
                   {area}
                 </span>
               ))}
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Map */}
-          <div className="mb-10">
-            <h2
-              className="mb-4 font-semibold"
-              style={{ fontSize: '20px', color: 'var(--fg)' }}
-            >
-              {t('mapTitle')}
-            </h2>
+      {/* Map */}
+      <section className="rule pb-24 pt-24 md:pb-40 md:pt-36">
+        <div className="wrap">
+          <h2 data-split className="display h-md mb-8 md:mb-10">
+            {t('mapTitle')}
+          </h2>
+          <div data-reveal>
             <div
-              className="overflow-hidden rounded-xl border border-[var(--line)]"
-              style={{ aspectRatio: '16/9' }}
+              className="overflow-hidden border"
+              style={{ aspectRatio: '16/9', borderColor: 'var(--line)', filter: 'grayscale(0.6) contrast(1.05)' }}
             >
               <iframe
                 title={t('mapTitle')}
@@ -283,20 +220,20 @@ export default async function ContattiPage({ params }: Props) {
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
+          </div>
+          <div className="mt-8 flex flex-col items-start gap-2">
             <a
               href={business.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 inline-block text-[13px]"
-              style={{ color: 'var(--muted)' }}
+              className="ulink"
             >
               {t('mapLink')} →
             </a>
+            <Link href="/" className="ulink" style={{ color: 'var(--muted)' }}>
+              {t('backHome')}
+            </Link>
           </div>
-
-          <Link href="/" className="text-[14px]" style={{ color: 'var(--muted)' }}>
-            {t('backHome')}
-          </Link>
         </div>
       </section>
     </SiteShell>

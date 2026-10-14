@@ -5,6 +5,7 @@ import LandingHero from '@/components/landing/LandingHero'
 import LandingForm from '@/components/landing/LandingForm'
 import LandingStickyBar from '@/components/landing/LandingStickyBar'
 import LandingPageTracker from '@/components/landing/LandingPageTracker'
+import HomeMotion from '@/components/home/HomeMotion'
 
 type Props = {
   params: { locale: string }
@@ -55,28 +56,26 @@ export default async function BozzaGratuitaPage({ params }: Props) {
   }
 
   return (
-    <main style={{ background: 'var(--bg)', minHeight: '100vh' }}>
+    <main id="contenuto" className="relative overflow-x-clip" style={{ background: 'var(--bg)', color: 'var(--fg)', minHeight: '100vh' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
 
       <header
-        className="fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-[12px]"
+        className="fixed inset-x-0 top-0 z-50 border-b"
         style={{
-          height: 56,
           borderColor: 'var(--line)',
-          background: 'rgba(8,8,8,0.85)',
+          background: 'rgba(11,15,20,0.78)',
+          backdropFilter: 'blur(14px)',
+          WebkitBackdropFilter: 'blur(14px)',
         }}
       >
-        <div className="mx-auto flex h-full max-w-[720px] items-center justify-between px-6">
-          <span className="text-[14px] font-semibold" style={{ color: 'var(--fg)' }}>
-            websardegna<span style={{ color: 'var(--muted)' }}>.xyz</span>
+        <div className="wrap flex h-[64px] items-center justify-between gap-4">
+          <span className="shrink-0 text-[15px] font-medium tracking-[0.18em] md:text-[17px]" style={{ color: 'var(--fg)' }}>
+            WEB<span style={{ color: 'var(--accent)' }}>/</span>SARDEGNA
           </span>
-          <span
-            className="text-[11px]"
-            style={{ color: 'var(--muted)', fontFamily: 'var(--font-mono)' }}
-          >
+          <span className="eyebrow truncate text-right">
             {t('headerBadge')}
           </span>
         </div>
@@ -87,12 +86,13 @@ export default async function BozzaGratuitaPage({ params }: Props) {
       <LandingForm />
       <LandingStickyBar />
 
-      <footer className="pb-24 pt-8 text-center md:pb-8">
-        <p className="text-[11px]" style={{ color: 'var(--dim)', fontFamily: 'var(--font-mono)' }}>
+      <footer className="rule pb-28 pt-8 md:pb-10">
+        <p className="wrap text-[12px] tracking-[0.04em]" style={{ color: 'var(--dim)' }}>
           {business.name} · {business.address.locality}, {business.address.region} ·{' '}
           {business.phone}
         </p>
       </footer>
+      <HomeMotion rootId="contenuto" />
     </main>
   )
 }

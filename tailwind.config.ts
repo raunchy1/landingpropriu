@@ -12,12 +12,12 @@ const config: Config = {
         mono: ['var(--font-mono)', 'JetBrains Mono', 'monospace'],
       },
       colors: {
-        bg: '#080808',
-        fg: '#EDEDEA',
-        muted: '#6E6E69',
-        dim: '#3A3A36',
-        line: '#1E1E1C',
-        'accent-green': '#2EBD59',
+        bg: 'var(--bg)',
+        fg: 'var(--fg)',
+        muted: 'var(--muted)',
+        dim: 'var(--dim)',
+        line: 'var(--line)',
+        accent: 'var(--accent)',
       },
       maxWidth: {
         content: '720px',

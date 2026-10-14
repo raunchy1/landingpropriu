@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
 import SiteShell from '@/components/SiteShell'
+import PageHeader from '@/components/site/PageHeader'
+import Arrow from '@/components/home/Arrow'
 import { getPosts } from '@/lib/blog/posts'
 
 type Props = {
@@ -31,74 +33,46 @@ export default async function BlogPage({ params }: Props) {
   const t = await getTranslations({ locale, namespace: 'blog' })
   const posts = getPosts(locale)
 
+  const dateFmt = (d: string) =>
+    new Date(d).toLocaleDateString(locale === 'it' ? 'it-IT' : 'en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    })
+
   return (
     <SiteShell>
-      <section className="py-[80px] md:py-[120px]">
-        <div className="mx-auto max-w-[720px] px-6 md:px-8">
-          <p
-            className="mb-5 text-[11px]"
-            style={{
-              color: 'var(--muted)',
-              fontFamily: 'var(--font-mono)',
-              fontWeight: 500,
-            }}
-          >
-            {t('eyebrow')}
-          </p>
+      <PageHeader eyebrow={t('eyebrow')} title={t('title')} lead={t('intro')} />
 
-          <h1
-            className="mb-4 font-bold leading-[1.1]"
-            style={{
-              fontSize: 'clamp(32px, 5vw, 52px)',
-              letterSpacing: '-0.03em',
-              color: 'var(--fg)',
-            }}
-          >
-            {t('title')}
-          </h1>
-
-          <p
-            className="mb-12 max-w-[560px] text-[17px] leading-[1.7]"
-            style={{ color: 'var(--muted)' }}
-          >
-            {t('intro')}
-          </p>
-
-          <div className="flex flex-col gap-6">
-            {posts.map((post) => (
+      <section className="wrap pb-24 md:pb-40">
+        <ul data-reveal className="rule">
+          {posts.map((post, i) => (
+            <li key={post.slug} className="border-b" style={{ borderColor: 'var(--line)' }}>
               <Link
-                key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="group block rounded-xl border border-[var(--line)] p-6 transition-colors duration-300 hover:border-[var(--dim-line)]"
-                style={{ background: 'var(--surface)' }}
+                className="group grid gap-4 py-8 md:grid-cols-12 md:gap-6 md:py-10"
               >
-                <time
-                  className="mb-3 block text-[11px]"
-                  style={{ color: 'var(--dim)', fontFamily: 'var(--font-mono)' }}
-                  dateTime={post.date}
-                >
-                  {new Date(post.date).toLocaleDateString(
-                    locale === 'it' ? 'it-IT' : 'en-US',
-                    { year: 'numeric', month: 'long', day: 'numeric' }
-                  )}{' '}
-                  · {post.readTime}
-                </time>
-                <h2
-                  className="mb-3 font-semibold leading-[1.25] transition-colors group-hover:text-[var(--accent-green)]"
-                  style={{ fontSize: '22px', color: 'var(--fg)' }}
-                >
-                  {post.title}
-                </h2>
-                <p
-                  className="text-[15px] leading-[1.6]"
-                  style={{ color: 'var(--muted)' }}
-                >
-                  {post.description}
-                </p>
+                <div className="flex items-center gap-4 text-[12px] uppercase tracking-[0.14em] md:col-span-3 md:flex-col md:items-start md:gap-2" style={{ color: 'var(--dim)' }}>
+                  <span style={{ color: 'var(--accent)' }}>{String(i + 1).padStart(2, '0')}</span>
+                  <time dateTime={post.date}>
+                    {dateFmt(post.date)} · {post.readTime}
+                  </time>
+                </div>
+                <div className="md:col-span-8">
+                  <h2 className="text-[26px] font-normal leading-[1.1] tracking-[-0.035em] transition-colors group-hover:text-[var(--accent)] md:text-[38px]" style={{ color: 'var(--fg)' }}>
+                    {post.title}
+                  </h2>
+                  <p className="mt-4 max-w-[60ch] text-[16px] leading-[1.6]" style={{ color: 'var(--muted)' }}>
+                    {post.description}
+                  </p>
+                </div>
+                <div className="arrow-host hidden justify-end md:col-span-1 md:flex" style={{ color: 'var(--fg)' }}>
+                  <Arrow />
+                </div>
               </Link>
-            ))}
-          </div>
-        </div>
+            </li>
+          ))}
+        </ul>
       </section>
     </SiteShell>
   )

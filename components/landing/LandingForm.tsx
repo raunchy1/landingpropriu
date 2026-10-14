@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from 'react'
 import { useTranslations } from 'next-intl'
 import { trackFormSubmit } from '@/lib/trackEvents'
+import Arrow from '@/components/home/Arrow'
 
 const WEB3FORMS_KEY = '71392d98-c721-43c2-8250-c03840287e70'
 
@@ -50,39 +51,30 @@ export default function LandingForm() {
   }
 
   const fieldClass =
-    'w-full rounded-lg px-4 py-3 text-[15px] outline-none transition-colors duration-300'
+    'w-full min-h-[56px] border-b bg-transparent px-0 py-3 text-[17px] outline-none transition-colors duration-300 placeholder:text-[var(--dim)] focus:border-[var(--accent)]'
   const fieldStyle = {
-    border: '1px solid var(--line)',
-    background: 'transparent',
+    borderColor: 'var(--dim-line)',
     color: 'var(--fg)',
   }
 
   return (
-    <section className="pb-20" style={{ background: 'var(--bg)' }}>
-      <div className="mx-auto max-w-[720px] px-6 md:px-8">
-        <div
-          className="rounded-xl border p-6 md:p-8"
-          style={{ borderColor: 'var(--line)', background: 'var(--surface)' }}
-        >
-          <p
-            className="mb-1 text-[11px]"
-            style={{ color: 'var(--muted)', fontFamily: 'var(--font-mono)' }}
-          >
-            {t('formEyebrow')}
-          </p>
-          <h2
-            className="mb-5 font-semibold"
-            style={{ fontSize: '20px', color: 'var(--fg)' }}
-          >
+    <section className="rule py-20 md:py-32" style={{ background: 'var(--bg)' }}>
+      <div className="wrap grid gap-10 lg:grid-cols-12 lg:gap-6">
+        <div className="lg:col-span-5">
+          <p className="eyebrow mb-6 md:mb-8">{t('formEyebrow')}</p>
+          <h2 data-split className="display h-md max-w-[14ch]">
             {t('formTitle')}
           </h2>
+        </div>
 
+        <div data-reveal className="lg:col-span-6 lg:col-start-7">
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <input
               name="name"
               type="text"
               required
               placeholder={t('formName')}
+              aria-label={t('formName')}
               className={fieldClass}
               style={fieldStyle}
             />
@@ -91,6 +83,7 @@ export default function LandingForm() {
               type="tel"
               required
               placeholder={t('formPhone')}
+              aria-label={t('formPhone')}
               className={fieldClass}
               style={fieldStyle}
             />
@@ -99,33 +92,26 @@ export default function LandingForm() {
               type="text"
               required
               placeholder={t('formBusiness')}
+              aria-label={t('formBusiness')}
               className={fieldClass}
               style={fieldStyle}
             />
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="cta-primary inline-flex items-center justify-center gap-3 rounded-lg px-7 py-3.5 text-[15px] font-medium transition-all duration-300 disabled:opacity-60"
-              style={{
-                border: '1px solid var(--line)',
-                background: 'var(--surface)',
-                color: 'var(--fg)',
-              }}
+              className="btn btn-accent mt-6 w-full disabled:opacity-60 sm:w-auto sm:self-start"
             >
-              <span
-                className="inline-block h-2 w-2 rounded-full"
-                style={{ background: 'var(--accent-green)' }}
-              />
               {status === 'loading' ? t('formSubmitting') : t('formSubmit')}
+              <Arrow />
             </button>
 
             {status === 'success' && (
-              <p className="text-[13px]" style={{ color: 'var(--accent-green)' }}>
+              <p className="text-[14px]" style={{ color: 'var(--accent)' }} role="status">
                 → {t('formSuccess')}
               </p>
             )}
             {status === 'error' && (
-              <p className="text-[13px]" style={{ color: 'var(--muted)' }}>
+              <p className="text-[14px]" style={{ color: 'var(--muted)' }} role="alert">
                 → {t('formError')}
               </p>
             )}

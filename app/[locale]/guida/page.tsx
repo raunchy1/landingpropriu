@@ -3,6 +3,8 @@ import { setRequestLocale } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
 import SiteShell from '@/components/SiteShell'
 import BlogContent from '@/components/BlogContent'
+import PageHeader from '@/components/site/PageHeader'
+import CtaPanel from '@/components/site/CtaPanel'
 import { getGuidaContent } from '@/lib/guida-content'
 import { business } from '@/lib/business'
 
@@ -87,89 +89,36 @@ export default async function GuidaPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      <section className="py-[80px] md:py-[120px]">
-        <div className="mx-auto max-w-[720px] px-6 md:px-8">
-          <p
-            className="mb-5 text-[11px]"
-            style={{
-              color: 'var(--muted)',
-              fontFamily: 'var(--font-mono)',
-              fontWeight: 500,
-            }}
-          >
-            {isIt ? '// guida' : '// guide'}
-          </p>
+      <PageHeader
+        size="md"
+        eyebrow={isIt ? '// guida' : '// guide'}
+        title={content.title}
+        lead={content.intro}
+      />
 
-          <h1
-            className="mb-6 font-bold leading-[1.1]"
-            style={{
-              fontSize: 'clamp(28px, 5vw, 44px)',
-              letterSpacing: '-0.03em',
-              color: 'var(--fg)',
-            }}
-          >
-            {content.title}
-          </h1>
-
-          <p
-            className="mb-10 text-[18px] leading-[1.6]"
-            style={{ color: 'var(--muted)' }}
-          >
-            {content.intro}
-          </p>
-
-          <div className="guida-content">
+      <div className="wrap pb-24 md:pb-40">
+        <div className="rule grid gap-6 pt-4 md:grid-cols-12">
+          <div className="guida-content md:col-span-8 md:col-start-3 lg:col-span-7 lg:col-start-4">
             <BlogContent blocks={content.blocks} />
           </div>
-
-          <div
-            className="mt-14 rounded-xl border border-[var(--line)] p-8"
-            style={{ background: 'var(--surface)' }}
-          >
-            <p
-              className="mb-4 font-semibold"
-              style={{ fontSize: '20px', color: 'var(--fg)' }}
-            >
-              {isIt
-                ? 'Inizia senza rischio con WebSardegna'
-                : 'Start risk-free with WebSardegna'}
-            </p>
-            <p
-              className="mb-6 text-[15px] leading-[1.6]"
-              style={{ color: 'var(--muted)' }}
-            >
-              {isIt
-                ? 'Bozza gratuita in 48 ore · 500€ tutto incluso · nessun anticipo'
-                : 'Free mockup in 48 hours · €500 all included · no deposit'}
-            </p>
-            <a
-              href={waLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-primary inline-flex items-center gap-3 rounded-lg px-7 py-3.5 text-[15px] font-medium transition-all duration-300"
-              style={{
-                border: '1px solid var(--line)',
-                background: 'var(--surface)',
-                color: 'var(--fg)',
-              }}
-            >
-              <span
-                className="inline-block h-2 w-2 rounded-full"
-                style={{ background: 'var(--accent-green)' }}
-              />
-              {isIt ? 'Richiedi bozza gratuita' : 'Request free mockup'}
-            </a>
-          </div>
-
-          <Link
-            href="/"
-            className="mt-8 inline-block text-[14px]"
-            style={{ color: 'var(--muted)' }}
-          >
-            {isIt ? '← Torna alla home' : '← Back to home'}
-          </Link>
         </div>
-      </section>
+
+        <CtaPanel
+          className="mt-16 md:mt-24"
+          title={isIt ? 'Inizia senza rischio con WebSardegna' : 'Start risk-free with WebSardegna'}
+          body={
+            isIt
+              ? 'Bozza gratuita in 48 ore · 500€ tutto incluso · nessun anticipo'
+              : 'Free mockup in 48 hours · €500 all included · no deposit'
+          }
+          cta={isIt ? 'Richiedi bozza gratuita' : 'Request free mockup'}
+          href={waLink}
+        />
+
+        <Link href="/" className="ulink mt-12" style={{ color: 'var(--muted)' }}>
+          {isIt ? '← Torna alla home' : '← Back to home'}
+        </Link>
+      </div>
     </SiteShell>
   )
 }

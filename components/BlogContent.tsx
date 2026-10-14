@@ -4,6 +4,8 @@ type Props = {
   blocks: BlogBlock[]
 }
 
+const body = 'mb-6 text-[17px] leading-[1.75] md:text-[18px]'
+
 export default function BlogContent({ blocks }: Props) {
   return (
     <article className="blog-content">
@@ -13,12 +15,8 @@ export default function BlogContent({ blocks }: Props) {
             return (
               <h2
                 key={i}
-                className="mb-4 mt-10 font-bold leading-[1.2]"
-                style={{
-                  fontSize: 'clamp(22px, 4vw, 32px)',
-                  letterSpacing: '-0.02em',
-                  color: 'var(--fg)',
-                }}
+                className="rule mb-6 mt-14 pt-10 text-[28px] font-normal leading-[1.1] tracking-[-0.035em] md:text-[38px]"
+                style={{ color: 'var(--fg)' }}
               >
                 {block.text}
               </h2>
@@ -27,43 +25,39 @@ export default function BlogContent({ blocks }: Props) {
             return (
               <h3
                 key={i}
-                className="mb-3 mt-7 font-semibold leading-[1.3]"
-                style={{ fontSize: '20px', color: 'var(--fg)' }}
+                className="mb-4 mt-10 text-[21px] font-medium leading-[1.3] tracking-[-0.015em]"
+                style={{ color: 'var(--fg)' }}
               >
                 {block.text}
               </h3>
             )
           case 'ul':
             return (
-              <ul
-                key={i}
-                className="mb-5 list-disc space-y-2 pl-5 text-[17px] leading-[1.7]"
-                style={{ color: 'var(--muted)' }}
-              >
+              <ul key={i} className={`${body} space-y-3`} style={{ color: 'var(--muted)' }}>
                 {block.items.map((item, j) => (
-                  <li key={j}>{item}</li>
+                  <li key={j} className="flex gap-4">
+                    <span className="mt-[0.78em] h-px w-3 shrink-0" style={{ background: 'var(--accent)' }} aria-hidden="true" />
+                    <span>{item}</span>
+                  </li>
                 ))}
               </ul>
             )
           case 'ol':
             return (
-              <ol
-                key={i}
-                className="mb-5 list-decimal space-y-2 pl-5 text-[17px] leading-[1.7]"
-                style={{ color: 'var(--muted)' }}
-              >
+              <ol key={i} className={`${body} space-y-3`} style={{ color: 'var(--muted)' }}>
                 {block.items.map((item, j) => (
-                  <li key={j}>{item}</li>
+                  <li key={j} className="flex gap-4">
+                    <span className="shrink-0 tabular-nums text-[13px] leading-[2.2]" style={{ color: 'var(--accent)' }} aria-hidden="true">
+                      {String(j + 1).padStart(2, '0')}
+                    </span>
+                    <span>{item}</span>
+                  </li>
                 ))}
               </ol>
             )
           default:
             return (
-              <p
-                key={i}
-                className="mb-5 text-[17px] leading-[1.7]"
-                style={{ color: 'var(--muted)' }}
-              >
+              <p key={i} className={body} style={{ color: 'var(--muted)' }}>
                 {block.text}
               </p>
             )

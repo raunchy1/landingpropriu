@@ -90,7 +90,7 @@ export default function ConsentManager() {
 
   const load = !!choice && (choice.analytics || choice.ads)
 
-  const btn = 'rounded-lg px-4 py-2.5 text-[13px] font-medium min-h-[40px]'
+  const btn = 'btn btn-sm justify-center px-5'
 
   return (
     <>
@@ -103,28 +103,28 @@ export default function ConsentManager() {
       )}
       {open && (
         <div role="dialog" aria-live="polite" aria-label={l.title}
-          className="fixed bottom-3 left-3 right-3 z-[100] mx-auto max-w-[560px] rounded-xl border p-5 shadow-2xl"
-          style={{ background: '#111110', borderColor: 'var(--dim-line)', color: 'var(--fg)' }}>
-          <p className="mb-2 text-[15px] font-semibold">{l.title}</p>
-          <p className="mb-3 text-[13px] leading-[1.6]" style={{ color: '#C8C8C2' }}>
+          className="fixed bottom-3 left-3 right-3 z-[100] mx-auto max-w-[560px] border p-5 md:bottom-6 md:p-7"
+          style={{ background: 'var(--bg-2)', borderColor: 'var(--dim-line)', color: 'var(--fg)', boxShadow: '0 24px 80px rgba(0,0,0,0.55)' }}>
+          <p className="eyebrow eyebrow-accent mb-3">{l.title}</p>
+          <p className="mb-4 text-[14px] leading-[1.6]" style={{ color: 'var(--muted)' }}>
             {l.body}{' '}
-            <Link href="/cookie-policy" className="underline" style={{ color: 'var(--fg)' }}>{l.policy}</Link>
+            <Link href="/cookie-policy" className="underline underline-offset-4" style={{ color: 'var(--fg)' }}>{l.policy}</Link>
             {' · '}
-            <Link href="/privacy" className="underline" style={{ color: 'var(--fg)' }}>{l.privacy}</Link>
+            <Link href="/privacy" className="underline underline-offset-4" style={{ color: 'var(--fg)' }}>{l.privacy}</Link>
           </p>
           {custom && (
-            <div className="mb-3 flex flex-col gap-2 text-[13px]">
-              <label className="flex items-center gap-2 opacity-80"><input type="checkbox" checked disabled /> {l.necessary}</label>
-              <label className="flex items-center gap-2"><input type="checkbox" checked={draft.analytics} onChange={(e) => setDraft({ ...draft, analytics: e.target.checked })} /> {l.analytics}</label>
-              <label className="flex items-center gap-2"><input type="checkbox" checked={draft.ads} onChange={(e) => setDraft({ ...draft, ads: e.target.checked })} /> {l.ads}</label>
+            <div className="rule mb-4 flex flex-col gap-1 pt-3 text-[14px]">
+              <label className="flex min-h-[40px] items-center gap-3 opacity-70"><input type="checkbox" className="chk" checked disabled /> {l.necessary}</label>
+              <label className="flex min-h-[40px] cursor-pointer items-center gap-3"><input type="checkbox" className="chk" checked={draft.analytics} onChange={(e) => setDraft({ ...draft, analytics: e.target.checked })} /> {l.analytics}</label>
+              <label className="flex min-h-[40px] cursor-pointer items-center gap-3"><input type="checkbox" className="chk" checked={draft.ads} onChange={(e) => setDraft({ ...draft, ads: e.target.checked })} /> {l.ads}</label>
             </div>
           )}
-          <div className="flex flex-wrap gap-2">
-            <button className={btn} style={{ background: 'var(--fg)', color: '#080808' }} onClick={() => save({ analytics: true, ads: true })}>{l.accept}</button>
-            <button className={btn + ' border'} style={{ borderColor: 'var(--dim)', color: 'var(--fg)' }} onClick={() => save({ analytics: false, ads: false })}>{l.reject}</button>
+          <div className="flex flex-wrap items-center gap-2">
+            <button className={btn + ' btn-accent'} onClick={() => save({ analytics: true, ads: true })}>{l.accept}</button>
+            <button className={btn + ' btn-ghost'} onClick={() => save({ analytics: false, ads: false })}>{l.reject}</button>
             {custom
-              ? <button className={btn + ' border'} style={{ borderColor: 'var(--dim)', color: 'var(--fg)' }} onClick={() => save(draft)}>{l.save}</button>
-              : <button className={btn + ' underline'} style={{ color: 'var(--fg)' }} onClick={() => setCustom(true)}>{l.customize}</button>}
+              ? <button className={btn + ' btn-ghost'} onClick={() => save(draft)}>{l.save}</button>
+              : <button className="min-h-[44px] px-2 text-[14px] underline underline-offset-4 transition-colors hover:text-[var(--accent)]" style={{ color: 'var(--fg)' }} onClick={() => setCustom(true)}>{l.customize}</button>}
           </div>
         </div>
       )}

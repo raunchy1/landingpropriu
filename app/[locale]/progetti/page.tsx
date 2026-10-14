@@ -3,6 +3,8 @@ import { setRequestLocale, getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 import { Link } from '@/i18n/navigation'
 import SiteShell from '@/components/SiteShell'
+import PageHeader from '@/components/site/PageHeader'
+import Arrow from '@/components/home/Arrow'
 import { getCaseStudies } from '@/lib/projects'
 
 type Props = {
@@ -39,173 +41,90 @@ export default async function ProgettiPage({ params }: Props) {
 
   return (
     <SiteShell>
-      <section className="py-[80px] md:py-[120px]">
-        <div className="mx-auto max-w-[720px] px-6 md:px-8">
-          <p
-            className="mb-5 text-[11px]"
-            style={{
-              color: 'var(--muted)',
-              fontFamily: 'var(--font-mono)',
-              fontWeight: 500,
-            }}
-          >
-            {t('eyebrow')}
-          </p>
+      <PageHeader eyebrow={t('eyebrow')} title={t('title')} lead={t('intro')} />
 
-          <h1
-            className="mb-4 font-bold leading-[1.1]"
-            style={{
-              fontSize: 'clamp(32px, 5vw, 52px)',
-              letterSpacing: '-0.03em',
-              color: 'var(--fg)',
-            }}
-          >
-            {t('title')}
-          </h1>
-
-          <p
-            className="mb-12 max-w-[600px] text-[17px] leading-[1.7]"
-            style={{ color: 'var(--muted)' }}
-          >
-            {t('intro')}
-          </p>
-
-          <div className="mb-12 flex flex-col gap-8">
-            {studies.map((study) => (
-              <article
-                key={study.id}
-                className="rounded-xl border border-[var(--line)] p-6 md:p-8"
-                style={{ background: 'var(--surface)' }}
-              >
-                <div className="mb-4 flex flex-wrap items-center gap-2">
-                  <span
-                    className="rounded-full border border-[var(--line)] px-3 py-1 text-[11px]"
-                    style={{
-                      color: 'var(--accent-green)',
-                      fontFamily: 'var(--font-mono)',
-                    }}
-                  >
-                    {study.category}
-                  </span>
-                  <span
-                    className="text-[11px]"
-                    style={{ color: 'var(--dim)', fontFamily: 'var(--font-mono)' }}
-                  >
-                    {study.location}
-                  </span>
-                </div>
-
-                {study.image && (
-                  <Image
-                    src={study.image}
-                    alt={study.title}
-                    width={1200}
-                    height={750}
-                    sizes="(min-width: 768px) 720px, 100vw"
-                    className="mb-6 h-auto w-full rounded-lg border border-[var(--line)]"
-                  />
-                )}
-
-                <h2
-                  className="mb-4 font-semibold leading-[1.25]"
-                  style={{ fontSize: '22px', color: 'var(--fg)' }}
-                >
+      <section className="wrap pb-24 md:pb-36">
+        <div className="flex flex-col">
+          {studies.map((study, i) => (
+            <article key={study.id} className="rule grid gap-8 py-12 md:grid-cols-12 md:gap-6 md:py-20">
+              <div className="md:col-span-5">
+                <p className="eyebrow mb-5">
+                  <span style={{ color: 'var(--accent)' }}>{String(i + 1).padStart(2, '0')}</span>
+                  {' / '}
+                  {study.category}
+                  {' · '}
+                  {study.location}
+                </p>
+                <h2 data-split className="display h-md">
                   {study.title}
                 </h2>
-
-                <div className="mb-4">
-                  <h3
-                    className="mb-2 text-[13px] font-medium uppercase tracking-wide"
-                    style={{ color: 'var(--dim)', fontFamily: 'var(--font-mono)' }}
-                  >
-                    {t('challenge')}
-                  </h3>
-                  <p
-                    className="text-[15px] leading-[1.7]"
-                    style={{ color: 'var(--muted)' }}
-                  >
-                    {study.challenge}
-                  </p>
-                </div>
-
-                <div className="mb-4">
-                  <h3
-                    className="mb-2 text-[13px] font-medium uppercase tracking-wide"
-                    style={{ color: 'var(--dim)', fontFamily: 'var(--font-mono)' }}
-                  >
-                    {t('solution')}
-                  </h3>
-                  <p
-                    className="text-[15px] leading-[1.7]"
-                    style={{ color: 'var(--muted)' }}
-                  >
-                    {study.solution}
-                  </p>
-                </div>
-
-                <div>
-                  <h3
-                    className="mb-2 text-[13px] font-medium uppercase tracking-wide"
-                    style={{ color: 'var(--dim)', fontFamily: 'var(--font-mono)' }}
-                  >
-                    {t('results')}
-                  </h3>
-                  <ul
-                    className="list-disc space-y-1 pl-5 text-[15px] leading-[1.7]"
-                    style={{ color: 'var(--muted)' }}
-                  >
-                    {study.results.map((r) => (
-                      <li key={r}>{r}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="mt-6 flex flex-wrap gap-x-3 gap-y-1">
                   {study.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-[11px]"
-                      style={{ color: 'var(--dim)', fontFamily: 'var(--font-mono)' }}
-                    >
+                    <span key={tag} className="text-[13px]" style={{ color: 'var(--dim)' }}>
                       #{tag}
                     </span>
                   ))}
                 </div>
-              </article>
-            ))}
-          </div>
+              </div>
 
-          <p
-            className="mb-6 text-[15px] leading-[1.7]"
-            style={{ color: 'var(--muted)' }}
-          >
-            {t('portfolioNote')}
-          </p>
+              <div data-reveal className="md:col-span-7">
+                {study.image && (
+                  <div className="work-card mb-10 overflow-hidden border" style={{ borderColor: 'var(--line)' }}>
+                    <Image
+                      src={study.image}
+                      alt={study.title}
+                      width={1200}
+                      height={750}
+                      sizes="(min-width: 768px) 58vw, 100vw"
+                      className="work-img h-auto w-full"
+                    />
+                  </div>
+                )}
 
-          <div className="flex flex-wrap gap-4">
+                <div className="grid gap-8 sm:grid-cols-2">
+                  <div>
+                    <h3 className="eyebrow mb-3">{t('challenge')}</h3>
+                    <p className="text-[16px] leading-[1.65]" style={{ color: 'var(--muted)' }}>
+                      {study.challenge}
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="eyebrow mb-3">{t('solution')}</h3>
+                    <p className="text-[16px] leading-[1.65]" style={{ color: 'var(--muted)' }}>
+                      {study.solution}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="rule mt-8 pt-6">
+                  <h3 className="eyebrow eyebrow-accent mb-4">{t('results')}</h3>
+                  <ul className="space-y-2">
+                    {study.results.map((r) => (
+                      <li key={r} className="flex gap-3 text-[16px] leading-[1.6]" style={{ color: 'var(--fg)' }}>
+                        <span className="mt-[0.75em] h-px w-3 shrink-0" style={{ background: 'var(--accent)' }} aria-hidden="true" />
+                        {r}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="rule pt-12 md:pt-16">
+          <p className="lead max-w-[56ch]">{t('portfolioNote')}</p>
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
             <a
               href={waLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="cta-primary inline-flex items-center gap-3 rounded-lg px-7 py-3.5 text-[15px] font-medium transition-all duration-300"
-              style={{
-                border: '1px solid var(--line)',
-                background: 'var(--surface)',
-                color: 'var(--fg)',
-              }}
+              className="btn btn-accent w-full sm:w-auto"
             >
-              <span
-                className="inline-block h-2 w-2 rounded-full"
-                style={{ background: 'var(--accent-green)' }}
-              />
               {t('ctaPortfolio')}
+              <Arrow />
             </a>
-
-            <Link
-              href="/"
-              className="inline-flex items-center px-4 py-3.5 text-[14px]"
-              style={{ color: 'var(--muted)' }}
-            >
+            <Link href="/" className="btn btn-ghost w-full sm:w-auto">
               {t('backHome')}
             </Link>
           </div>

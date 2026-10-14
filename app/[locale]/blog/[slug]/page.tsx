@@ -4,6 +4,8 @@ import { setRequestLocale } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
 import SiteShell from '@/components/SiteShell'
 import BlogContent from '@/components/BlogContent'
+import PageHeader from '@/components/site/PageHeader'
+import CtaPanel from '@/components/site/CtaPanel'
 import { getAllPostParams, getPost } from '@/lib/blog/posts'
 
 type Props = {
@@ -83,91 +85,49 @@ export default async function BlogPostPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      <section className="py-[80px] md:py-[120px]">
-        <div className="mx-auto max-w-[720px] px-6 md:px-8">
-          <Link
-            href="/blog"
-            className="mb-8 inline-block text-[13px] transition-colors"
-            style={{
-              color: 'var(--muted)',
-              fontFamily: 'var(--font-mono)',
-            }}
-          >
+      <PageHeader
+        size="md"
+        before={
+          <Link href="/blog" className="ulink mb-10 md:mb-14" style={{ color: 'var(--muted)' }}>
             {cta.back}
           </Link>
-
-          <time
-            className="mb-4 block text-[11px]"
-            style={{ color: 'var(--dim)', fontFamily: 'var(--font-mono)' }}
-            dateTime={post.date}
-          >
+        }
+        eyebrow={
+          <time dateTime={post.date}>
             {new Date(post.date).toLocaleDateString(
               locale === 'it' ? 'it-IT' : 'en-US',
               { year: 'numeric', month: 'long', day: 'numeric' }
             )}{' '}
             · {post.readTime}
           </time>
+        }
+        title={post.title}
+        lead={post.description}
+      />
 
-          <h1
-            className="mb-6 font-bold leading-[1.1]"
-            style={{
-              fontSize: 'clamp(28px, 5vw, 44px)',
-              letterSpacing: '-0.03em',
-              color: 'var(--fg)',
-            }}
-          >
-            {post.title}
-          </h1>
-
-          <p
-            className="mb-10 text-[18px] leading-[1.6]"
-            style={{ color: 'var(--muted)' }}
-          >
-            {post.description}
-          </p>
-
-          <BlogContent blocks={post.blocks} />
-
-          <div
-            className="mt-14 rounded-xl border border-[var(--line)] p-8"
-            style={{ background: 'var(--surface)' }}
-          >
-            <p
-              className="mb-4 font-semibold"
-              style={{ fontSize: '20px', color: 'var(--fg)' }}
-            >
-              {locale === 'it'
-                ? 'Vuoi un sito che porti clienti reali?'
-                : 'Want a website that brings real customers?'}
-            </p>
-            <p
-              className="mb-6 text-[15px] leading-[1.6]"
-              style={{ color: 'var(--muted)' }}
-            >
-              {locale === 'it'
-                ? 'Bozza gratuita in 48 ore, senza anticipo. Paghi solo se sei soddisfatto.'
-                : 'Free mockup in 48 hours, no upfront payment. Pay only if you love it.'}
-            </p>
-            <a
-              href={cta.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-primary inline-flex items-center gap-3 rounded-lg px-7 py-3.5 text-[15px] font-medium transition-all duration-300"
-              style={{
-                border: '1px solid var(--line)',
-                background: 'var(--surface)',
-                color: 'var(--fg)',
-              }}
-            >
-              <span
-                className="inline-block h-2 w-2 rounded-full"
-                style={{ background: 'var(--accent-green)' }}
-              />
-              {cta.label}
-            </a>
+      <div className="wrap pb-24 md:pb-40">
+        <div className="rule grid gap-6 pt-4 md:grid-cols-12">
+          <div className="md:col-span-8 md:col-start-3 lg:col-span-7 lg:col-start-4">
+            <BlogContent blocks={post.blocks} />
           </div>
         </div>
-      </section>
+
+        <CtaPanel
+          className="mt-16 md:mt-24"
+          title={
+            locale === 'it'
+              ? 'Vuoi un sito che porti clienti reali?'
+              : 'Want a website that brings real customers?'
+          }
+          body={
+            locale === 'it'
+              ? 'Bozza gratuita in 48 ore, senza anticipo. Paghi solo se sei soddisfatto.'
+              : 'Free mockup in 48 hours, no upfront payment. Pay only if you love it.'
+          }
+          cta={cta.label}
+          href={cta.href}
+        />
+      </div>
     </SiteShell>
   )
 }

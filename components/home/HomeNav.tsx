@@ -7,6 +7,7 @@ import WhatsAppLink from '@/components/WhatsAppLink'
 import MotionToggle from './MotionToggle'
 import Arrow from './Arrow'
 
+/** Site-wide header (home + every inner page). */
 export default function HomeNav() {
   const t = useTranslations('home.nav')
   const locale = useLocale()
@@ -20,6 +21,10 @@ export default function HomeNav() {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  // Section anchors live on the home page; elsewhere they route back to it.
+  const onHome = pathname === '/'
+  const linkClass = 'text-[15px] transition-colors hover:text-[var(--accent)]'
 
   const links = [
     { href: '#offerta', label: t('offer') },
@@ -56,12 +61,23 @@ export default function HomeNav() {
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">
-          {links.map((l) => (
-            <a key={l.href} href={l.href} className="text-[15px] transition-colors hover:text-[var(--accent)]" style={{ color: 'var(--fg)' }}>
-              {l.label}
-            </a>
-          ))}
-          <Link href="/portfolio" className="text-[15px] transition-colors hover:text-[var(--accent)]" style={{ color: 'var(--fg)' }}>
+          {links.map((l) =>
+            onHome ? (
+              <a key={l.href} href={l.href} className={linkClass} style={{ color: 'var(--fg)' }}>
+                {l.label}
+              </a>
+            ) : (
+              <Link key={l.href} href={`/${l.href}`} className={linkClass} style={{ color: 'var(--fg)' }}>
+                {l.label}
+              </Link>
+            )
+          )}
+          <Link
+            href="/portfolio"
+            className={linkClass}
+            style={{ color: pathname === '/portfolio' ? 'var(--accent)' : 'var(--fg)' }}
+            aria-current={pathname === '/portfolio' ? 'page' : undefined}
+          >
             {t('cv')}
           </Link>
         </nav>
