@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { setRequestLocale } from 'next-intl/server'
 import SiteShell from '@/components/SiteShell'
+import EcomGrid from '@/components/portfolio/EcomGrid'
 import { profile, t, rakazoLinks, rakazoStack, getWorks, skills, experience, education, languages, pick, type Loc } from '@/lib/portfolio'
 
 type Props = { params: { locale: string } }
@@ -212,10 +213,19 @@ export default function PortfolioPage({ params }: Props) {
         </div>
       </section>
 
+      {/* ECOMUNICARE */}
+      <section id="clienti" className="rule py-24 md:py-36">
+        <div className="wrap">
+          <SectionHead n="04" title={loc === 'en' ? 'Websites for local businesses' : 'Siti per attività locali'} />
+          <p data-reveal className="lead -mt-6 mb-12 max-w-[60ch] md:-mt-8">{loc === 'en' ? 'A selection of client websites I developed at the Swiss agency Ecomunicare: hotels, shops, salons, trades and cultural venues.' : "Una selezione di siti per clienti che ho sviluppato presso l'agenzia svizzera Ecomunicare: hotel, negozi, saloni, artigiani e luoghi di cultura."}</p>
+          <EcomGrid loc={loc} />
+        </div>
+      </section>
+
       {/* SKILLS */}
       <section className={section}>
         <div className="wrap">
-          <SectionHead n="04" title={t('skillsTitle', loc)} />
+          <SectionHead n="05" title={t('skillsTitle', loc)} />
           <div data-reveal className="grid gap-px sm:grid-cols-2 lg:grid-cols-4" style={{ background: 'var(--line)' }}>
             {skills.map((g) => (
               <div key={g.title.en} className="p-6 md:p-8" style={{ background: 'var(--bg)' }}>
@@ -232,7 +242,7 @@ export default function PortfolioPage({ params }: Props) {
       {/* EXPERIENCE */}
       <section className={section}>
         <div className="wrap">
-          <SectionHead n="05" title={t('expTitle', loc)} />
+          <SectionHead n="06" title={t('expTitle', loc)} />
           <ol data-reveal className="rule">
             {experience.map((e, i) => (
               <li key={e.role + e.org} className="grid gap-2 border-b py-8 md:grid-cols-12 md:gap-6 md:py-10" style={{ borderColor: 'var(--line)' }}>
@@ -255,7 +265,7 @@ export default function PortfolioPage({ params }: Props) {
       <section className={section}>
         <div className="wrap grid gap-16 lg:grid-cols-2 lg:gap-6">
           <div>
-            <SectionHead n="06" title={t('eduTitle', loc)} />
+            <SectionHead n="07" title={t('eduTitle', loc)} />
             <div data-reveal className="rule">
               {education.map((ed) => (
                 <div key={ed.title.en} className="border-b py-6" style={{ borderColor: 'var(--line)' }}>
@@ -266,7 +276,7 @@ export default function PortfolioPage({ params }: Props) {
             </div>
           </div>
           <div>
-            <SectionHead n="07" title={t('langTitle', loc)} />
+            <SectionHead n="08" title={t('langTitle', loc)} />
             <div data-reveal className="space-y-6">
               {languages.map((l) => (
                 <div key={l.level + l.name.en}>
