@@ -24,6 +24,13 @@ const nextConfig = {
   images: {
     formats: ['image/webp'],
   },
+  async rewrites() {
+    return {
+      beforeFiles: [
+        { source: '/bozze/:slug', destination: '/bozze/:slug/index.html' },
+      ],
+    };
+  },
   async redirects() {
     return [
       {

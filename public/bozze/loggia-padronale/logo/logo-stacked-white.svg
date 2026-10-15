@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 150" role="img" aria-label="Loggia Padronale"><g transform="translate(98 0) scale(1)" fill="none" stroke="#d9b8a6" stroke-linecap="square">
+<path d="M6 62V28A26 26 0 0 1 58 28V62" stroke-width="2.6"/>
+<path d="M11 62V28.5A21 21 0 0 1 53 28.5V62" stroke-width="1"/>
+<path d="M15 62V44a5 5 0 0 1 10 0V62M27 62V44a5 5 0 0 1 10 0V62M39 62V44a5 5 0 0 1 10 0V62" stroke-width="1.6"/>
+<path d="M14 37H50" stroke-width="1"/><path d="M2 62H62" stroke-width="2.6"/>
+<path d="M30 7.2h4l-.8 5.6h-2.4z" fill="#d9b8a6" stroke="none"/></g>
+<text x="130" y="104" text-anchor="middle" font-family="'Playfair Display',Georgia,'Times New Roman',serif" font-size="20" letter-spacing="2.4" fill="#ffffff">LOGGIA PADRONALE</text>
+<line x1="90" y1="118" x2="170" y2="118" stroke="#d9b8a6" stroke-width=".8"/>
+<text x="130" y="138" text-anchor="middle" font-family="'Open Sans',Arial,sans-serif" font-size="8.5" letter-spacing="4" fill="#d9b8a6">SUITE · ORISTANO</text></svg>
