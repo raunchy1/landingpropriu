@@ -56,7 +56,7 @@ export default function HomeNav() {
           style={{ color: 'var(--fg)' }}
           aria-label="WebSardegna — home"
         >
-          WEB<span style={{ color: 'var(--accent)' }}>/</span>SARDEGNA
+          <img src="/brand/logo-v5.svg" alt="WebSardegna" width={702} height={128} className="block h-[34px] w-auto md:h-[40px]" />
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">

@@ -74,7 +74,7 @@ export default async function BozzaGratuitaPage({ params }: Props) {
       >
         <div className="wrap flex h-[64px] items-center justify-between gap-4">
           <span className="shrink-0 text-[15px] font-medium tracking-[0.18em] md:text-[17px]" style={{ color: 'var(--fg)' }}>
-            WEB<span style={{ color: 'var(--accent)' }}>/</span>SARDEGNA
+            <img src="/brand/logo-v5.svg" alt="WebSardegna" width={702} height={128} className="block h-[34px] w-auto md:h-[40px]" />
           </span>
           <span className="eyebrow truncate text-right">
             {t('headerBadge')}

@@ -20,7 +20,7 @@ export default function Footer() {
               style={{ color: 'var(--fg)' }}
               aria-label="WebSardegna — home"
             >
-              WEB<span style={{ color: 'var(--accent)' }}>/</span>SARDEGNA
+              <img src="/brand/logo-v5.svg" alt="WebSardegna" width={702} height={128} className="block h-[34px] w-auto md:h-[40px]" />
             </Link>
             <address className="mt-6 not-italic text-[14px] leading-[1.8]" style={{ color: 'var(--muted)' }}>
               <span style={{ color: 'var(--fg)' }}>{business.name}</span>
