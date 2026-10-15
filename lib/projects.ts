@@ -13,11 +13,10 @@ export type CaseStudy = {
   tags: string[]
 }
 
-/** Public case studies — only Andamus (content shared with the /portfolio page). */
+/** Public case studies (content shared with the /portfolio page). Currently none. */
 export function getCaseStudies(locale: string): CaseStudy[] {
   const loc: Loc = locale === 'en' ? 'en' : 'it'
   return getWorks(loc)
-    .filter((w) => w.id === 'andamus')
     .map((w) => ({
       id: w.id,
       title: w.title,

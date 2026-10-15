@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { setRequestLocale } from 'next-intl/server'
 import SiteShell from '@/components/SiteShell'
 import EcomGrid from '@/components/portfolio/EcomGrid'
-import { profile, t, rakazoLinks, rakazoStack, getWorks, skills, experience, education, languages, pick, type Loc } from '@/lib/portfolio'
+import { profile, t, rakazoLinks, rakazoStack, skills, experience, education, languages, pick, type Loc } from '@/lib/portfolio'
 
 type Props = { params: { locale: string } }
 
@@ -51,7 +51,6 @@ function Chip({ children, accent }: { children: React.ReactNode; accent?: boolea
 export default function PortfolioPage({ params }: Props) {
   const loc = (params.locale === 'en' ? 'en' : 'it') as Loc
   setRequestLocale(loc)
-  const works = getWorks(loc)
 
   const section = 'rule py-24 md:py-36'
 
@@ -159,64 +158,10 @@ export default function PortfolioPage({ params }: Props) {
         </div>
       </section>
 
-      {/* WORK */}
-      <section className="py-24 md:py-36">
-        <div className="wrap">
-          <SectionHead n="03" title={t('workTitle', loc)} />
-          <div data-reveal className="grid gap-px lg:grid-cols-2" style={{ background: 'var(--line)' }}>
-            {works.map((w) => (
-              <article key={w.id} className="work-card flex flex-col" style={{ background: 'var(--bg)' }}>
-                {w.image ? (
-                  <div className="relative aspect-[16/10] overflow-hidden" style={{ background: 'var(--bg-2)' }}>
-                    <Image src={w.image} alt={w.title} fill sizes="(min-width:1024px) 50vw, 100vw" className="work-img object-cover object-top" />
-                  </div>
-                ) : null}
-                <div className="flex flex-1 flex-col p-6 md:p-10">
-                  <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-                    <Chip accent>{w.tag}</Chip>
-                    {w.wip && (
-                      <Chip>
-                        <span className="h-[6px] w-[6px] animate-pulse rounded-full" style={{ background: 'var(--accent)' }} />
-                        {t('wip', loc)}
-                      </Chip>
-                    )}
-                  </div>
-                  <h3 className="mb-6 text-[30px] font-normal leading-[1.05] tracking-[-0.04em] md:text-[40px]" style={{ color: 'var(--fg)' }}>{w.title}</h3>
-                  <p className="eyebrow mb-2">{t('problem', loc)}</p>
-                  <p className="mb-6 text-[15px] leading-[1.65]" style={{ color: 'var(--muted)' }}>{w.problem}</p>
-                  <p className="eyebrow mb-2">{w.how ? t('solution', loc) : t('did', loc)}</p>
-                  <p className="mb-6 text-[15px] leading-[1.65]" style={{ color: 'var(--fg)' }}>{w.did}</p>
-                  {w.how && (
-                    <>
-                      <p className="eyebrow mb-3">{t('how', loc)}</p>
-                      <ol className="mb-8 space-y-2.5">
-                        {w.how.map((h: string, i: number) => (
-                          <li key={h} className="flex gap-4 text-[15px] leading-[1.55]" style={{ color: 'var(--fg)' }}>
-                            <span className="shrink-0 text-[13px] tabular-nums leading-[1.8]" style={{ color: 'var(--accent)' }}>0{i + 1}</span>{h}
-                          </li>
-                        ))}
-                      </ol>
-                    </>
-                  )}
-                  <div className="rule mt-auto flex flex-wrap items-center gap-x-3 gap-y-2 pt-5">
-                    {w.stack.map((s) => <span key={s} className="text-[13px]" style={{ color: 'var(--dim)' }}>{s}</span>)}
-                    {w.href && (
-                      <a href={w.href} target="_blank" rel="noopener noreferrer" className="ml-auto inline-flex min-h-[40px] items-center text-[14px] transition-colors hover:text-[var(--accent)]" style={{ color: 'var(--fg)' }}>
-                        {w.href.replace(/^https:\/\//, '').replace(/\/$/, '').replace('andamus.13.140.190.190.sslip.io', 'andamus (live)')} ↗
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ECOMUNICARE */}
       <section id="clienti" className="rule py-24 md:py-36">
         <div className="wrap">
-          <SectionHead n="04" title={loc === 'en' ? 'Websites for local businesses' : 'Siti per attività locali'} />
+          <SectionHead n="03" title={loc === 'en' ? 'Websites for local businesses' : 'Siti per attività locali'} />
           <p data-reveal className="lead -mt-6 mb-12 max-w-[60ch] md:-mt-8">{loc === 'en' ? 'A selection of client websites I developed at the Swiss agency Ecomunicare: hotels, shops, salons, trades and cultural venues.' : "Una selezione di siti per clienti che ho sviluppato presso l'agenzia svizzera Ecomunicare: hotel, negozi, saloni, artigiani e luoghi di cultura."}</p>
           <EcomGrid loc={loc} />
         </div>
@@ -225,7 +170,7 @@ export default function PortfolioPage({ params }: Props) {
       {/* SKILLS */}
       <section className={section}>
         <div className="wrap">
-          <SectionHead n="05" title={t('skillsTitle', loc)} />
+          <SectionHead n="04" title={t('skillsTitle', loc)} />
           <div data-reveal className="grid gap-px sm:grid-cols-2 lg:grid-cols-4" style={{ background: 'var(--line)' }}>
             {skills.map((g) => (
               <div key={g.title.en} className="p-6 md:p-8" style={{ background: 'var(--bg)' }}>
@@ -242,7 +187,7 @@ export default function PortfolioPage({ params }: Props) {
       {/* EXPERIENCE */}
       <section className={section}>
         <div className="wrap">
-          <SectionHead n="06" title={t('expTitle', loc)} />
+          <SectionHead n="05" title={t('expTitle', loc)} />
           <ol data-reveal className="rule">
             {experience.map((e, i) => (
               <li key={e.role + e.org} className="grid gap-2 border-b py-8 md:grid-cols-12 md:gap-6 md:py-10" style={{ borderColor: 'var(--line)' }}>
@@ -265,7 +210,7 @@ export default function PortfolioPage({ params }: Props) {
       <section className={section}>
         <div className="wrap grid gap-16 lg:grid-cols-2 lg:gap-6">
           <div>
-            <SectionHead n="07" title={t('eduTitle', loc)} />
+            <SectionHead n="06" title={t('eduTitle', loc)} />
             <div data-reveal className="rule">
               {education.map((ed) => (
                 <div key={ed.title.en} className="border-b py-6" style={{ borderColor: 'var(--line)' }}>
@@ -276,7 +221,7 @@ export default function PortfolioPage({ params }: Props) {
             </div>
           </div>
           <div>
-            <SectionHead n="08" title={t('langTitle', loc)} />
+            <SectionHead n="07" title={t('langTitle', loc)} />
             <div data-reveal className="space-y-6">
               {languages.map((l) => (
                 <div key={l.level + l.name.en}>

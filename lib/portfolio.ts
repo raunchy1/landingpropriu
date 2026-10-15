@@ -101,23 +101,7 @@ export const rakazoLinks = [
 export const rakazoStack = ['TypeScript', 'Hono', 'oRPC', 'Better Auth', 'Postgres', 'Prisma', 'Graphile Worker', 'Docker', 'E2B', 'Electron', 'SSE']
 
 type Work = { id: string; title: string; tag: L; problem: L; did: L; how?: { it: string[]; en: string[] }; wip?: boolean; stack: string[]; href?: string; image?: string }
-const works: Work[] = [
-  {
-    id: 'anvelope', title: 'Anvelope Ungheni', image: '/portfolio/anvelope.webp', href: 'https://anvelope-ungheni.md',
-    tag: { it: 'E-commerce · Moldova', en: 'E-commerce · Moldova' },
-    problem: { it: 'Un rivenditore di pneumatici con un vecchio negozio OpenCart, lento e difficile da gestire, con un catalogo enorme in due lingue.', en: 'A tire retailer stuck on a slow, hard-to-manage OpenCart store with a huge bilingual catalog.' },
-    did: { it: 'Ricostruzione completa OpenCart → Next.js + Supabase: ~15.000 prodotti migrati con tool dedicati, catalogo bilingue RO/RU, servizi d’officina, flusso di vendita WhatsApp-first, pannello admin su misura, UI orientata alle performance (obiettivo LCP < 2s).', en: 'Full OpenCart → Next.js + Supabase rebuild: ~15,000 products migrated with custom tooling, bilingual RO/RU catalog, workshop services, WhatsApp-first sales flow, custom admin panel, performance-minded UI (LCP target under 2s).' },
-    stack: ['Next.js', 'Supabase', 'TypeScript', 'Tailwind', 'i18n RO/RU'],
-  },
-  {
-    id: 'andamus', title: 'Andamus', image: '/portfolio/andamus.webp', href: 'https://andamus.13.140.190.190.sslip.io', wip: true,
-    tag: { it: 'SaaS · Mobilità in Sardegna', en: 'SaaS · Mobility in Sardinia' },
-    problem: { it: 'In Sardegna spostarsi da un paese all’altro, o da una città all’altra, è davvero difficile: autobus locali con orari scomodi e poco frequenti, e per andare da A a B spesso servono più cambi di mezzo e tanto tempo perso.', en: 'In Sardinia, getting from village to village or town to town is genuinely hard: local buses run on awkward, infrequent schedules, and going from A to B often means changing several times and losing hours.' },
-    did: { it: 'Ho progettato Andamus partendo da un’usanza fortissima sull’isola: offrire un passaggio. Un SaaS che trasforma questa abitudine in una rete di mobilità locale, con due profili — passeggero e autista. Credo che Andamus possa risolvere un problema duro e amaro per chi vive sull’isola: i trasporti.', en: 'I designed Andamus around a strong island custom: offering a lift — a “passaggio”. It’s a SaaS that turns that habit into a local mobility network, with two profiles: passenger and driver. I believe Andamus can solve a hard, bitter problem for the people who live on the island: transport.' },
-    how: { it: ['L’autista pubblica il viaggio che deve già fare, in una direzione e a un orario.', 'I passeggeri cercano la tratta, trovano il passaggio e prenotano il posto.', 'L’autista decide se offrirlo gratis o a pagamento — pagamenti integrati con Stripe.', 'Notifiche push e login con Google tengono tutti aggiornati in tempo reale.'], en: ['A driver publishes a trip they’re already making, in a direction and at a time.', 'Passengers search the route, find the ride and book a seat.', 'The driver chooses whether the ride is free or paid — payments integrated via Stripe.', 'Push notifications and Google sign-in keep everyone updated in real time.'] },
-    stack: ['Next.js', 'Supabase', 'Google OAuth', 'Google Maps', 'Stripe', 'Push notifications', 'Resend', 'PostHog', 'Sentry'],
-  },
-]
+const works: Work[] = []
 export const getWorks = (loc: Loc) => works.map((w) => ({ ...w, tag: pick(w.tag, loc), problem: pick(w.problem, loc), did: pick(w.did, loc), how: w.how ? w.how[loc] : undefined }))
 
 export const skills: { title: L; items: string[] }[] = [
@@ -133,7 +117,7 @@ export const skills: { title: L; items: string[] }[] = [
 
 export const experience: { role: string; org: string; dates: L; place: L; desc: L }[] = [
   { role: 'Founder & AI Engineer', org: 'Rakazo', dates: { it: 'gen 2024 – oggi', en: 'Jan 2024 – Present' }, place: { it: 'Remoto', en: 'Remote' }, desc: { it: 'Costruzione da zero di un agente AI autonomo: motore agentico, memoria persistente, recupero del contesto.', en: 'Building an autonomous AI agent from the ground up: agentic engine, persistent memory, context retrieval.' } },
-  { role: 'AI Builder & Full-Stack Developer', org: 'WebSardegna · Self-employed', dates: { it: 'gen 2023 – oggi', en: 'Jan 2023 – Present' }, place: { it: 'Sardegna · Remoto', en: 'Sardinia · Remote' }, desc: { it: 'App web in produzione con agenti di coding, workflow multi-modello, integrazione LLM, Anvelope Ungheni, siti clienti e campagne Ads.', en: 'Production web apps with coding agents, multi-model workflows, LLM integration, Anvelope Ungheni, client sites and Ads campaigns.' } },
+  { role: 'AI Builder & Full-Stack Developer', org: 'WebSardegna · Self-employed', dates: { it: 'gen 2023 – oggi', en: 'Jan 2023 – Present' }, place: { it: 'Sardegna · Remoto', en: 'Sardinia · Remote' }, desc: { it: 'App web in produzione con agenti di coding, workflow multi-modello, integrazione LLM, siti clienti e campagne Ads.', en: 'Production web apps with coding agents, multi-model workflows, LLM integration, client sites and Ads campaigns.' } },
   { role: 'Night Receptionist', org: 'Hotel Orri & Camping Village Orri · Seasonal', dates: { it: 'mag 2026 – oggi', en: 'May 2026 – Present' }, place: { it: 'Tortolì, Sardegna', en: 'Tortolì, Sardinia' }, desc: { it: 'Front office notturno in IT/EN/FR/RU, night audit e chiusura cassa, gestione emergenze. Stagioni precedenti: 2024 reception, 2025 night reception.', en: 'Solo night front office in IT/EN/FR/RU, night audit and cash close, emergencies. Prior seasons: 2024 reception, 2025 night reception.' } },
   { role: 'Payroll Specialist, GMP Local Market Operations', org: 'Safeguard Global', dates: { it: 'gen 2023 – ago 2023', en: 'Jan 2023 – Aug 2023' }, place: { it: 'Chișinău, Moldova', en: 'Chișinău, Moldova' }, desc: { it: 'Registri paghe end-to-end, contratti, regole fiscali e contributi; Zucchetti Paghe Web; referente cliente.', en: 'End-to-end payroll registers, contracts, tax rules and contributions; Zucchetti Paghe Web; client contact.' } },
   { role: 'HR Partner', org: 'Accenture', dates: { it: 'mar 2022 – dic 2022', en: 'Mar 2022 – Dec 2022' }, place: { it: 'Iași, Romania · Ibrido', en: 'Iași, Romania · Hybrid' }, desc: { it: 'Relazione con dipendenti e practice leader, performance review, analisi headcount e talenti, coordinamento di un piccolo team HR.', en: 'Employee and practice-leader relations, performance reviews, headcount and talent analysis, coordinating a small HR Partner team.' } },

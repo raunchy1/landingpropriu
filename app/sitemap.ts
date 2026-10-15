@@ -97,19 +97,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.1,
     },
     {
-      url: `${baseUrl}/progetti`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.85,
-      alternates: { languages: { it: `${baseUrl}/progetti`, en: `${baseUrl}/en/progetti` } },
-    },
-    {
-      url: `${baseUrl}/en/progetti`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.65,
-    },
-    {
       url: `${baseUrl}/sardegna/bozza-gratuita`,
       lastModified,
       changeFrequency: 'monthly',

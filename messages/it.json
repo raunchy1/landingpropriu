@@ -33,11 +33,11 @@
     "formError": "Errore — scrivimi direttamente su WhatsApp."
   },
   "progettiPage": {
-    "metaTitle": "Progetti | Andamus — Mobilità in Sardegna | WebSardegna",
-    "metaDescription": "Andamus: un SaaS per la mobilità locale in Sardegna, progettato e sviluppato da WebSardegna. Problema, soluzione e come funziona.",
+    "metaTitle": "Progetti | WebSardegna",
+    "metaDescription": "Siti web per attività locali in Sardegna: guarda i lavori nel portfolio di WebSardegna.",
     "eyebrow": "// progetti",
     "title": "Un progetto, raccontato bene.",
-    "intro": "Andamus è il progetto su cui stiamo lavorando: un problema reale dell’isola, una soluzione concreta. Ancora in sviluppo, raccontato con onestà.",
+    "intro": "I lavori di WebSardegna sono raccolti nel portfolio: siti per hotel, negozi, saloni e attività locali.",
     "challenge": "Il problema",
     "solution": "La soluzione",
     "results": "Come funziona",
@@ -312,19 +312,8 @@
         }
       ]
     },
-    "work": {
-      "eyebrow": "04 / Un progetto",
-      "title": "Costruito in Sardegna, per la Sardegna.",
-      "tag": "SaaS · Mobilità in Sardegna",
-      "name": "Andamus",
-      "status": "In sviluppo",
-      "body": "Spostarsi tra paesi sull’isola è difficile. Andamus trasforma un’abitudine sarda, offrire un passaggio, in una rete di mobilità locale: l’autista pubblica il viaggio, il passeggero prenota il posto.",
-      "stack": "Next.js · Supabase · Google Maps · Stripe",
-      "cta": "Leggi il caso studio",
-      "alt": "Schermata dell’app Andamus"
-    },
     "process": {
-      "eyebrow": "05 / Come funziona",
+      "eyebrow": "04 / Come funziona",
       "title": "Dal messaggio al sito online.",
       "steps": [
         {
@@ -346,7 +335,7 @@
       ]
     },
     "calc": {
-      "eyebrow": "06 / Calcolatore",
+      "eyebrow": "05 / Calcolatore",
       "title": "Quanto costa davvero? Facciamo i conti.",
       "intro": "Parti dalla base. Aggiungi solo quello che ti serve: gli extra si concordano insieme, prima di iniziare.",
       "base": "Sito professionale",
@@ -386,7 +375,7 @@
       "waExtras": "Extra che mi interessano:"
     },
     "trust": {
-      "eyebrow": "07 / Garanzie",
+      "eyebrow": "06 / Garanzie",
       "title": "Nessun anticipo. Nessuna sorpresa.",
       "items": [
         {
@@ -408,7 +397,7 @@
       ]
     },
     "faq": {
-      "eyebrow": "08 / Domande",
+      "eyebrow": "07 / Domande",
       "title": "Domande frequenti.",
       "items": [
         {
@@ -446,7 +435,7 @@
       ]
     },
     "final": {
-      "eyebrow": "09 / Contatti",
+      "eyebrow": "08 / Contatti",
       "title": "Hai un’attività? Mettiamola online.",
       "body": "Scrivici su WhatsApp: in 48 ore hai la bozza del tuo sito. Gratis, senza impegno.",
       "waLabel": "WhatsApp",

@@ -50,9 +50,6 @@ export default function Footer() {
             <Link href="/guida" className={linkClass}>
               {t('guide')}
             </Link>
-            <Link href="/progetti" className={linkClass}>
-              {t('projects')}
-            </Link>
             <Link href="/portfolio" className={linkClass}>
               {t('portfolio')}
             </Link>

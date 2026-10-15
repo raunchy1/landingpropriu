@@ -5,7 +5,6 @@ import Marquee from '@/components/home/Marquee'
 import Problem from '@/components/home/Problem'
 import Offer from '@/components/home/Offer'
 import Sectors from '@/components/home/Sectors'
-import Work from '@/components/home/Work'
 import Process from '@/components/home/Process'
 import Calculator from '@/components/home/Calculator'
 import Trust from '@/components/home/Trust'
@@ -28,7 +27,6 @@ export default async function Home({ params }: { params: { locale: string } }) {
         <Problem />
         <Offer />
         <Sectors />
-        <Work />
         <Process />
         <Calculator />
         <Trust />

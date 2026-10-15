@@ -16,7 +16,7 @@ const txt = {
     more: 'Forse cercavi',
     links: [
       { href: '/servizi', label: 'Servizi' },
-      { href: '/progetti', label: 'Progetti' },
+      { href: '/portfolio', label: 'Portfolio' },
       { href: '/blog', label: 'Blog' },
       { href: '/contatti', label: 'Contatti' },
     ],
@@ -30,7 +30,7 @@ const txt = {
     more: 'Maybe you were looking for',
     links: [
       { href: '/servizi', label: 'Services' },
-      { href: '/progetti', label: 'Projects' },
+      { href: '/portfolio', label: 'Portfolio' },
       { href: '/blog', label: 'Blog' },
       { href: '/contatti', label: 'Contact' },
     ],
