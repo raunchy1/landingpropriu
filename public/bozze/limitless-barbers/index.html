@@ -1,255 +1,507 @@
 <!doctype html>
 <html lang="it">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Limitless Barbers — Barbiere a Olbia · Barbering Without Limits</title>
-<meta name="description" content="Limitless Barbers, Via Vicenza 36, Olbia. Taglio, barba e sfumature di precisione in un salone firmato a88_studio. 5,0 su Google. Prenota su WhatsApp.">
+<meta name="description" content="Limitless Barbers, Via Vicenza 36 a Olbia. Taglio, barba, sfumature di precisione e il Battesimo del Taglio, in un salone firmato a88_studio. 5,0 su Google. Prenota su WhatsApp.">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#0b0b0c">
-<link rel="icon" href="/bozze/limitless-barbers/logo/favicon.svg" type="image/svg+xml"><link rel="icon" href="/bozze/limitless-barbers/logo/favicon-32.png" sizes="32x32"><link rel="apple-touch-icon" href="/bozze/limitless-barbers/logo/apple-touch-icon.png">
-<meta property="og:title" content="Limitless Barbers — Olbia"><meta property="og:image" content="/bozze/limitless-barbers/img/interior_a88_04.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#0b0b0c;--bg2:#121214;--line:rgba(201,169,110,.22);--gold:#c9a96e;--ivory:#efe9df;--mute:#a59f95}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ivory);font-family:'Bodoni Moda',serif;font-size:18px;line-height:1.65;overflow-x:hidden}
-img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
-.sans{font-family:'Jost',sans-serif}
-.eyebrow{font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
-h1,h2,h3{font-weight:500;line-height:1.08;letter-spacing:-.01em}
-h2{font-size:clamp(34px,5vw,64px);margin:.35em 0 .5em}h2 em,h1 em{font-style:italic;color:var(--gold)}
-.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
-section{padding:120px 0}
-.btn{display:inline-flex;align-items:center;gap:10px;font-family:'Jost',sans-serif;font-size:13px;letter-spacing:.2em;text-transform:uppercase;padding:17px 30px;border:1px solid var(--gold);transition:.3s}
-.btn.solid{background:var(--gold);color:#111}.btn.solid:hover{background:var(--ivory);border-color:var(--ivory)}
-.btn.ghost:hover{background:var(--gold);color:#111}
-.btn svg{width:18px;height:18px}
-.preview{background:var(--gold);color:#111;font-family:Jost,sans-serif;font-size:12px;text-align:center;padding:7px 12px;letter-spacing:.06em}
-header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.4s}
-header.s{background:rgba(11,11,12,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:84px}
-.nav img{height:52px;width:auto}
-.nav nav{display:flex;gap:30px;font-family:Jost,sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase}
-.nav nav a:hover{color:var(--gold)}
-.nav .btn{padding:12px 20px}
-.hero{position:relative;height:100svh;min-height:640px;padding:0;display:flex;align-items:flex-end;overflow:hidden}
-.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,12,.55) 0%,rgba(11,11,12,.15) 40%,rgba(11,11,12,.92) 100%)}
-.hero .wrap{position:relative;z-index:2;padding-bottom:90px;width:100%}
-.hero h1{font-size:clamp(46px,8.4vw,124px);max-width:12ch;margin:.25em 0 .3em}
-.hero p.lead{max-width:560px;color:#ddd5c8;font-size:20px;margin-bottom:34px}
-.cta-row{display:flex;gap:14px;flex-wrap:wrap}
-.badge{display:inline-flex;align-items:center;gap:10px;font-family:Jost,sans-serif;font-size:13px;letter-spacing:.08em;margin-top:34px;color:#ddd5c8}
-.stars{color:var(--gold);letter-spacing:2px}
-.marquee{border-block:1px solid var(--line);padding:22px 0;overflow:hidden;white-space:nowrap;background:var(--bg)}
-.marquee div{display:inline-block;animation:mq 40s linear infinite;font-size:28px;font-style:italic}
-.marquee span{color:var(--gold);margin:0 34px;font-style:normal}
-@keyframes mq{to{transform:translateX(-50%)}}
-.split{display:grid;grid-template-columns:1.05fr 1fr;gap:80px;align-items:center}
-.split p{color:#cfc8bc;margin-bottom:1.1em}
-.imgstack{position:relative}.imgstack img{width:100%;aspect-ratio:4/5;object-fit:cover}
-.imgstack .sm{position:absolute;width:48%;aspect-ratio:1;right:-34px;bottom:-50px;border:8px solid var(--bg)}
-.sign{font-style:italic;font-size:26px;color:var(--gold);margin-top:14px}
-.services{background:var(--bg2)}
-.svc-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:60px;flex-wrap:wrap}
-.svc-head p{max-width:460px;color:var(--mute)}
-.svc{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}
-.svc article{padding:44px 40px 44px 0;border-bottom:1px solid var(--line)}
-.svc article:nth-child(odd){border-right:1px solid var(--line)}.svc article:nth-child(even){padding-left:40px}
-.svc .n{font-family:Jost;font-size:12px;color:var(--gold);letter-spacing:.2em}
-.svc h3{font-size:34px;margin:10px 0 12px}
-.svc p{color:#bdb6aa;font-size:17px}
-.svc .price{font-family:Jost,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-top:16px}
-.feature{display:grid;grid-template-columns:1fr 1fr;margin-top:80px;background:var(--bg);border:1px solid var(--line)}
-.feature img{width:100%;height:100%;object-fit:cover;min-height:420px}
-.feature div{padding:60px}
-.feature p{color:#cfc8bc;margin-bottom:1em}
-.team .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;margin-top:50px}
-.member img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(.15)}
-.member h3{font-size:36px;margin:22px 0 4px}.member .role{font-family:Jost;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
-.member p{color:#bdb6aa;margin-top:12px}
-.gallery .g{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:260px;gap:12px;margin-top:50px}
-.g a{overflow:hidden;position:relative}.g img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
-.g a:hover img{transform:scale(1.06)}
-.g .w2{grid-column:span 2}.g .h2{grid-row:span 2}
-.studio{position:relative;padding:0}
-.studio .bgimg{width:100%;height:80vh;min-height:520px;object-fit:cover}
-.studio .card{position:absolute;right:6%;bottom:-80px;background:var(--bg);border:1px solid var(--line);padding:56px;max-width:560px}
-.studio .card p{color:#cfc8bc;margin-bottom:1em}
-.studio-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:150px 0 0}
-.studio-strip img{aspect-ratio:4/3;object-fit:cover;width:100%}
-.reviews{background:var(--bg2)}
-.rv-top{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:56px}
-.score{display:flex;align-items:center;gap:22px;border:1px solid var(--line);padding:22px 30px}
-.score b{font-size:64px;font-weight:500;line-height:1;color:var(--gold)}
-.score small{font-family:Jost;font-size:13px;color:var(--mute);display:block;letter-spacing:.06em}
-.rv{columns:3 320px;column-gap:24px}
-.rv blockquote{break-inside:avoid;border:1px solid var(--line);padding:32px;margin-bottom:24px;background:var(--bg)}
-.rv blockquote p{font-size:18px;font-style:italic;color:#e3dccf}
-.rv cite{display:flex;justify-content:space-between;margin-top:20px;font-style:normal;font-family:Jost;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
-.rv-foot{margin-top:30px;font-family:Jost;font-size:13px;color:var(--mute)}
-.events{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:40px}
-.events img{aspect-ratio:3/4;object-fit:cover;width:100%}
-.cta-band{text-align:center;padding:140px 0;background:linear-gradient(rgba(11,11,12,.78),rgba(11,11,12,.9)),url(/bozze/limitless-barbers/img/salondays_01.jpg) center/cover}
-.cta-band h2{max-width:16ch;margin-inline:auto}
-.cta-band p{max-width:560px;margin:0 auto 36px;color:#d6cfc3}
-.info{display:grid;grid-template-columns:1fr 1fr;gap:70px}
-.hours li{display:flex;justify-content:space-between;list-style:none;padding:16px 0;border-bottom:1px solid var(--line);font-size:19px}
-.hours li span:last-child{font-family:Jost;font-size:15px;letter-spacing:.06em;color:#d6cfc3}
-.hours li.off span:last-child{color:#6d675f}
-.contact-lines{margin-top:36px;display:grid;gap:12px;font-family:Jost;font-size:15px;color:#d6cfc3}
-.contact-lines a{color:var(--gold)}
-.map{border:1px solid var(--line);min-height:440px}.map iframe{width:100%;height:100%;min-height:440px;border:0;filter:grayscale(1) invert(.9) contrast(.9)}
-footer{border-top:1px solid var(--line);padding:70px 0 120px;text-align:center}
-footer img{height:130px;margin:0 auto 26px}
-footer p{font-family:Jost;font-size:13px;color:var(--mute);letter-spacing:.04em}
-.mbar{display:none}
-.fade{opacity:0;transform:translateY(30px);transition:1s cubic-bezier(.2,.7,.2,1)}.fade.in{opacity:1;transform:none}
-@media(max-width:960px){
- body{font-size:17px}section{padding:84px 0}
- .nav nav,.nav .btn{display:none}.nav{height:70px}.nav img{height:44px}
- .split,.feature,.info,.team .grid{grid-template-columns:1fr;gap:44px}
- .imgstack .sm{right:-6px;bottom:-30px;width:44%}
- .svc{grid-template-columns:1fr}.svc article,.svc article:nth-child(even){padding:34px 0;border-right:0}
- .feature div{padding:36px 26px}.feature img{min-height:300px}
- .gallery .g{grid-template-columns:repeat(2,1fr);grid-auto-rows:190px}
- .studio .card{position:relative;right:auto;bottom:auto;margin:-80px 16px 0;padding:34px 26px}
- .studio .bgimg{height:56vh;min-height:360px}
- .studio-strip{padding-top:40px;grid-template-columns:1fr 1fr}.studio-strip img:last-child{display:none}
- .hero .wrap{padding-bottom:120px}.hero p.lead{font-size:18px}
- .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(11,11,12,.94);backdrop-filter:blur(10px);border-top:1px solid var(--line);gap:10px}
- .mbar a{flex:1;justify-content:center;padding:15px 10px}
- .events{grid-template-columns:1fr 1fr}.events img:last-child{display:none}
-}
-</style>
+<meta name="theme-color" content="#08080a">
+<meta name="author" content="Limitless Barbers">
+
+<link rel="icon" href="/bozze/limitless-barbers/logo/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/bozze/limitless-barbers/logo/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/bozze/limitless-barbers/logo/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Limitless Barbers — Olbia · Barbering Without Limits">
+<meta property="og:description" content="Taglio, barba e sfumature di precisione in Via Vicenza 36, Olbia. 5,0 su Google. Prenota su WhatsApp.">
+<meta property="og:image" content="/bozze/limitless-barbers/img/interior_a88_04.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/bozze/limitless-barbers/img/hero-poster.jpg">
+<link rel="stylesheet" href="/bozze/limitless-barbers/style.css">
 </head>
 <body>
-<header id="hd"><div class="preview">Bozza gratuita di WebSardegna · anteprima non pubblica</div><div class="wrap nav">
- <a href="#top" aria-label="Limitless Barbers"><img src="/bozze/limitless-barbers/logo/logo-horizontal.svg" alt="Limitless Barbers" width="240" height="51"></a>
- <nav><a href="#filosofia">Filosofia</a><a href="#servizi">Servizi</a><a href="#team">Team</a><a href="#galleria">Galleria</a><a href="#recensioni">Recensioni</a><a href="#contatti">Contatti</a></nav>
- <a class="btn solid wa" href="https://wa.me/393315007192?text=Ciao%20Limitless%2C%20vorrei%20prenotare%20un%20appuntamento">Prenota</a>
-</div></header>
 
-<section class="hero" id="top">
- <video autoplay muted loop playsinline preload="auto" poster="/bozze/limitless-barbers/img/hero-poster.jpg"><source src="/bozze/limitless-barbers/img/hero.mp4" type="video/mp4"></video>
- <div class="wrap">
-  <div class="eyebrow">Barbering without limits · Olbia</div>
-  <h1>Il taglio che <em>parla</em> prima&nbsp;di&nbsp;te.</h1>
-  <p class="lead">Sfumature millimetriche, barba scolpita a mano e un salone che non somiglia a nessun altro in città. Da Limitless Barbers il tuo tempo in poltrona diventa un rituale.</p>
-  <div class="cta-row">
-   <a class="btn solid" href="https://wa.me/393315007192?text=Ciao%20Limitless%2C%20vorrei%20prenotare%20un%20appuntamento"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.2 1.2Z"/></svg>Prenota su WhatsApp</a>
-   <a class="btn ghost" href="#servizi">Scopri i servizi</a>
+<!-- ======================= HEADER ======================= -->
+<header class="site-head" id="siteHead">
+  <div class="preview-bar"><b>Bozza gratuita WebSardegna</b> · anteprima non pubblica</div>
+  <div class="shell site-head__bar">
+    <a class="brand" href="#top" aria-label="Limitless Barbers — torna all'inizio">
+      <img src="/bozze/limitless-barbers/logo/limitless-wordmark-gold.svg" alt="Limitless Barbers" width="1160" height="244">
+    </a>
+    <nav class="site-nav" aria-label="Navigazione principale">
+      <a href="#filosofia">Filosofia</a>
+      <a href="#servizi">Servizi</a>
+      <a href="#team">Team</a>
+      <a href="#galleria">Galleria</a>
+      <a href="#studio">Studio</a>
+      <a href="#recensioni">Recensioni</a>
+      <a href="#orari">Orari</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+    <div class="head-cta">
+      <a class="btn btn--gold btn--sm" href="https://wa.me/393315007192?text=Ciao%20Limitless%2C%20vorrei%20prenotare%20un%20appuntamento" target="_blank" rel="noopener">Prenota su WhatsApp</a>
+      <button class="burger" id="burger" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
+    </div>
   </div>
-  <a class="badge" href="https://www.google.com/maps/search/?api=1&query=Limitless+Barbers+Via+Vicenza+36+Olbia" target="_blank" rel="noopener"><span class="stars">★★★★★</span> 5,0 su Google · 63 recensioni</a>
- </div>
+</header>
+
+<nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
+  <a href="#filosofia"><span class="num">01</span> Filosofia</a>
+  <a href="#servizi"><span class="num">02</span> Servizi</a>
+  <a href="#team"><span class="num">03</span> Team</a>
+  <a href="#galleria"><span class="num">04</span> Galleria</a>
+  <a href="#studio"><span class="num">05</span> Lo studio</a>
+  <a href="#recensioni"><span class="num">06</span> Recensioni</a>
+  <a href="#orari"><span class="num">07</span> Orari</a>
+  <a href="#contatti"><span class="num">08</span> Dove siamo</a>
+  <div class="mobile-menu__foot">
+    <a class="btn btn--gold btn--block" href="https://wa.me/393315007192?text=Ciao%20Limitless%2C%20vorrei%20prenotare%20un%20appuntamento" target="_blank" rel="noopener">Prenota su WhatsApp</a>
+    <p class="meta">Via Vicenza 36 · 07026 Olbia</p>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- ======================= HERO ======================= -->
+<section class="hero">
+  <div class="hero__media">
+    <video autoplay muted loop playsinline preload="auto" poster="/bozze/limitless-barbers/img/hero-poster.jpg" aria-hidden="true" tabindex="-1">
+      <source src="/bozze/limitless-barbers/img/hero.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero__grain" aria-hidden="true"></div>
+
+  <div class="shell">
+    <div class="hero__inner">
+      <p class="eyebrow rv">Barbering without limits · Olbia</p>
+      <h1 class="rv rv-d1">Il taglio parla di te<br><em>prima che tu apra bocca.</em></h1>
+      <p class="lead rv rv-d2">Da Limitless Barbers non vendiamo un taglio veloce: costruiamo la tua immagine, millimetro dopo millimetro. Sfumature pulite, barba disegnata a mano e un salone, firmato a88_studio, che a Olbia non somiglia a nessun altro. Siediti, raccontaci come vivi i tuoi capelli: al resto pensiamo noi.</p>
+      <div class="hero__cta rv rv-d3">
+        <a class="btn btn--gold" href="https://wa.me/393315007192?text=Ciao%20Limitless%2C%20vorrei%20prenotare%20un%20appuntamento" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.2 1.2Z"/></svg>
+          Prenota su WhatsApp
+        </a>
+        <a class="btn btn--ghost" href="#servizi">Scopri i servizi</a>
+      </div>
+
+      <div class="hero__foot rv rv-d4">
+        <div class="hero__facts">
+          <span class="meta">Via Vicenza 36 · Olbia</span>
+          <span class="meta">Mar — Sab · orario continuato</span>
+          <span class="meta">Su appuntamento</span>
+        </div>
+        <a class="rating-pill" href="https://www.google.com/maps/search/?api=1&amp;query=Limitless+Barbers+Via+Vicenza+36+Olbia" target="_blank" rel="noopener">
+          <b>5,0</b>
+          <span class="score-card__meta">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <small>63 recensioni su Google</small>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true">Scorri<i></i></div>
 </section>
 
-<div class="marquee" aria-hidden="true"><div>Taglio <span>✦</span> Sfumature <span>✦</span> Barba <span>✦</span> Battesimo del Taglio <span>✦</span> Via Vicenza 36, Olbia <span>✦</span> Barbering without limits <span>✦</span> Taglio <span>✦</span> Sfumature <span>✦</span> Barba <span>✦</span> Battesimo del Taglio <span>✦</span> Via Vicenza 36, Olbia <span>✦</span> Barbering without limits <span>✦</span></div></div>
+<!-- ======================= TICKER ======================= -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <div class="ticker__group">
+      <span>Taglio</span><i>✦</i><span>Barba</span><i>✦</i><span>Sfumature di precisione</span><i>✦</i><span>Battesimo del Taglio</span><i>✦</i><span>Via Vicenza 36, Olbia</span><i>✦</i><span>Barbering without limits</span><i>✦</i>
+    </div>
+    <div class="ticker__group">
+      <span>Taglio</span><i>✦</i><span>Barba</span><i>✦</i><span>Sfumature di precisione</span><i>✦</i><span>Battesimo del Taglio</span><i>✦</i><span>Via Vicenza 36, Olbia</span><i>✦</i><span>Barbering without limits</span><i>✦</i>
+    </div>
+  </div>
+</div>
 
-<section id="filosofia"><div class="wrap split">
- <div class="imgstack fade"><img src="/bozze/limitless-barbers/img/salondays_02.jpg" alt="Barbieri al lavoro nel salone Limitless Barbers" loading="lazy"><img class="sm" src="/bozze/limitless-barbers/img/interior_a88_05.jpg" alt="Dettaglio insegna Limitless" loading="lazy"></div>
- <div class="fade">
-  <div class="eyebrow">La filosofia</div>
-  <h2>Nessun limite.<br><em>Solo dettagli.</em></h2>
-  <p>Limitless Barbers nasce a Olbia il 22 agosto 2026 dal sogno di Gianluca, barbiere che da oltre dieci anni si prende cura degli stessi clienti, molti dei quali lo seguono da sempre. Un sogno costruito con sacrificio, poltrona dopo poltrona, e finalmente diventato un salone tutto suo.</p>
-  <p>Qui il taglio non è una pratica veloce: è ascolto, consiglio e precisione. Prima di prendere in mano le forbici capiamo chi sei, come porti i capelli ogni giorno e che immagine vuoi dare di te. Poi lavoriamo con calma, sfumatura dopo sfumatura, finché il risultato non è esattamente quello giusto.</p>
-  <p>Il nome dice tutto: <em>Barbering without limits</em>. Nessun limite alla cura, alla qualità e all'attenzione che riserviamo a ogni cliente — che tu venga per un taglio classico, per una barba da ridisegnare o per il primo taglio di tuo figlio.</p>
-  <div class="sign">— Gianluca &amp; il team Limitless</div>
- </div>
-</div></section>
+<!-- ======================= 01 · FILOSOFIA ======================= -->
+<section class="section" id="filosofia">
+  <div class="shell">
+    <div class="philo">
+      <div class="philo__media rv">
+        <img class="big rv-img" src="/bozze/limitless-barbers/img/interior_a88_05.jpg" alt="Il logo Limitless inciso sul pavimento del salone, con l'ombra delle palme" loading="lazy" width="1600" height="1200">
+        <img class="small" src="/bozze/limitless-barbers/img/salondays_02.jpg" alt="I barbieri Limitless al lavoro sulle poltrone del salone" loading="lazy" width="1180" height="1573">
+        <span class="tagline">Est. MMXXVI — Olbia</span>
+      </div>
 
-<section class="services" id="servizi"><div class="wrap">
- <div class="svc-head fade"><div><div class="eyebrow">I servizi</div><h2>Ogni servizio,<br><em>un rituale.</em></h2></div><p>Lavoriamo su appuntamento, con orario continuato dal martedì al sabato, per dedicare a ognuno il tempo che merita. Prezzi in salone: scrivici su WhatsApp e ti rispondiamo subito.</p></div>
- <div class="svc">
-  <article class="fade"><div class="n">01</div><h3>Taglio</h3><p>Consulenza sulla forma del viso e sul tuo stile, poi taglio a forbice e macchinetta con sfumature su misura: dalla skin fade più pulita al classico intramontabile. Rifinitura, styling e consigli per gestirlo a casa.</p><div class="price">Prezzi in salone · chiedi su WhatsApp</div></article>
-  <article class="fade"><div class="n">02</div><h3>Barba</h3><p>Disegno della linea, regolazione delle lunghezze e contorni netti, per una barba che valorizza i lineamenti invece di nasconderli. Il risultato: ordinata, definita, tua.</p><div class="price">Prezzi in salone · chiedi su WhatsApp</div></article>
-  <article class="fade"><div class="n">03</div><h3>Taglio + Barba</h3><p>L'esperienza completa Limitless: capelli e barba progettati insieme, perché si parlino e creino un'immagine coerente. Il servizio ideale se vuoi uscire dal salone rinnovato da capo a piedi.</p><div class="price">Prezzi in salone · chiedi su WhatsApp</div></article>
-  <article class="fade"><div class="n">04</div><h3>Battesimo del Taglio</h3><p>Il primo taglio di capelli del tuo bambino, trasformato in un ricordo da custodire: un momento accolto con pazienza e delicatezza, e una ciocca conservata in un sacchettino da portare a casa.</p><div class="price">Su prenotazione · chiedi su WhatsApp</div></article>
- </div>
- <div class="feature fade">
-  <img src="/bozze/limitless-barbers/img/battesimo_01.jpg" alt="La prima ciocca nel sacchettino del Battesimo del Taglio" loading="lazy">
-  <div><div class="eyebrow">Il Battesimo del Taglio</div><h2 style="font-size:clamp(30px,3.6vw,48px)">Il primo taglio<br><em>non si scorda mai.</em></h2>
-  <p>Per un genitore il primo taglio del proprio figlio è un passaggio emozionante. Per questo abbiamo creato un servizio dedicato: tempi lenti, un ambiente sereno e mani esperte che sanno mettere a proprio agio anche i più piccoli.</p>
-  <p>Alla fine ti consegniamo la prima ciocca in un sacchettino con un biglietto, da conservare insieme alle foto di quel giorno. Un piccolo rito che diventa un ricordo di famiglia.</p>
-  <a class="btn solid" href="https://wa.me/393315007192?text=Ciao%2C%20vorrei%20informazioni%20sul%20Battesimo%20del%20Taglio">Prenota il Battesimo</a></div>
- </div>
-</div></section>
+      <div class="philo__body rv rv-d1">
+        <p class="eyebrow"><span class="num">01</span>&nbsp;&nbsp;La filosofia</p>
+        <h2 class="h2" style="margin:.4em 0 .6em">Nessun limite.<br><em class="gold">Solo dettagli.</em></h2>
 
-<section class="team" id="team"><div class="wrap">
- <div class="fade"><div class="eyebrow">Il team</div><h2>Mani esperte,<br><em>occhio da sarto.</em></h2></div>
- <div class="grid">
-  <div class="member fade"><img src="/bozze/limitless-barbers/img/battesimo_02.jpg" alt="Gianluca, head barber di Limitless Barbers" loading="lazy" style="object-position:60% 30%"><div class="role">Head barber · fondatore</div><h3>Gianluca</h3><p>Oltre dieci anni dietro la poltrona e clienti che lo seguono da sempre. Nelle recensioni lo descrivono così: preciso, puntuale, sempre attento a venire incontro alle richieste di chi si siede davanti allo specchio.</p></div>
-  <div class="member fade"><img src="/bozze/limitless-barbers/img/salondays_03.jpg" alt="Barbiere Limitless al lavoro" loading="lazy"><div class="role">Barber</div><h3>Isaia</h3><p>Parte del team Limitless fin dall'apertura. Stessa ossessione per i dettagli, stessa cura nelle sfumature: perché la qualità, qui, non dipende da chi ti capita, ma da come lavoriamo tutti.</p></div>
- </div>
-</div></section>
+        <p class="drop">Limitless Barbers nasce dal sogno di Gianluca, barbiere che da più di dieci anni si prende cura delle stesse teste — clienti che lo hanno seguito di poltrona in poltrona, per anni, prima che il salone diventasse finalmente suo. Il 22 agosto quel sogno ha aperto la saracinesca in Via Vicenza 36, a Olbia.</p>
 
-<section class="gallery" id="galleria" style="padding-top:0"><div class="wrap">
- <div class="fade"><div class="eyebrow">Galleria</div><h2>Dentro <em>Limitless.</em></h2></div>
- <div class="g">
-  <a class="w2 h2"><img src="/bozze/limitless-barbers/img/interior_a88_04.jpg" alt="Le postazioni del salone" loading="lazy"></a>
-  <a class="h2"><img src="/bozze/limitless-barbers/img/salondays_01.jpg" alt="Una giornata in salone" loading="lazy"></a>
-  <a><img src="/bozze/limitless-barbers/img/interior_a88_02.jpg" alt="Merchandising Limitless" loading="lazy"></a>
-  <a><img src="/bozze/limitless-barbers/img/battesimo_03.jpg" alt="Battesimo del taglio" loading="lazy"></a>
-  <a class="h2"><img src="/bozze/limitless-barbers/img/build_preview_04.jpg" alt="T-shirt Limitless" loading="lazy"></a>
-  <a class="w2"><img src="/bozze/limitless-barbers/img/interior_a88_03.jpg" alt="Area lavaggio" loading="lazy"></a>
-  <a><img src="/bozze/limitless-barbers/img/build_preview_03.jpg" alt="Prodotti selezionati" loading="lazy"></a>
-  <a class="w2"><img src="/bozze/limitless-barbers/img/interior_a88_01.jpg" alt="Poltrone da barbiere" loading="lazy"></a>
-  <a><img src="/bozze/limitless-barbers/img/opening_poster.jpg" alt="Grand opening 22 agosto" loading="lazy"></a>
- </div>
-</div></section>
+        <p>Qui il taglio non è una pratica da sbrigare. È una consulenza: guardiamo la forma del viso, la direzione naturale del capello, le abitudini di ogni giorno — quanto tempo hai la mattina, se usi il phon, se vuoi qualcosa che cresca bene anche fra tre settimane. Solo dopo prendiamo in mano forbici e macchinetta, e lavoriamo con calma finché la sfumatura non è esattamente dove deve stare.</p>
 
+        <p>Il nome non è uno slogan appeso al muro: <em>barbering without limits</em> significa nessun limite alla cura, alla qualità e al tempo che dedichiamo a chi si siede davanti allo specchio. Vale per un taglio classico, per una barba da ridisegnare e per il primo taglio di tuo figlio.</p>
+
+        <p class="sign">— Gianluca &amp; il team Limitless</p>
+
+        <ul class="principles">
+          <li>
+            <span class="rn">I.</span>
+            <div>
+              <h3>Prima si ascolta</h3>
+              <p>Ogni servizio inizia con qualche domanda e uno sguardo allo specchio insieme. Meglio capirsi prima che pentirsi dopo: ti diciamo con onestà cosa funziona sui tuoi capelli e cosa no.</p>
+            </div>
+          </li>
+          <li>
+            <span class="rn">II.</span>
+            <div>
+              <h3>Poi si lavora di precisione</h3>
+              <p>Sfumature costruite a gradi, contorni netti, rifinitura pulita. È il lavoro di dettaglio che fa la differenza fra un taglio qualunque e un taglio che ti rappresenta.</p>
+            </div>
+          </li>
+          <li>
+            <span class="rn">III.</span>
+            <div>
+              <h3>E si torna a casa sapendo cosa fare</h3>
+              <p>Prima di salutarti ti spieghiamo come gestire la piega, quali prodotti usare e ogni quanto tornare per mantenere la forma. Il risultato deve durare anche senza di noi.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 02 · SERVIZI ======================= -->
+<section class="section services" id="servizi">
+  <div class="shell">
+    <div class="section-head section-head--split rv">
+      <div>
+        <p class="eyebrow"><span class="num">02</span>&nbsp;&nbsp;I servizi</p>
+        <h2 class="h2" style="margin-top:.35em">Ogni servizio,<br><em class="gold">un rituale.</em></h2>
+      </div>
+      <p class="measure-sm">Lavoriamo su appuntamento, con orario continuato dal martedì al sabato, perché ogni persona abbia il tempo che merita e nessuno resti ad aspettare in piedi. Scrivici su WhatsApp con il giorno che preferisci: ti proponiamo il primo orario libero.</p>
+    </div>
+
+    <div class="svc-layout">
+      <div class="svc-list" id="svcList">
+        <article class="svc-item rv" data-preview="0">
+          <span class="rn">I.</span>
+          <div>
+            <h3>Taglio</h3>
+            <p>Consulenza sulla forma del viso e sul tuo stile, poi taglio a forbice e macchinetta con sfumatura su misura: dalla skin fade più pulita al classico che non passa mai di moda. Chiudiamo con la rifinitura dei contorni, lo styling e i consigli per rifarlo a casa.</p>
+            <span class="price">Prezzi in salone · chiedi su WhatsApp</span>
+            <img class="svc-item__thumb" src="/bozze/limitless-barbers/img/redvalley_03.jpg" alt="Taglio in corso, rifinitura con la macchinetta" loading="lazy">
+          </div>
+        </article>
+
+        <article class="svc-item rv" data-preview="1">
+          <span class="rn">II.</span>
+          <div>
+            <h3>Barba</h3>
+            <p>Disegno della linea, regolazione delle lunghezze, contorni definiti e rifinitura finale. Una barba costruita sui tuoi lineamenti — pensata per valorizzare la mascella, non per nascondere il viso.</p>
+            <span class="price">Prezzi in salone · chiedi su WhatsApp</span>
+            <img class="svc-item__thumb" src="/bozze/limitless-barbers/img/salondays_02.jpg" alt="Il team Limitless al lavoro in salone" loading="lazy">
+          </div>
+        </article>
+
+        <article class="svc-item rv" data-preview="2">
+          <span class="rn">III.</span>
+          <div>
+            <h3>Taglio + Barba</h3>
+            <p>L'esperienza completa: capelli e barba progettati insieme, così che le proporzioni si parlino e l'immagine risulti coerente da ogni angolazione. È il servizio giusto quando vuoi uscire dal salone davvero rinnovato.</p>
+            <span class="price">Prezzi in salone · chiedi su WhatsApp</span>
+            <img class="svc-item__thumb" src="/bozze/limitless-barbers/img/salondays_01.jpg" alt="La sala del salone Limitless durante una giornata di lavoro" loading="lazy">
+          </div>
+        </article>
+
+        <article class="svc-item rv" data-preview="3">
+          <span class="rn">IV.</span>
+          <div>
+            <h3>Battesimo del Taglio</h3>
+            <p>Il primo taglio di capelli del tuo bambino, trasformato in un ricordo da custodire: tempi lenti, nessuna fretta e una ciocca conservata in una boccetta di vetro, dentro un sacchetto di juta con il cartoncino «My First Haircut».</p>
+            <span class="price">Su prenotazione · chiedi su WhatsApp</span>
+            <img class="svc-item__thumb" src="/bozze/limitless-barbers/img/battesimo_02.jpg" alt="Gianluca con un bambino dopo il Battesimo del Taglio" loading="lazy">
+          </div>
+        </article>
+      </div>
+
+      <div class="svc-preview rv rv-d1" id="svcPreview" aria-hidden="true">
+        <figure class="is-on"><img src="/bozze/limitless-barbers/img/redvalley_03.jpg" alt="" loading="lazy"><figcaption>Taglio · sfumature di precisione</figcaption></figure>
+        <figure><img src="/bozze/limitless-barbers/img/salondays_02.jpg" alt="" loading="lazy"><figcaption>Barba · linea e contorni</figcaption></figure>
+        <figure><img src="/bozze/limitless-barbers/img/salondays_01.jpg" alt="" loading="lazy"><figcaption>Taglio + barba · l'esperienza completa</figcaption></figure>
+        <figure><img src="/bozze/limitless-barbers/img/battesimo_02.jpg" alt="" loading="lazy"><figcaption>Battesimo del Taglio</figcaption></figure>
+      </div>
+    </div>
+
+    <!-- feature: battesimo -->
+    <div class="feature rv">
+      <div class="feature__img rv-img">
+        <img src="/bozze/limitless-barbers/img/battesimo_01.jpg" alt="La prima ciocca conservata in una boccetta di vetro, con il cartoncino «My First Haircut» e il sacchetto di juta" loading="lazy" width="1180" height="1573">
+      </div>
+      <div class="feature__body">
+        <p class="eyebrow">Il servizio speciale</p>
+        <h3 class="h3">Il primo taglio<br><em class="gold">non si scorda mai.</em></h3>
+        <p>Per un genitore il primo taglio del proprio figlio è un passaggio che vale quanto una fotografia di famiglia. Per questo gli abbiamo dedicato un servizio a parte: nessuna fretta, un ambiente tranquillo, mani che sanno mettere a proprio agio anche chi non è mai salito su una poltrona da barbiere.</p>
+        <p>Alla fine ti consegniamo la prima ciocca sigillata nella sua boccetta, con il cartoncino e il sacchetto di juta da riporre insieme alle foto di quel giorno. Un piccolo rito che resta in casa per sempre.</p>
+        <a class="btn btn--gold" href="https://wa.me/393315007192?text=Ciao%2C%20vorrei%20informazioni%20sul%20Battesimo%20del%20Taglio" target="_blank" rel="noopener">Prenota il Battesimo del Taglio</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 03 · TEAM ======================= -->
+<section class="section" id="team">
+  <div class="shell">
+    <div class="section-head section-head--split rv">
+      <div>
+        <p class="eyebrow"><span class="num">03</span>&nbsp;&nbsp;Il team</p>
+        <h2 class="h2" style="margin-top:.35em">Mani esperte,<br><em class="gold">occhio da sarto.</em></h2>
+      </div>
+      <p class="measure-sm">Siamo pochi e lavoriamo con lo stesso metodo, così la qualità non dipende da chi trovi in salone quel giorno. Chiunque ti segua, il risultato è quello che ti aspetti.</p>
+    </div>
+
+    <div class="team-grid">
+      <article class="member rv">
+        <figure>
+          <img src="/bozze/limitless-barbers/img/battesimo_02.jpg" alt="Gianluca, head barber e fondatore di Limitless Barbers, in salone" loading="lazy" style="object-position:62% 28%" width="1180" height="1573">
+          <figcaption>In salone · Via Vicenza 36</figcaption>
+        </figure>
+        <div class="member__text">
+          <span class="role">Head barber · fondatore</span>
+          <h3>Gianluca</h3>
+          <p>Più di dieci anni dietro la poltrona e clienti che lo seguono da sempre. Nelle recensioni lo descrivono così: preciso, puntuale, attento a venire incontro alle richieste di chi si siede davanti allo specchio. Limitless è il salone che ha costruito pezzo per pezzo.</p>
+        </div>
+      </article>
+
+      <article class="member rv rv-d1">
+        <figure>
+          <img src="/bozze/limitless-barbers/img/salondays_03.jpg" alt="Barbiere Limitless in salone con la t-shirt Clean Cuts Club" loading="lazy" width="1180" height="1573">
+          <figcaption>Clean Cuts Club · divisa Limitless</figcaption>
+        </figure>
+        <div class="member__text">
+          <span class="role">Barber</span>
+          <h3>Isaia</h3>
+          <p>Parte del team fin dall'inizio. Stessa ossessione per i dettagli, stessa pazienza sulle sfumature e sulla rifinitura. Con lui il taglio è un lavoro di pulizia: niente di appariscente, tutto esattamente al suo posto.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="team-note rv">
+      <img class="rv-img" src="/bozze/limitless-barbers/img/build_preview_04.jpg" alt="T-shirt bianca con il lettering Limitless Barbers stampato sul retro" loading="lazy" width="1180" height="1573">
+      <div>
+        <p class="eyebrow">Clean Cuts Club</p>
+        <h3 class="h4" style="margin:.5em 0 .6em">Un salone, un'identità,<br><em class="gold">una squadra riconoscibile.</em></h3>
+        <p>Le t-shirt che vedi in salone fanno parte del progetto Limitless tanto quanto le poltrone e le luci: stesso lettering, stessa cura. Lo stesso vale per i prodotti da styling a marchio Limitless che usiamo in postazione e che trovi in salone, se vuoi riprodurre a casa la piega che ti facciamo qui.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 04 · GALLERIA ======================= -->
+<section class="section section--tight" id="galleria">
+  <div class="shell">
+    <div class="section-head section-head--split rv">
+      <div>
+        <p class="eyebrow"><span class="num">04</span>&nbsp;&nbsp;Galleria</p>
+        <h2 class="h2" style="margin-top:.35em">Dentro <em class="gold">Limitless.</em></h2>
+      </div>
+      <p class="measure-sm">Fotografie reali del salone, delle giornate di lavoro e dei dettagli che lo rendono riconoscibile. Tocca un'immagine per aprirla a schermo intero.</p>
+    </div>
+
+    <div class="gal" id="gallery">
+      <button class="g-a" type="button"><img src="/bozze/limitless-barbers/img/interior_a88_04.jpg" alt="Le postazioni con le poltrone da barbiere firmate Limitless" loading="lazy"></button>
+      <button class="g-b" type="button"><img src="/bozze/limitless-barbers/img/salondays_01.jpg" alt="Il salone aperto sulla strada durante una giornata di lavoro" loading="lazy"></button>
+      <button class="g-c" type="button"><img src="/bozze/limitless-barbers/img/salondays_02.jpg" alt="Il team Limitless al lavoro sulle postazioni del salone" loading="lazy"></button>
+      <button class="g-d" type="button"><img src="/bozze/limitless-barbers/img/interior_a88_01.jpg" alt="Poltrone da barbiere e specchi a tutta altezza nel salone" loading="lazy"></button>
+      <button class="g-e" type="button"><img src="/bozze/limitless-barbers/img/interior_a88_02.jpg" alt="L'area d'attesa con merchandising Limitless e insegna retroilluminata" loading="lazy"></button>
+      <button class="g-f" type="button"><img src="/bozze/limitless-barbers/img/interior_a88_03.jpg" alt="L'area lavaggio con le sedute nere e la pedana" loading="lazy"></button>
+      <button class="g-g" type="button"><img src="/bozze/limitless-barbers/img/battesimo_03.jpg" alt="Il sacchetto di juta del Battesimo del Taglio tenuto in mano" loading="lazy"></button>
+      <button class="g-h" type="button"><img src="/bozze/limitless-barbers/img/interior_a88_05.jpg" alt="Il logo Limitless sul pavimento con le ombre delle piante" loading="lazy"></button>
+      <button class="g-i" type="button"><img src="/bozze/limitless-barbers/img/build_preview_03.jpg" alt="I vasetti di prodotto a marchio Limitless Barbers" loading="lazy"></button>
+    </div>
+
+    <div class="rv-strip rv">
+      <div class="section-head">
+        <p class="eyebrow">Fuori dal salone</p>
+        <h3 class="h3" style="margin-top:.2em">Limitless × <em class="gold">Red Valley</em></h3>
+        <p class="measure">Durante il festival abbiamo portato la poltrona dentro l'Artists Compound: tagli dal vivo fino a notte, con la stessa attenzione che mettiamo in Via Vicenza. Perché il salone è il nostro posto, ma il mestiere viaggia con noi.</p>
+      </div>
+      <div class="rv-strip__grid">
+        <img src="/bozze/limitless-barbers/img/redvalley_03.jpg" alt="Taglio dal vivo nell'Artists Compound del Red Valley" loading="lazy">
+        <img src="/bozze/limitless-barbers/img/redvalley_01.jpg" alt="La postazione Limitless allestita al festival Red Valley" loading="lazy">
+        <img src="/bozze/limitless-barbers/img/redvalley_02.jpg" alt="Il team Limitless davanti alla postazione del Red Valley" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 05 · LO STUDIO ======================= -->
 <section class="studio" id="studio">
- <img class="bgimg" src="/bozze/limitless-barbers/img/interior_a88_01.jpg" alt="Interno del salone progettato da a88_studio" loading="lazy">
- <div class="card fade"><div class="eyebrow">Lo studio · design a88_studio</div><h2 style="font-size:clamp(30px,3.6vw,48px)">Un salone che<br><em>non ha eguali</em> a Olbia.</h2>
-  <p>Gli interni sono firmati da a88_studio: luci lineari, toni grafite, acciaio e verde vivo. Un ambiente moderno e luminosissimo, pensato perché ogni dettaglio — dalla poltrona all'area d'attesa — racconti la stessa idea di cura.</p>
-  <p>Chi è già passato da noi lo dice meglio: «un'area d'attesa senza eguali» e «chicche di modernità mai viste su Olbia».</p></div>
- <div class="wrap studio-strip"><img src="/bozze/limitless-barbers/img/interior_a88_03.jpg" alt="Lavaggio" loading="lazy"><img src="/bozze/limitless-barbers/img/build_preview_01.jpg" alt="Progetto a88_studio" loading="lazy"><img src="/bozze/limitless-barbers/img/interior_a88_05.jpg" alt="Logo Limitless" loading="lazy"></div>
+  <div class="studio__hero">
+    <img src="/bozze/limitless-barbers/img/interior_a88_01.jpg" alt="L'interno del salone Limitless progettato da a88_studio" loading="lazy" width="1600" height="1200">
+  </div>
+  <div class="shell">
+    <div class="studio__card rv">
+      <p class="eyebrow"><span class="num">05</span>&nbsp;&nbsp;Lo studio · interni a88_studio</p>
+      <h2 class="h3" style="margin:.5em 0 .6em">Un salone che a Olbia<br><em class="gold">non ha eguali.</em></h2>
+      <p>Il progetto d'interni porta la firma di a88_studio: pareti chiare dall&rsquo;effetto materico, impianti a vista, tubi neri, luci lineari sospese e verde vero a spezzare il grigio. Nulla è decorativo per caso — ogni elemento, dalla poltrona all'area d'attesa, racconta la stessa idea di cura che poi ritrovi nel taglio.</p>
+      <p>L'area d'attesa è pensata per farti stare comodo davvero: sedute, merchandising, una console accesa. Non una sala d'aspetto, ma un pezzo di salone in cui il tempo passa bene.</p>
+      <blockquote class="studio__quote">«Un nuovo salone con area d'attesa senza eguali» · «chicche di modernità mai viste su Olbia» — dalle recensioni Google</blockquote>
+    </div>
+
+    <div class="studio__strip rv">
+      <figure><img src="/bozze/limitless-barbers/img/interior_a88_03.jpg" alt="L'area lavaggio con pedana e sedute reclinabili" loading="lazy"><figcaption>Area lavaggio</figcaption></figure>
+      <figure><img src="/bozze/limitless-barbers/img/interior_a88_02.jpg" alt="L'area d'attesa con t-shirt Limitless appese e insegna retroilluminata" loading="lazy"><figcaption>Area d'attesa &amp; merch</figcaption></figure>
+      <figure><img src="/bozze/limitless-barbers/img/build_preview_01.jpg" alt="La copertina del progetto d'interni firmato a88_studio" loading="lazy"><figcaption>Progetto a88_studio</figcaption></figure>
+    </div>
+  </div>
 </section>
 
-<section class="reviews" id="recensioni"><div class="wrap">
- <div class="rv-top fade"><div><div class="eyebrow">Recensioni Google</div><h2>Lo dicono<br><em>i nostri clienti.</em></h2></div>
-  <a class="score" href="https://www.google.com/maps/search/?api=1&query=Limitless+Barbers+Via+Vicenza+36+Olbia" target="_blank" rel="noopener"><b>5,0</b><div><span class="stars">★★★★★</span><small>63 recensioni su Google</small><small style="color:var(--gold)">Leggile tutte su Google Maps →</small></div></a></div>
- <div class="rv">
-  <blockquote class="fade"><p>«Salone davvero bellissimo, curato in ogni dettaglio e con un'atmosfera pazzesca. Come sempre mi sono trovato benissimo, sia per il risultato che per la professionalità e l'attenzione. Si vede la passione che ci mette e la qualità del lavoro. Super consigliato, una garanzia a Olbia!»</p><cite>Zeeshan <span class="stars">★★★★★</span></cite></blockquote>
-  <blockquote class="fade"><p>«Ormai sono più di 10 anni che vado da lui e mi sono sempre trovato benissimo. È una persona fantastica, ma soprattutto un barbiere davvero eccezionale. Sa sempre come consigliarti e riesce a fare il suo lavoro con una precisione incredibile. Dopo così tanti anni, non cambierei mai barbiere!»</p><cite>Gianluca <span class="stars">★★★★★</span></cite></blockquote>
-  <blockquote class="fade"><p>«Taglio impeccabile e cura dei dettagli fuori dal comune. I ragazzi del Limitless Barber Shop di Olbia sono dei veri professionisti: atmosfera top, precisione maniacale con le sfumature e accoglienza super. Ormai il mio barbiere di riferimento in città. Consigliatissimo!»</p><cite>Pulighino <span class="stars">★★★★★</span></cite></blockquote>
-  <blockquote class="fade"><p>«Esperienza sempre ottima! Barbieri professionali, precisi e attenti ai dettagli. Ambiente accogliente, servizio curato e grande disponibilità. Consigliatissimo.»</p><cite>Valerio <span class="stars">★★★★★</span></cite></blockquote>
-  <blockquote class="fade"><p>«Un nuovo salone con area d'attesa senza eguali, come solo Gianluca e i suoi potevano immaginare. Una professionalità assoluta e insomma siete il meglio!»</p><cite>Antonio <span class="stars">★★★★★</span></cite></blockquote>
-  <blockquote class="fade"><p>«Locale modernissimo, molto luminoso, associato alla super professionalità di Gianluca, preciso, puntuale, attento a venire incontro sempre alle richieste del cliente, se siete alla ricerca di un parrucchiere di meglio non potete trovare.»</p><cite>Cristian <span class="stars">★★★★★</span></cite></blockquote>
-  <blockquote class="fade"><p>«Gianluca, il mio barbiere da ormai 6 anni! Dopo tanti sacrifici sono felicissimo di vederti finalmente realizzare il tuo sogno. Professionalità, precisione e tanta passione. Super consigliato!⭐️»</p><cite>Paolo <span class="stars">★★★★★</span></cite></blockquote>
-  <blockquote class="fade"><p>«Un Salone con la S maiuscola con dei Professionisti con la P maiuscola. Gianluca è una garanzia da anni e anni a questa parte. Ambiente familiare, super chill e con delle chicche di modernità mai viste su Olbia. 5 stelle a mani basse»</p><cite>Mattia <span class="stars">★★★★★</span></cite></blockquote>
- </div>
- <p class="rv-foot">Recensioni reali pubblicate su Google Maps, riportate testualmente.</p>
- <div class="fade" style="margin-top:80px"><div class="eyebrow">Fuori dal salone</div><h3 style="font-size:34px;margin-top:12px">Limitless × <em style="color:var(--gold)">Red Valley</em> 2026</h3><p style="color:var(--mute);max-width:620px;margin-top:10px">La nostra postazione al festival Red Valley: tagli dal vivo, musica e la stessa cura di sempre.</p>
- <div class="events"><img src="/bozze/limitless-barbers/img/redvalley_03.jpg" alt="Taglio dal vivo al Red Valley" loading="lazy"><img src="/bozze/limitless-barbers/img/redvalley_01.jpg" alt="Postazione Limitless al Red Valley" loading="lazy"><img src="/bozze/limitless-barbers/img/redvalley_04.jpg" alt="Il team al Red Valley" loading="lazy"></div></div>
-</div></section>
+<!-- ======================= 06 · RECENSIONI ======================= -->
+<section class="section reviews" id="recensioni">
+  <div class="shell">
+    <div class="section-head section-head--split rv">
+      <div>
+        <p class="eyebrow"><span class="num">06</span>&nbsp;&nbsp;Recensioni Google</p>
+        <h2 class="h2" style="margin-top:.35em">Lo dicono<br><em class="gold">i nostri clienti.</em></h2>
+      </div>
+      <a class="score-card" href="https://www.google.com/maps/search/?api=1&amp;query=Limitless+Barbers+Via+Vicenza+36+Olbia" target="_blank" rel="noopener">
+        <b>5,0</b>
+        <span class="score-card__meta">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <small>63 recensioni su Google</small>
+          <small class="go">Leggile tutte su Google Maps →</small>
+        </span>
+      </a>
+    </div>
 
-<section class="cta-band"><div class="wrap fade">
- <div class="eyebrow">Prenotazioni</div><h2>Il tuo prossimo taglio <em>inizia con un messaggio.</em></h2>
- <p>Scrivici su WhatsApp con il giorno che preferisci: ti proponiamo il primo orario libero e ti aspettiamo in Via Vicenza 36.</p>
- <a class="btn solid" href="https://wa.me/393315007192?text=Ciao%20Limitless%2C%20vorrei%20prenotare%20un%20appuntamento">Prenota su WhatsApp</a>
-</div></section>
+    <div class="quotes">
+      <blockquote class="rv"><p>«Salone davvero bellissimo, curato in ogni dettaglio e con un'atmosfera pazzesca. Come sempre mi sono trovato benissimo, sia per il risultato che per la professionalità e l'attenzione. Si vede la passione che ci mette e la qualità del lavoro. Super consigliato, una garanzia a Olbia!»</p><cite>Zeeshan <span class="stars" aria-hidden="true">★★★★★</span></cite></blockquote>
+      <blockquote class="rv"><p>«Ormai sono più di 10 anni che vado da lui e mi sono sempre trovato benissimo. È una persona fantastica, ma soprattutto un barbiere davvero eccezionale. Sa sempre come consigliarti e riesce a fare il suo lavoro con una precisione incredibile. Dopo così tanti anni, non cambierei mai barbiere!»</p><cite>Gianluca <span class="stars" aria-hidden="true">★★★★★</span></cite></blockquote>
+      <blockquote class="rv"><p>«Taglio impeccabile e cura dei dettagli fuori dal comune. I ragazzi del Limitless Barber Shop di Olbia sono dei veri professionisti: atmosfera top, precisione maniacale con le sfumature e accoglienza super. Ormai il mio barbiere di riferimento in città. Consigliatissimo!»</p><cite>Pulighino <span class="stars" aria-hidden="true">★★★★★</span></cite></blockquote>
+      <blockquote class="rv"><p>«Esperienza sempre ottima! Barbieri professionali, precisi e attenti ai dettagli. Ambiente accogliente, servizio curato e grande disponibilità. Consigliatissimo.»</p><cite>Valerio <span class="stars" aria-hidden="true">★★★★★</span></cite></blockquote>
+      <blockquote class="rv"><p>«Un nuovo salone con area d'attesa senza eguali, come solo Gianluca e i suoi potevano immaginare. Una professionalità assoluta e insomma siete il meglio!»</p><cite>Antonio <span class="stars" aria-hidden="true">★★★★★</span></cite></blockquote>
+      <blockquote class="rv"><p>«Locale modernissimo, molto luminoso, associato alla super professionalità di Gianluca, preciso, puntuale, attento a venire incontro sempre alle richieste del cliente, se siete alla ricerca di un parrucchiere di meglio non potete trovare.»</p><cite>Cristian <span class="stars" aria-hidden="true">★★★★★</span></cite></blockquote>
+      <blockquote class="rv"><p>«Gianluca, il mio barbiere da ormai 6 anni! Dopo tanti sacrifici sono felicissimo di vederti finalmente realizzare il tuo sogno. Professionalità, precisione e tanta passione. Super consigliato!⭐️»</p><cite>Paolo <span class="stars" aria-hidden="true">★★★★★</span></cite></blockquote>
+      <blockquote class="rv"><p>«Un Salone con la S maiuscola con dei Professionisti con la P maiuscola. Gianluca è una garanzia da anni e anni a questa parte. Ambiente familiare, super chill e con delle chicche di modernità mai viste su Olbia. 5 stelle a mani basse»</p><cite>Mattia <span class="stars" aria-hidden="true">★★★★★</span></cite></blockquote>
+    </div>
+    <p class="quotes-note">Recensioni reali pubblicate su Google Maps e riportate testualmente, senza modifiche.</p>
+  </div>
+</section>
 
-<section id="contatti"><div class="wrap info">
- <div class="fade"><div class="eyebrow">Orari &amp; contatti</div><h2>Ti aspettiamo<br><em>in salone.</em></h2>
-  <ul class="hours"><li class="off"><span>Lunedì</span><span>Chiuso</span></li><li><span>Martedì</span><span>08:30 – 19:30</span></li><li><span>Mercoledì</span><span>08:30 – 19:30</span></li><li><span>Giovedì</span><span>08:30 – 19:30</span></li><li><span>Venerdì</span><span>08:30 – 19:30</span></li><li><span>Sabato</span><span>08:30 – 18:30</span></li><li class="off"><span>Domenica</span><span>Chiuso</span></li></ul>
-  <div class="contact-lines"><div>Via Vicenza 36, 07026 Olbia (SS)</div><div>WhatsApp &amp; telefono: <a href="https://wa.me/393315007192">+39 331 500 7192</a></div><div>Instagram: <a href="https://www.instagram.com/limitlessbarbers_olbia/" target="_blank" rel="noopener">@limitlessbarbers_olbia</a></div><div>Orario continuato, su appuntamento</div></div>
- </div>
- <div class="map fade"><iframe loading="lazy" title="Mappa Limitless Barbers" src="https://maps.google.com/maps?q=Limitless%20Barbers%2C%20Via%20Vicenza%2036%2C%20Olbia&z=16&output=embed"></iframe></div>
-</div></section>
+<!-- ======================= CTA BAND ======================= -->
+<section class="cta-band">
+  <img src="/bozze/limitless-barbers/img/salondays_01.jpg" alt="" aria-hidden="true" loading="lazy">
+  <div class="shell inner rv">
+    <p class="eyebrow eyebrow--center eyebrow--plain">Prenotazioni</p>
+    <h2 class="h2">Il tuo prossimo taglio<br><em class="gold">inizia con un messaggio.</em></h2>
+    <p class="lead">Scrivici su WhatsApp indicando il giorno e la fascia oraria che preferisci: ti rispondiamo con il primo posto disponibile. Niente app, niente attese al telefono.</p>
+    <a class="btn btn--gold" href="https://wa.me/393315007192?text=Ciao%20Limitless%2C%20vorrei%20prenotare%20un%20appuntamento" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.2 1.2Z"/></svg>
+      Prenota su WhatsApp
+    </a>
+  </div>
+</section>
 
-<footer><div class="wrap">
- <img src="/bozze/limitless-barbers/logo/logo-stacked.svg" alt="Limitless Barbers" width="173" height="130">
- <p>Limitless Barbers · Via Vicenza 36, 07026 Olbia · +39 331 500 7192</p>
- <p style="margin-top:8px">Interni a88_studio · Bozza sito a cura di <a href="https://websardegna.xyz" style="color:var(--gold)">WebSardegna</a></p>
-</div></footer>
+<!-- ======================= 07 · ORARI ======================= -->
+<section class="section" id="orari">
+  <div class="shell hours-grid">
+    <div class="rv">
+      <p class="eyebrow"><span class="num">07</span>&nbsp;&nbsp;Orari</p>
+      <h2 class="h2" style="margin:.35em 0 .5em">Quando trovarci<br><em class="gold">in salone.</em></h2>
+      <p class="measure-sm">Orario continuato dal martedì al sabato. Domenica e lunedì siamo chiusi. Lavoriamo su appuntamento: un messaggio prima di passare ti evita l'attesa.</p>
+      <p style="margin-top:18px"><span class="status" id="statusPill"><i></i><span id="statusText">Orari di apertura</span></span></p>
 
-<div class="mbar"><a class="btn solid" href="https://wa.me/393315007192?text=Ciao%20Limitless%2C%20vorrei%20prenotare%20un%20appuntamento">Prenota su WhatsApp</a><a class="btn ghost" href="tel:+393315007192" style="flex:.45">Chiama</a></div>
-<script>
-const hd=document.getElementById('hd');addEventListener('scroll',()=>hd.classList.toggle('s',scrollY>40),{passive:true});
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.fade').forEach(el=>io.observe(el));
-const v=document.querySelector('.hero video');v.muted=true;const p=v.play();if(p)p.catch(()=>{});
-</script>
-</body></html>
+      <ul class="hours" id="hoursList">
+        <li class="is-closed" data-day="1"><span class="d">Lunedì <span class="today-tag" hidden>Oggi</span></span><span class="h">Chiuso</span></li>
+        <li data-day="2"><span class="d">Martedì <span class="today-tag" hidden>Oggi</span></span><span class="h">08:30 — 19:30</span></li>
+        <li data-day="3"><span class="d">Mercoledì <span class="today-tag" hidden>Oggi</span></span><span class="h">08:30 — 19:30</span></li>
+        <li data-day="4"><span class="d">Giovedì <span class="today-tag" hidden>Oggi</span></span><span class="h">08:30 — 19:30</span></li>
+        <li data-day="5"><span class="d">Venerdì <span class="today-tag" hidden>Oggi</span></span><span class="h">08:30 — 19:30</span></li>
+        <li data-day="6"><span class="d">Sabato <span class="today-tag" hidden>Oggi</span></span><span class="h">08:30 — 18:30</span></li>
+        <li class="is-closed" data-day="0"><span class="d">Domenica <span class="today-tag" hidden>Oggi</span></span><span class="h">Chiuso</span></li>
+      </ul>
+    </div>
+
+    <div class="hours-side rv rv-d1">
+      <img class="rv-img" src="/bozze/limitless-barbers/img/interior_a88_04.jpg" alt="Le postazioni del salone Limitless pronte per la giornata" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover" width="1600" height="1200">
+      <dl class="info-list">
+        <div><dt>Indirizzo</dt><dd>Via Vicenza 36 — 07026 Olbia (SS)</dd></div>
+        <div><dt>WhatsApp</dt><dd><a href="https://wa.me/393315007192" target="_blank" rel="noopener">+39 331 500 7192</a></dd></div>
+        <div><dt>Telefono</dt><dd><a href="tel:+393315007192">+39 331 500 7192</a></dd></div>
+        <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/limitlessbarbers_olbia/" target="_blank" rel="noopener">@limitlessbarbers_olbia</a></dd></div>
+        <div><dt>Prezzi</dt><dd>Prezzi in salone, chiedi su WhatsApp</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 08 · CONTATTI / MAPPA ======================= -->
+<section class="section section--tight" id="contatti">
+  <div class="shell contact-grid">
+    <div class="rv">
+      <p class="eyebrow"><span class="num">08</span>&nbsp;&nbsp;Dove siamo</p>
+      <h2 class="h2" style="margin:.35em 0 .5em">Via Vicenza 36,<br><em class="gold">Olbia.</em></h2>
+      <p class="measure-sm">Ci trovi in Via Vicenza 36, con la vetrina che dà sulla strada. Se è la prima volta che vieni da noi, scrivici su WhatsApp: ti diciamo com'è la situazione posti e quanto devi aspettare, così arrivi al momento giusto.</p>
+      <div class="contact-cta">
+        <a class="btn btn--gold" href="https://wa.me/393315007192?text=Ciao%20Limitless%2C%20vorrei%20prenotare%20un%20appuntamento" target="_blank" rel="noopener">Prenota su WhatsApp</a>
+        <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Limitless+Barbers+Via+Vicenza+36+Olbia" target="_blank" rel="noopener">Apri in Google Maps</a>
+      </div>
+      <p style="margin-top:26px"><a class="link-u" href="tel:+393315007192">Chiama +39 331 500 7192</a></p>
+    </div>
+    <div class="map-frame rv rv-d1">
+      <iframe title="Mappa — Limitless Barbers, Via Vicenza 36, Olbia" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Limitless%20Barbers%2C%20Via%20Vicenza%2036%2C%20Olbia&amp;z=16&amp;output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="site-foot">
+  <div class="shell">
+    <img class="site-foot__mark" src="/bozze/limitless-barbers/logo/limitless-lockup-stacked-gold.svg" alt="Limitless Barbers — Barbering Without Limits" width="760" height="560" loading="lazy">
+    <div class="foot-links">
+      <a href="https://wa.me/393315007192?text=Ciao%20Limitless%2C%20vorrei%20prenotare%20un%20appuntamento" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://www.instagram.com/limitlessbarbers_olbia/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Limitless+Barbers+Via+Vicenza+36+Olbia" target="_blank" rel="noopener">Google Maps</a>
+      <a href="tel:+393315007192">Telefono</a>
+    </div>
+    <p>Limitless Barbers · Via Vicenza 36, 07026 Olbia (SS) · +39 331 500 7192</p>
+    <p>Mar — Ven 08:30 / 19:30 · Sab 08:30 / 18:30 · Dom e Lun chiuso</p>
+    <p class="credit">Interni a88_studio · Bozza gratuita a cura di <a href="https://websardegna.xyz" target="_blank" rel="noopener">WebSardegna</a></p>
+  </div>
+</footer>
+
+<!-- ======================= STICKY MOBILE CTA ======================= -->
+<div class="mobile-bar">
+  <a class="btn btn--gold" href="https://wa.me/393315007192?text=Ciao%20Limitless%2C%20vorrei%20prenotare%20un%20appuntamento" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.2 1.2Z"/></svg>
+    Prenota su WhatsApp
+  </a>
+  <a class="btn btn--ghost btn--icon" href="tel:+393315007192" aria-label="Chiama Limitless Barbers">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M21 16.4v2.6a2 2 0 0 1-2.2 2 19.5 19.5 0 0 1-8.5-3 19.2 19.2 0 0 1-5.9-5.9 19.5 19.5 0 0 1-3-8.6A2 2 0 0 1 3.4 1H6a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L7.1 8.9a16 16 0 0 0 6 6l1.3-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+  </a>
+</div>
+
+<!-- ======================= LIGHTBOX ======================= -->
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Galleria fotografica">
+  <button class="lb__close" id="lbClose" aria-label="Chiudi">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+  </button>
+  <button class="lb__btn lb__prev" id="lbPrev" aria-label="Immagine precedente">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button class="lb__btn lb__next" id="lbNext" aria-label="Immagine successiva">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+  <figure>
+    <img id="lbImg" src="" alt="">
+    <figcaption class="lb__cap" id="lbCap"></figcaption>
+  </figure>
+</div>
+
+<script src="/bozze/limitless-barbers/main.js" defer></script>
+</body>
+</html>
