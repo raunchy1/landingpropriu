@@ -9,9 +9,9 @@
 <meta name="theme-color" content="#08080a">
 <meta name="author" content="Limitless Barbers">
 
-<link rel="icon" href="/bozze/limitless-barbers/logo/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/bozze/limitless-barbers/logo/favicon-32.png" sizes="32x32">
-<link rel="apple-touch-icon" href="/bozze/limitless-barbers/logo/apple-touch-icon.png">
+<link rel="icon" href="/bozze/limitless-barbers/logo/motion/limitless-favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/bozze/limitless-barbers/logo/motion/limitless-favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/bozze/limitless-barbers/logo/motion/limitless-apple-touch-icon.png">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
@@ -23,16 +23,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="/bozze/limitless-barbers/img/hero-poster.jpg">
+<link rel="preload" as="image" href="/bozze/limitless-barbers/logo/motion/limitless-mark-animated.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/bozze/limitless-barbers/style.css">
+<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('intro');</script>
 </head>
 <body>
+
+<!-- intro: il marchio animato sopra il video, poi si posa nell'header -->
+<div id="intro" aria-hidden="true"><img src="/bozze/limitless-barbers/logo/motion/limitless-mark-animated.svg" alt="" width="760" height="468"></div>
 
 <!-- ======================= HEADER ======================= -->
 <header class="site-head" id="siteHead">
   <div class="preview-bar"><b>Bozza gratuita WebSardegna</b> · anteprima non pubblica</div>
   <div class="shell site-head__bar">
     <a class="brand" href="#top" aria-label="Limitless Barbers — torna all'inizio">
-      <img src="/bozze/limitless-barbers/logo/limitless-wordmark-gold.svg" alt="Limitless Barbers" width="1160" height="244">
+      <img src="/bozze/limitless-barbers/logo/motion/limitless-horizontal.svg" alt="Limitless Barbers" width="406" height="72">
     </a>
     <nav class="site-nav" aria-label="Navigazione principale">
       <a href="#filosofia">Filosofia</a>
@@ -461,7 +466,7 @@
 <!-- ======================= FOOTER ======================= -->
 <footer class="site-foot">
   <div class="shell">
-    <img class="site-foot__mark" src="/bozze/limitless-barbers/logo/limitless-lockup-stacked-gold.svg" alt="Limitless Barbers — Barbering Without Limits" width="760" height="560" loading="lazy">
+    <img class="site-foot__mark" src="/bozze/limitless-barbers/logo/motion/limitless-mark.svg" alt="Limitless Barbers — Barbering Without Limits" width="760" height="468" loading="lazy">
     <div class="foot-links">
       <a href="https://wa.me/393315007192?text=Ciao%20Limitless%2C%20vorrei%20prenotare%20un%20appuntamento" target="_blank" rel="noopener">WhatsApp</a>
       <a href="https://www.instagram.com/limitlessbarbers_olbia/" target="_blank" rel="noopener">Instagram</a>

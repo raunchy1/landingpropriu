@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Limitless Barbers — Logo in movimento</title>
+<meta name="description" content="Anteprima del nuovo marchio animato Limitless Barbers: lettere che si disegnano, riflesso oro metallico e insegna da barbiere.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0b0b0c">
+<link rel="icon" href="/bozze/limitless-barbers/logo/motion/limitless-favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b0c;--gold:#c9a96e;--ivory:#efe9df;--mute:#8e887e;--line:rgba(201,169,110,.22)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ivory);font-family:'Bodoni Moda',serif;min-height:100svh;
+ display:flex;flex-direction:column;align-items:center;justify-content:center;gap:44px;padding:56px 24px;
+ background-image:radial-gradient(120% 80% at 50% 36%,rgba(201,169,110,.07),transparent 62%)}
+.eyebrow{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);text-align:center}
+.stage{width:min(92vw,900px);aspect-ratio:760/468;display:grid;place-items:center}
+.stage img{width:100%;height:100%;object-fit:contain}
+.controls{display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center}
+button,.lnk{font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase;
+ color:var(--ivory);background:none;border:1px solid var(--line);padding:15px 28px;cursor:pointer;transition:.3s}
+button:hover,.lnk:hover{border-color:var(--gold);color:var(--gold)}
+button:focus-visible,.lnk:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.lnk{text-decoration:none;color:var(--mute)}
+.meta{font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.1em;color:var(--mute);text-align:center;line-height:2}
+.meta b{color:var(--ivory);font-weight:400}
+.note{display:none}
+@media (prefers-reduced-motion:reduce){.note{display:block}}
+@media (max-width:700px){body{gap:30px;padding:40px 18px}.stage{width:100%}}
+</style>
+</head>
+<body>
+
+<div class="eyebrow">Limitless Barbers · marchio in movimento</div>
+
+<div class="stage">
+ <img id="mark" src="/bozze/limitless-barbers/logo/motion/limitless-mark-animated.svg"
+      alt="Limitless Barbers — Barbering Without Limits" width="760" height="468">
+</div>
+
+<div class="controls">
+ <button id="replay" type="button">↻ Rivedi l'animazione</button>
+ <a class="lnk" href="/bozze/limitless-barbers">Torna al sito</a>
+</div>
+
+<p class="meta">
+ Durata <b>3,6 s</b> · SVG + CSS, nessuna libreria · si ferma sul lockup statico<br>
+ <span class="note">Rilevata la preferenza “riduci animazioni”: viene mostrata la versione statica.</span>
+ Statico: <b>limitless-mark.svg</b> · Orizzontale: <b>limitless-horizontal.svg</b> · Icona: <b>limitless-favicon.svg</b>
+</p>
+
+<script>
+(function(){
+ var img=document.getElementById('mark'), btn=document.getElementById('replay');
+ var reduce=matchMedia('(prefers-reduced-motion: reduce)');
+ var ANIM='/bozze/limitless-barbers/logo/motion/limitless-mark-animated.svg';
+ var STILL='/bozze/limitless-barbers/logo/motion/limitless-mark.svg';
+ function apply(){ if(reduce.matches){ img.src=STILL; btn.disabled=true; btn.style.opacity=.4; } }
+ apply();
+ if(reduce.addEventListener) reduce.addEventListener('change',function(){ img.src=reduce.matches?STILL:ANIM; btn.disabled=reduce.matches; btn.style.opacity=reduce.matches?.4:1; });
+ btn.addEventListener('click',function(){ if(reduce.matches) return; img.src=ANIM+'?r='+Date.now(); });
+})();
+</script>
+</body></html>

@@ -532,3 +532,37 @@ body.menu-open .mobile-menu{clip-path:inset(0 0 0 0)}
 
 /* ---------- anchor offset ---------- */
 section[id]{scroll-margin-top:clamp(84px,9vw,118px)}
+
+/* ---------- intro: marchio animato sulla hero ---------- */
+:root{--hx:193px;--hy:80px}
+#intro{display:none}
+html.intro,html.intro body{overflow:hidden}
+html.intro #intro{
+  display:grid;place-items:center;position:fixed;inset:0;z-index:200;
+  background:var(--ink);cursor:pointer;
+}
+#intro img{width:min(84vw,760px);height:auto}
+html.intro-go #intro{animation:introOut .95s var(--ease) 3.25s forwards}
+html.intro-go #intro img{animation:introSettle .95s var(--ease) 3.25s forwards}
+#intro.skip{animation:none!important;transition:opacity .4s ease;opacity:0}
+#intro.skip img{animation:none!important}
+@keyframes introOut{
+  0%{background-color:var(--ink)}
+  55%{background-color:rgba(8,8,10,.4)}
+  100%{background-color:rgba(8,8,10,0);visibility:hidden}
+}
+@keyframes introSettle{
+  0%{opacity:1;transform:translate(0,0) scale(1)}
+  55%{opacity:.85}
+  100%{opacity:0;transform:translate(calc(var(--hx) - 50vw),calc(var(--hy) - 50svh)) scale(.16)}
+}
+@keyframes brandIn{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:none}}
+html.intro .brand{opacity:0}
+html.intro-go .brand{animation:brandIn .8s var(--ease) 3.85s forwards}
+html.intro-done .brand{opacity:1}
+@media (max-width:900px){:root{--hx:150px;--hy:74px}}
+@media (max-width:540px){:root{--hx:116px;--hy:66px}}
+@media (prefers-reduced-motion:reduce){
+  #intro{display:none!important}
+  .brand{opacity:1!important;animation:none!important}
+}

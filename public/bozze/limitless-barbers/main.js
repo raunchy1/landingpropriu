@@ -6,6 +6,41 @@
 
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ---------- intro: marchio animato, una volta al caricamento ---------- */
+  (function () {
+    var root = document.documentElement;
+    var intro = document.getElementById('intro');
+    if (!intro) return;
+    if (!root.classList.contains('intro')) { intro.remove(); return; }
+    var done = false, t1, t2;
+    var finish = function (fast) {
+      if (done) return;
+      done = true;
+      clearTimeout(t1); clearTimeout(t2);
+      if (fast) intro.classList.add('skip');
+      root.classList.remove('intro', 'intro-go');
+      root.classList.add('intro-done');
+      setTimeout(function () { intro.remove(); }, fast ? 420 : 0);
+    };
+    var go = function () {
+      root.classList.add('intro-go');
+      t1 = setTimeout(function () { finish(false); }, 4700);
+    };
+    var im = intro.querySelector('img');
+    if (im.complete) go();
+    else {
+      im.addEventListener('load', go);
+      im.addEventListener('error', function () { finish(true); });
+    }
+    t2 = setTimeout(function () {
+      if (!root.classList.contains('intro-go')) finish(true);
+    }, 6000);
+    intro.addEventListener('click', function () { finish(true); });
+    window.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' || e.key === ' ') finish(true);
+    }, { once: true });
+  })();
+
   /* ---------- header sticky ---------- */
   var head = document.getElementById('siteHead');
   var onScroll = function () {
