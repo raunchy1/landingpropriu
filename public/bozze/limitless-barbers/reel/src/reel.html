@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Limitless Reel</title>
+<link rel="stylesheet" href="fonts/local.css">
+<style>
+  :root{
+    --gold:#C9A96E;
+    --gold-soft:#E0C999;
+    --ivory:#EFE9DF;
+    --ink:#060606;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1080px;height:1920px;background:var(--ink);overflow:hidden}
+  body{font-family:'Jost',sans-serif;-webkit-font-smoothing:antialiased}
+  #stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--ink)}
+
+  .scene{position:absolute;inset:0;opacity:0;will-change:opacity,transform}
+
+  /* ---------- media primitives ---------- */
+  .bleed{position:absolute;inset:0;overflow:hidden}
+  .bleed img{position:absolute;left:50%;top:50%;width:1080px;height:1920px;object-fit:cover;
+             transform:translate(-50%,-50%);will-change:transform;
+             filter:brightness(1.16) contrast(1.07) saturate(1.04)}
+  .backdrop{position:absolute;inset:-60px;overflow:hidden}
+  .backdrop img{width:100%;height:100%;object-fit:cover;filter:blur(44px) saturate(.72) brightness(.46)}
+  .window{position:absolute;left:50%;transform:translateX(-50%);overflow:hidden;background:#000;
+          box-shadow:0 40px 120px rgba(0,0,0,.65)}
+  .window img{position:absolute;left:50%;top:50%;width:100%;height:100%;object-fit:cover;
+              transform:translate(-50%,-50%);will-change:transform;
+              filter:brightness(1.12) contrast(1.06) saturate(1.04)}
+  .window::after{content:'';position:absolute;inset:0;border:1px solid rgba(201,169,110,.28);pointer-events:none}
+
+  /* tone + depth */
+  .tone{position:absolute;inset:0;pointer-events:none}
+  .tone.dark{background:linear-gradient(180deg,rgba(6,6,6,.62) 0%,rgba(6,6,6,.06) 30%,rgba(6,6,6,.14) 52%,rgba(6,6,6,.76) 100%)}
+  .tone.heavy{background:linear-gradient(180deg,rgba(6,6,6,.74) 0%,rgba(6,6,6,.42) 45%,rgba(6,6,6,.84) 100%)}
+  #vignette{position:absolute;inset:0;pointer-events:none;z-index:60;
+    background:radial-gradient(135% 95% at 50% 44%,rgba(0,0,0,0) 46%,rgba(0,0,0,.38) 100%)}
+  #flash{position:absolute;inset:0;background:var(--ivory);opacity:0;pointer-events:none;z-index:70;mix-blend-mode:screen}
+  #bars{position:absolute;inset:0;pointer-events:none;z-index:65}
+  #bars .bar{position:absolute;left:0;width:100%;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0}
+
+  /* ---------- type ---------- */
+  .eyebrow{font-family:'Jost',sans-serif;font-weight:400;font-size:21px;letter-spacing:.42em;
+           text-transform:uppercase;color:var(--gold-soft);white-space:nowrap;text-shadow:0 2px 20px rgba(0,0,0,.8)}
+  .kicker{font-family:'Jost',sans-serif;font-weight:300;font-size:25px;letter-spacing:.30em;
+          text-transform:uppercase;color:rgba(239,233,223,.95);text-shadow:0 2px 24px rgba(0,0,0,.7)}
+  .serif{font-family:'Bodoni Moda',serif;color:var(--ivory);line-height:1.02;letter-spacing:-.005em;
+         text-shadow:0 6px 40px rgba(0,0,0,.72)}
+  .gold{color:var(--gold)}
+  .it{font-style:italic}
+
+  .mask{display:block;overflow:hidden;padding:0 .04em .14em}
+  .mask > span{display:block;will-change:transform,opacity}
+  .ch{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.16em}
+  .ch > i{display:inline-block;font-style:inherit;will-change:transform}
+
+  .rule{height:1px;background:linear-gradient(90deg,var(--gold),rgba(201,169,110,0));transform-origin:left center}
+
+  /* ---------- scene: hook ---------- */
+  #s0 .window{top:430px;width:1080px;height:608px}
+  #s0 .hook{position:absolute;left:84px;top:1170px;width:912px}
+  #s0 .hook .serif{font-size:94px;font-weight:400}
+  #s0 .eyebrow{position:absolute;left:86px;top:338px}
+  #s0 .btm{position:absolute;left:86px;bottom:150px;display:flex;align-items:center;gap:26px}
+
+  /* ---------- scene: big word ---------- */
+  /* soft scrim so the kinetic type holds up over the brighter frames */
+  .scrim{position:absolute;left:0;width:1080px;top:600px;height:660px;pointer-events:none;
+         background:radial-gradient(62% 48% at 50% 50%,rgba(6,6,6,.74) 0%,rgba(6,6,6,.46) 52%,rgba(6,6,6,0) 100%)}
+  .word{position:absolute;left:0;width:1080px;text-align:center}
+  .word .serif{font-size:200px;font-weight:600;letter-spacing:.01em;
+               text-shadow:0 8px 54px rgba(0,0,0,.85),0 0 120px rgba(0,0,0,.6)}
+  .wordsub{position:absolute;left:0;width:1080px;text-align:center}
+
+  /* ---------- scene: framed photo ---------- */
+  .fw{top:430px;width:1080px;height:810px}
+  .cap{position:absolute;left:0;width:1080px;text-align:center}
+  .cap .serif{font-size:62px;font-weight:400}
+
+  /* ---------- scene: rating ---------- */
+  #s8 .score{position:absolute;left:0;width:1080px;text-align:center;top:690px}
+  #s8 .score .num{font-family:'Bodoni Moda',serif;font-size:300px;font-weight:600;color:var(--ivory);line-height:.92}
+  #s8 .stars{position:absolute;left:0;width:1080px;text-align:center;top:1055px;font-size:60px;letter-spacing:.22em;color:var(--gold)}
+  #s8 .stars span{display:inline-block}
+  #s8 .lab{position:absolute;left:0;width:1080px;text-align:center;top:1180px}
+  #s8 .lab .serif{font-size:72px;font-weight:400}
+  #s8 .rev{position:absolute;left:0;width:1080px;text-align:center;top:1300px}
+  #s8 .eyebrow{position:absolute;left:0;width:1080px;text-align:center;top:560px}
+
+  /* ---------- scene: logo + CTA ---------- */
+  #s9{background:var(--ink)}
+  #s9 .glow{position:absolute;left:50%;top:40%;width:1300px;height:1300px;transform:translate(-50%,-50%);
+            background:radial-gradient(circle,rgba(201,169,110,.17) 0%,rgba(201,169,110,0) 62%)}
+  #logoWrap{position:absolute;left:50%;top:618px;transform:translate(-50%,-50%);width:948px}
+  #logoWrap svg{width:100%;height:auto;display:block}
+  #s9 .cta{position:absolute;left:0;width:1080px;text-align:center;top:1032px}
+  #s9 .cta .serif{font-size:70px;font-weight:400}
+  #s9 .wa{position:absolute;left:50%;top:1152px;transform:translateX(-50%);
+          display:flex;align-items:center;gap:22px;padding:30px 62px;border:1px solid var(--gold);border-radius:999px}
+  #s9 .wa svg{width:44px;height:44px;fill:var(--gold)}
+  #s9 .wa span{font-family:'Jost',sans-serif;font-size:32px;letter-spacing:.17em;text-transform:uppercase;color:var(--gold)}
+  #s9 .place{position:absolute;left:0;width:1080px;text-align:center;top:1392px}
+  #s9 .place .serif{font-size:96px;font-weight:400}
+  #s9 .addr{position:absolute;left:0;width:1080px;text-align:center;top:1538px}
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <!-- 0 HOOK -->
+  <div class="scene" id="s0">
+    <div class="backdrop"><img id="vb0" src="vid/a_0001.jpg" alt=""></div>
+    <div class="window"><img id="vs0" src="vid/a_0001.jpg" alt=""></div>
+    <div class="tone dark"></div>
+    <div class="eyebrow" data-anim="eyebrow">Limitless Barbers · Olbia</div>
+    <div class="hook">
+      <div class="serif mask"><span>Il taglio</span></div>
+      <div class="serif mask"><span>che ti cambia</span></div>
+      <div class="serif mask"><span class="it gold">la giornata.</span></div>
+    </div>
+    <div class="btm"><div class="rule" style="width:150px"></div><div class="kicker">Via Vicenza 36</div></div>
+  </div>
+
+  <!-- 1 FADE -->
+  <div class="scene" id="s1">
+    <div class="bleed"><img src="ph/salondays_02.jpg" alt=""></div>
+    <div class="tone dark"></div>
+    <div class="scrim"></div>
+    <div class="word" style="top:780px"><div class="serif" data-split>Fade</div></div>
+    <div class="wordsub" style="top:1035px"><div class="kicker">Sfumature di precisione</div></div>
+  </div>
+
+  <!-- 2 framed interior -->
+  <div class="scene" id="s2">
+    <div class="backdrop"><img src="ph/interior_a88_01.jpg" alt=""></div>
+    <div class="window fw"><img src="ph/interior_a88_01.jpg" alt=""></div>
+    <div class="tone heavy" style="opacity:.55"></div>
+    <div class="cap" style="top:1360px"><div class="serif it">Un salone firmato <span class="gold">a88_studio</span></div></div>
+  </div>
+
+  <!-- 3 BARBA -->
+  <div class="scene" id="s3">
+    <div class="bleed"><img src="ph/redvalley_03.jpg" alt=""></div>
+    <div class="tone dark"></div>
+    <div class="scrim"></div>
+    <div class="word" style="top:760px"><div class="serif" data-split>Barba</div></div>
+    <div class="wordsub" style="top:1015px"><div class="kicker">Linee nette, su misura</div></div>
+  </div>
+
+  <!-- 4 video window -->
+  <div class="scene" id="s4">
+    <div class="backdrop"><img id="vb4" src="vid/b_0001.jpg" alt=""></div>
+    <div class="window" style="top:470px;width:1080px;height:608px"><img id="vs4" src="vid/b_0001.jpg" alt=""></div>
+    <div class="tone heavy" style="opacity:.5"></div>
+    <div class="cap" style="top:1230px"><div class="serif">Quattro postazioni.<br><span class="it gold">Zero fretta.</span></div></div>
+  </div>
+
+  <!-- 5 STILE -->
+  <div class="scene" id="s5">
+    <div class="bleed"><img src="ph/salondays_01.jpg" alt=""></div>
+    <div class="tone dark"></div>
+    <div class="scrim"></div>
+    <div class="word" style="top:770px"><div class="serif" data-split>Stile</div></div>
+    <div class="wordsub" style="top:1025px"><div class="kicker">Taglio · Barba · Rituale</div></div>
+  </div>
+
+  <!-- 6 framed interior 2 -->
+  <div class="scene" id="s6">
+    <div class="backdrop"><img src="ph/interior_a88_04.jpg" alt=""></div>
+    <div class="window fw"><img src="ph/interior_a88_04.jpg" alt=""></div>
+    <div class="tone heavy" style="opacity:.55"></div>
+    <div class="cap" style="top:1340px"><div class="serif">Su appuntamento,<br><span class="it gold">dal martedì al sabato.</span></div></div>
+  </div>
+
+  <!-- 7 signage -->
+  <div class="scene" id="s7">
+    <div class="bleed"><img src="ph/interior_a88_05.jpg" alt=""></div>
+    <div class="tone dark"></div>
+    <div class="cap" style="top:1230px"><div class="serif it">Barbering<br>without limits</div></div>
+  </div>
+
+  <!-- 8 rating -->
+  <div class="scene" id="s8">
+    <div class="bleed"><img src="ph/salondays_03.jpg" alt="" style="filter:brightness(.78) contrast(1.05) saturate(.85) blur(5px)"></div>
+    <div class="tone heavy"></div>
+    <div class="eyebrow">Recensioni Google</div>
+    <div class="score"><div class="num" data-split>5,0</div></div>
+    <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+    <div class="lab"><div class="serif it">su Google</div></div>
+    <div class="rev"><div class="kicker">63 recensioni</div></div>
+  </div>
+
+  <!-- 9 logo + CTA -->
+  <div class="scene" id="s9">
+    <div class="glow"></div>
+    <div id="logoWrap"></div>
+    <div class="cta"><div class="serif it gold">Prenota ora su</div></div>
+    <div class="wa">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.2 1.2Z"/></svg>
+      <span>WhatsApp</span>
+    </div>
+    <div class="place"><div class="serif">Olbia</div></div>
+    <div class="addr"><div class="kicker">Via Vicenza 36</div></div>
+  </div>
+
+  <div id="bars">
+    <div class="bar" id="bar1"></div>
+    <div class="bar" id="bar2"></div>
+  </div>
+  <div id="flash"></div>
+  <div id="vignette"></div>
+</div>
+
+<script src="gsap.min.js"></script>
+<script src="timeline.js"></script>
+</body>
+</html>
