@@ -172,9 +172,12 @@
       "offer": "Offer",
       "process": "Process",
       "work": "Work",
+      "services": "Services",
       "faq": "FAQ",
       "cv": "About me",
       "cta": "Message us",
+      "menu": "Open menu",
+      "close": "Close menu",
       "motion": "Motion",
       "motionOn": "on",
       "motionReduced": "reduced",
@@ -191,7 +194,43 @@
       "secondary": "See the offer",
       "label1": "01 — Island",
       "label2": "02 — Online",
-      "scroll": "Scroll"
+      "scroll": "Scroll",
+      "plateAlt": "Interior of the Limitless Barbers salon in Olbia, from the website draft",
+      "plateName": "Limitless Barbers",
+      "plateMeta": "Draft · Olbia",
+      "plateOpen": "Open the draft"
+    },
+    "work": {
+      "title": "Selected work",
+      "forWho": "For",
+      "draft": "Draft",
+      "open": "Open the draft",
+      "items": [
+        {
+          "name": "Limitless Barbers",
+          "place": "Olbia",
+          "alt": "Stations inside the Limitless Barbers salon in Olbia, from the website draft",
+          "tags": ["Website", "Design", "Logo"]
+        },
+        {
+          "name": "Loggia Padronale",
+          "place": "Oristano",
+          "alt": "Brick-vaulted room at Loggia Padronale in Oristano, from the website draft",
+          "tags": ["Website", "Hospitality"]
+        }
+      ]
+    },
+    "services": {
+      "eyebrow": "Services",
+      "title": "Websites, made to measure.",
+      "intro": "Fast sites, designed for phones first, for restaurants, hotels, shops and local businesses in Sardinia.",
+      "more": "Also AI integration, Google Ads campaigns and custom software.",
+      "all": "All services"
+    },
+    "statement": {
+      "line1": "Free draft in 48 hours.",
+      "line2": "No upfront payment. You pay only if you like it.",
+      "cta": "Message us on WhatsApp"
     },
     "marquee": {
       "label": "We work all over Sardinia",
@@ -247,7 +286,8 @@
         "Professional photos and copywriting",
         "Ad campaigns (Google Ads, social)"
       ],
-      "excludedNote": "Extras are agreed upfront, in writing. See the calculator below.",
+      "excludedNote": "Extras are agreed upfront, in writing.",
+      "once": "one-time",
       "cta": "I want the free draft"
     },
     "sectors": {
@@ -440,7 +480,9 @@
       "waLabel": "WhatsApp",
       "phone": "+39 350 199 8569",
       "igLabel": "Instagram",
-      "ig": "@websardegna"
+      "ig": "@websardegna",
+      "talk": "Let’s talk",
+      "emailLabel": "Email"
     },
     "sticky": {
       "cta": "Message us on WhatsApp"

@@ -173,9 +173,12 @@
       "offer": "Offerta",
       "process": "Processo",
       "work": "Lavori",
+      "services": "Servizi",
       "faq": "FAQ",
       "cv": "Chi sono",
       "cta": "Scrivici",
+      "menu": "Apri il menu",
+      "close": "Chiudi il menu",
       "motion": "Animazioni",
       "motionOn": "on",
       "motionReduced": "ridotte",
@@ -192,7 +195,43 @@
       "secondary": "Vedi l’offerta",
       "label1": "01 — Isola",
       "label2": "02 — Online",
-      "scroll": "Scorri"
+      "scroll": "Scorri",
+      "plateAlt": "Interno del salone Limitless Barbers a Olbia, nella bozza del sito",
+      "plateName": "Limitless Barbers",
+      "plateMeta": "Bozza · Olbia",
+      "plateOpen": "Apri la bozza"
+    },
+    "work": {
+      "title": "Lavori selezionati",
+      "forWho": "Per chi",
+      "draft": "Bozza",
+      "open": "Apri la bozza",
+      "items": [
+        {
+          "name": "Limitless Barbers",
+          "place": "Olbia",
+          "alt": "Postazioni del salone Limitless Barbers a Olbia, nella bozza del sito",
+          "tags": ["Sito web", "Design", "Logo"]
+        },
+        {
+          "name": "Loggia Padronale",
+          "place": "Oristano",
+          "alt": "Sala con volta in mattoni della Loggia Padronale a Oristano, nella bozza del sito",
+          "tags": ["Sito web", "Ospitalità"]
+        }
+      ]
+    },
+    "services": {
+      "eyebrow": "Servizi",
+      "title": "Siti web su misura.",
+      "intro": "Siti veloci e pensati prima per lo smartphone, per ristoranti, hotel, negozi e attività locali in Sardegna.",
+      "more": "Anche integrazione AI, campagne Google Ads e software su misura.",
+      "all": "Tutti i servizi"
+    },
+    "statement": {
+      "line1": "Bozza gratuita in 48 ore.",
+      "line2": "Nessun anticipo. Paghi solo se ti piace.",
+      "cta": "Scrivici su WhatsApp"
     },
     "marquee": {
       "label": "Lavoriamo in tutta la Sardegna",
@@ -248,7 +287,8 @@
         "Servizio fotografico e testi professionali",
         "Campagne pubblicitarie (Google Ads, social)"
       ],
-      "excludedNote": "Gli extra si concordano prima, per iscritto. Vedi il calcolatore qui sotto.",
+      "excludedNote": "Gli extra si concordano prima, per iscritto.",
+      "once": "una tantum",
       "cta": "Voglio la bozza gratuita"
     },
     "sectors": {
@@ -441,7 +481,9 @@
       "waLabel": "WhatsApp",
       "phone": "350 199 8569",
       "igLabel": "Instagram",
-      "ig": "@websardegna"
+      "ig": "@websardegna",
+      "talk": "Parliamo",
+      "emailLabel": "Email"
     },
     "sticky": {
       "cta": "Scrivici su WhatsApp"

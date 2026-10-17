@@ -1,11 +1,14 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import { Link } from '@/i18n/navigation'
+import { Link, usePathname } from '@/i18n/navigation'
 import { business } from '@/lib/business'
+import MotionToggle from './home/MotionToggle'
+import BrandLockup from './home/BrandLockup'
 
 export default function Footer() {
   const t = useTranslations('footer')
+  const onHome = usePathname() === '/'
 
   const linkClass = 'inline-flex min-h-[40px] items-center text-[15px] capitalize transition-colors hover:text-[var(--accent)]'
 
@@ -20,7 +23,11 @@ export default function Footer() {
               style={{ color: 'var(--fg)' }}
               aria-label="WebSardegna — home"
             >
-              <img src="/brand/logo-jost.svg" alt="WebSardegna" width={560} height={140} className="block h-[40px] w-auto md:h-[48px]" />
+              {onHome ? (
+                <BrandLockup />
+              ) : (
+                <img src="/brand/logo-jost.svg" alt="WebSardegna" width={560} height={140} className="block h-[40px] w-auto md:h-[48px]" />
+              )}
             </Link>
             <address className="mt-6 not-italic text-[14px] leading-[1.8]" style={{ color: 'var(--muted)' }}>
               <span style={{ color: 'var(--fg)' }}>{business.name}</span>
@@ -50,9 +57,11 @@ export default function Footer() {
             <Link href="/guida" className={linkClass}>
               {t('guide')}
             </Link>
-            <Link href="/portfolio" className={linkClass}>
-              {t('portfolio')}
-            </Link>
+            {!onHome && (
+              <Link href="/portfolio" className={linkClass}>
+                {t('portfolio')}
+              </Link>
+            )}
             <Link href="/contatti" className={linkClass}>
               {t('contact')}
             </Link>
@@ -70,7 +79,10 @@ export default function Footer() {
 
         <div className="rule mt-12 flex flex-wrap items-center justify-between gap-3 pt-6 text-[11px] uppercase tracking-[0.16em] md:mt-16" style={{ color: 'var(--dim)' }}>
           <span>websardegna.xyz</span>
-          <span>{t('location')}</span>
+          <span className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            {onHome && <MotionToggle />}
+            <span>{t('location')}</span>
+          </span>
         </div>
       </div>
     </footer>

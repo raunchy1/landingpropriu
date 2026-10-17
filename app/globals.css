@@ -152,6 +152,64 @@ html[data-motion='reduced'] *, html[data-motion='reduced'] *::before, html[data-
 }
 
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* ═══════════════════ HOME — editorial (light) ═══════════════════ */
+.ws-home {
+  --bg: #ffffff;
+  --bg-2: #f4f4f2;
+  --fg: #111111;
+  --muted: #4f4f4f;
+  --dim: #5c5c5c;
+  --dim-line: #d5d5d0;
+  --line: #e6e6e2;
+  --accent: #111111;
+  --accent-ink: #ffffff;
+  background: #fff;
+  color: #111;
+  min-height: 100svh;
+}
+.ws-home .wrap { max-width: 1320px; }
+.ws-home ::selection { background: #111; color: #fff; }
+.ws-home .display { font-weight: 600; letter-spacing: -0.06em; line-height: 0.9; }
+.ws-home .btn-accent { background: #111; color: #fff; }
+.ws-home .btn-accent:hover { background: #2a2a2a; }
+.ws-home .btn-accent .arrow { background: rgba(255,255,255,0.16); color: #fff; }
+.ws-home .btn-ghost { border-color: #111; color: #111; }
+.ws-home .btn-ghost:hover { background: #111; color: #fff; }
+.ws-home .eyebrow { color: #5c5c5c; }
+.ws-home section[id] { scroll-margin-top: 88px; }
+.mobile-bar {
+  background: linear-gradient(to top, rgba(11,15,20,0.92) 60%, rgba(11,15,20,0));
+}
+.ws-home .mobile-bar {
+  background: linear-gradient(to top, rgba(255,255,255,0.97) 60%, rgba(255,255,255,0));
+}
+.ws-home :focus-visible { outline-color: #111; }
+
+/* Shared overlays sit outside .ws-home; follow the light homepage while it is open. */
+html.ws-tone {
+  --bg: #ffffff;
+  --bg-2: #ffffff;
+  --fg: #111111;
+  --muted: #4f4f4f;
+  --dim: #5c5c5c;
+  --dim-line: #d5d5d0;
+  --line: #e6e6e2;
+  --accent: #111111;
+  --accent-ink: #ffffff;
+}
+html.ws-tone [role='dialog'] {
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.12) !important;
+}
+html.ws-tone [role='dialog'] .btn-accent {
+  background: #111;
+  color: #fff;
+}
+html.ws-tone [role='dialog'] .btn-accent:hover { background: #2a2a2a; }
+html.ws-tone [role='dialog'] .btn-ghost {
+  border-color: #111;
+  color: #111;
+}
 .process-stage.is-pinned { min-height: 100svh; display: flex; flex-direction: column; justify-content: center; padding-top: 96px; padding-bottom: 48px; }
 .process-stage:not(.is-pinned) [data-step-bar] { transform: scaleX(1); }
 [data-step-dot] { color: #535963; transition: color .4s; }
