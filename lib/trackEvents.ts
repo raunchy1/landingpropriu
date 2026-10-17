@@ -5,6 +5,7 @@ export type WhatsAppLocation =
   | 'contact'
   | 'final_cta'
   | 'sticky_bar'
+  | 'statement'
   | 'landing'
   | 'ai_section'
   | 'calculator'
