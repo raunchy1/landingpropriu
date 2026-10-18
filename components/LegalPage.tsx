@@ -12,7 +12,7 @@ export default function LegalPage({ title, updated, sections, children }: { titl
           {sections.map((s, i) => (
             <section key={s.h} className="grid gap-4 border-b py-9 md:grid-cols-12 md:gap-6 md:py-12" style={{ borderColor: 'var(--line)' }}>
               <div className="md:col-span-4">
-                <p className="eyebrow mb-3" style={{ color: 'var(--accent)' }}>
+                <p className="eyebrow mb-3" style={{ color: 'var(--accent-fg)' }}>
                   {String(i + 1).padStart(2, '0')}
                 </p>
                 <h2 className="text-[21px] leading-[1.25] tracking-[-0.02em] md:text-[24px]" style={{ color: 'var(--fg)' }}>

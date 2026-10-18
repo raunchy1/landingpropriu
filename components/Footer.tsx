@@ -7,7 +7,7 @@ import { business } from '@/lib/business'
 export default function Footer({ ink = false }: { ink?: boolean }) {
   const t = useTranslations('footer')
 
-  const linkClass = 'inline-flex min-h-[40px] items-center text-[15px] capitalize transition-colors hover:text-[var(--accent)]'
+  const linkClass = 'inline-flex min-h-[40px] items-center text-[15px] capitalize transition-colors hover:text-[var(--accent-fg)]'
 
   return (
     <footer className="rule" style={{ background: 'var(--bg)', color: 'var(--fg)' }}>
@@ -29,7 +29,7 @@ export default function Footer({ ink = false }: { ink?: boolean }) {
               <br />
               <a
                 href={`tel:${business.phoneE164}`}
-                className="underline decoration-[var(--dim-line)] underline-offset-4 transition-colors hover:text-[var(--accent)]"
+                className="underline decoration-[var(--dim-line)] underline-offset-4 transition-colors hover:text-[var(--accent-fg)]"
                 style={{ color: 'var(--fg)' }}
               >
                 {business.phone}

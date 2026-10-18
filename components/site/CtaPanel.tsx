@@ -13,10 +13,10 @@ type Props = {
 export default function CtaPanel({ title, body, cta, href, className = '' }: Props) {
   return (
     <div data-reveal className={className}>
-      <div className="p-7 md:p-12" style={{ background: 'var(--fg)', color: '#11161c' }}>
+      <div className="rounded-[24px] p-7 md:p-12" style={{ background: 'var(--accent)', color: '#151515' }}>
         <p className="max-w-[22ch] text-[30px] font-normal leading-[1.02] tracking-[-0.04em] md:text-[44px]">{title}</p>
         {body && (
-          <p className="mt-5 max-w-[52ch] text-[16px] leading-[1.6]" style={{ color: '#3d392f' }}>
+          <p className="mt-5 max-w-[52ch] text-[16px] leading-[1.6]" style={{ color: '#2b2b26' }}>
             {body}
           </p>
         )}
@@ -24,7 +24,7 @@ export default function CtaPanel({ title, body, cta, href, className = '' }: Pro
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn btn-accent mt-8 w-full sm:w-auto"
+          className="btn btn-ink mt-8 w-full sm:w-auto"
         >
           {cta}
           <Arrow />

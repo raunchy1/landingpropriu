@@ -30,7 +30,7 @@ function SectionHead({ n, title }: { n: string; title: string }) {
   return (
     <div className="mb-12 md:mb-16">
       <p className="eyebrow mb-6 md:mb-8">
-        <span style={{ color: 'var(--accent)' }}>{n}</span>
+        <span style={{ color: 'var(--accent-fg)' }}>{n}</span>
       </p>
       <h2 data-split className="display h-md max-w-[20ch]">{title}</h2>
     </div>
@@ -41,7 +41,7 @@ function Chip({ children, accent }: { children: React.ReactNode; accent?: boolea
   return (
     <span
       className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-[12px]"
-      style={{ borderColor: accent ? 'rgba(46,242,200,0.4)' : 'var(--dim-line)', color: accent ? 'var(--accent)' : 'var(--muted)' }}
+      style={{ borderColor: accent ? 'var(--dim-line)' : 'var(--dim-line)', color: accent ? 'var(--accent)' : 'var(--muted)' }}
     >
       {children}
     </span>
@@ -65,7 +65,7 @@ export default function PortfolioPage({ params }: Props) {
               Cristian<br />Ermurache
             </h1>
             <div data-reveal className="mt-8 md:mt-12">
-              <p className="text-[20px] leading-[1.3] tracking-[-0.02em] md:text-[26px]" style={{ color: 'var(--accent)' }}>{t('role', loc)}</p>
+              <p className="text-[20px] leading-[1.3] tracking-[-0.02em] md:text-[26px]" style={{ color: 'var(--accent-fg)' }}>{t('role', loc)}</p>
               <p className="lead mt-6 max-w-[52ch]">{t('heroLead', loc)}</p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {(t('badges', loc) as string[]).map((b) => <Chip key={b}>{b}</Chip>)}
@@ -109,12 +109,12 @@ export default function PortfolioPage({ params }: Props) {
       </section>
 
       {/* RAKAZO */}
-      <section className="py-24 md:py-36" style={{ background: 'var(--fg)', color: '#11161c' }}>
+      <section className="py-24 md:py-36" style={{ background: 'var(--bg-2)', color: '#11161c' }}>
         <div className="wrap">
           <p className="eyebrow mb-6 md:mb-8" style={{ color: '#5b5547' }}>02</p>
           <h2 data-split className="display h-md mb-12 max-w-[20ch] md:mb-16" style={{ color: '#11161c' }}>{t('featured', loc)}</h2>
           <article data-reveal className="grid gap-10 lg:grid-cols-12 lg:gap-6">
-            <a href="https://rakazo.com/" target="_blank" rel="noopener noreferrer" className="work-card relative block overflow-hidden border lg:order-2 lg:col-span-7" style={{ borderColor: '#c9bea5', background: '#f4efe3' }}>
+            <a href="https://rakazo.com/" target="_blank" rel="noopener noreferrer" className="work-card relative block overflow-hidden border lg:order-2 lg:col-span-7" style={{ borderColor: '#c9bea5', background: '#ffffff' }}>
               <div className="relative aspect-[16/10] w-full">
                 <Image src="/portfolio/rakazo.webp" alt="Rakazo" fill sizes="(min-width:1024px) 58vw, 100vw" className="work-img object-cover object-top" />
               </div>

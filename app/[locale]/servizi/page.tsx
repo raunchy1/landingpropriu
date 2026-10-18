@@ -78,7 +78,7 @@ export default async function ServiziPage({ params }: Props) {
 
       <PageHeader eyebrow={t('eyebrow')} title={t('title')} lead={t('intro')}>
         <p className="mt-6 flex items-start gap-3 text-[15px] leading-[1.6]" style={{ color: 'var(--fg)' }}>
-          <span style={{ color: 'var(--accent)' }}>→</span> {t('highlight')}
+          <span style={{ color: 'var(--accent-fg)' }}>→</span> {t('highlight')}
         </p>
       </PageHeader>
 
@@ -92,7 +92,7 @@ export default async function ServiziPage({ params }: Props) {
             >
               <span
                 className="text-[12px] uppercase tracking-[0.16em] tabular-nums md:col-span-1"
-                style={{ color: 'var(--accent)' }}
+                style={{ color: 'var(--accent-fg)' }}
               >
                 {String(i + 1).padStart(2, '0')}
               </span>
@@ -127,7 +127,7 @@ export default async function ServiziPage({ params }: Props) {
           <ol data-reveal className="grid gap-px md:grid-cols-3 lg:col-span-8" style={{ background: 'var(--line)' }}>
             {steps.map((step, i) => (
               <li key={step.title} className="flex flex-col gap-6 p-6 md:p-8" style={{ background: 'var(--bg)' }}>
-                <span className="text-[48px] font-light leading-none tracking-[-0.04em] md:text-[64px]" style={{ color: 'var(--accent)' }}>
+                <span className="text-[48px] font-light leading-none tracking-[-0.04em] md:text-[64px]" style={{ color: 'var(--accent-fg)' }}>
                   {i + 1}
                 </span>
                 <div>
