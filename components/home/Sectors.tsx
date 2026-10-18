@@ -2,6 +2,9 @@
 
 import { useRef, useState, type KeyboardEvent } from 'react'
 import { useTranslations } from 'next-intl'
+import AnimIcon, { IconTile, type IconName } from '@/components/icons/AnimIcon'
+
+const ICONS: Record<string, IconName> = { ristoranti: 'utensils', bnb: 'bed', negozi: 'bag', artigiani: 'hammer', turismo: 'compass' }
 
 type Sector = { key: string; label: string; title: string; body: string; points: string[] }
 
@@ -9,6 +12,8 @@ export default function Sectors() {
   const t = useTranslations('home.sectors')
   const items = t.raw('items') as Sector[]
   const [active, setActive] = useState(0)
+  // icons in a freshly switched panel draw in right away (HomeMotion only observes the first render)
+  const [touched, setTouched] = useState(false)
   const tabs = useRef<(HTMLButtonElement | null)[]>([])
 
   const onKey = (e: KeyboardEvent) => {
@@ -17,6 +22,7 @@ export default function Sectors() {
     e.preventDefault()
     const next = (active + dir + items.length) % items.length
     setActive(next)
+    setTouched(true)
     tabs.current[next]?.focus()
   }
 
@@ -48,11 +54,14 @@ export default function Sectors() {
               aria-selected={i === active}
               aria-controls={`panel-${s.key}`}
               tabIndex={i === active ? 0 : -1}
-              onClick={() => setActive(i)}
+              onClick={() => {
+                setActive(i)
+                setTouched(true)
+              }}
               className="tab-btn"
             >
-              <span className="mr-2 text-[11px] tabular-nums" style={{ color: i === active ? 'var(--accent)' : 'var(--dim)' }}>
-                0{i + 1}
+              <span className="mr-2.5 inline-block h-[18px] w-[18px] align-[-3px]" style={{ color: i === active ? 'var(--accent)' : 'var(--dim)' }}>
+                <AnimIcon name={ICONS[s.key] ?? 'sparkle'} delay={i * 120} />
               </span>
               {s.label}
             </button>
@@ -66,7 +75,10 @@ export default function Sectors() {
           aria-labelledby={`tab-${cur.key}`}
           className="tab-panel grid gap-10 pt-12 md:grid-cols-12 md:gap-6 md:pt-16"
         >
-          <h3 className="text-[30px] font-normal leading-[1.05] tracking-[-0.035em] md:col-span-6 md:text-[46px]">{cur.title}</h3>
+          <div className="md:col-span-6">
+            <IconTile name={ICONS[cur.key] ?? 'sparkle'} size="lg" className="mb-8" drawNow={touched} />
+            <h3 className="text-[30px] font-normal leading-[1.05] tracking-[-0.035em] md:text-[46px]">{cur.title}</h3>
+          </div>
           <div className="md:col-span-5 md:col-start-8">
             <p className="text-[17px] leading-[1.6]" style={{ color: 'var(--muted)' }}>
               {cur.body}

@@ -34,7 +34,7 @@ export default function Calculator() {
         </div>
 
         <div data-reveal className="lg:col-span-6 lg:col-start-7">
-          <div className="border p-6 sm:p-9" style={{ borderColor: 'var(--line)', background: 'var(--bg-2)' }}>
+          <div className="gcard p-6 sm:p-9">
             <div className="flex items-start justify-between gap-4 border-b pb-6" style={{ borderColor: 'var(--line)' }}>
               <div>
                 <p className="text-[17px]">{t('base')}</p>
