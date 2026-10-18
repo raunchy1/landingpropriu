@@ -82,6 +82,9 @@
     var leadBtn = root.querySelector(".room-photo");
     var lead = leadBtn.querySelector("img");
     var thumbs = Array.prototype.slice.call(root.querySelectorAll(".film button"));
+    thumbs.forEach(function (btn) {
+      btn.setAttribute("aria-label", "Mostra la foto: " + btn.dataset.alt);
+    });
     var current = 0;
     function select(i, scroll) {
       current = i;
@@ -138,7 +141,7 @@
   });
   if (filters.length) applyFilter("all");
 
-  var suiteField = document.getElementById("suite");
+  var suiteField = document.getElementById("suite-field");
   document.querySelectorAll("[data-suite]").forEach(function (link) {
     link.addEventListener("click", function () {
       suiteField.value = link.dataset.suite;
