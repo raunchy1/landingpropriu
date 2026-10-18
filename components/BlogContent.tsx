@@ -48,7 +48,7 @@ export default function BlogContent({ blocks }: Props) {
               <ol key={i} className={`${body} space-y-3`} style={{ color: 'var(--muted)' }}>
                 {block.items.map((item, j) => (
                   <li key={j} className="flex gap-4">
-                    <span className="shrink-0 tabular-nums text-[13px] leading-[2.2]" style={{ color: 'var(--accent)' }} aria-hidden="true">
+                    <span className="shrink-0 tabular-nums text-[13px] leading-[2.2]" style={{ color: 'var(--accent-fg)' }} aria-hidden="true">
                       {String(j + 1).padStart(2, '0')}
                     </span>
                     <span>{item}</span>

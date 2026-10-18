@@ -54,13 +54,13 @@ export default async function BlogPage({ params }: Props) {
                 className="group grid gap-4 py-8 md:grid-cols-12 md:gap-6 md:py-10"
               >
                 <div className="flex items-center gap-4 text-[12px] uppercase tracking-[0.14em] md:col-span-3 md:flex-col md:items-start md:gap-2" style={{ color: 'var(--dim)' }}>
-                  <span style={{ color: 'var(--accent)' }}>{String(i + 1).padStart(2, '0')}</span>
+                  <span style={{ color: 'var(--accent-fg)' }}>{String(i + 1).padStart(2, '0')}</span>
                   <time dateTime={post.date}>
                     {dateFmt(post.date)} · {post.readTime}
                   </time>
                 </div>
                 <div className="md:col-span-8">
-                  <h2 className="text-[26px] font-normal leading-[1.1] tracking-[-0.035em] transition-colors group-hover:text-[var(--accent)] md:text-[38px]" style={{ color: 'var(--fg)' }}>
+                  <h2 className="text-[26px] font-normal leading-[1.1] tracking-[-0.035em] transition-colors group-hover:text-[var(--accent-fg)] md:text-[38px]" style={{ color: 'var(--fg)' }}>
                     {post.title}
                   </h2>
                   <p className="mt-4 max-w-[60ch] text-[16px] leading-[1.6]" style={{ color: 'var(--muted)' }}>

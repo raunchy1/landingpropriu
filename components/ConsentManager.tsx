@@ -124,7 +124,7 @@ export default function ConsentManager() {
             <button className={btn + ' btn-ghost'} onClick={() => save({ analytics: false, ads: false })}>{l.reject}</button>
             {custom
               ? <button className={btn + ' btn-ghost'} onClick={() => save(draft)}>{l.save}</button>
-              : <button className="min-h-[44px] px-2 text-[14px] underline underline-offset-4 transition-colors hover:text-[var(--accent)]" style={{ color: 'var(--fg)' }} onClick={() => setCustom(true)}>{l.customize}</button>}
+              : <button className="min-h-[44px] px-2 text-[14px] underline underline-offset-4 transition-colors hover:text-[var(--accent-fg)]" style={{ color: 'var(--fg)' }} onClick={() => setCustom(true)}>{l.customize}</button>}
           </div>
         </div>
       )}

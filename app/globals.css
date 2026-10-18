@@ -12,6 +12,7 @@
   --dim-line: #3a3f46;
   --line: #222932;
   --accent: #2ef2c8;
+  --accent-fg: #2ef2c8;
   --accent-ink: #04221b;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -46,7 +47,7 @@ main li a:not([class*="inline-flex"]):not([class*="rounded"]):not(.btn):not(.uli
   font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--muted);
 }
-.eyebrow-accent { color: var(--accent); }
+.eyebrow-accent { color: var(--accent-fg); }
 
 .display {
   font-weight: 400; letter-spacing: -0.045em; line-height: 0.98; color: var(--fg);
@@ -240,6 +241,7 @@ html[data-motion='on'] .ai.is-in .ai-m-blink   { animation: ai-pop .5s var(--eas
   --dim-line: #cfccc2;
   --line: #e4e1d8;
   --accent: #e4f222;
+  --accent-fg: #5b6600;
   --accent-ink: #151515;
   --ink: #151515;
   background: var(--bg); color: var(--fg);

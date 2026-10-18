@@ -6,7 +6,7 @@ import { Link, usePathname, useRouter } from '@/i18n/navigation'
 import WhatsAppLink from '@/components/WhatsAppLink'
 import Arrow from '@/components/home/Arrow'
 
-/** Home header: light bar that gains a frosted background on scroll. */
+/** Site-wide header (home + inner pages): light bar that gains a frosted background on scroll. */
 export default function Nav() {
   const t = useTranslations('home.nav')
   const locale = useLocale()
@@ -20,6 +20,10 @@ export default function Nav() {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  // Section anchors live on the home page; elsewhere they route back to it.
+  const onHome = pathname === '/'
+  const linkClass = 'rounded-full px-4 py-2 text-[15px] font-medium transition-colors hover:bg-[var(--card)]'
 
   const links = [
     { href: '#lavori', label: t('work') },
@@ -52,12 +56,23 @@ export default function Nav() {
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
-          {links.map((l) => (
-            <a key={l.href} href={l.href} className="rounded-full px-4 py-2 text-[15px] font-medium transition-colors hover:bg-[var(--card)]">
-              {l.label}
-            </a>
-          ))}
-          <Link href="/portfolio" className="rounded-full px-4 py-2 text-[15px] font-medium transition-colors hover:bg-[var(--card)]">
+          {links.map((l) =>
+            onHome ? (
+              <a key={l.href} href={l.href} className={linkClass}>
+                {l.label}
+              </a>
+            ) : (
+              <Link key={l.href} href={`/${l.href}`} className={linkClass}>
+                {l.label}
+              </Link>
+            )
+          )}
+          <Link
+            href="/portfolio"
+            className={linkClass}
+            style={pathname === '/portfolio' ? { background: 'var(--card)' } : undefined}
+            aria-current={pathname === '/portfolio' ? 'page' : undefined}
+          >
             {t('cv')}
           </Link>
         </nav>

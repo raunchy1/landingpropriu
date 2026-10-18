@@ -97,7 +97,7 @@ export default async function ContattiPage({ params }: Props) {
               <a
                 href={`tel:${business.phoneE164}`}
                 itemProp="telephone"
-                className="text-[26px] leading-none tracking-[-0.03em] transition-colors hover:text-[var(--accent)] md:text-[30px]"
+                className="text-[26px] leading-none tracking-[-0.03em] transition-colors hover:text-[var(--accent-fg)] md:text-[30px]"
                 style={{ color: 'var(--fg)' }}
               >
                 {business.phone}
@@ -109,7 +109,7 @@ export default async function ContattiPage({ params }: Props) {
               <a
                 href={`mailto:${business.email}`}
                 itemProp="email"
-                className="break-all text-[20px] leading-[1.2] tracking-[-0.02em] transition-colors hover:text-[var(--accent)] md:text-[22px]"
+                className="break-all text-[20px] leading-[1.2] tracking-[-0.02em] transition-colors hover:text-[var(--accent-fg)] md:text-[22px]"
                 style={{ color: 'var(--fg)' }}
               >
                 {business.email}

@@ -63,12 +63,12 @@ export default function EcomGrid({ loc }: { loc: Loc }) {
               <LazyVideo id={s.id} name={s.name} />
             </a>
             <div className="flex flex-1 flex-col p-6">
-              <span className="mb-4 inline-flex self-start rounded-full border px-3 py-1 text-[12px]" style={{ borderColor: 'rgba(46,242,200,0.4)', color: 'var(--accent)' }}>{label(s.cat)}</span>
+              <span className="mb-4 inline-flex self-start rounded-full border px-3 py-1 text-[12px]" style={{ borderColor: 'var(--dim-line)', color: 'var(--accent-fg)' }}>{label(s.cat)}</span>
               <h3 className="mb-2 text-[24px] font-normal leading-[1.1] tracking-[-0.03em]" style={{ color: 'var(--fg)' }}>{s.name}</h3>
               <p className="mb-5 text-[14px] leading-[1.6]" style={{ color: 'var(--muted)' }}>{loc === 'en' ? s.en : s.it}</p>
               <div className="rule mt-auto flex flex-wrap items-center justify-between gap-2 pt-4">
                 <span className="text-[12px]" style={{ color: 'var(--dim)' }}>{ecomCredit[loc]}</span>
-                <a href={s.url} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[40px] items-center text-[14px] transition-colors hover:text-[var(--accent)]" style={{ color: 'var(--fg)' }}>
+                <a href={s.url} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[40px] items-center text-[14px] transition-colors hover:text-[var(--accent-fg)]" style={{ color: 'var(--fg)' }}>
                   {s.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/.*$/, '')} ↗
                 </a>
               </div>
