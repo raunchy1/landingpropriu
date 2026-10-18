@@ -26,7 +26,7 @@ export default function Calculator() {
     <section id="calcolatore" className="rule py-24 md:py-40">
       <div className="wrap grid gap-14 lg:grid-cols-12 lg:gap-6">
         <div className="lg:col-span-5">
-          <p className="eyebrow mb-6 md:mb-8">{t('eyebrow')}</p>
+          <p className="eyebrow mb-6 md:mb-8">{t('eyebrow').replace(/^\d+\s*\/\s*/, '')}</p>
           <h2 data-split className="display h-md max-w-[14ch]">
             {t('title')}
           </h2>
@@ -34,7 +34,7 @@ export default function Calculator() {
         </div>
 
         <div data-reveal className="lg:col-span-6 lg:col-start-7">
-          <div className="border p-6 sm:p-9" style={{ borderColor: 'var(--line)', background: 'var(--bg-2)' }}>
+          <div className="rounded-[24px] border p-6 sm:p-9" style={{ borderColor: 'var(--line)', background: 'var(--bg-2)' }}>
             <div className="flex items-start justify-between gap-4 border-b pb-6" style={{ borderColor: 'var(--line)' }}>
               <div>
                 <p className="text-[17px]">{t('base')}</p>

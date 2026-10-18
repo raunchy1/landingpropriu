@@ -444,6 +444,26 @@
     },
     "sticky": {
       "cta": "Message us on WhatsApp"
+    },
+    "ramp": {
+      "tag": "Free draft in 48 hours",
+      "chipDraft": "Draft ready",
+      "chipDraftSub": "in 48 hours, free",
+      "chipPrice": "€500 all included",
+      "chipPriceSub": "domain and hosting for the first year",
+      "chipPay": "Pay only if you like it",
+      "live": "Real site",
+      "work": {
+        "eyebrow": "Work",
+        "title": "Real sites, in motion.",
+        "intro": "Every card plays a site I built. Pick a sector and watch them scroll.",
+        "more": "Show all {n} sites",
+        "less": "Show less",
+        "visit": "Visit the site"
+      },
+      "sectorsCta": "See a live example",
+      "processNote": "No upfront payment at any step.",
+      "faqMore": "More questions? Message us on WhatsApp"
     }
   }
 }

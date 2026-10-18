@@ -1,29 +1,32 @@
 import { setRequestLocale } from 'next-intl/server'
-import HomeNav from '@/components/home/HomeNav'
-import Hero from '@/components/home/Hero'
-import Marquee from '@/components/home/Marquee'
-import Problem from '@/components/home/Problem'
-import Offer from '@/components/home/Offer'
-import Sectors from '@/components/home/Sectors'
-import Process from '@/components/home/Process'
+import Nav from '@/components/ramp/Nav'
+import Hero from '@/components/ramp/Hero'
+import Strip from '@/components/ramp/Strip'
+import Problem from '@/components/ramp/Problem'
+import Work from '@/components/ramp/Work'
+import Offer from '@/components/ramp/Offer'
+import Sectors from '@/components/ramp/Sectors'
+import Process from '@/components/ramp/Process'
 import Calculator from '@/components/home/Calculator'
-import Trust from '@/components/home/Trust'
-import Faq from '@/components/home/Faq'
-import FinalCta from '@/components/home/FinalCta'
+import Trust from '@/components/ramp/Trust'
+import Faq from '@/components/ramp/Faq'
+import FinalCta from '@/components/ramp/FinalCta'
 import HomeMotion from '@/components/home/HomeMotion'
 import Footer from '@/components/Footer'
 import MobileBar from '@/components/MobileBar'
+import { rampFont } from '@/components/ramp/font'
 
 export default async function Home({ params }: { params: { locale: string } }) {
   const { locale } = await params
   setRequestLocale(locale)
 
   return (
-    <>
-      <HomeNav />
-      <main id="contenuto" className="relative overflow-x-clip" style={{ background: 'var(--bg)', color: 'var(--fg)' }}>
+    <div className={`ramp ${rampFont.variable}`}>
+      <Nav />
+      <main id="contenuto" className="relative overflow-x-clip">
         <Hero />
-        <Marquee />
+        <Strip />
+        <Work />
         <Problem />
         <Offer />
         <Sectors />
@@ -33,9 +36,9 @@ export default async function Home({ params }: { params: { locale: string } }) {
         <Faq />
         <FinalCta />
       </main>
-      <Footer />
-      <MobileBar />
+      <Footer ink />
+      <MobileBar light />
       <HomeMotion rootId="contenuto" />
-    </>
+    </div>
   )
 }
