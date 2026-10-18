@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { business } from '@/lib/business'
 
-export default function Footer() {
+export default function Footer({ ink = false }: { ink?: boolean }) {
   const t = useTranslations('footer')
 
   const linkClass = 'inline-flex min-h-[40px] items-center text-[15px] capitalize transition-colors hover:text-[var(--accent)]'
@@ -20,7 +20,7 @@ export default function Footer() {
               style={{ color: 'var(--fg)' }}
               aria-label="WebSardegna — home"
             >
-              <img src="/brand/logo-jost.svg" alt="WebSardegna" width={560} height={140} className="block h-[40px] w-auto md:h-[48px]" />
+              <img src={ink ? '/brand/logo-jost-ink.svg' : '/brand/logo-jost.svg'} alt="WebSardegna" width={560} height={140} className="block h-[40px] w-auto md:h-[48px]" />
             </Link>
             <address className="mt-6 not-italic text-[14px] leading-[1.8]" style={{ color: 'var(--muted)' }}>
               <span style={{ color: 'var(--fg)' }}>{business.name}</span>

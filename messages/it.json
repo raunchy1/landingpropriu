@@ -445,6 +445,26 @@
     },
     "sticky": {
       "cta": "Scrivici su WhatsApp"
+    },
+    "ramp": {
+      "tag": "Bozza gratuita in 48 ore",
+      "chipDraft": "Bozza pronta",
+      "chipDraftSub": "in 48 ore, gratis",
+      "chipPrice": "500 € tutto incluso",
+      "chipPriceSub": "dominio e hosting per il primo anno",
+      "chipPay": "Paghi solo se ti piace",
+      "live": "Sito reale",
+      "work": {
+        "eyebrow": "Lavori",
+        "title": "Siti veri, in movimento.",
+        "intro": "Ogni scheda fa girare un sito che ho sviluppato. Scegli un settore e guardali scorrere.",
+        "more": "Mostra tutti i {n} siti",
+        "less": "Mostra meno",
+        "visit": "Visita il sito"
+      },
+      "sectorsCta": "Vedi un esempio dal vivo",
+      "processNote": "Nessun anticipo in nessun passaggio.",
+      "faqMore": "Altre domande? Scrivici su WhatsApp"
     }
   }
 }
