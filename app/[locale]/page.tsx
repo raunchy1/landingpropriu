@@ -4,6 +4,7 @@ import Hero from '@/components/home/Hero'
 import Marquee from '@/components/home/Marquee'
 import Problem from '@/components/home/Problem'
 import Offer from '@/components/home/Offer'
+import Work from '@/components/home/Work'
 import Sectors from '@/components/home/Sectors'
 import Process from '@/components/home/Process'
 import Calculator from '@/components/home/Calculator'
@@ -26,6 +27,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
         <Marquee />
         <Problem />
         <Offer />
+        <Work />
         <Sectors />
         <Process />
         <Calculator />

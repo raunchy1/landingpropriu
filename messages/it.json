@@ -251,8 +251,14 @@
       "excludedNote": "Gli extra si concordano prima, per iscritto. Vedi il calcolatore qui sotto.",
       "cta": "Voglio la bozza gratuita"
     },
+    "work": {
+      "eyebrow": "03 / Lavori",
+      "title": "Siti veri, già online.",
+      "intro": "Una selezione di siti per hotel, cantine, negozi e imprese. Passa sopra per fermare la galleria, oppure guardali tutti nel portfolio.",
+      "cta": "Vedi il portfolio"
+    },
     "sectors": {
-      "eyebrow": "03 / Per chi è",
+      "eyebrow": "04 / Per chi è",
       "title": "Pensato per chi lavora in Sardegna.",
       "items": [
         {
@@ -313,7 +319,7 @@
       ]
     },
     "process": {
-      "eyebrow": "04 / Come funziona",
+      "eyebrow": "05 / Come funziona",
       "title": "Dal messaggio al sito online.",
       "steps": [
         {
@@ -335,7 +341,7 @@
       ]
     },
     "calc": {
-      "eyebrow": "05 / Calcolatore",
+      "eyebrow": "06 / Calcolatore",
       "title": "Quanto costa davvero? Facciamo i conti.",
       "intro": "Parti dalla base. Aggiungi solo quello che ti serve: gli extra si concordano insieme, prima di iniziare.",
       "base": "Sito professionale",
@@ -375,7 +381,7 @@
       "waExtras": "Extra che mi interessano:"
     },
     "trust": {
-      "eyebrow": "06 / Garanzie",
+      "eyebrow": "07 / Garanzie",
       "title": "Nessun anticipo. Nessuna sorpresa.",
       "items": [
         {
@@ -397,7 +403,7 @@
       ]
     },
     "faq": {
-      "eyebrow": "07 / Domande",
+      "eyebrow": "08 / Domande",
       "title": "Domande frequenti.",
       "items": [
         {
@@ -435,7 +441,7 @@
       ]
     },
     "final": {
-      "eyebrow": "08 / Contatti",
+      "eyebrow": "09 / Contatti",
       "title": "Hai un’attività? Mettiamola online.",
       "body": "Scrivici su WhatsApp: in 48 ore hai la bozza del tuo sito. Gratis, senza impegno.",
       "waLabel": "WhatsApp",

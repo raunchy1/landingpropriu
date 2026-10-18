@@ -21,6 +21,34 @@ export default function HomeMotion({ rootId }: { rootId: string }) {
     let cancelled = false
     let revert: (() => void) | undefined
 
+    // animated icons draw in when they enter the viewport
+    const icons = root.querySelectorAll<SVGElement>('[data-icon]')
+    const io = new IntersectionObserver(
+      (entries) =>
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return
+          e.target.classList.add('is-in')
+          io.unobserve(e.target)
+        }),
+      { rootMargin: '0px 0px -8% 0px' }
+    )
+    icons.forEach((el) => io.observe(el))
+
+    // glass cards: border + spotlight follow the cursor
+    const onMove = (ev: PointerEvent) => {
+      const card = (ev.target as Element | null)?.closest<HTMLElement>('.gcard')
+      if (!card) return
+      const r = card.getBoundingClientRect()
+      card.style.setProperty('--mx', `${ev.clientX - r.left}px`)
+      card.style.setProperty('--my', `${ev.clientY - r.top}px`)
+    }
+    root.addEventListener('pointermove', onMove, { passive: true })
+    const stopExtras = () => {
+      io.disconnect()
+      root.removeEventListener('pointermove', onMove)
+      icons.forEach((el) => el.classList.remove('is-in'))
+    }
+
     ;(async () => {
       const { gsap, ScrollTrigger, SplitText } = await import('@/lib/gsap')
       if (document.fonts?.ready) await document.fonts.ready
@@ -78,6 +106,12 @@ export default function HomeMotion({ rootId }: { rootId: string }) {
             if (i === active) return
             active = i
             dots.forEach((d, k) => d.toggleAttribute('data-active', k <= i))
+            // replay the step's icon as it comes into focus
+            steps[i]?.querySelectorAll('[data-icon]').forEach((el) => {
+              el.classList.remove('is-in')
+              void (el as SVGElement).getBoundingClientRect()
+              el.classList.add('is-in')
+            })
           }
           setActive(0)
 
@@ -121,6 +155,7 @@ export default function HomeMotion({ rootId }: { rootId: string }) {
 
     return () => {
       cancelled = true
+      stopExtras()
       revert?.()
     }
   }, [mode, rootId])

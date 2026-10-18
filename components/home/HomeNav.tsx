@@ -28,6 +28,7 @@ export default function HomeNav() {
 
   const links = [
     { href: '#offerta', label: t('offer') },
+    { href: '#lavori', label: t('work') },
     { href: '#processo', label: t('process') },
     { href: '#faq', label: t('faq') },
   ]

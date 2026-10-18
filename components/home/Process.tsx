@@ -1,4 +1,7 @@
 import { getTranslations } from 'next-intl/server'
+import { IconTile, type IconName } from '@/components/icons/AnimIcon'
+
+const ICONS: IconName[] = ['chat', 'clock', 'check', 'rocket']
 
 type Step = { title: string; body: string }
 
@@ -42,6 +45,7 @@ export default async function Process() {
                   0{i + 1}
                 </span>
                 <div className="md:col-span-6 md:col-start-7 md:self-end">
+                  <IconTile name={ICONS[i % ICONS.length]} size="lg" className="mb-8" />
                   <h3 className="text-[34px] font-normal leading-[1.02] tracking-[-0.04em] md:text-[56px]">
                     <span className="sr-only">{i + 1}. </span>
                     {s.title}

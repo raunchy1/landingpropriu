@@ -250,8 +250,14 @@
       "excludedNote": "Extras are agreed upfront, in writing. See the calculator below.",
       "cta": "I want the free draft"
     },
+    "work": {
+      "eyebrow": "03 / Work",
+      "title": "Real sites, already live.",
+      "intro": "A selection of sites for hotels, wineries, shops and businesses. Hover to pause the gallery, or see them all in the portfolio.",
+      "cta": "See the portfolio"
+    },
     "sectors": {
-      "eyebrow": "03 / Who it’s for",
+      "eyebrow": "04 / Who it’s for",
       "title": "Made for people who work in Sardinia.",
       "items": [
         {
@@ -312,7 +318,7 @@
       ]
     },
     "process": {
-      "eyebrow": "04 / How it works",
+      "eyebrow": "05 / How it works",
       "title": "From a message to a live website.",
       "steps": [
         {
@@ -334,7 +340,7 @@
       ]
     },
     "calc": {
-      "eyebrow": "05 / Calculator",
+      "eyebrow": "06 / Calculator",
       "title": "What does it really cost? Let’s do the math.",
       "intro": "Start from the base. Add only what you need: extras are agreed together, before we start.",
       "base": "Professional website",
@@ -374,7 +380,7 @@
       "waExtras": "Extras I’m interested in:"
     },
     "trust": {
-      "eyebrow": "06 / Guarantees",
+      "eyebrow": "07 / Guarantees",
       "title": "No upfront payment. No surprises.",
       "items": [
         {
@@ -396,7 +402,7 @@
       ]
     },
     "faq": {
-      "eyebrow": "07 / Questions",
+      "eyebrow": "08 / Questions",
       "title": "Frequently asked questions.",
       "items": [
         {
@@ -434,7 +440,7 @@
       ]
     },
     "final": {
-      "eyebrow": "08 / Contact",
+      "eyebrow": "09 / Contact",
       "title": "Got a business? Let’s put it online.",
       "body": "Message us on WhatsApp: in 48 hours you’ll have a draft of your site. Free, no commitment.",
       "waLabel": "WhatsApp",
