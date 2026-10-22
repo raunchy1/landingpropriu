@@ -9,7 +9,7 @@ export default function Projects() {
   const t = useTranslations('projects')
 
   const stats = [t('stat1'), t('stat2'), t('stat3')]
-  const previews = [1, 2, 3].map((i) => ({
+  const previews = [4, 1, 2, 3].map((i) => ({
     title: t(`preview${i}Title`),
     location: t(`preview${i}Location`),
     result: t(`preview${i}Result`),
