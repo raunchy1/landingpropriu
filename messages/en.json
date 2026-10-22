@@ -174,13 +174,14 @@
   },
   "progettiPage": {
     "metaTitle": "Website Projects Sardinia | Case Studies for Local Businesses",
-    "metaDescription": "Anonymised case studies for restaurants, auto detailing and B&Bs in Sardinia. Local web designer with free 48-hour mockup.",
+    "metaDescription": "Case studies for restaurants, auto detailing and B&Bs in Sardinia, plus Reputia, a SaaS for Google reviews. Local web designer with free 48-hour mockup.",
     "eyebrow": "// case studies",
     "title": "Real projects for Sardinian businesses",
-    "intro": "Three concrete examples of custom websites built for clients in Sardinia. Names are anonymised for privacy, but the results are real.",
+    "intro": "Concrete examples of work built in Sardinia: custom websites for local clients (names anonymised for privacy, results are real) and Reputia, the SaaS I built to manage Google reviews.",
     "challenge": "Challenge",
     "solution": "Solution",
     "results": "Results",
+    "visitProject": "Visit the site ↗",
     "portfolioNote": "To see the full portfolio with screenshots and details, message me on WhatsApp — I'll show you everything in minutes.",
     "ctaPortfolio": "See full portfolio",
     "backHome": "← Back to home"

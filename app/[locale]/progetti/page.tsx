@@ -159,6 +159,22 @@ export default async function ProgettiPage({ params }: Props) {
                     </span>
                   ))}
                 </div>
+
+                {study.url && (
+                  <a
+                    href={study.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-5 inline-block text-[14px] font-medium"
+                    style={{
+                      color: 'var(--accent-green)',
+                      borderBottom: '1px solid var(--dim)',
+                      paddingBottom: 2,
+                    }}
+                  >
+                    {t('visitProject')}
+                  </a>
+                )}
               </article>
             ))}
           </div>
