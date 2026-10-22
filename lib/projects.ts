@@ -13,24 +13,6 @@ export type CaseStudy = {
 export function getCaseStudies(locale: string): CaseStudy[] {
   if (locale === 'en') {
     return [
-    {
-      id: 'reputia',
-      title: 'Reputia — recensioni Google gestite con l\'AI',
-      category: 'SaaS / Prodotto proprio',
-      location: 'Fatto in Sardegna, per tutta Italia',
-      challenge:
-        'Ristoranti, hotel e attività locali ricevono decine di recensioni Google ma non hanno tempo di rispondere. Le recensioni senza risposta, soprattutto quelle negative, pesano sulla fiducia dei clienti e sulla visibilità su Google Maps.',
-      solution:
-        'Una web app in abbonamento che si collega al Profilo dell\'Attività Google con l\'autorizzazione ufficiale, raccoglie in una sola lista le recensioni di tutte le sedi e scrive per ognuna una risposta pronta, nel tono dell\'attività. Niente viene pubblicato finché il titolare non legge e preme «Pubblica su Google».',
-      results: [
-        'Rispondere alle recensioni diventa questione di minuti, non di serate',
-        'Bozze AI in italiano o nella lingua del cliente (EN, DE, FR, ES)',
-        'Controlli che segnalano bozze con sconti promessi o numeri di telefono',
-        'Più sedi e collaboratori con permessi diversi',
-      ],
-      tags: ['saas', 'ai', 'recensioni google', 'next.js'],
-      url: 'https://reputia.websardegna.xyz',
-    },
       {
         id: 'reputia',
         title: 'Reputia — Google review management with AI',
@@ -101,6 +83,24 @@ export function getCaseStudies(locale: string): CaseStudy[] {
   }
 
   return [
+    {
+      id: 'reputia',
+      title: 'Reputia — recensioni Google gestite con l\'AI',
+      category: 'SaaS / Prodotto proprio',
+      location: 'Fatto in Sardegna, per tutta Italia',
+      challenge:
+        'Ristoranti, hotel e attività locali ricevono decine di recensioni Google ma non hanno tempo di rispondere. Le recensioni senza risposta, soprattutto quelle negative, pesano sulla fiducia dei clienti e sulla visibilità su Google Maps.',
+      solution:
+        'Una web app in abbonamento che si collega al Profilo dell\'Attività Google con l\'autorizzazione ufficiale, raccoglie in una sola lista le recensioni di tutte le sedi e scrive per ognuna una risposta pronta, nel tono dell\'attività. Niente viene pubblicato finché il titolare non legge e preme «Pubblica su Google».',
+      results: [
+        'Rispondere alle recensioni diventa questione di minuti, non di serate',
+        'Bozze AI in italiano o nella lingua del cliente (EN, DE, FR, ES)',
+        'Controlli che segnalano bozze con sconti promessi o numeri di telefono',
+        'Più sedi e collaboratori con permessi diversi',
+      ],
+      tags: ['saas', 'ai', 'recensioni google', 'next.js'],
+      url: 'https://reputia.websardegna.xyz',
+    },
     {
       id: 'ogliastra-ristorante',
       title: 'Ristorante e paninoteca — costa Ogliastra',
