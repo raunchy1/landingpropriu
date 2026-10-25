@@ -2,11 +2,14 @@
 
 import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
+import { usePathname } from '@/i18n/navigation'
 import WhatsAppLink from '@/components/WhatsAppLink'
 import { trackPhoneClick } from '@/lib/trackEvents'
 
 export default function MobileBar() {
   const t = useTranslations('mobileBar')
+  const pathname = usePathname()
+  const isGoogleProfile = pathname.startsWith('/servizi/profilo-google')
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -45,6 +48,7 @@ export default function MobileBar() {
     >
       <WhatsAppLink
         location="sticky_bar"
+        messageKey={isGoogleProfile ? 'googleProfile' : 'default'}
         className="flex items-center gap-2.5 text-[13px] font-medium"
         style={{ color: 'var(--fg)' }}
       >
@@ -52,7 +56,7 @@ export default function MobileBar() {
           className="inline-block h-2 w-2 shrink-0 rounded-full"
           style={{ background: 'var(--accent-green)' }}
         />
-        {t('cta')}
+        {isGoogleProfile ? t('gbpCta') : t('cta')}
       </WhatsAppLink>
 
       <a

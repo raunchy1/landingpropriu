@@ -7,6 +7,9 @@ export type WhatsAppLocation =
   | 'sticky_bar'
   | 'landing'
   | 'ai_section'
+  | 'google_profile'
+  | 'google_profile_page'
+  | 'servizi_gbp'
 
 function pushEvent(payload: Record<string, unknown>) {
   if (typeof window !== 'undefined' && window.dataLayer) {

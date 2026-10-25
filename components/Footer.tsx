@@ -20,6 +20,9 @@ export default function Footer() {
           <Link href="/servizi" style={{ color: 'var(--muted)' }}>
             {t('services')}
           </Link>
+          <Link href="/servizi/profilo-google" style={{ color: 'var(--muted)' }}>
+            {t('googleProfile')}
+          </Link>
           <Link href="/blog" style={{ color: 'var(--muted)' }}>
             {t('blog')}
           </Link>

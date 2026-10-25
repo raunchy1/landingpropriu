@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl'
 import ScrollReveal from './ScrollReveal'
 import WhatsAppLink from '@/components/WhatsAppLink'
+import { Link } from '@/i18n/navigation'
 
 export default function Pricing() {
   const t = useTranslations('pricing')
@@ -107,6 +108,13 @@ export default function Pricing() {
               />
               {tHero('ctaPrimary')}
             </WhatsAppLink>
+            <Link
+              href="/servizi/profilo-google"
+              className="mt-5 block text-[14px] leading-[1.6]"
+              style={{ color: 'var(--muted)', width: 'fit-content' }}
+            >
+              {t('gbpLink')}
+            </Link>
           </div>
         </ScrollReveal>
       </div>

@@ -86,6 +86,18 @@ export default function Services() {
 
           <div className="reveal-child mt-14 flex flex-col gap-4">
             <Link
+              href="/servizi/profilo-google"
+              className="text-[14px] font-medium transition-colors"
+              style={{
+                color: 'var(--accent-green)',
+                borderBottom: '1px solid var(--dim)',
+                paddingBottom: 2,
+                width: 'fit-content',
+              }}
+            >
+              {t('gbpLink')}
+            </Link>
+            <Link
               href="/servizi"
               className="text-[14px] font-medium transition-colors"
               style={{

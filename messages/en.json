@@ -43,7 +43,8 @@
     "cat5Title": "AI-powered video content",
     "cat5Body": "Promotional videos, social media content, creative advertising generated with AI tools.",
     "closing": "If your project doesn't fit neatly into these categories, reach out anyway. Chances are I can help — or I'll tell you honestly if I can't.",
-    "viewAll": "All services →"
+    "viewAll": "All services →",
+    "gbpLink": "Google Business Profile completion — €199 →"
   },
   "about": {
     "eyebrow": "// about me",
@@ -265,7 +266,8 @@
     "item3": "payment only if you proceed",
     "item4": "site live within days",
     "item5": "no upfront payment",
-    "waLink": "https://wa.me/393501998569?text=Hey%2C%20I%27d%20like%20a%20free%20mockup%20for%20my%20website"
+    "waLink": "https://wa.me/393501998569?text=Hey%2C%20I%27d%20like%20a%20free%20mockup%20for%20my%20website",
+    "gbpLink": "Incomplete Google listing? Completion from €150 →"
   },
   "localArea": {
     "eyebrow": "// service area",
@@ -336,10 +338,64 @@
     "guide": "guide",
     "projects": "projects",
     "contact": "contact",
+    "googleProfile": "google profile",
     "location": "sardinia, 2026"
+  },
+  "googleProfile": {
+    "metaTitle": "Google Business Profile Completion in Sardinia | €199 | WebSardegna",
+    "metaDescription": "We complete incomplete Google Business Profiles for restaurants, B&Bs, shops and makers in Sardinia. Free audit, same-day completion. €199 one-time, from €150.",
+    "keywords": [
+      "google business profile completion",
+      "incomplete google maps listing",
+      "google business sardinia",
+      "google business profile restaurant"
+    ],
+    "eyebrow": "// google profile",
+    "title": "Google Business Profile completion",
+    "price": "199€.",
+    "priceUnit": "one-time.",
+    "priceDetail": "from €150 to €250, depending on what is missing. The usual price is €199.",
+    "intro": "We look for businesses in Sardinia whose Google Maps listing is incomplete — hours, photos, category, description, website, phone, attributes — and we fix it the same day, after you approve. It is its own service: Maps visibility now, without waiting for a new website.",
+    "audience": "For restaurants, B&Bs, shops, makers and tourism businesses in Sardinia.",
+    "deliverablesTitle": "What is included",
+    "d1": "Audit of the existing Google Business Profile",
+    "d2": "We fill the missing fields: category, description, hours, contacts, services or menu attributes where they apply",
+    "d3": "We tidy photo placement and add the best photos you send",
+    "d4": "We correct name, address and phone consistency (NAP)",
+    "d5": "We set up or fix booking, WhatsApp and call buttons where they apply",
+    "d6": "After go-live, a simple tip for asking reviews — light guidance, not a separate product",
+    "processTitle": "How it works",
+    "step1Title": "Message us on WhatsApp",
+    "step1Body": "Business name and, if you have it, the Google Maps link.",
+    "step2Title": "Free audit within a few hours",
+    "step2Body": "We send screenshots of what is missing. No commitment.",
+    "step3Title": "You approve and pay",
+    "step3Body": "Only if the audit convinces you. No surprise work.",
+    "step4Title": "We finish the same day",
+    "step4Body": "Or the next business day, if you write late in the day.",
+    "asideTitle": "Separate from the €500 website",
+    "asideBody": "The website stays the main offer: free mockup, €500, you pay only if it convinces you. This is smaller and faster — the Google listing fixed, so customers find you on Maps while you decide about the site. If you want the website later, we talk about it then.",
+    "cta": "Message me on WhatsApp",
+    "emailLabel": "or email —",
+    "emailSubject": "Google Business Profile completion",
+    "faqTitle": "Questions about the profile",
+    "q1": "Do I need a website?",
+    "a1": "No. We complete the listing even if you do not have a website. If one is missing, we say so in the audit: the €500 website stays a separate service, when you need it.",
+    "q2": "How long does it take?",
+    "a2": "The free audit arrives within a few hours. After approval and payment, we complete the listing the same day, or the next business day.",
+    "q3": "Do you need access to my Google account?",
+    "a3": "Yes, to publish the changes. Usually an invite as a profile manager is enough, or temporary access we agree on. We publish nothing before you approve.",
+    "q4": "What if I already have a profile?",
+    "a4": "That is the usual case. We work on profiles that already exist but are incomplete: missing hours, few photos, the wrong category, no phone or website. If it is already in good shape, we say so in the audit and you do not proceed.",
+    "cardIntro": "Incomplete Google Maps listing? We fix it the same day, after a free audit. It does not replace the €500 website: it is Maps visibility, now.",
+    "detailsLink": "How it works →",
+    "pageLink": "Open the service page →",
+    "backServices": "← The €500 website and other services",
+    "backHome": "← Back to home"
   },
   "mobileBar": {
     "cta": "get free mockup",
+    "gbpCta": "google profile",
     "call": "call",
     "waLink": "https://wa.me/393501998569?text=Hey%2C%20I%27d%20like%20a%20free%20mockup%20for%20my%20website"
   }
