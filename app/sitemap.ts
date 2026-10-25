@@ -60,6 +60,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/servizi/profilo-google`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+      alternates: {
+        languages: {
+          it: `${baseUrl}/servizi/profilo-google`,
+          en: `${baseUrl}/en/servizi/profilo-google`,
+        },
+      },
+    },
+    {
+      url: `${baseUrl}/en/servizi/profilo-google`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/progetti`,
       lastModified,
       changeFrequency: 'monthly',

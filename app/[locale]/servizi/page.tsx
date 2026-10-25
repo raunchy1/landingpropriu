@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { setRequestLocale, getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
 import SiteShell from '@/components/SiteShell'
+import WhatsAppLink from '@/components/WhatsAppLink'
 
 type Props = {
   params: { locale: string }
@@ -29,6 +30,7 @@ export default async function ServiziPage({ params }: Props) {
   const { locale } = await params
   setRequestLocale(locale)
   const t = await getTranslations({ locale, namespace: 'serviziPage' })
+  const gbp = await getTranslations({ locale, namespace: 'googleProfile' })
 
   const services = [1, 2, 3, 4, 5].map((i) => ({
     title: t(`service${i}Title`),
@@ -110,6 +112,79 @@ export default async function ServiziPage({ params }: Props) {
           >
             <span style={{ color: 'var(--accent-green)' }}>→</span> {t('highlight')}
           </p>
+
+          <article
+            className="mb-16 rounded-xl border border-[var(--line)] p-6 md:p-8"
+            style={{ background: 'var(--surface)' }}
+          >
+            <p
+              className="mb-3 text-[11px]"
+              style={{ fontFamily: 'var(--font-mono)', color: 'var(--muted)' }}
+            >
+              {gbp('eyebrow')}
+            </p>
+            <h2
+              className="mb-3 font-semibold leading-[1.25]"
+              style={{ fontSize: '22px', color: 'var(--fg)' }}
+            >
+              {gbp('title')}
+            </h2>
+            <p
+              className="mb-2 leading-[1.1]"
+              style={{
+                fontSize: 'clamp(28px, 5vw, 40px)',
+                fontWeight: 800,
+                letterSpacing: '-0.03em',
+                color: 'var(--fg)',
+              }}
+            >
+              {gbp('price')}{' '}
+              <span style={{ color: 'var(--muted)', fontWeight: 500 }}>
+                {gbp('priceUnit')}
+              </span>
+            </p>
+            <p
+              className="mb-4 text-[14px] leading-[1.6]"
+              style={{ color: 'var(--muted)' }}
+            >
+              {gbp('priceDetail')}
+            </p>
+            <p
+              className="mb-6 text-[15px] leading-[1.7]"
+              style={{ color: 'var(--muted)' }}
+            >
+              {gbp('cardIntro')}
+            </p>
+            <div className="flex flex-col items-start gap-4">
+              <WhatsAppLink
+                location="servizi_gbp"
+                messageKey="googleProfile"
+                className="cta-primary inline-flex items-center gap-3 rounded-lg px-7 py-3.5 text-[15px] font-medium transition-all duration-300"
+                style={{
+                  border: '1px solid var(--line)',
+                  background: 'var(--bg)',
+                  color: 'var(--fg)',
+                }}
+              >
+                <span
+                  className="inline-block h-2 w-2 rounded-full"
+                  style={{ background: 'var(--accent-green)' }}
+                />
+                {gbp('cta')}
+              </WhatsAppLink>
+              <Link
+                href="/servizi/profilo-google"
+                className="text-[14px] font-medium"
+                style={{
+                  color: 'var(--accent-green)',
+                  borderBottom: '1px solid var(--dim)',
+                  paddingBottom: 2,
+                }}
+              >
+                {gbp('detailsLink')}
+              </Link>
+            </div>
+          </article>
 
           <div className="mb-16 flex flex-col gap-10">
             {services.map((service, i) => (

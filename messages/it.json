@@ -43,7 +43,8 @@
     "cat5Title": "Contenuti video con AI",
     "cat5Body": "Video promozionali, contenuti per i social, advertising creativo generato con strumenti di intelligenza artificiale.",
     "closing": "Se il tuo progetto non rientra esattamente in queste categorie, scrivimi lo stesso. Probabilmente posso aiutarti — o dirti onestamente se non è il caso.",
-    "viewAll": "Tutti i servizi →"
+    "viewAll": "Tutti i servizi →",
+    "gbpLink": "Completamento Profilo Google — 199€ →"
   },
   "about": {
     "eyebrow": "// chi sono",
@@ -265,7 +266,8 @@
     "item3": "pagamento solo se procedi",
     "item4": "sito online in pochi giorni",
     "item5": "nessun pagamento anticipato",
-    "waLink": "https://wa.me/393501998569?text=Ciao%2C%20vorrei%20la%20bozza%20gratuita%20per%20il%20mio%20sito"
+    "waLink": "https://wa.me/393501998569?text=Ciao%2C%20vorrei%20la%20bozza%20gratuita%20per%20il%20mio%20sito",
+    "gbpLink": "Scheda Google incompleta? Completamento da 150 € →"
   },
   "localArea": {
     "eyebrow": "// zone servite",
@@ -335,10 +337,65 @@
     "guide": "guida",
     "projects": "progetti",
     "contact": "contatti",
+    "googleProfile": "profilo google",
     "location": "sardegna, 2026"
+  },
+  "googleProfile": {
+    "metaTitle": "Completamento Profilo Google Business Sardegna | 199€ | WebSardegna",
+    "metaDescription": "Sistemiamo la scheda Google Business incompleta per ristoranti, B&B, negozi e artigiani in Sardegna. Audit gratuito, completamento lo stesso giorno. 199€ una tantum, da 150€.",
+    "keywords": [
+      "completamento profilo google business",
+      "scheda google maps incompleta",
+      "google business sardegna",
+      "profilo google ristorante",
+      "google my business sardegna"
+    ],
+    "eyebrow": "// profilo google",
+    "title": "Completamento Profilo Google Business",
+    "price": "199€.",
+    "priceUnit": "una tantum.",
+    "priceDetail": "da 150 € a 250 €, in base a quanto manca sulla scheda. Il prezzo più frequente è 199 €.",
+    "intro": "Cerchiamo attività in Sardegna con la scheda Google Maps incompleta — orari, foto, categoria, descrizione, sito, telefono, attributi — e la sistemiamo lo stesso giorno, dopo che approvi. È un servizio a sé: visibilità su Maps adesso, senza aspettare un sito nuovo.",
+    "audience": "Per ristoranti, B&B, negozi, artigiani e attività turistiche in Sardegna.",
+    "deliverablesTitle": "Cosa comprende",
+    "d1": "Audit della scheda Google Business esistente",
+    "d2": "Compiliamo i campi mancanti: categoria, descrizione, orari, contatti, servizi o attributi del menu dove servono",
+    "d3": "Sistemiamo il posizionamento delle foto e inseriamo le migliori che ci mandi",
+    "d4": "Correggiamo la coerenza di nome, indirizzo e telefono (NAP)",
+    "d5": "Impostiamo o sistemiamo i pulsanti di prenotazione, WhatsApp e chiamata, dove si applicano",
+    "d6": "Dopo la messa online, un consiglio semplice per chiedere le recensioni — una guida breve, non un servizio a parte",
+    "processTitle": "Come funziona",
+    "step1Title": "Scrivici su WhatsApp",
+    "step1Body": "Nome dell'attività e, se ce l'hai, il link Google Maps.",
+    "step2Title": "Audit gratuito in poche ore",
+    "step2Body": "Ti mandiamo gli screenshot di cosa manca. Senza impegno.",
+    "step3Title": "Approvi e paghi",
+    "step3Body": "Solo se l'audit ti convince. Nessun lavoro a sorpresa.",
+    "step4Title": "Completiamo lo stesso giorno",
+    "step4Body": "O il giorno lavorativo successivo, se ci scrivi a fine giornata.",
+    "asideTitle": "A parte dal sito da 500 €",
+    "asideBody": "Il sito web resta il servizio principale: bozza gratuita, 500 €, paghi solo se ti convince. Questo è più piccolo e più veloce — la scheda Google sistemata, così i clienti ti trovano su Maps mentre decidi sul sito. Se dopo vuoi il sito, ne parliamo.",
+    "cta": "Scrivimi su WhatsApp",
+    "emailLabel": "oppure email —",
+    "emailSubject": "Completamento Profilo Google Business",
+    "faqTitle": "Domande sul profilo",
+    "q1": "Mi serve un sito web?",
+    "a1": "No. Completiamo la scheda anche se non hai un sito. Se manca, lo segnaliamo nell'audit: il sito da 500 € resta un servizio separato, quando ti serve.",
+    "q2": "Quanto tempo ci vuole?",
+    "a2": "L'audit gratuito arriva in poche ore. Dopo approvazione e pagamento, completiamo la scheda lo stesso giorno, o il giorno lavorativo successivo.",
+    "q3": "Vi serve l'accesso al mio account Google?",
+    "a3": "Sì, per pubblicare le modifiche. Di solito basta un invito come gestore della scheda, oppure un accesso temporaneo che concordiamo. Non pubblichiamo nulla prima della tua approvazione.",
+    "q4": "E se ho già un profilo?",
+    "a4": "È il caso più comune. Lavoriamo sulle schede già aperte ma incomplete: orari mancanti, poche foto, categoria sbagliata, telefono o sito assenti. Se è già a posto, te lo diciamo nell'audit e non procedi.",
+    "cardIntro": "Scheda Google Maps incompleta? La sistemiamo lo stesso giorno, dopo un audit gratuito. Non sostituisce il sito da 500 €: è la visibilità su Maps, adesso.",
+    "detailsLink": "Come funziona →",
+    "pageLink": "Apri la pagina del servizio →",
+    "backServices": "← Il sito web da 500 € e gli altri servizi",
+    "backHome": "← Torna alla home"
   },
   "mobileBar": {
     "cta": "richiedi bozza gratuita",
+    "gbpCta": "profilo google",
     "call": "chiama",
     "waLink": "https://wa.me/393501998569?text=Ciao%2C%20vorrei%20la%20bozza%20gratuita%20per%20il%20mio%20sito"
   }

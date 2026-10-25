@@ -68,8 +68,22 @@ export function buildStructuredData(locale: string, faqs: FaqItem[]) {
       name: area,
     })),
     serviceType: isIt
-      ? ['Creazione siti web', 'Web design', 'SEO locale', 'Google Ads', 'Integrazione AI']
-      : ['Website development', 'Web design', 'Local SEO', 'Google Ads', 'AI integration'],
+      ? [
+          'Creazione siti web',
+          'Web design',
+          'SEO locale',
+          'Google Ads',
+          'Integrazione AI',
+          'Completamento Profilo Google Business',
+        ]
+      : [
+          'Website development',
+          'Web design',
+          'Local SEO',
+          'Google Ads',
+          'AI integration',
+          'Google Business Profile completion',
+        ],
     knowsAbout: isIt
       ? ['Siti web Sardegna', 'Web design locale', 'SEO per attività locali', 'Google Business Profile']
       : ['Websites Sardinia', 'Local web design', 'Local SEO', 'Google Business Profile'],
@@ -140,6 +154,29 @@ export function buildStructuredData(locale: string, faqs: FaqItem[]) {
         description: isIt
           ? 'Bozza gratuita in 48 ore. Pagamento solo se soddisfatto.'
           : 'Free mockup in 48 hours. Pay only if satisfied.',
+      },
+    },
+    {
+      '@type': 'Service',
+      '@id': `${baseUrl}/#service-google-profile`,
+      name: isIt
+        ? 'Completamento Profilo Google Business'
+        : 'Google Business Profile completion',
+      url: `${baseUrl}/servizi/profilo-google`,
+      description: isIt
+        ? 'Completiamo la scheda Google Maps incompleta per attività locali in Sardegna: audit, campi mancanti, foto, NAP e pulsanti. Lo stesso giorno dopo la tua approvazione. 199€ una tantum, da 150€ a 250€.'
+        : 'We complete an incomplete Google Business Profile for local businesses in Sardinia: audit, missing fields, photos, NAP and buttons. Same day after approval. €199 one-time, from €150 to €250.',
+      provider: { '@id': `${baseUrl}/#localbusiness` },
+      areaServed: { '@type': 'AdministrativeArea', name: 'Sardegna' },
+      offers: {
+        '@type': 'AggregateOffer',
+        lowPrice: '150',
+        highPrice: '250',
+        priceCurrency: 'EUR',
+        offerCount: 1,
+        description: isIt
+          ? 'Prezzo tipico 199€, una tantum. Da 150€ a 250€ in base a quanto manca sulla scheda.'
+          : 'Typical price €199, one-time. From €150 to €250 depending on what is missing.',
       },
     },
     {

@@ -10,15 +10,25 @@ const LANDING_MESSAGES = {
   en: "Hey, I saw your ad — I'd like a free website mockup for my business in Sardinia",
 } as const
 
-export type WhatsAppMessageKey = 'default' | 'landing'
+const GOOGLE_PROFILE_MESSAGES = {
+  it: 'Ciao, vorrei il completamento del Profilo Google Business per la mia attività',
+  en: "Hi, I'd like the Google Business Profile completion for my business",
+} as const
+
+const MESSAGES = {
+  default: DEFAULT_MESSAGES,
+  landing: LANDING_MESSAGES,
+  googleProfile: GOOGLE_PROFILE_MESSAGES,
+} as const
+
+export type WhatsAppMessageKey = keyof typeof MESSAGES
 
 /** Build WhatsApp URL with optional UTM/gclid from current page (client-side). */
 export function buildWhatsAppUrl(
   locale: 'it' | 'en',
   messageKey: WhatsAppMessageKey = 'default'
 ): string {
-  const messages = messageKey === 'landing' ? LANDING_MESSAGES : DEFAULT_MESSAGES
-  const text = messages[locale]
+  const text = MESSAGES[messageKey][locale]
   const params = new URLSearchParams({ text })
 
   if (typeof window !== 'undefined') {
@@ -42,6 +52,5 @@ export function getStaticWhatsAppUrl(
   locale: 'it' | 'en',
   messageKey: WhatsAppMessageKey = 'default'
 ): string {
-  const messages = messageKey === 'landing' ? LANDING_MESSAGES : DEFAULT_MESSAGES
-  return `${business.whatsapp}?text=${encodeURIComponent(messages[locale])}`
+  return `${business.whatsapp}?text=${encodeURIComponent(MESSAGES[messageKey][locale])}`
 }
